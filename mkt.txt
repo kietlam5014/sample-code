@@ -1,0 +1,50 @@
+#    Script created by Metadoc CDF Release Matrix document
+#    11/23/2009
+#    9:14:05 AM
+#    Building 43 variants
+#---------------------------------------------------------
+#SpaceID:   Country          Operator         Lang  CDF
+#---------------------------------------------------------
+1230-7619:  Australia        Customized       EN    R6A
+1231-0540:  Australia        Optus            EN    R9A
+1230-7141:  Austria          Mobilkom         DE    R13A
+1230-7155:  Belgium          Customized       NL    R6A
+1230-2795:  China            Customized       ZS    R10A
+1234-2554:  China            Customized       EN    R1A
+1230-7152:  Czech            Customized       CS    R6A
+1230-7140:  Denmark          Customized       DA    R5A
+1230-7151:  Finland          Customized       FI    R5A
+1230-2804:  France           Customized       FR    R6A
+1230-2800:  Germany          Customized       DE    R9A
+1230-2396:  Germany          Vodafone         DE    R19A
+1233-7729:  Global           Customized       EN    R5A
+1230-7135:  Greece           Vodafone         EL    R8A
+1230-7161:  Hong_Kong        Customized       ZH    R10A
+1230-7158:  Hong_Kong        Customized       EN    R8A
+1230-7157:  India            Customized       EN    R7A
+1231-4390:  Italy            Wind             IT    R12A
+1230-7136:  Italy            Customized       IT    R5A
+1230-4389:  Japan            Customized       JA    R1A
+1230-6135:  MENA             Customized       AR    R3A
+1230-2395:  Netherlands      Vodafone         NL    R19A
+1230-7137:  Netherlands      Customized       NL    R8A
+1230-7580:  Netherlands      T-Mobile         NL    R5A
+1230-7138:  Norway           Customized       NO    R5A
+1230-7146:  Poland           Customized       PL    R5A
+1231-4395:  Portugal         Customized       PT    R6A
+1230-7143:  Portugal         Vodafone         PT    R14A
+1230-6133:  Russia           Customized       RU    R10A
+1231-7617:  Singapore        Customized       EN    R5A
+1230-7142:  Spain            Customized       ES    R5A
+1230-7583:  Spain            Movistar         ES    R16A
+1230-2394:  Spain            Vodafone         ES    R18A
+1230-2397:  Sweden           Customized       SE    R16A
+1231-0543:  Sweden           Telenor          SE    R12A
+1231-4392:  Switzerland      Swisscom         EN    R7A
+1231-4391:  Switzerland      Swisscom         IT    R8A
+1230-2802:  Switzerland      Sunrise          DE    R5A
+1230-2805:  Switzerland      Swisscom         DE    R9A
+1230-2801:  Switzerland      Swisscom         FR    R8A
+1230-7149:  Taiwan           Customized       ZT    R8A
+1230-2799:  United_Kingdom   Customized       EN    R13A
+1230-2393:  United_Kingdom   Vodafone         EN    R18A
