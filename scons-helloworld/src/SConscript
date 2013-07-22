@@ -1,0 +1,4 @@
+Import('env')
+
+for subdir in ['foofiles', 'main']:
+    env.SConscript('%s/SConscript' % subdir, {'env': env})

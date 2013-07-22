@@ -1,0 +1,8 @@
+# Kiet Lam
+# Using scons to build sample helloworld c++ source
+# Feature seperation of source and built target
+
+env = Environment()
+env.VariantDir('build', 'src')
+
+env.SConscript('build/SConscript', {'env': env})

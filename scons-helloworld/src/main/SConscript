@@ -1,0 +1,4 @@
+Import('env')
+
+env.Append(CPPPATH=['foofiles/'])
+Program(target = 'Test', source = ['main.cc', 'hello.cc'], LIBS=['foo'], LIBPATH='../foofiles')
