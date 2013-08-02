@@ -1,0 +1,7 @@
+Kiet Lam
+
+Sample to generate Makefile using autotools
+
+Steps to generate Makefile
+  autoreconf --install
+  ./configure
