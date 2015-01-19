@@ -1,17 +1,56 @@
 #!/usr/bin/env python
 
 ## Author: Kiet Lam
-## Date  : Dec 22, 2014
+## Date  : Jan 18, 2015
 ## Description: For each project, get all gerrits that have at least following requirements:
-##              - three (CR+1)s and DV+1,
+##              - mincrs (CR+1)s and DV+1,
 ##              - clean SI Status
 
 import subprocess
 import argparse
 import pwd
 import json
+from ConfigParser import SafeConfigParser
 from Gerrit import *
 import pdb
+
+
+def readConfig(config, cfgFile):
+#
+# read config file and check required sections/keys
+#
+    '''
+    Example config ini format:
+
+    [default]
+    project = prima
+    mincrs  = 2
+    target  = msm8916
+    branch  = master_prima
+    test    = True
+
+    [projects]
+    platform/vendor/qcom-proprietary/wlan = master_prima
+    platform/external/wpa_supplicant_8 = LA.BR.1
+    platform/hardware/qcom/wlan = LA.BR.1
+    platform/vendor/qcom-proprietary/ship/wlan/utils = LA.BR.1
+    platform/vendor/qcom-proprietary/ship/wlan/ath6kl-utils = LA.BR.1
+    '''
+
+    config.read(cfgFile)
+
+    # test sections
+    for section in ['default', 'projects']:
+        if not config.has_section(section):
+            print "%s does not exist" % section
+            sys.exit(-1)
+
+    # test 'default' key
+    for k in ['project', 'mincrs', 'target', 'branch']:
+        if not config.has_option('default', k):
+            print "%s does not exist" % k
+            sys.exit(-1)
+
 
 def getOpenGerrits(project, branch, target):
 	open_gerrits = []
@@ -29,16 +68,16 @@ def getOpenGerrits(project, branch, target):
 	            for GerritFileItem in GerritInfo['currentPatchSet']['files']:
 	                if 'COMMIT_MSG' in GerritFileItem['file']:
 	                    valid_files = False
-	                elif 'CORE/MAC/inc/qwlan_version.h' in GerritFileItem['file']:
+	                elif 'CORE/MAC/inc/qwlan_version.h'.lower() in GerritFileItem['file'].lower():
 	                    valid_files = False
 	                elif r'platform/vendor/qcom-proprietary/wlan' in GerritInfo['project']:
-	                    if 'msm8974' in target:
+	                    if target in ['msm8974', 'msm8916', 'msm8909']:
 	                        if 'prima' != GerritFileItem['file'].split('/')[0]:
 	                            valid_files = False
 	                            break
 	                        else:
 	                            valid_files = True
-	                    elif 'apq8084' in target:
+	                    elif target in ['apq8084', 'msm8994']:
 	                        if 'qcacld-new' != GerritFileItem['file'].split('/')[0]:
 	                            valid_files = False
 	                            break
@@ -62,9 +101,11 @@ def processGerrits(project, branch, target, mincrs, test):
 	verifiedGerrits = []
 	excludedGerrits = []
 	print "\n"
-	print "project:%s" % project
-	print "branch :%s" % branch
-	print "target :%s" % target
+	print "project :%s" % project
+	print "branch  :%s" % branch
+	print "target  :%s" % target
+	print "min crs :%s" % mincrs
+	print "test req:%s" % test
 	gerritList = getOpenGerrits(project, branch, target)
 	for gerritNum in gerritList:
 	    gerritNum = gerritNum.strip()
@@ -74,7 +115,7 @@ def processGerrits(project, branch, target, mincrs, test):
 	    if not gerrit.ciStatuses() == None:
 	        cimsg = ' '.join(gerrit.ciStatuses())
 	    print "Processing gerrit:%s " % gerritNum
-	    if gerrit.isGood(mincrs) and (gerrit.ciStatuses() == None or 'Queued at position' in cimsg or 'Change is being verified' in cimsg):
+	    if gerrit.isGood(mincrs) and (gerrit.ciStatuses() == None or 'Queued at position' in cimsg or 'Change is being verified' in cimsg or 'is not enabled for BAIT automation' in cimsg):
 	        # if --test supplied, check for test result
 	        if test:
 	            comment = gerrit.commentsSearch(r'TEST STATUS:.*\d+|TEST RESULT')
@@ -103,24 +144,17 @@ def processGerrits(project, branch, target, mincrs, test):
 
 
 def main():
-	projects = {
-	  'platform/vendor/qcom-proprietary/wlan': 'master',
-	  'platform/external/wpa_supplicant_8': 'kitkat',
-	  'platform/hardware/qcom/wlan': 'kk',
-	  'platform/vendor/qcom-proprietary/ship/wlan/utils': 'master',
-	  'platform/vendor/qcom-proprietary/ship/wlan/ath6kl-utils': 'master'
-	}
-
-
 	curDir = os.getcwd()
 	project = None
 	branch  = None
 	gerrit  = None
-	mincrs  = 3
-	target  = 'msm8974' # default target
 	verifiedGerrits = []
 	excludedGerrits = []
-	testRequired = False
+	projects = []
+	target = 'msm8916'
+	mincrs = 2
+	testRequired = True
+	config = SafeConfigParser()
 
 	parser = argparse.ArgumentParser(description='Get open gerrits')
 	parser.add_argument('-p','--project', action='store', dest='project', help='project', required=False)
@@ -129,18 +163,27 @@ def main():
 	parser.add_argument('-g','--gerrit', action='store',dest='gerrit', help='gerrit',required=False)
 	parser.add_argument('-m','--mincrs', action='store',dest='mincrs', help='minimum crs',required=False)
 	parser.add_argument('--test', action='store_true', help='needed test result')
+	parser.add_argument('-c','--config', action='store',dest='config', help='config file to read',required=False)
         results = parser.parse_args()
 
 	if results.project:
-		project = results.project
+	    project = results.project
 	if results.branch:
-		branch = results.branch
+	    branch = results.branch
 	if results.target:
-		target = results.target
+	    target = results.target
 	if results.mincrs:
-		mincrs = results.mincrs
+	    mincrs = results.mincrs
 	if results.test:
-		testRequired = True
+	    testRequired = True
+	if results.config:
+	    configFile = results.config
+	    readConfig(config, configFile)
+	    project = config.get('default', 'project')
+	    mincrs  = config.get('default', 'mincrs')
+            target  = config.get('default', 'target')
+            branch  = config.get('default', 'branch')
+	    testRequired = config.get('default', 'test')
 
 	# process just one given gerrit. for debugging purpose of particular gerrit when needed
 	if results.gerrit:
@@ -148,7 +191,7 @@ def main():
 		gerrit = Gerrit(gerritNum)
 		if not gerrit.ciStatuses() == None:
 		    cimsg = ' '.join(gerrit.ciStatuses())
-		if gerrit.isGood(mincrs) and (gerrit.ciStatuses() == None or 'Queued at position' in cimsg or 'Change is being verified' in cimsg):
+		if gerrit.isGood(mincrs) and (gerrit.ciStatuses() == None or 'Queued at position' in cimsg or 'Change is being verified' in cimsg or 'is not enabled for BAIT automation' in cimsg):
 		    verifiedGerrits.append(gerritNum)
 		    print "Processed gerrit:%s " % gerritNum
 		    sys.exit(0)
@@ -156,22 +199,14 @@ def main():
 		    print "Excluded gerrits: %s" % gerritNum
 		    sys.exit(-1)
 
-	# process given project
-	if project and branch:
-	    verifiedGerrits, excludedGerrits = processGerrits(project, branch, target, mincrs, testRequired)
+	# process all projects
+	if results.config:
+	    for project, branch in config.items('projects'):
+	        verifiedGerrits, excludedGerrits = processGerrits(project, branch, target, mincrs, testRequired)
 	    sys.exit(0)
 
-	# process all projects
-	if (not project) and (not branch):
-		for project, branch in projects.iteritems():
-	            verifiedGerrits, excludedGerrits = processGerrits(project, branch, target, mincrs, testRequired)
-
-	if verifiedGerrits:
-	    fo = open(os.path.join(curDir,'Input_gerritlist.txt'), "w")
-	    fo.writelines(verifiedGerrits)
-	    fo.close()
-
-	print verifiedGerrits
+	if project and branch and target:
+	    verifiedGerrits, excludedGerrits = processGerrits(project, branch, target, mincrs, testRequired)
 
 if __name__ == '__main__':
 	main()
