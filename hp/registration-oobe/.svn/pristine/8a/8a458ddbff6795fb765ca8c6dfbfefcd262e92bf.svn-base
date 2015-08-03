@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="tl" xml:lang="tl">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Bilang bahagi ng pangako ng HP sa paghahatid ng mas mahusay na karanasan sa device, may kasama ang device na ito na diagnostic software.  Nangongolekta ang software na ito ng hindi nakikilalang data na pang-diagnostic, kabilang ang impormasyon sa hardware at software ng device, configuration at status ng network, at paggamit ng application. Ginagamit ang impormasyong ito upang pahusayin ang mga inaalok naming produkto at serbisyo.  Iniuugnay ang data na pang-diagnostic sa device, at hindi mag-iiba-iba sa pagitan ng mga user. Ibinabahagi lang ang hindi nakikilalang data sa provider ng software na pang-diagnostic. Maaaring maganap ang mga session sa pag-upload ng data sa cellular o WiFi network at sumusunod sa mga pamantayan sa Seguridad ng HP.  Kaunti lang ang data na ipinapadala sa provider ng diagnostic sa cellular network at hindi dapat negatibong makaapekto sa paglalaan ng data mula sa mobile operator. Kung gusto mong huwag paganahin ang mga naturang tampok sa diagnostic, mangyaring pumunta sa Mga Setting.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

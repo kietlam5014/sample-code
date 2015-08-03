@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						Como parte del compromiso de HP de ofrecer una mejor experiencia de dispositivo, este dispositivo está equipado con software de diagnóstico.  Este software recopila datos de diagnóstico anónimos, incluyendo información sobre hardware y software del dispositivo, configuración y estado de la red y uso de las aplicaciones. Esta información se usa para mejorar nuestras ofertas de productos y servicios.  Los datos de diagnóstico están vinculados al dispositivo y no diferenciarán entre usuarios. Los datos anónimos solo se comparten con el proveedor de software de diagnóstico. Estas sesiones de carga de datos pueden ocurrir a través de una red WiFi o celular y cumplen con los estándares de la Seguridad HP.  La cantidad de datos enviados al proveedor de diagnóstico a través de la red celular es mínima y no debería influir de forma negativa en la cobertura de datos del operador móvil. Si desea desactivar estas características de diagnóstico, vaya a Configuración.
+
+	</body>
+</html>

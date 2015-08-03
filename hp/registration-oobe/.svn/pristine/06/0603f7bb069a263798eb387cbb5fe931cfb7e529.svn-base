@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						Aziránti elkötelezettségünk jeléül, hogy az HP-nél még jobb szolgáltatást kínáljunk, ezt a készüléket diagnosztikai szoftverrel szereltük fel.  A szoftver anonim diagnosztikai adatokat gyűjt, beleértve a hardver-, szoftver-, hálózati konfigurációs és hálózati állapotra vonatkozó, valamint alkalmazás-használattal kapcsolatos információkat. Az adatokat termékeink és szolgáltatásaink fejlesztésére használjuk fel.  A diagnosztikai adatok készülékhez kötöttek, nem tesznek különbséget a felhasználók között. Az anonim információkhoz csak a diagnosztikai szoftver működtetője férhet hozzá. Az adatfeltöltési munkamenetek mobiltelefon- vagy vezeték nélküli hálózaton keresztül is történhetnek, és megfelelnek az HP biztonsági szabványainak.  A diagnosztikai szoftver működtetője számára mobiltelefon hálózaton keresztül küldött adatok mennyisége elenyésző, ezért nem befolyásolja negatív módon a mobiltelefon-szolgáltató által sugárzott adatok kibocsátását. A diagnosztikai funkciót a Beállítások menüben kapcsolhatja ki.
+
+	</body>
+</html>

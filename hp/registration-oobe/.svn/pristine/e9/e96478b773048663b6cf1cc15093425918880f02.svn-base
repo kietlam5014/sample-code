@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html dir="ltr" lang="zh-CN" xml:lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						作为惠普践行其交付更优设备体验承诺的一部分，此设备还配备诊断软件。  此软件会收集匿名诊断数据，包括硬件和软件信息、网络配置和状态以及应用使用情况。 这些信息可用于提升我们的产品和服务供应水平。  诊断数据与此设备绑定，且不会区分用户。 匿名数据仅与诊断软件提供商共享。 数据通过移动网络或 WiFi 网络上传，并遵照惠普安全标准。  通过移动网络向诊断提供程序发送的数据量很小，因此不会对移动运营商的数据配额产生负面影响。 如果您想禁用这些诊断功能，请前往“设置”。</Content>
+
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

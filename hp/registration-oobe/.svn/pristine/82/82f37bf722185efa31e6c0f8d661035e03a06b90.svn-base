@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="id" xml:lang="id">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Sebagai bagian dari komitmen HP dalam memberikan pengalaman yang lebih baik terkait penggunaan perangkat, maka perangkat ini dilengkapi dengan perangkat lunak diagnostik.  Perangkat lunak ini mengumpulkan data diagnostik anonim, termasuk informasi perangkat keras dan perangkat lunak unit perangkat, konfigurasi dan status jaringan, dan penggunaan aplikasi. Informasi ini dipergunakan untuk meningkatkan penawaran produk dan layanan.  Data diagnostik hanya dikaitkan ke perangkat, dan tidak akan membedakan antarpengguna. Data anonim hanya dibagikan kepada penyedia perangkat lunak diagnostik. Sesi pengunggahan data bisa berlangsung melalui jaringan seluler atau Wi-Fi dan bersesuaian dengan standar Keamanan HP.  Jumlah data yang dikirim ke penyedia diagnostik melalui jaringan seluler sangat kecil dan tidak akan memberikan dampak negatif terhadap penjatahan data dari operator seluler. Jika Anda ingin menonaktifkan fitur-fitur diagnostik tersebut, masuk ke Pengaturan.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

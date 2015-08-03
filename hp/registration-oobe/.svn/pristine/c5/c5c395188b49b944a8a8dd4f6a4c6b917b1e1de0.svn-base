@@ -1,0 +1,117 @@
+package hp.oobe.internals.output;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.SecretKeySpec;
+
+import hp.oobe.utilities.Cryptography;
+import android.content.ContentResolver;
+import android.database.Cursor;
+import android.net.Uri;
+import android.provider.Settings.Secure;
+import android.util.Base64;
+import android.util.Log;
+
+public class OutputProvider extends Output
+{
+	public static final String URI_PROVIDER = "content://hp.oobe/registration";
+		
+	public OutputProvider(ContentResolver contentResolver)
+	{
+		super(contentResolver);
+		title = URI_PROVIDER;
+	}
+	
+	@Override
+	public String readOutput()
+	{
+		final String NEWLINE = "\n";
+		
+		String result = null;
+		String pwd = Secure.getString(contentResolver, Secure.ANDROID_ID);
+		
+		try
+		{		
+			Cursor c = contentResolver.query(
+					Uri.parse(URI_PROVIDER),
+					null,  //projection (null=all columns)
+					null,  //selection  (null=all rows)
+					null,  //selectionArgs (null=none)
+					null); //sortOrder     (null=unordered)
+			
+			if( c!=null && c.getCount()==1 && c.moveToFirst() && c.getPosition()==0 ) 
+			{
+				StringBuilder sb = new StringBuilder();
+				
+				for( String key : c.getColumnNames() )
+				{
+					String val = c.getString(c.getColumnIndex(key));
+					val = CryptographyUtil.decrypt(val, pwd);
+					
+					sb.append(key);
+					sb.append(": ");
+					sb.append(val);
+					sb.append(NEWLINE);
+				}
+				
+				result = sb.toString();
+			}
+			
+		}
+		catch(SecurityException e)
+		{
+			Log.d(TAG, "Unable to to read from content provider because of security exception.");
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	/*
+	 * Helper class to encrypt the content that will stored in the columns. 
+	 * The client consuming this can use the same class to decrypt the content.
+	 */
+	private static class CryptographyUtil {
+		
+		private static final String PBE_ALGORITHM = "PBEWithSHA256And256BitAES-CBC-BC";
+		private static final String CIPHER_ALGORITHM = "AES/CBC/PKCS5Padding";
+		private static final int NUM_OF_ITERATIONS = 1000;
+		private static final int KEY_SIZE = 256;
+		private static final byte[] salt = "+E=6}".getBytes();
+		private static final byte[] iv = "SaAswLdD0dDdaAaA".getBytes();
+		
+		public static String decrypt(String cipherText, String secret) {
+			byte[] decryptedText = null;
+			String finalText = "";
+			
+			try {
+				PBEKeySpec pbeKeySpec = new PBEKeySpec(secret.toCharArray(), 
+						CryptographyUtil.salt, CryptographyUtil.NUM_OF_ITERATIONS, CryptographyUtil.KEY_SIZE);
+				SecretKeyFactory keyFactory = SecretKeyFactory.getInstance(CryptographyUtil.PBE_ALGORITHM);
+				
+				SecretKey key = keyFactory.generateSecret(pbeKeySpec);
+				SecretKey privateKey = new SecretKeySpec(key.getEncoded(), "AES");
+				
+				IvParameterSpec ivSpec = new IvParameterSpec(CryptographyUtil.iv);
+				
+				Cipher decCipher = Cipher.getInstance(CryptographyUtil.CIPHER_ALGORITHM);
+				decCipher.init(Cipher.DECRYPT_MODE, privateKey, ivSpec);
+				
+				decryptedText = decCipher.doFinal(Base64.decode(cipherText, 0));
+				
+				
+				finalText = new String(decryptedText);
+			} catch(Exception e) {
+				e.printStackTrace();
+				// DO NOTHING
+			}
+			
+			return finalText;
+		}
+		
+		
+	}//#CryptographyUtil	
+}

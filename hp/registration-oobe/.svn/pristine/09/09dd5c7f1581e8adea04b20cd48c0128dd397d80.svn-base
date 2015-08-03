@@ -1,0 +1,139 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.model = hp.registration.model || {};
+
+hp.registration.model.OTA = function() {
+    
+   var finalObject_ = {
+            "clientId": null,
+            "clientSecret" : null,
+            "grantType" : null,
+            "genericDeviceInfo": {
+                "uniqueId": null,
+				"deviceModel": null,
+				"suggestedBornOnDate": null,
+				"platformInfo": {
+					"osName": null,
+					"osVersion": null
+                }
+            }
+        };
+    
+    /*
+     * ============================================================================================
+     * Public members
+     * ============================================================================================
+     */
+    
+    Object.defineProperties(this, {
+        'CLIENT_ID': {
+            'value': 'clientId',
+            'writable': false
+        },
+        'CLIENT_SECRET': {
+            'value': 'clientSecret',
+            'writable': false
+        },
+        'GRANT_TYPE': {
+            'value': 'grantType',
+            'writable': false
+        },
+        'GENERIC_DEVICEINFO': {
+            'value': 'genericDeviceInfo',
+            'writable': false
+        },
+        'UNIQUE_ID': {
+            'value': 'uniqueId',
+            'writable': false
+        },
+        'DEVICE_MODEL': {
+            'value': 'deviceModel',
+            'writable': false
+        },
+		'SUGGESTED_BORNONDATE': {
+            'value': 'suggestedBornOnDate',
+            'writable': false
+        },
+        'PLATFORM_INFO': {
+            'value': 'platformInfo',
+            'writable': false
+        },
+        'OS_NAME': {
+            'value': 'osName',
+            'writable': false
+        },
+        'OS_VERSION': {
+            'value': 'osVersion',
+            'writable': false
+        }
+    });
+    
+    /*
+     * Set keys
+     *
+     * @params
+     *  inContainer: Literal Object.
+     *
+     * @returns
+     *  null
+     */
+    this.setKeys = function(inContainer) {
+        
+        for (var key_ in inContainer) {
+         
+            switch (key_) {
+                    
+                case this.CLIENT_ID:
+                case this.CLIENT_SECRET:
+                case this.GRANT_TYPE:
+                    
+                    finalObject_[key_] = inContainer[key_];
+                    break;
+                    
+                case this.UNIQUE_ID:
+                case this.DEVICE_MODEL:
+                case this.SUGGESTED_BORNONDATE:
+                case this.PLATFORM_INFO:
+					
+                    finalObject_[this.GENERIC_DEVICEINFO][key_] = inContainer[key_];
+                    break;
+                    
+                case this.SOFTWARE_BUILD_BRANCH:
+                    
+                    // DEPRECATED
+                    break;
+                    
+                case this.OS_NAME:
+				case this.OS_VERSION:
+                    
+                    finalObject_[this.GENERIC_DEVICEINFO][this.PLATFORM_INFO][key_] = inContainer[key_];
+                    break;
+                 
+                default:
+                    
+                    console.log('Key ' + key_ + ' is not supported by the OTA application');
+                    break;
+            }
+            
+        }
+        
+        return null;
+        
+    }.bind(this);//#hp.registration.model.OTA.setKeys
+    
+    /*
+     * Retrieves the final message that should be sent to the backend. 
+     *
+     * @returns 
+     *  String. 
+     */
+    this.getMessageAsString = function() {
+
+        return JSON.stringify(finalObject_);
+        
+        
+    }.bind(this);//#hp.registration.model.OTA.getMessageAsString
+    
+    return this;
+    
+}.apply({}, null);

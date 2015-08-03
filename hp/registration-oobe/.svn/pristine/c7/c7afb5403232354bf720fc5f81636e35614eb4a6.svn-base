@@ -1,0 +1,105 @@
+package hp.oobe;
+
+public final class Consts {
+
+	// Tag that will be used on LOGCAT
+	public static final String TAG = "HP_OOBE"; 
+	
+	public static final String SERVICE_PACKAGE_FULL_NAME = "hp.oobe.service";
+	
+	public static final String SERVICE_REGISTRATION_NAME = ".Registration";
+	
+	public static final String FILES_ROOT = "/data/data/hp.oobe/files/";
+	
+	public static final String FILE_NAME_REQUEST_REGISTRATION = "registration";
+	
+	public static final String FILE_NAME_OTA = "ota";
+	
+	public static final String FILE_NAME_RESPONSE = "response";
+	
+	public static final String FILE_NAME_OTA_RESPONSE = "ota_response";
+	
+	public static final String FILE_NAME_OTA_QUERY = "ota_query";
+	
+	public static final String FILE_NAME_OTA_QUERY_RESPONSE = "ota_query_response";
+	
+	public static final String FILE_NAME_BOD = "bod";
+	
+	public static final String BOD_FIELD = "born_on_dt";
+	
+	public static final String EXTENDED_REG_SUB_BLOCK = "ExtendedRegistrationSubBlock";
+	
+	public static final String FILE_FULL_PATH_CONFIGS = "/system/vendor/hp/hp.oobe/configs.xml";
+	
+	public static final String OTA_SECRET = "4d34a5d7b938917339ae3271370b4579e9a67130";
+	
+	public static final String PREFERENCES = "Preferences";
+	
+	public static final String PREFERENCE_ENDPOINT = "endPoint";
+	
+	public static final String PREFERENCE_ENDPOINT_OTA = "endPointOTA";
+	
+	public static final String PREFERENCE_ENDPOINT_OTA_QUERY = "endPointOTAQuery";
+	
+	public static final String PREFERENCE_ENDPOINT_BEACON = "endPointBeacon";
+	
+	public static final String PREFERENCE_ENDPOINT_BEACON_POST_OOBE = "endPointBeaconPostOOBE";
+	
+	public static final String PREFERENCE_REGISTRATION_SENT = "registrationSent";
+	
+	public static final String PREFERENCE_BEACON_SENT = "beaconSent";
+	
+	public static final String PREFERENCE_BEACON_POST_OOBE_SENT = "beaconPostOOBESent";
+	
+	public static final String PREFERENCE_OTA_SENT = "otaSent";
+	
+	public static final String PREFERENCE_CURRENT_ATTEMPT = "currentAttempt";
+	
+	public static final String PREFERENCE_HOW_MANY_TIMES_RAN = "numberOfTimesItRan";
+	
+	public static final String PREFERENCE_PREVENT_PREFILL = "preventPrefill";
+	
+	public static final String PREFERENCE_RUNNING_DURING_OOBE = "runningDuringOOBE";
+	
+	public static final String PREFERENCE_CARRIERIQ_INSTALLED = "carrierIQInstalled";
+	
+	public static final String PREFERENCE_NOTIFICATION_TITLE = "notificationTitle";
+	
+	public static final String PREFERENCE_NOTIFICATION_TEXT = "notificationText";
+	
+	public static final String PREFERENCE_NOTIFICATION_LAST_DATE_SCHEDULED = "lastDateNotificationScheduled";
+	
+	public static final String PREFERENCE_AVOID_DISABLING_ACTIVITY = "avoidDisablingActivity";
+	
+	public static final String PREFERENCE_QA_SERIAL_NUMBER = "qaSerialNumber";
+	
+	public static final String PREFERENCE_QA_MODEL_NUMBER = "qaModelNumber";
+	
+	public static final String PREFERENCE_QA_OTA_REGISTRATION_ENDPOINT = "qaEndPointOTARegistration";
+	
+	public static final String PREFERENCE_QA_OTA_QUERY_ENDPOINT = "qaEndPointOTAQuery";
+	
+	public static final String PREFERENCE_QA_METRICS_MISC_VERSION = "qaMetricsVersion";
+	
+	public static final int INTERVAL_NOTIFICATION = 168;
+	
+	//public static final int[] NUMBER_OF_HOURS_TO_TRY = {8, 16, 24, 32, 44};
+	public static final int[] NUMBER_OF_HOURS_TO_TRY = {1, 4, 8, 16, 32};
+	
+	public static final String FILE_NAME_REQUEST_METRICS = "metrics";
+	
+	public static final String EXTRA_TOUCHPOINT_UI = "UI";
+
+	public static final String PREFERENCE_FIRST_TIME_APP_RUN = "firstTimeAppRan";
+	
+	public static final String HPOOBE = "hp.oobe";
+
+	public static final String HPOOBE_ENDPOINT ="countryCode";
+	
+	public static final int TAG_DROPBOX = 11; 
+	public static final String TAG_3PART_NONE = "255"; 
+	public static final String DROPBOX = "DropBox"; 
+	public static final String METRICS = "Metrics"; 
+	public static final String HPLAUNCHER = "launcher"; 
+	public static final String ISCOLSE = "isclose"; 
+}

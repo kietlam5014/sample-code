@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="ja" xml:lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						よりよいデバイス体験を提供するという HP のコミットメントの一部として、本デバイスには診断ソフトウェアが搭載されています。  このソフトウェアは匿名の診断データ (デバイスハードウェアおよびソフトウェア情報、ネットワーク構成と状態、およびアプリケーションの使用状況) を収集します。 この情報は当社の製品およびサービス提供の改善目的でのみ使用されます。  診断データはデバイスと関連付けられており、ユーザーの特定は行われません。 匿名データは診断ソフトウェアプロバイダーとのみ共有されます。 データアップロードセッションは携帯電話または WiFi ネットワークを通じて行われ、HP セキュリティ基準に従います。  携帯電話ネットワークを通じて診断プロバイダーに送信されるデータの量は最小限であり、携帯電話会社からのデータ割り当てに悪影響を与えるものではありません。 この診断機能を無効化したい場合は、「設定」を開いてください。
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

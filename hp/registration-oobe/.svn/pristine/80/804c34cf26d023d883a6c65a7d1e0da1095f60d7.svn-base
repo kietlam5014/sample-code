@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="ca" xml:lang="ca">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Com a part del comprimís d'HP per entregar una millor experiència amb els dispositius, aquest dispositiu està equipat amb programari de diagnòstic.  Aquest programari recull les dades de diagnòstic anònimes, inclosa la informació del programari y del maquinari del dispositiu, l'estat i la configuració de la xarxa i l'ús de les aplicacions. Aquesta informació s'utilitza per millorar la nostra oferta de serveis i productes.  Les dades de diagnòstic estan vinculades al dispositiu i no diferencien els usuaris. Les dades anònimes només es comparteixen amb el proveïdor de programari de diagnòstic. Les sessions de càrrega de dades es poden produir a través d'una xarxa sense fil o mòbil i són compatibles amb els estàndards d'HP Security.  La quantitat de dades enviades al proveïdor de diagnòstic a través d'una xarxa mòbil és mínima i no hauria de tenir cap impacte sobre la cobertura de l'operador mòbil. Si voleu inhabilitar aquestes funcions de diagnòstic, aneu a Configuració.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

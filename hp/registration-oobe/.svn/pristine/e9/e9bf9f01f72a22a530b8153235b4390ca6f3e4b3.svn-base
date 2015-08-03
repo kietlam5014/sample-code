@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						Dans le cadre de l'engagement de HP à offrir une meilleure expérience de ses périphériques, ce périphérique est équipé d'un logiciel de diagnostic.  Ce logiciel recueille des données de diagnostic anonymes, y compris des informations sur le matériel et les logiciels du périphérique, la configuration et le statut du réseau, ainsi que l'utilisation des applications. Ces informations sont utilisées pour améliorer nos offres de produits et de services.  Les données de diagnostic sont associées à ce périphérique et aucune distinction n'est faite entre les utilisateurs. Les données anonymes sont partagées uniquement avec le fournisseur du logiciel de diagnostic. Les sessions de téléchargement de données peuvent être ouvertes sur un réseau cellulaire ou un réseau Wi-Fi conformément aux normes de sécurité de HP.  La quantité de données envoyées au fournisseur de diagnostic via le réseau cellulaire est minime et ne devrait avoir aucune incidence sur l'allocation de données par l'opérateur de téléphonie mobile. Si vous souhaitez désactiver ces fonctionnalités de diagnostic, accédez à la section Paramètres.
+	
+	</body>
+</html>

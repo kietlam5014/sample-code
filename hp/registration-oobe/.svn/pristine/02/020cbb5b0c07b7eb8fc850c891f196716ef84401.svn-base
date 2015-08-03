@@ -1,0 +1,123 @@
+package hp.oobe;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.util.Log;
+
+public class RegistrationScheduleReceiver extends BroadcastReceiver {
+
+	private SharedPreferences preferences = null;
+	private Context context = null;
+	
+	private void openSharedPreferences() {
+		
+		preferences = this.context.getSharedPreferences(Consts.PREFERENCES, 0);
+		
+	}
+	
+	/**
+	 * Schedules the logic responsible for sending the data to the backend.
+	 * 
+	 *   @param date Next date that has to be triggered. 
+	 */
+	private void scheduleService(long date) {
+		
+		try {
+			// Scheduling the BroadcastReceiver 
+			Intent myIntent = new Intent(this.context, RegistrationScheduleReceiver.class);
+			PendingIntent pendingIntent = null;
+			pendingIntent = PendingIntent.getBroadcast(this.context, 0, myIntent, 0);
+			
+			AlarmManager alarmManager = (AlarmManager)this.context.getSystemService(Context.ALARM_SERVICE);
+			
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTimeInMillis(date);
+			
+			alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+
+			Log.d(Consts.TAG, "Receiver for Service was scheduled to run on " + calendar.getTime().toString());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private long getDateToBeScheduled(long firstTimeRan, int currentAttempt) {
+	
+		Calendar calendar;
+		
+			int currentHoursToBeAdded = Consts.NUMBER_OF_HOURS_TO_TRY[currentAttempt];
+			
+			calendar = Calendar.getInstance();
+			calendar.setTimeInMillis(firstTimeRan);
+			calendar.add(Calendar.HOUR, currentHoursToBeAdded);
+	
+		
+		return calendar.getTimeInMillis();
+		
+	}
+	
+	//=============================================================================================
+	// PUBLIC MEMBERS
+	//=============================================================================================
+	
+	@Override
+	public void onReceive(Context context, Intent intent) {
+		//android.os.Debug.waitForDebugger();	
+	
+		this.context = context;
+		
+		 
+		try {
+			Log.d(Consts.TAG, "RegistrationScheduleReceiver--->HEY I WOKE UP");
+			ComponentName result = null; 
+			Intent intentservice = new Intent(this.context, hp.oobe.service.Registration.class);
+
+			if (intent.getAction() != null && intent.getAction().equals("android.intent.action.BOOT_COMPLETED")) {
+				/*
+				String firstTimeAppRan = preferences.getString(Consts.PREFERENCE_FIRST_TIME_APP_RUN, null);
+				int currentAttempt = preferences.getInt(Consts.PREFERENCE_CURRENT_ATTEMPT, -1);
+				
+				Log.d(Consts.TAG, "RegistrationScheduleReceiver woke up. FirstTimeAppRan = " + 
+						firstTimeAppRan + ";currentAttempt = " + currentAttempt);
+				
+				if (currentAttempt != -1) {
+					
+					long date = getDateToBeScheduled(Long.parseLong(firstTimeAppRan), currentAttempt);
+					scheduleService(date);
+					
+				} else {
+					
+					// TODO CHECK OTHER CASES.
+					Log.d(Consts.TAG, "The currentAtrtempt is not a valid number");
+					
+				}
+				*/
+				Log.d(Consts.TAG, "RegistrationScheduleReceiver--->reset PREFERENCE_CURRENT_ATTEMPT");
+				intentservice.putExtra(Consts.EXTRA_TOUCHPOINT_UI, "yes");
+				
+			}
+//	intentservice.putExtra(Consts.EXTRA_TOUCHPOINT_UI, "yes");
+			result = this.context.startService(intentservice);
+			if (result == null) {
+				Log.d(Consts.TAG, "RegistrationScheduleReceiver The HP OOBE Service component is not available in the system.");
+			} else {
+				Log.d(Consts.TAG, "RegistrationScheduleReceiver HP OOBE Service component was started.");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	}
+	
+}

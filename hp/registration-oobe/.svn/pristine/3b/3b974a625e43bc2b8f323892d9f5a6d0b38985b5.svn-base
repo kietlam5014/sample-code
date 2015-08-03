@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="nl" xml:lang="nl">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Om de gebruikservaring te verbeteren heeft HP dit apparaat voorzien van diagnostische software.  Deze software verzamelt anonieme diagnostische gegevens, zoals informatie over de hardware en software, de netwerkconfiguratie en -status en het applicatiegebruik. Deze gegevens worden gebruikt om onze producten en diensten te verbeteren.  De diagnostische gegevens zijn gekoppeld aan het apparaat, niet aan individuele gebruikers. De anonieme gegevens worden alleen gedeeld met de leverancier van de diagnostische software. Het uploaden van data geschiedt via een mobiel netwerk of een WiFi-netwerk en vindt plaats conform de veiligheidsstandaarden van HP.  De hoeveelheid informatie die over het mobiele netwerk naar de leverancier van de diagnostische software wordt verzonden is minimaal en heeft geen impact op uw mobiele databundel. Indien u dat wenst kunt u naar Instellingen gaan en daar de diagnosefunctie uitschakelen.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

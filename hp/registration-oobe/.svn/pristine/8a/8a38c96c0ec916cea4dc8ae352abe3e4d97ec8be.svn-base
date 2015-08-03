@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="logo">80dp</dimen>
+    <dimen name="top">130dp</dimen>
+    <dimen name="margin">25dp</dimen>
+    <dimen name="backbuttom">160dp</dimen>
+     <dimen name="titlesize">48sp</dimen>
+</resources>

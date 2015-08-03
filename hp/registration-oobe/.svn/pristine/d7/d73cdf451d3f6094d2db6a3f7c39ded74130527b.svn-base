@@ -1,0 +1,387 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.util = hp.registration.util || {};
+
+hp.registration.util.Localization = function () {
+
+	/*
+	=============================================================================================== 
+	Private members
+	===============================================================================================
+	 */
+	var _cache = null, _currentEntity = null,
+    	RES_LOC_RESOURCE_FOLDER_PATH = 'content/translations/{0}/',
+    	RES_LOC_DEFAULT_RESOURCE_FOLDER_PATH = 'content/translations/',
+    	LOC_FILE_NAME = '{0}.json',
+    	LOC_HOMEREGION_FILE_NAME = '{0}.homeregion-{1}.json';
+
+	var _homeRegionRedirects = {
+	    "MX": ["AR", "CL", "UY", "PY", "BO", "PE", "EC", "CO", "VE", "GY", "SR"]
+	};
+	var xhr_ = null, _obj = null;
+
+	var _Helper = {
+		'sameOriginPolicyHappened': false // Flag to indicate if the 101 error happened, so we
+										  // show just one error message on the console with a
+										  // helper text of what to do.
+	}
+
+    /*
+     * Some country codes work as "mother" langauges for its variations. This method tries to get 
+     * the "mother" home region.
+	 *
+     *@input
+     *   inOriginalCountryCode: String. Two letter country code.
+     *
+     *@returns
+     *   String. Two letter country code. It returns either the mother langauge code or the 
+     *   inOriginalCountryCode if no mapping was found. 
+     */
+	function _getHomeRegion(inOriginalCountryCode) {
+	    inOriginalCountryCode = inOriginalCountryCode.toUpperCase();
+	    var _keys = Object.keys(_homeRegionRedirects);
+	    var _result = inOriginalCountryCode;
+
+	    for (var _i = 0, _len = _keys.length; _i < _len; _i++) {
+	        var _isItThere = _homeRegionRedirects[_keys[_i]].some(
+                    function (inItem) {
+                        return (inItem === inOriginalCountryCode);
+                    }
+                );
+
+	        if (_isItThere) {
+	            _result = _keys[_i];
+	            break;
+	        }
+	    }
+
+	    return _result;
+	};//#_getHomeRegion
+
+	/*
+     * Returns an array that contains each relative path where the application shouold look 
+     * for content. Index 0 is the most specific and as the index increases the relevance 
+     * decreases.
+     *
+     * @input
+     *  inContext: Object.
+     *                      { 
+     *                          "language": String, 
+     *                          "country": String
+     *                          "entities": Array 
+     *                      }
+     *
+     * @returns
+     *  Array. Array containing the relative path that should be looked at.
+     */
+    function _produceFallbacks(inContext) {
+        var _result = [],
+        	_language = inContext.language.replace('-', '_'),
+        	_country = _getHomeRegion(inContext.country),
+        	_entities = inContext['entities'];
+
+        /*
+         * Example of what is produced
+         * _locales/en_US/resources.homeregion-US.resjson
+         * _locales/en_US/resources.resjson
+         * _locales/en/resources.homeregion-US.resjson
+         * _locales/en/resources.resjson
+         * _laceles/resources.homeregion-US.resjson
+         * _lacales/resources.resjson
+         */
+        for (var _i=0, _len=_entities.length;_i<_len;_i++) {
+            if (_language.indexOf('_') !== -1) {
+                if (_country.toUpperCase() !== inContext.country.toUpperCase()) {
+                    _result.push(RES_LOC_RESOURCE_FOLDER_PATH.replace('{0}', _language) +
+	                    LOC_HOMEREGION_FILE_NAME.replace('{0}', _entities[_i]).replace('{1}',
+                        inContext.country.toUpperCase()));
+                }
+
+	            _result.push(RES_LOC_RESOURCE_FOLDER_PATH.replace('{0}',_language) + 
+	                LOC_HOMEREGION_FILE_NAME.replace('{0}', _entities[_i]).replace('{1}', _country));
+
+	            _result.push(RES_LOC_RESOURCE_FOLDER_PATH.replace('{0}',_language) + 
+	                LOC_FILE_NAME.replace('{0}', _entities[_i]));
+        	}
+            
+            if (_country.toUpperCase() !== inContext.country.toUpperCase()) {
+                _result.push(RES_LOC_RESOURCE_FOLDER_PATH.replace('{0}', _language.substring(0, 2)) +
+                LOC_HOMEREGION_FILE_NAME.replace('{0}', _entities[_i]).replace('{1}',
+                inContext.country.toUpperCase()));
+            }
+
+        	_result.push(RES_LOC_RESOURCE_FOLDER_PATH.replace('{0}',_language.substring(0,2)) + 
+            LOC_HOMEREGION_FILE_NAME.replace('{0}', _entities[_i]).replace('{1}', _country));
+
+        	_result.push(RES_LOC_RESOURCE_FOLDER_PATH.replace('{0}',_language.substring(0,2)) + 
+            LOC_FILE_NAME.replace('{0}', _entities[_i]));
+            
+        	if (_country.toUpperCase() !== inContext.country.toUpperCase()) {
+        	    _result.push(RES_LOC_DEFAULT_RESOURCE_FOLDER_PATH.replace('{0}', _language) +
+                LOC_HOMEREGION_FILE_NAME.replace('{0}', _entities[_i]).replace('{1}',
+                inContext.country.toUpperCase()));
+        	}
+
+            _result.push(RES_LOC_DEFAULT_RESOURCE_FOLDER_PATH.replace('{0}',_language) + 
+                LOC_HOMEREGION_FILE_NAME.replace('{0}', _entities[_i]).replace('{1}', _country));
+
+            _result.push(RES_LOC_DEFAULT_RESOURCE_FOLDER_PATH.replace('{0}',_language) + 
+                LOC_FILE_NAME.replace('{0}', _entities[_i]));
+
+            /*
+             * The case below is the final fallback. If the language is not supported then English 
+             * should be the default language.
+             */
+            if (_language.substring(0,2) !== 'en') {
+                _result.push(RES_LOC_RESOURCE_FOLDER_PATH.replace('{0}','en') + 
+                LOC_FILE_NAME.replace('{0}', _entities[_i]));
+            }
+        }
+
+        //console.dir(_result);
+        return _result;
+    }//#_produceFallbacks
+
+    /*
+     * Merge two objects by checking if the property from the new localization object 
+     * is not in the collection. In this case, the property is added. If exists it's 
+     * ignored.
+     *
+     *@input
+     *  inObject: Object. JSON object with the translation
+     *
+     *@returns
+     *  null
+     */
+    function _merge(inObject) {
+    	if (_cache === null) {
+    		_cache = inObject;
+    	} else {
+    		var _keys = Object.keys(inObject);
+    		for (var _i=0, _len = _keys.length;_i < _len;_i++) {
+    			if (_keys[_i] in _cache) {
+    				// DO NOTHING
+    			} else {
+    				_cache[_keys[_i]] = inObject[_keys[_i]];
+    			}
+    		}
+    	}
+
+        return null;
+    }//#_merge
+
+	/*
+	=============================================================================================== 
+	Public members
+	===============================================================================================
+	 */
+
+	this.Helper = {
+		'alwaysReturnID': false
+	}
+
+	 /*
+	  *Load the resources.
+	  *
+	  *@input
+	  *	inContainer: Object.
+	  *			   {
+	  *					"language",
+	  *					"country",
+      *                  "callback"
+	  *			   }
+      *
+      *@returns
+      * null
+	  */
+	this.loadResource = function(inContainer) {
+
+        RES_LOC_RESOURCE_FOLDER_PATH = 'content/translations/{0}/',
+        RES_LOC_DEFAULT_RESOURCE_FOLDER_PATH = 'content/translations/',
+        LOC_FILE_NAME = '{0}.json?3',
+        LOC_HOMEREGION_FILE_NAME = '{0}.homeregion-{1}.json?3';
+
+        inContainer['entities'] = [
+                                    'strings', 
+                                    'country', 
+                                    'properties',
+                                    'retailers'
+                                  ];
+
+	    var _fallbacks = _produceFallbacks(inContainer);
+
+	    var _total = _fallbacks.length,
+	        _current = 0;
+
+	    _cache = null; // Cleaning the cache to avoid buggy merges.
+
+	    function _processAfterResponse() {
+	        if (_current < _total) {
+	            _fetchTranslation(_fallbacks[_current]);
+	        } else {
+
+	            /*
+                The logic below treats two scenarios. When the method is called from the app's
+                start up; in this case the logic has to raise an event. The method can also be 
+                called later (when the user changes country); in this case a fallback method is 
+                expected.
+                */
+	            if ('callback' in inContainer) {
+	                inContainer['callback']();
+	            } else {
+	                var _event = document.createEvent('CustomEvent');
+
+	                _event.initCustomEvent('milestonedone', true, true,
+                        { "milestone": "localization" });
+	                window.dispatchEvent(_event);
+	            }
+	        }
+	    }//#_processAfterResponse
+
+	    function _fetchTranslation(inUrl) {
+	        var _xhr = new XMLHttpRequest();
+	        _xhr.open('GET', inUrl, true);
+
+	        _xhr.onload = function () {
+	            _current++;
+
+	            if (_xhr.readyState === 4) {
+	                _obj = JSON.parse(_xhr.response);
+	                _merge(_obj);
+	            }
+
+	            _processAfterResponse();
+	        }//#onload
+	        _xhr.onerror = function (inError) {
+	            _current++;
+	            _processAfterResponse();
+	        }//#onerror
+	        
+	        try {
+	            _xhr.send(null);
+	        } catch (inException) {
+                if (inException.code == '101' && !(_Helper.sameOriginPolicyHappened)) {
+                	_Helper.sameOriginPolicyHappened = true;
+                	console.log('It seems that the user agent is enforcing the same origin ' +
+                		'policy. Close Google Chrome and run it using ' + 
+                		'--args --disable-web-security');
+                }
+	        }
+	    }//#_fetchTranslation
+
+	    _fetchTranslation(_fallbacks[_current]);
+
+        return null;
+	};//#loadResource
+
+	
+	 /*
+	  *Load a specific resource.
+	  *
+	  *@input
+	  *	inContainer: Object.
+	  *			   {
+	  *					"language",
+	  *					"country",
+      *                 "callback",
+      *					"entity"
+	  *			   }
+      *
+      *@returns
+      * null
+	  */
+    this.loadSpecificResource = function(inContainer) {
+		RES_LOC_RESOURCE_FOLDER_PATH = 'content/translations/{0}/',
+        RES_LOC_DEFAULT_RESOURCE_FOLDER_PATH = 'content/translations/',
+        LOC_FILE_NAME = '{0}.htm',
+        LOC_HOMEREGION_FILE_NAME = '{0}.homeregion-{1}.htm';
+
+        inContainer['entities'] = [
+                                    inContainer['entity']
+                                  ];
+                                  
+        var _fallbacks = _produceFallbacks(inContainer), 
+        	_current = 0,
+        	_result = null; 
+        	
+        var _total = _fallbacks.length-1;
+
+	    function _processAfterResponse() {
+	        if (_result === null) {
+	        	if (_current > _total) {
+	        		inContainer['callback'](null);
+	        	} else {
+	            	_fetchTranslation(_fallbacks[_current]);
+	            }
+	        } else {
+	            if ('callback' in inContainer) {
+	                inContainer['callback'](_result);
+	            } 
+	        }
+	    }//#_processAfterResponse
+
+	    function _fetchTranslation(inUrl) {
+	        var _xhr = new XMLHttpRequest();
+	        _xhr.open('GET', inUrl, true);
+
+	        _xhr.onload = function () {
+	            _current++;
+
+	            if (_xhr.readyState === 4) {
+	                _result = _xhr.response;
+	            }
+
+	            _processAfterResponse();
+	        }//#onload
+	        _xhr.onerror = function (inError) {
+	            _current++;
+	            _processAfterResponse();
+	        }//#onerror
+	        
+	        try {
+	            _xhr.send(null);
+	        } catch (inException) {
+                if (inException.code == '101' && !(_Helper.sameOriginPolicyHappened)) {
+                	_Helper.sameOriginPolicyHappened = true;
+                	console.log('It seems that the user agent is enforcing the same origin ' +
+                		'policy. Close Google Chrome and run it using ' + 
+                		'--args --disable-web-security');
+                }
+	        }
+	    }//#_fetchTranslation
+
+	    _fetchTranslation(_fallbacks[_current]);
+
+        return null;
+    };//#loadSpecificResource
+
+    /*
+     *Get the content based on ID. The loadResource has to be called at least once
+     *
+     *@input
+     * inKey: String. ID of the content.
+     *
+     *@returns
+     *  String. If the key was found the content is returned. 
+     *	Null. If the key was not found.
+     */
+	this.getContent = function(inKey) {
+	
+		/*
+		 * The IF below is for internal use only. It shows on the UI each ID and where they are 
+		 * located.
+		 */
+		if (this.Helper.alwaysReturnID) {
+			inKey = inKey.replace('hp.oobe.', '');
+			return inKey;
+		}
+	
+		if (_cache === null) {
+			return null;
+		} else {
+			return _cache[inKey];
+		}
+	}//#getContent
+
+	return this;
+}.apply({}, null);

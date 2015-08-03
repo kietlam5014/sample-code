@@ -1,0 +1,33 @@
+package hp.oobe.tasks;
+
+public interface IOOBETask {
+
+	/**
+	 * Main logic for the task.
+	 */
+	public void run();
+	
+	/**
+	 * Identifier of the task.
+	 * 
+	 * @return
+	 * 	Name of the the task. 
+	 */
+	public String getName();
+	
+	/**
+	 * Get the status of the task.
+	 * 
+	 * @return
+	 * 	true if the task finished successfully. false, otherwise.
+	 */
+	public boolean getStatus();
+	
+	/**
+	 * Set the status of the task.
+	 * 
+	 * @param status
+	 */
+	public void setStatus(boolean status);
+	
+}

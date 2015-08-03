@@ -1,0 +1,96 @@
+
+[lang="ru"] BODY.landscape a, [lang="ru"] BODY.landscape .regularText,
+[lang="de"] BODY.landscape a, [lang="de"] BODY.landscape .regularText,
+[lang="tl"] BODY.landscape a, [lang="tl"] BODY.landscape .regularText,
+[lang="hu"] BODY.landscape a, [lang="hu"] BODY.landscape .regularText, 
+[lang="ro"] BODY.landscape a, [lang="ro"] BODY.landscape .regularText,
+[lang="pt"] BODY.landscape a, [lang="pt"] BODY.landscape .regularText,
+[lang="uk"] BODY.landscape a, [lang="uk"] BODY.landscape .regularText {
+    font-size: 16px;
+} 
+
+[lang="el"] BODY.landscape a, [lang="el"] BODY.landscape .regularText,
+[lang="pl"] BODY.landscape a, [lang="pl"] BODY.landscape .regularText,
+[lang="sk"] BODY.landscape a, [lang="sk"] BODY.landscape .regularText {
+    font-size: 15px;   
+}
+
+[lang="ru"] BODY.landscape a, [lang="ru"] BODY.landscape .regularText {
+    font-size: 14px;   
+}
+
+/*General========================================================================================*/
+.registrationFormLine {
+    margin-bottom: 10px !important;
+}
+
+.base-field-style, .list-field-style,
+.base-field-style:hover, .base-field-style:focus {
+    padding: 0 10px 10px 10px;
+}
+
+/*General (Portrait)=============================================================================*/
+BODY.portrait #consentSection {
+    display: -webkit-box;   
+}
+
+/*Popup (General)================================================================================*/
+#popupNote {
+    height: 5%;
+
+}
+
+#popupTitle {
+    height: 1%;
+}
+
+.popupContentForContentBig {
+    height: 85%;
+}
+
+.popupContentForContentSmall {
+    height: 55%;   
+}
+
+#popupButtonForContent {
+    height: 1%;
+}
+
+#popupNote {
+    margin-bottom: 10px;
+}
+
+/*Popup (landscape)===============================================================================*/
+BODY.landscape #popupWindowForContent {
+    width: 70%;
+}
+
+BODY.landscape #popupBodyContent {
+    min-height: 140px;
+}
+
+BODY.landscape #consentContent {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+}
+
+BODY.landscape #popupWindowForContent {
+    padding: 50px 150px;
+}
+
+BODY.landscape #popupWindow {
+    padding: 90px 150px;
+}
+
+/*Popup (portrait)================================================================================*/
+BODY.portrait #popupWindowForContent {
+    padding: 50px 40px;
+}
+
+BODY.portrait #popupWindow {
+    padding: 90px 60px;
+}
+
+IFRAME {
+    width: 100% !important;
+}

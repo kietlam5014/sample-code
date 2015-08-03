@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>HP Privacy Statement Worldwide</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1"/>
+        <link rel="stylesheet" type="text/css" href="content/privacyrights/css/index.css"/>
+
+    </head>
+<body>
+<div id="page"><div id="header" class=""><img src="content/privacyrights/images/logo.gif" alt="HP"></div>
+
+
+<div id="content" class="">
+
+
+
+<h1>HP Privacy Rights Worldwide</h1>
+
+
+
+<ul id="linksNeutral" class="links neutral">
+	<li 
+         class="collapsed region firstRegion">Africa</li>
+        <ul id="page1Dark" class="links dark itemsOfRegion">
+        	
+            <li   onclick="window.parent.getPageContent('content/privacyrights/rights_africa_en.htm');">Africa-English</li>
+        	
+            <li   onclick="window.parent.getPageContent('content/privacyrights/rights_africa_fr.htm');">Africa-French </li>
+            <li   onclick="window.parent.getPageContent('content/privacyrights/rights_SA_en.htm');">South Africa-English</li>
+        </ul>
+    </li>
+	<li class="collapsed region">Americas</li>
+        <ul id="page2Dark" class="links dark itemsOfRegion">
+            <li   onclick="window.parent.getPageContent('content/privacyrights/rights_AR_es.htm');">Argentina </li>
+        </ul>
+    </li>
+    <li 
+        class="collapsed region">Europe</li>
+        <ul id="page4Dark" class="links dark itemsOfRegion">
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_BY_ru.htm');">Belarus-Russian </li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_BE_nl.htm');">Belgium-Dutch</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_BE_fr.htm');">Belgium-French</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_BG_bg.htm');">Bulgaria-Bulgarian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_HR_hr.htm');">Croatia-Croatian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_CY_el.htm');">Cyprus-Greek</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_CZ_cs.htm');">Czech Republic-Czech</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_DK_da.htm');">Denmark-Danish</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_EE_et.htm');">Estonia-Estonian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_FI_fi.htm');">Finland-Finnish</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_FR_fr.htm');">France-French</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_DE_de.htm');">Germany-German</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_GR_el.htm');">Greece-Greek</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_HU_hu.htm');">Hungary-Hungarian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_IE_en.htm');">Ireland-English</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_IT_it.htm');">Italy-Italian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_KZ_ru.htm');">Kazakhstan-Russian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_LV_lv.htm');">Latvia-Latvian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_LT_lt.htm');">Lithuania-Lithuanian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_LU_fr.htm');">Luxembourg-French</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_ME_sr.htm');">Montenegro-Serbian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_NL_nl.htm');">Netherlands-Dutch</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_NO_no.htm');">Norway-Norwegian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_PL_pl.htm');">Poland-Polish</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_PT_pt.htm');">Portugal-Portuguese</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_RO_ro.htm');">Romania-Romanian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_RU_ru.htm');">Russia-Russian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_RS_sr.htm');">Serbia-Serbian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_SK_sk.htm');">Slovak Republic-Slovak</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_SI_sl.htm');">Slovenia-Slovenian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_ES_es.htm');">Spain-Spanish</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_SE_sv.htm');">Sweden-Swedish</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_CH_de.htm');">Switzerland-German</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_CH_fr.htm');">Switzerland-French</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_TR_tr.htm');">Turkey-Turkish</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_UA_ru.htm');">Ukraine-Russian</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_GB_en.htm');">United Kingdom-English</li>
+        </ul>
+    </li>	
+    <li 
+       class="collapsed region">Middle East</li>
+        <ul id="page5Dark" class="links dark itemsOfRegion">
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_IL_he.htm');">Israel-Hebrew</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_MIDDLEEAST_en.htm');">Middle East-English</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_MIDDLEEAST_en.htm');">Saudi Arabia-English</li>
+            <li  onclick="window.parent.getPageContent('content/privacyrights/rights_MIDDLEEAST_en.htm');">United Arab Emirates-English</li>
+        </ul>
+    </li>	
+</ul>
+
+
+
+		 
+</div>
+
+
+</body></html>	       
+	
+

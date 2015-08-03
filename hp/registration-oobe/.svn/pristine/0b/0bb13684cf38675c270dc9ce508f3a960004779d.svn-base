@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						As part of HP's commitment to delivering a better device experience, this device is equipped with diagnostic software.  This software enables collection of anonymous diagnostic data such as device hardware & software information, network configuration & status, and application usage, so that we can improve our product and service offerings.  The diagnostic data is tied to the device, and will not differentiate between each user who may use the device. Anonymous data is shared with the diagnostic software provider. The data upload sessions may occur over a cellular or wifi network and are designed to be consistent with HP security standards and with negligible impact on data usage fees. If you would like to disable such diagnostic features, please go to Settings.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

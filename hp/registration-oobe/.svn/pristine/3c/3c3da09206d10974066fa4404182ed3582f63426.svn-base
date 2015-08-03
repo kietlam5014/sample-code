@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						Cílem společnosti HP je poskytování stále lepších zařízení, a proto je toto zařízení vybaveno diagnostickým softwarem.  Tento software shromažďuje anonymní diagnostické údaje, jako jsou informace o hardwaru a softwaru zařízení, konfigurace a stav sítě nebo používání aplikací. Tyto údaje slouží ke zlepšování naší nabídky produktů a služeb.  Diagnostické údaje jsou vázány na konkrétní zařízení a nelze podle nich identifikovat jednotlivé uživatele. Anonymní údaje jsou sdíleny pouze s poskytovatelem diagnostického softwaru. Data se odesílají prostřednictvím mobilní sítě nebo sítě Wi-Fi a při odesílání se uplatňují bezpečnostní standardy společnosti HP.  Množství dat odeslaných poskytovateli diagnostických služeb prostřednictvím mobilní sítě je minimální a nemělo by mít velký vliv na využití datového limitu u mobilního operátora. Chcete-li tyto diagnostické funkce zakázat, přejděte do nabídky Nastavení.
+
+	</body>
+</html>

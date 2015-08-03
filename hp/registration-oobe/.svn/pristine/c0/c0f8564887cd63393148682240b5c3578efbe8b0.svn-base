@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="hu" xml:lang="hu">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Aziránti elkötelezettségünk jeléül, hogy az HP-nél még jobb szolgáltatást kínáljunk, ezt a készüléket diagnosztikai szoftverrel szereltük fel.  A szoftver anonim diagnosztikai adatokat gyűjt, beleértve a hardver-, szoftver-, hálózati konfigurációs és hálózati állapotra vonatkozó, valamint alkalmazás-használattal kapcsolatos információkat. Az adatokat termékeink és szolgáltatásaink fejlesztésére használjuk fel.  A diagnosztikai adatok készülékhez kötöttek, nem tesznek különbséget a felhasználók között. Az anonim információkhoz csak a diagnosztikai szoftver működtetője férhet hozzá. Az adatfeltöltési munkamenetek mobiltelefon- vagy vezeték nélküli hálózaton keresztül is történhetnek, és megfelelnek az HP biztonsági szabványainak.  A diagnosztikai szoftver működtetője számára mobiltelefon hálózaton keresztül küldött adatok mennyisége elenyésző, ezért nem befolyásolja negatív módon a mobiltelefon-szolgáltató által sugárzott adatok kibocsátását. A diagnosztikai funkciót a Beállítások menüben kapcsolhatja ki.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						Som ett led i HPs strävan att ständigt ge en bättre användarupplevelse är denna enhet utrustad med diagnostisk programvara.  Programvaran samlar in anonyma diagnostiska data, bland annat information om enhetens maskin- och programvara, nätverkskonfiguration och status samt programanvändning. Informationen används för att förbättra våra produkter och tjänster.  Den diagnostiska informationen är kopplad till enheten och gör inte åtskillnad mellan användare. Anonyma data vidarebefordras endast till leverantören av den diagnostiska programvaran. Överföringen av informationen kan ske via mobil- eller Wi-Fi-nätverk och uppfyller HPs säkerhetsbestämmelser.  Mängden data som skickas via mobilnätverket är minimal och bör inte påverka datatilldelningen från mobiloperatören. Du kan inaktivera diagnostikfunktionen när som helst via Inställningar.
+
+	</body>
+</html>

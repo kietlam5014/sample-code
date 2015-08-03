@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="sr" xml:lang="sr">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Kao deo HP-ove posvećenosti pružanju boljeg iskustva uređaja, ovaj uređaj je opremljen dijagnostičkim softverom.  Ovaj softver prikuplja anonimne dijagnostičke podatke, uključujući informacije o hardveru i softveru uređaja, konfiguraciju i status mreže i korišćenje aplikacije. Ove informacije se koriste za poboljšanje naše ponude proizvoda i usluga.  Dijagnostički podaci vezuju se za uređaj, a ne razlikuju se između korisnika. Anonimni podaci se dele samo sa dobavljačem dijagnostičkog softvera. Sesije otpremanja podataka mogu se odvijati preko mobilne ili WiFi mreže i usaglašene su sa standardima HP bezbednosti.  Količina podataka koja se šalje dobavljaču dijagnostike preko mobilne mreže je minimalna i ne bi trebalo negativno da utiče na dodelu podataka od mobilnog operatera. Ako budete želeli da onemogućite takve dijagnostičke funkcije, idite u „Postavke“.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

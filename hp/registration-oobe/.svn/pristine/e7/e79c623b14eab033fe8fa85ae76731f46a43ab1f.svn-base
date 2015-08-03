@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="fi" xml:lang="fi">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						HP on sitoutunut parantamaan laitteiden käyttöelämystä, ja osana tätä pyrkimystä laite on varustettu vianmääritysohjelmistolla.  Ohjelmisto kerää anonyymeja vianmääritystietoja, esimerkiksi tietoja laitteistosta ja ohjelmistosta, verkkomäärityksistä, verkon tilasta ja sovellusten käytöstä. Näitä tietoja käytetään tuotteiden ja palveluiden kehittämiseen.  Vianmääritystiedot ovat laitekohtaisia eikä niitä voi yhdistää käyttäjiin. Anonyymit vianmääritystiedot jaetaan vain vianmääritysohjelmiston toimittajan kanssa. HP:n tietoturvastandardeja vastaavat tiedonsiirtoistunnot voidaan toteuttaa matkapuhelin- tai Wi-Fi-verkon välityksellä.  Vianmäärityspalveluiden tarjoajalle lähetetään matkapuhelinverkon kautta vain vähän tietoja, joten tämän ei pitäisi vaikuttaa negatiivisesti matkapuhelinoperaattorin määrittämään datakiintiöön. Jos haluat poistaa vianmääritystoiminnot käytöstä, voit tehdä tämän Asetukset-kohdassa.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

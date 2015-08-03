@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="ro" xml:lang="ro">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Ca parte a angajamentului companiei HP de a oferi o mai bună experienţă a utilizatorului cu dispozitivul, acest dispozitiv este echipat cu software de diagnosticare.  Acest software colectează date de diagnosticare anonime, inclusiv informaţii despre hardware-ul şi software-ul dispozitivului, despre configuraţia şi starea reţelei şi despre utilizarea aplicaţiilor. Aceste informaţii sunt utilizate pentru a îmbunătăţi ofertele noastre de produse şi servicii.  Datele de diagnosticare se referă strict la dispozitiv şi nu vor fi diferenţiate în funcţie de utilizatori. Datele anonime sunt partajate numai cu furnizorul software-ului de diagnosticare. Sesiunile de încărcare de date pot fi activate printr-o reţea de telefonie mobilă sau WiFi şi sunt în conformitate cu standardele de securitate HP.  Volumul de date trimis către furnizorul de diagnostice prin reţeaua de telefonie mobilă este minim şi nu ar trebui să influenţeze negativ alocarea de date de la operatorul mobil. Dacă doriţi să dezactivaţi aceste caracteristici de diagnosticare, mergeţi la Setări.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

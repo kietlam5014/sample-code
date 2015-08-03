@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="sl" xml:lang="sl">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Ta naprava je kot del HP-jeve obveze za nudenje boljše izkušnje z napravami opremljena z diagnostično programsko opremo.  Ta programska oprema zbira diagnostične podatke, vključno z informacijami o strojni in programski opremi naprave, konfiguracijami in stanji omrežja ter uporabo programov. S pomočjo teh informacij izboljšujemo naše ponudbe izdelkov in storitev.  Diagnostični podatki so povezani z napravo in jih med uporabniki ne razločujemo. Anonimne podatke delimo samo s ponudnikom diagnostične programske opreme. Prek mobilnega omrežja ali omrežja Wi-Fi se lahko izvedejo seje prenosa podatkov, ki ustrezajo HP-jevim varnostnim standardom.  Količina podatkov, ki so prek mobilnega omrežja poslani ponudniku diagnostične programske opreme, je minimalna, in ne bi smela vplivati na podatke, ki jih dodeli mobilni operater. Če želite onemogočite takšne diagnostične funkcije, lahko to naredite v »Nastavitvah«.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

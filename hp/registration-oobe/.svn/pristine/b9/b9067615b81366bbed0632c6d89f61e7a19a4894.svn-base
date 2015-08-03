@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_home">Reģistrēt</string>
+    <string name="notification_title">Reģistrēt</string>
+    <string name="notification_text">Lūdzu, reģistrējiet šo ierīci, lai iegūtu personalizētu pieeju un ātrāk saņemtu palīdzību.</string>
+    <string name="app_name">HP OOBE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+<string name="mybutton">Settings</string>
+<string name="read_provider_description">Access registration data entered during first boot.</string>
+</resources>

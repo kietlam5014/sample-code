@@ -1,0 +1,35 @@
+package hp.oobe;
+
+import java.util.HashMap;
+
+import android.app.Application;
+
+public class HPoobeApp extends Application {
+
+	private static HashMap<String,String> mContent= new HashMap<String,String>();
+	static Object lock= new Object();
+	@Override
+	public void onCreate() {
+		super.onCreate();
+
+	}
+		
+	public static String getContent(String Key) {
+		synchronized (lock) {
+			return mContent.get(Key);
+		}
+	}
+
+	public static void setContent(String Key,String Content) {
+		synchronized (lock) {
+			mContent.put(Key, Content);
+		}
+	}
+
+	public static void cleanContent()
+	{
+		synchronized (lock) {
+			mContent.clear();
+		}
+	}
+}

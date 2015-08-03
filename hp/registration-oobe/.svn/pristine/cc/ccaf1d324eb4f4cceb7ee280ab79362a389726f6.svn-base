@@ -1,0 +1,75 @@
+package hp.oobe.internals.output;
+
+import hp.oobe.utilities.Cryptography;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import android.content.ContentResolver;
+import android.provider.Settings.Secure;
+import android.util.Log;
+
+public abstract class Output
+{
+	public static final String TAG = "HP_OOBE_INTERNALS"; 	
+	
+	protected String title;
+	protected ContentResolver contentResolver;
+	
+	public abstract String readOutput();
+		
+	public Output(ContentResolver contentResolver)
+	{
+		this.contentResolver = contentResolver;		
+	}	
+	
+	public String getTitle()
+	{
+		return title;
+	}	
+	
+	protected String readFile(String filePath)
+	{
+		return readFile(filePath, false);
+	}
+	
+	protected String readFile(String filePath, boolean decrypt)
+	{
+		String result = null;
+		String pwd = Secure.getString(contentResolver, Secure.ANDROID_ID);
+		
+		try {
+			File f1 = new File(filePath);
+			FileInputStream fin = new FileInputStream(f1);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(fin));
+			StringBuilder sb = new StringBuilder();
+			String line = null;
+			
+			while((line = reader.readLine()) != null) {
+				sb.append(line).append("\n");
+			}
+			
+			result = sb.toString();
+			
+			
+		} catch (FileNotFoundException e1) {
+			Log.d(TAG, "The file '"+filePath+"' was not found while attempting to open it.");
+			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		if (result != null)	{
+			Log.d(TAG, result);
+			
+			if( decrypt )
+				result = Cryptography.decrypt(result, pwd);			
+		}
+		
+		return result;
+	}
+}

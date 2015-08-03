@@ -1,0 +1,427 @@
+package hp.oobe;
+
+import hp.oobe.utilities.Cryptography;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StringReader;
+import java.util.HashMap;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.SecretKeySpec;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
+import org.xml.sax.InputSource;
+
+import android.content.ContentProvider;
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.UriMatcher;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteQueryBuilder;
+import android.net.Uri;
+import android.provider.Settings.Secure;
+import android.util.Base64;
+import android.util.Log;
+
+public class RegistrationProvider extends ContentProvider {
+
+	private static final UriMatcher uriMatcher;
+	private static final String AUTHORITY = "hp.oobe";
+	private static final String ENTITY = "registration";
+	private static final int ALL_ROWS = 1;
+	private static final int VERSION = 1;
+	
+	private static final String URI_PROVIDER = "content://hp.oobe/registration";
+	
+	private static final Uri CONTENT_URI = Uri.parse(URI_PROVIDER);
+	private static final String COLUMN_FIRST_NAME = "first_name";
+	private static final String COLUMN_LAST_NAME = "last_name";
+	private static final String COLUMN_EMAIL = "email";
+	private static final String COLUMN_COUNTRY_CODE = "country_code";
+	
+	private static HashMap<String, String> registrationProjectionMap = null;
+	
+	static {
+		
+		uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+		uriMatcher.addURI(AUTHORITY, ENTITY, ALL_ROWS);
+		
+		registrationProjectionMap = new HashMap<String, String>();
+		registrationProjectionMap.put(COLUMN_FIRST_NAME, COLUMN_FIRST_NAME);
+		registrationProjectionMap.put(COLUMN_LAST_NAME, COLUMN_LAST_NAME);
+		registrationProjectionMap.put(COLUMN_EMAIL, COLUMN_EMAIL);
+		registrationProjectionMap.put(COLUMN_COUNTRY_CODE, COLUMN_COUNTRY_CODE);
+		
+	}
+	
+	private static class DatabaseHelper extends SQLiteOpenHelper {
+		
+		DatabaseHelper(Context context) {
+			
+			super(context, ENTITY, null, VERSION);
+
+		}
+		
+		@Override
+		public void onCreate(SQLiteDatabase db) {
+			
+			Log.d(Consts.TAG, "Data Provider will create a temporary database.");	
+			
+			db.execSQL("CREATE TABLE " + ENTITY + "(" + 
+												COLUMN_FIRST_NAME + " LONGTEXT," + 
+												COLUMN_LAST_NAME + " LONGTEXT," +
+												COLUMN_EMAIL + " LONGTEXT," +
+												COLUMN_COUNTRY_CODE + " LONGTEXT" +
+					");");
+			
+		}
+		
+		@Override
+		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+			
+			Log.d(Consts.TAG, "Data Provider will update the database.");
+			
+			db.execSQL("DROP TABLE IF EXISTS " + ENTITY);
+			onCreate(db);
+			
+		}
+		
+	}//#DatabaseHelper
+	
+	/*
+	 * Helper class to encrypt the content that will stored in the columns. 
+	 * The client consuming this can use the same class to decrypt the content.
+	 */
+	private static class CryptographyUtil {
+		
+		private static final String PBE_ALGORITHM = "PBEWithSHA256And256BitAES-CBC-BC";
+		private static final String CIPHER_ALGORITHM = "AES/CBC/PKCS5Padding";
+		private static final int NUM_OF_ITERATIONS = 1000;
+		private static final int KEY_SIZE = 256;
+		private static final byte[] salt = "+E=6}".getBytes();
+		private static final byte[] iv = "SaAswLdD0dDdaAaA".getBytes();
+
+		
+		public static String encrypt(String plainText, String secret) {
+			byte[] encryptedText = null;
+			String finalText = "";
+		
+			try {
+				PBEKeySpec pbeKeySpec = new PBEKeySpec(secret.toCharArray(), 
+						CryptographyUtil.salt, CryptographyUtil.NUM_OF_ITERATIONS, CryptographyUtil.KEY_SIZE);
+				SecretKeyFactory keyFactory = SecretKeyFactory.getInstance(CryptographyUtil.PBE_ALGORITHM);
+				
+				SecretKey key = keyFactory.generateSecret(pbeKeySpec);
+				SecretKey privateKey = new SecretKeySpec(key.getEncoded(), "AES");
+				
+				IvParameterSpec ivSpec = new IvParameterSpec(CryptographyUtil.iv);
+				
+				Cipher encCipher = Cipher.getInstance(CryptographyUtil.CIPHER_ALGORITHM);
+				encCipher.init(Cipher.ENCRYPT_MODE, privateKey, ivSpec);
+				
+				encryptedText = encCipher.doFinal(plainText.getBytes());
+				
+				finalText = Base64.encodeToString(encryptedText, 0);
+			} catch(Exception e) {
+				e.printStackTrace();
+				// DO NOTHING
+			}
+			
+			return finalText;
+		}
+		
+		public static String decrypt(String cipherText, String secret) {
+			byte[] decryptedText = null;
+			String finalText = "";
+			
+			try {
+				PBEKeySpec pbeKeySpec = new PBEKeySpec(secret.toCharArray(), 
+						CryptographyUtil.salt, CryptographyUtil.NUM_OF_ITERATIONS, CryptographyUtil.KEY_SIZE);
+				SecretKeyFactory keyFactory = SecretKeyFactory.getInstance(CryptographyUtil.PBE_ALGORITHM);
+				
+				SecretKey key = keyFactory.generateSecret(pbeKeySpec);
+				SecretKey privateKey = new SecretKeySpec(key.getEncoded(), "AES");
+				
+				IvParameterSpec ivSpec = new IvParameterSpec(CryptographyUtil.iv);
+				
+				Cipher decCipher = Cipher.getInstance(CryptographyUtil.CIPHER_ALGORITHM);
+				decCipher.init(Cipher.DECRYPT_MODE, privateKey, ivSpec);
+				
+				decryptedText = decCipher.doFinal(Base64.decode(cipherText, 0));
+				
+				
+				finalText = new String(decryptedText);
+			} catch(Exception e) {
+				e.printStackTrace();
+				// DO NOTHING
+			}
+			
+			return finalText;
+		}
+		
+		
+	}//#CryptographyUtil
+	
+	private InputSource inputSource = null;
+	private DatabaseHelper dbHelper = null;
+	private String firstName = null,
+				   lastName = null,
+				   email = null,
+				   countryCode = null;
+	
+	private String getContentFromRegistrationFile(String registrationFile, String xPathExpression) {
+		
+		String content = null;
+		inputSource = new InputSource(new StringReader(registrationFile));
+		
+		if (inputSource != null && xPathExpression != null && !xPathExpression.equals("")) {
+		
+			XPath xpath = XPathFactory.newInstance().newXPath();
+			
+			try {
+				
+				content = (String) xpath.evaluate(xPathExpression, inputSource, XPathConstants.STRING);
+
+			} catch (XPathExpressionException e) {
+				
+				Log.d(Consts.TAG, "Problem evaluating the expression " + xPathExpression);
+				e.printStackTrace();
+				
+			}
+			
+		}
+		
+		return content;
+		
+	}
+	
+	private String getFirstName(String registrationFile) {
+		
+		return getContentFromRegistrationFile(registrationFile, "/registration-request/payload/registration/FoundationBlock/@pers_give_nm");
+		
+	}
+	
+	private String getLastName(String registrationFile) {
+		
+		return getContentFromRegistrationFile(registrationFile, "/registration-request/payload/registration/FoundationBlock/@pers_last_nm");
+		
+	}
+	
+	private String getEmail(String registrationFile) {
+		
+		return getContentFromRegistrationFile(registrationFile, "/registration-request/payload/registration/FoundationBlock/@email_add_nm");
+		
+	}
+	
+	private String getCountryCode(String registrationFile) {
+		
+		return getContentFromRegistrationFile(registrationFile, "/registration-request/payload/registration/FoundationBlock/@addr_country_cd");
+		
+	}
+	
+	private String openRegistrationFile() {
+		
+		String result = null;
+		String pwd = Secure.getString(getContext().getContentResolver(), Secure.ANDROID_ID);
+		BufferedReader reader = null;
+		
+		try {
+			
+			File f1 = new File(Consts.FILES_ROOT + Consts.FILE_NAME_REQUEST_REGISTRATION);
+			FileInputStream fin = new FileInputStream(f1);
+			reader = new BufferedReader(new InputStreamReader(fin));
+			StringBuilder sb = new StringBuilder();
+			String line = null;
+			
+			while((line = reader.readLine()) != null) {
+				sb.append(line).append("\n");
+			}
+			
+			result = sb.toString();
+			
+			if (reader != null) {
+				reader.close();
+			}
+			
+		} catch (FileNotFoundException e1) {
+			
+			Log.d(Consts.TAG, "The file " + Consts.FILE_NAME_REQUEST_REGISTRATION + " was not found while attempting to open it.");
+			e1.printStackTrace();
+			
+		} catch (IOException e) {
+			
+			Log.d(Consts.TAG, "There was a problem while trying to parse " + Consts.FILE_NAME_REQUEST_REGISTRATION);
+			e.printStackTrace();
+			
+		} 
+		
+		if (result != null) {
+			
+			result = Cryptography.decrypt(result, pwd);
+			
+			/*
+			 * The message stored is an XML file with the prefix message=
+			 * Removing the message= so it doesn't cause exception when we try to 
+			 * parse the XML file.
+			 */
+			result = result.substring(8);
+			
+		}
+		
+		return result;
+		
+	}
+	
+	private void queryRegistration() {
+		
+		String registrationFile = openRegistrationFile();
+		
+		if (registrationFile == null) {
+			
+			Log.d(Consts.TAG, 
+					"Data Provider got a request to open registration file. But a problem happened during the operation.");
+			
+		} else {
+			
+			firstName = getFirstName(registrationFile);
+			lastName = getLastName(registrationFile);
+			email = getEmail(registrationFile);
+			countryCode = getCountryCode(registrationFile);
+			
+		}
+		
+	}//#queryRegistration
+	
+	private void createOrUpdateRow(SQLiteDatabase db) {
+		
+		try {
+			String pwd = Secure.getString(getContext().getContentResolver(), Secure.ANDROID_ID);
+			
+			if (firstName != null && lastName != null && email != null && countryCode != null) {
+				
+				firstName = CryptographyUtil.encrypt(firstName, pwd);
+				lastName = CryptographyUtil.encrypt(lastName, pwd);
+				email = CryptographyUtil.encrypt(email, pwd);
+				countryCode = CryptographyUtil.encrypt(countryCode, pwd);
+				
+				String sqlInsert = "INSERT INTO " + ENTITY + " Values ('" + 
+									firstName + "','" +
+									lastName + "','" + 
+									email +"','"+
+									countryCode +"');";
+				
+				db.delete(ENTITY, null, null);
+				db.execSQL(sqlInsert);
+				
+				Log.d(Consts.TAG, "Data provider included a row into the temporary database.");
+				
+			} else {
+				
+				Log.d(Consts.TAG, "Data provider has no content to include.");
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}//#createOrUpdate
+	
+	/*
+	 * ============================================================================================
+	 * PUBLIC MEMBERS
+	 * ============================================================================================
+	 */
+	
+	@Override
+	public boolean onCreate() {
+		
+		//android.os.Debug.waitForDebugger();
+
+		dbHelper = new DatabaseHelper(getContext());
+		
+		return true;
+		
+	}
+	
+	@Override
+	public int delete(Uri URI, String arg1, String[] arg2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	@Override
+	public String getType(Uri uri) {
+		
+		switch(uriMatcher.match(uri)) {
+		
+			case ALL_ROWS:
+				break;
+			default: 
+				throw new IllegalArgumentException("Unsupported URI");
+		
+		}
+		
+		return null;
+		
+	}
+
+	@Override
+	public Uri insert(Uri arg0, ContentValues arg1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs,
+			String sort) {
+		
+		Cursor cursor = null;
+		try {
+			SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+			qb.setTables(ENTITY);
+			qb.setProjectionMap(registrationProjectionMap);
+			
+			SQLiteDatabase db = dbHelper.getReadableDatabase();
+			
+			switch(uriMatcher.match(uri)) {
+			
+				case ALL_ROWS:
+					queryRegistration();
+					createOrUpdateRow(db);
+					break;
+			
+			}
+			
+			
+			cursor = qb.query(db, projection, selection, selectionArgs, null, null, sort);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return cursor;
+	}
+
+	@Override
+	public int update(Uri arg0, ContentValues arg1, String arg2, String[] arg3) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

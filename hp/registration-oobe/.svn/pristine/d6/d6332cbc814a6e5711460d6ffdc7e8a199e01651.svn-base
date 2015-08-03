@@ -1,0 +1,143 @@
+package hp.oobe;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.util.Log;
+
+public class RegistrationNotificationReceiver extends BroadcastReceiver {
+
+	private SharedPreferences preferences = null;
+	private Context context = null;
+	
+	private void openSharedPreferences() {
+		
+		preferences = this.context.getSharedPreferences(Consts.PREFERENCES, 0);
+		
+	}
+	
+	private String getTitle() {
+		
+		return context
+				.getString(R.string.notification_title);
+		/*String result = null;
+		
+		if (preferences == null) {
+			
+			openSharedPreferences();
+			
+		} 
+			
+		result = preferences.getString(Consts.PREFERENCE_NOTIFICATION_TITLE, null);
+			
+		return result;*/
+		
+	}
+	
+	private String getText() {
+		
+		return context
+				.getString(R.string.notification_text);
+		/*
+		String result = null;
+		
+		if (preferences == null) {
+			
+			openSharedPreferences();
+			
+		} 
+			
+		result = preferences.getString(Consts.PREFERENCE_NOTIFICATION_TEXT, null);
+		
+		return result;*/
+		
+	}
+	
+	private void removeKey(String keyName) {
+		
+		
+			if (preferences == null) {
+				
+				openSharedPreferences();
+				
+			}
+			
+			SharedPreferences.Editor editor = preferences.edit();
+			editor.remove(keyName);
+			editor.commit();
+	
+		
+	}
+	
+	//=============================================================================================
+	// PUBLIC MEMBERS
+	//=============================================================================================
+	
+	@Override
+	public void onReceive(Context context, Intent intent) {
+		//android.os.Debug.waitForDebugger();	
+	
+		try {
+			this.context = context;
+			RegistrationNotificationManager nManager = new RegistrationNotificationManager(context);
+			Log.d(Consts.TAG, "Notification Receiver  ");
+			/*
+			 * During reboot we need to re-schedule the notification (if was scheduled before).
+			 */
+			if (intent.getAction() != null && intent.getAction().equals("android.intent.action.BOOT_COMPLETED")) {
+				
+				Log.d(Consts.TAG, "Notification Receiver received a BOOT_COMPLETED event.");
+				
+				Date lastDateScheduled = nManager.lastScheduledDate();
+				
+				// If null means there is nothing to do.
+				if (lastDateScheduled != null) {
+					
+					Log.d(Consts.TAG, "Need to reschedule the Broadcast Receiver for the Notification");
+					
+					Calendar calendar = Calendar.getInstance();
+					calendar.setTimeInMillis(lastDateScheduled.getTime());
+					calendar.add(Calendar.HOUR, Consts.INTERVAL_NOTIFICATION);
+					
+					nManager.scheduleNotification(calendar.getTime(), null, null);
+					
+					Log.d(Consts.TAG, "Broadcast Receiver for the Notification rescheduled");
+					
+				}
+				
+			} else {
+			
+				String title = getTitle(), text =getText();
+				
+				if (title == null || text == null) {
+					
+					Log.d(Consts.TAG,"Title or text for the notification was not found. Notification won't show up.");
+					
+				} else {
+					
+					Log.d(Consts.TAG, "Showing the notification");
+					
+					nManager.show(title, text, R.drawable.ic_launcher);
+					
+					// Removing the lastDateNotificationScheduled. This is key to schedule the BroadcastReceiver. 
+					// This is meant to show once. And never should show up again.
+					removeKey(Consts.PREFERENCE_NOTIFICATION_LAST_DATE_SCHEDULED);
+					
+				}
+				
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+	}
+	
+}

@@ -1,0 +1,20 @@
+package hp.oobe.internals.output;
+
+import android.content.ContentResolver;
+
+public class OutputBOD extends Output
+{
+	public static final String BOD = "/data/data/hp.oobe/files/bod";
+	
+	public OutputBOD(ContentResolver contentResolver)
+	{
+		super(contentResolver);
+		title = BOD;
+	}	
+
+	@Override
+	public String readOutput()
+	{
+		return readFile(BOD, true);
+	}	
+}

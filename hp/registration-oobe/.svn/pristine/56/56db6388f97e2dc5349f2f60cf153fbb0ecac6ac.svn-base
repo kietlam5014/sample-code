@@ -1,0 +1,25 @@
+/*
+ * @depends
+ */
+
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.useragent = hp.registration.useragent || {};
+
+hp.registration.useragent.NetworkInfoBrowser = function() {
+    
+    this.getIP = function() {
+        
+        return null;
+        
+    };//#getIP
+    
+    this.getIPFromPreferences = function() {
+        
+        return null;
+        
+    };//getIPFromPreferences
+    
+    return this;
+    
+}.apply({}, null);//#hp.registration.useragentNetworkInfoBrowser

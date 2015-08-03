@@ -1,0 +1,379 @@
+package hp.oobe;
+
+import hp.oobe.Registration.RequestCallback;
+
+import java.lang.reflect.Method;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnLongClickListener;
+import android.webkit.ConsoleMessage;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+@SuppressLint("SetJavaScriptEnabled")
+public class MainActivity extends Activity {
+	
+	WebView webview = null;
+	Registration registration = null;
+	BroadcastReceiver receiver=null;
+	private boolean appInstalled(String packageName) {
+		boolean appInstalled = false;
+		PackageManager  pm = getPackageManager();
+		try {
+			pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+			appInstalled = true;
+		} catch (NameNotFoundException e) {
+			appInstalled = false;
+		}
+		return appInstalled;
+		
+	}
+	
+	protected void init(Bundle savedInstanceState) {
+		
+		/*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+		WebView.setWebContentsDebuggingEnabled(true);
+	}*/
+
+	/*
+	 * The experience has to show up only for the main user of the device. 
+	 * In other words, the user who booted the device for the first time.
+	 */
+	//	setContentView(R.layout.activity_main);
+		Util util = new Util();
+		if (!util.isCurrentUserOwner(getApplicationContext())) {
+			
+			registration = new Registration(this, webview);
+			registration.closeApplication(true);
+			return;
+			
+		}
+
+		//getApplicationContext()
+		if (webview == null) {
+			
+			/*
+			 * workaround to avoid the UI having strange behavior when the user turns 
+			 * the screen off and on. This prevents the buttons to be repositioned. 
+			 */ 
+			IntentFilter intentFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
+			
+			
+			receiver=new BroadcastReceiver() {
+				
+				@Override
+				public void onReceive(Context context, Intent intent) {
+					if (intent.getAction().equals(Intent.ACTION_SCREEN_ON) || 
+							intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
+						if(webview!=null)
+						{
+							registration.closeInputKeyboard();
+					    	webview.loadUrl("javascript:onConfigurationChanged();");
+						}
+					}
+				}
+			};
+			
+			registerReceiver(receiver, intentFilter);
+	
+			SharedPreferences preferences = getSharedPreferences(Consts.PREFERENCES, 0);
+			SharedPreferences.Editor editor = preferences.edit();
+			
+			editor.putInt(Consts.PREFERENCE_HOW_MANY_TIMES_RAN, 0);
+			editor.commit();
+			
+			webview = (WebView)findViewById(R.id.webview);
+			registration.addView(webview);
+	
+			WebSettings settings = webview.getSettings();
+			settings.setJavaScriptEnabled(true);
+			settings.setAllowUniversalAccessFromFileURLs(true);
+			settings.setAllowFileAccessFromFileURLs(true);
+			settings.setDatabaseEnabled(true);
+			settings.setDefaultTextEncodingName("UTF-8");
+
+			webview.addJavascriptInterface(registration, "registrationAndroid");
+			webview.setOnLongClickListener(new OnLongClickListener() {		
+				@Override
+				public boolean onLongClick(View v) {
+					// TODO Auto-generated method stub
+					return true;
+				}
+			});
+			webview.setWebChromeClient(new WebChromeClient() {
+				public boolean onConsoleMessage(ConsoleMessage cm) {
+					Log.d(Consts.TAG, cm.message() + "(" + cm.sourceId() + ". Line: " + cm.lineNumber() + ")");
+					return true;
+				}
+			});
+				
+			webview.loadUrl("file:///android_asset/home.html");
+			/*
+			if (!appInstalled("com.hp.android.launcher.hplauncher")) {
+				webview.setWebViewClient(new WebViewClient() {
+					@Override
+					public void onPageFinished(WebView view, String url) {
+						try {
+						//	view.loadUrl("javascript: removeAviate();");
+							webview.removeJavascriptInterface("registrationAndroid");
+							webview.addJavascriptInterface(registration,
+									"registrationAndroid");
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+
+				});
+			}
+		*/
+			/*
+			 * The step below hides the status bar and the soft keys so the user can't interact with it.
+			 * This kind of action could be done only if it's a system app, which is the case of this app 
+			 * in a real image. But it won't be if you're debugging via Eclipse (because the application 
+			 * gets installed in the user space, not the system space).
+			 */
+			 
+			View window = getWindow().getDecorView();
+
+			try {
+				viewSetSystemUiVisibility(window, STATUS_BAR_DISABLE_NOTIFICATION_ALERTS
+						| STATUS_BAR_DISABLE_SYSTEM_INFO
+						| STATUS_BAR_DISABLE_HOME
+						| STATUS_BAR_DISABLE_RECENT
+						| STATUS_BAR_DISABLE_BACK
+						| STATUS_BAR_DISABLE_SEARCH);
+			} catch(Exception e) {
+				e.printStackTrace();
+				Log.d(Consts.TAG, "Problem to hide the status bar and soft keys.");
+			}
+			
+		}
+		
+		
+	}
+	@Override
+	protected void onCreate(final Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		Configuration config = this.getResources().getConfiguration();
+		config.fontScale = 1.0f;
+		this.getResources().updateConfiguration(config,
+				this.getResources().getDisplayMetrics());
+		
+		setContentView(R.layout.activity_2);
+		registration = new Registration(this,null);
+		registration.adapterUI();
+		
+		PackageManager localPackageManager = getPackageManager();
+		PackageInfo storeAppInfo=null;
+		try {
+			 storeAppInfo = localPackageManager.getPackageInfo("com.google.android.gms", PackageManager.GET_SERVICES);
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			storeAppInfo=null;
+		}
+	//	storeAppInfo=null;
+		if (storeAppInfo != null) {
+			init(savedInstanceState);
+			registration.IsWait = true;
+		} else {
+			RequestCallback Callback = registration.new RequestCallback() {
+				@Override
+				public void requestNotify(Boolean isSucceed) {
+					if (isSucceed) {
+						init(savedInstanceState);
+						// always remove dropbox if from launcher
+						webview.setWebViewClient(new WebViewClient() {
+							@Override
+							public void onPageFinished(WebView view, String url) {
+								try {
+									registration.IsWait = false;	
+								//	view.loadUrl("javascript: removeAviate();");
+									webview.removeJavascriptInterface("registrationAndroid");
+									webview.addJavascriptInterface(
+											registration, "registrationAndroid");
+								} catch (Exception e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+							}
+
+						});
+					}
+				}
+			};
+			registration.dialogCta(savedInstanceState, Callback);	
+			
+		}
+
+	}
+	
+	@Override 
+	public void onConfigurationChanged(Configuration newConfig) {
+		registration.closeInputKeyboard();
+		super.onConfigurationChanged(newConfig);
+		if(webview!=null)
+		{
+			webview.loadUrl("javascript: onConfigurationChanged();");
+		}
+	}
+	
+	@Override
+	protected void onSaveInstanceState(Bundle outState )
+	{
+		super.onSaveInstanceState(outState);
+		//webview.saveState(outState);
+	}
+
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState)
+	{
+		super.onSaveInstanceState(savedInstanceState);
+		//webview.restoreState(savedInstanceState);
+		
+	}
+	
+	public void onPostFinished(String result) {
+		
+	}
+	
+	@Override
+	public void onDestroy()
+	{
+		registration.backUI();
+		if(receiver!=null)
+		{
+			unregisterReceiver(receiver);
+		}
+		super.onDestroy();	
+	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode,
+			Intent dropbox_intent) {
+		Log.d(Consts.TAG, "onActivityResult");
+		super.onActivityResult(requestCode, resultCode, dropbox_intent);
+		if (requestCode == Consts.TAG_DROPBOX) {
+			try {
+				if (dropbox_intent.hasExtra("EXTRA_OOBE_LOGIN_RESULT")) {
+					int dropbox_result = dropbox_intent.getIntExtra(
+							"EXTRA_OOBE_LOGIN_RESULT", 0);
+					switch (dropbox_result) {
+					case 1:
+
+						break; // User is logged in
+					case 2:
+
+						break; // User pressed the "No thanks" button
+					case 3:
+
+						break; // User pressed the back button
+					default:
+
+						break;
+
+					}
+					registration.resultDropbox=String.valueOf(dropbox_result);
+			
+					registration.setSharedPreference(Consts.DROPBOX,
+							String.valueOf(dropbox_result));
+				} else {
+
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			HPoobeApp.setContent(Consts.DROPBOX,registration.resultDropbox);
+			
+			try {
+				Intent intent = getPackageManager().getLaunchIntentForPackage(
+						"com.hp.android.launcher.hplauncher");
+				if (intent != null) {
+					
+					startActivity(intent);
+					registration.resultLauncher="0";
+					registration.setSharedPreference(Consts.HPLAUNCHER,
+							String.valueOf(0));
+				}
+				else
+				{
+					registration.resultLauncher=Consts.TAG_3PART_NONE;
+					registration.setSharedPreference(Consts.HPLAUNCHER,
+							String.valueOf(Consts.TAG_3PART_NONE));
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				registration.resultLauncher=Consts.TAG_3PART_NONE;
+				registration.setSharedPreference(Consts.HPLAUNCHER,
+						String.valueOf(Consts.TAG_3PART_NONE));
+				System.out
+						.println("no com.hp.android.launcher.hplauncher installed");
+				e.printStackTrace();
+			}
+			
+			    HPoobeApp.setContent(Consts.HPLAUNCHER,registration.resultLauncher);		   
+				registration.IsWait = false;
+				Log.d(Consts.TAG, "closeApplication in callback");
+				registration.closeApplication(false);
+
+			
+			
+		}
+
+	}
+	@Override
+	public void onBackPressed() {
+		Log.d("HP_OOBE", "Back button was pressed");
+		return;
+	}
+
+	private static final int STATUS_BAR_DISABLE_BACK = 0x00400000;
+	private static final int STATUS_BAR_DISABLE_EXPAND = 0x00010000;
+	private static final int STATUS_BAR_DISABLE_NOTIFICATION_ICONS = 0x00020000;
+	private static final int STATUS_BAR_DISABLE_NOTIFICATION_ALERTS = 0x00040000;
+	private static final int STATUS_BAR_DISABLE_SYSTEM_INFO = 0x00100000;
+	private static final int STATUS_BAR_DISABLE_HOME = 0x00200000;
+	private static final int STATUS_BAR_DISABLE_RECENT = 0x01000000;
+	private static final int STATUS_BAR_DISABLE_SEARCH = 0x02000000;
+	private static Method findMethod(Class c, String name, Class param) {
+	    try {
+	        if (c == null) {
+	            return null;
+	        }
+	        return c.getMethod(name, param);
+	    } catch (NoSuchMethodException unused) {
+	        Log.d(Consts.TAG, "Method not found " + name);
+	    }
+	    return null;
+	}
+	private static final Method sViewSetSystemUiVisibility =
+	    findMethod(View.class, "setSystemUiVisibility",
+	            Integer.TYPE);
+	private static void viewSetSystemUiVisibility(View fl, int v) {
+	    if (sViewSetSystemUiVisibility != null) {
+	        try {
+	            sViewSetSystemUiVisibility.invoke(fl, v);
+	        } catch (Throwable e) {
+	            // ignore
+	        }
+	    }
+	}
+}

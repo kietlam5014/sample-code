@@ -1,0 +1,3214 @@
+/*
+ * This JavaScript works as the controller for the home.html. Any action from the interface 
+ * should be handled here.
+ */
+
+var Aviateinstalled = true;
+ var app_ = hp.registration;
+ var titleSelector_ = '#mainTitle',
+     title_ = null,
+     introSelector_ = '#Title',
+     intro_ = null,
+     popupScreenSelector_ = '#popupCanvas',
+     popupScreen_ = null,
+     popupContentScreenSelector_ = '#popupCanvasForContent',
+     popupContentScreen_ = null,
+     popupTitleSelector_ = '#popupTitle',
+     popupTitle_ = null,
+     popupBodyForContentSelector_ = '#popupContentBodyContent',
+     popupBodyForContent_ = null,
+     popupButtonSelector_ = '#popupButton',
+     popupButton_ = null,
+     popupButton2Selector_ = '#popupButton2',
+     popupButton2_ = null,
+     popupButtonForContentSelector_ = '#popupButtonForContent',
+     popupButtonForContent_ = null,
+     popupContentForContentSelector_ = '#popupContentForContent',
+     popupContentForContent_ = null,
+     popupButton2ForContentSelector_ = '#popupButton2ForContent',
+     popupButton2ForContent_ = null,
+     skipRegistrationSelector_ = '#skipRegistration',
+     skipRegistration_ = null,
+     submitButtonSelector_ = '#btnConatiner',
+     submitButton_ = null,
+     skipButtonSelector_ = '#btnContainerSkip',
+     skipButton_ = null,
+     goAwayButtonSelector_ = '#btnContainerGoAway',
+     goAwayButton_ = null,
+     goAwayButtonLabelSelector_ = '#goAwayButtonLabel',
+     goAwayButtonLabel_ = null,
+     eulaCheckboxSelector_ = '#eulaCheckbox',
+     eulaCheckbox_ = null,
+     firstNameFieldSelector_ = '#firstName',
+     firstNameField_ = null,
+     lastNameFieldSelector_ = '#lastName',
+     lastNameField_ = null,
+     emailFieldSelector_ = '#email',
+     emailField_ = null,
+     emailConsentSelector_ = '#emailConsent',
+     emailConsent_ = null,
+     emailConsentTextSelector_ = '#emailConsentText',
+     emailConsentText_ = null,
+     countryListSelector_ = '#CountryLst',
+     countryList_ = null,
+     errorMessageCountrySelector_ = '#CountryErrorMsg',
+     errorMessageCountry_ = null,
+     errorMessageNameSelector_ = '#FrstNameErrorMsg',
+     errorMessageName_ = null,
+     errorMessageConsentEmailSelector_ = '#EmailConsentErrorMsg',
+     errorMessageConsentEmail_ = null,
+     errorMessageEmailSelector_ = '#EmailErrorMsg',
+     errorMessageEmail_ = null,
+     licenseTermsPlainTextSelector_ = '#licenseTermsPlainText',
+     licenseTermsPlainText_ = null,
+     licenseTermsSelector_ = '#licenseTerms',
+     licenseTerms_ = null,
+     privacyRightsSelector_ = '#privacyRights',
+     privacyRights_ = null,
+     dataCollectionSelector_ = '#dataCollection',
+     dataCollection_ = null,
+     anonymousTextSelector_ = '#SubtitleContent',
+     anonymousText_ = null,
+     finishButtonLabelSelector_ = '#finishButtonLabel',
+     finishButtonLabel_ = null,
+     skipButtonLabelSelector_ = '#skipButtonLabel',
+     skipButtonLabel_ = null,
+     countryRequiredTextSelector_ = '#countryRequiredText',
+     countryRequiredText_ = null,
+     nameRequiredTextSelector_ = '#nameRequiredText',
+     nameRequiredText_ = null,
+     emailRequiredSelector_ = '#emailRequiredText',
+     emailRequired_ = null,
+     yesTextSelector_ = '#yesText',
+     yesText_ = null,
+     noTextSelector_ = '#noText',
+     noText_ = null,
+     consentYesSelector_ = '#consentYes',
+     consentYes_ = null,
+     consentNoSelector_ = '#consentNo',
+     consentNo_ = null,
+     mainContentSelector_ = '#wrapper',
+     mainContent_ = null,
+     lastNameContainerSelector_ = '#lastNameContainer',
+     lastNameContainer = null,
+     firstNameContainerSelector_ = '#firstNameContainer',
+     firstNameContainer_ = null,
+     formFirstNameSelector_ = '#formFirstName',
+     formFirstName_ = null,
+     countryCollectionSelector_ = '#countryCollection',
+     countryCollection_ = null,
+     arrowCountryListSelector_ = '#arrowCountryList',
+     arrotCountryList_ = null,
+     formCountrySelector_ = '#formCountry',
+     formCountry_ = null,
+     formFirstNameSelector_ = '#formFirstName',
+     formFirstName_ = null,
+     formLastNameSelector_ = '#formLastName',
+     formLastName_ = null,
+     formEmailSelector_ = '#formEmail',
+     formEmail_ = null,
+     footerSelector_ = 'FOOTER',
+     footer_ = null,
+     nameFieldsContainerSelector_ = '#nameFieldsContainer',
+     nameFieldsContainer_ = null,
+     mainCanvasSelector_ = '#mainCanvas',
+     mainCanvas_ = null,
+     formSelector_ = '#registrationForm',
+     form_ = null,
+     keyboardPlaceholder_ = null,
+     clearAllContainerSelector_ = '#clearAllContainer',
+     clearAllContainer_ = null,
+     clearAllSelector_ = '#clearAll',
+     clearAll_ = null,
+     clearAllIconSelector_ = '#clearAllIcon',
+     clearAllIcon_ = null,
+     carrierIQContainerSelector_ = '#carrierIQContainer',
+     carrierIQContainer_ = null,
+     carrierIQConsentSelector_ = '#carrierIQConsent',
+     carrierIQConsent_ = null,
+     carrierIQTextSelector_ = '#carrierIQText',
+     carrierIQText_ = null,
+     notePopupSelector_ = '#popupNote',
+     notePopup_ = null,
+	 finishButtonLabelSelectorandroid_ = '#finishButtonLabelandroid',
+	 finishButtonLabelandroid_ = null,
+     popupSimpleHeaderSelector_ = '#popupSimpleHeader',
+     submitButtonSelectorandroid_ = '#btnConatinerandroid',
+     submitButtonandroid_ = null,
+     popupSimpleHeader_ = null;
+ 
+
+var Helper_ = {
+    /*
+     * These flags are used internally during development. It makes easy to capture screenshots 
+     * on the webbrowser. 
+     */
+    'Flags': {
+        'alwaysShowID': null,
+        'alwaysFullName': null,
+        'alwaysShowErrorMessages': null,
+        'alwaysShowPrivacyRights': null,
+        'language': null
+    },//#Helper_.Flags
+    /*
+     * Temporary solution for pre-selction of the email consent. 
+     * Because we don't have the country information by the moment shows up, 
+     * we have to avoid the pre-selection of the consent. That should happen
+     * only when the user inputs a valid country.
+     */
+    'isFirstTime': false,
+    /*
+     * Helps the scenario where the user selected the consent and after that
+     * selected a country where there is a pre-selection defined. 
+     */
+    'didUserEngagedWithConsent': false,
+    /*
+     * Helper member to know if the country error message was on the screen to 
+     * avoid the problem of overlaping labels when the country field get the 
+     * focus again.
+     */
+    'wasCountryErrorMessageOnScreen': false,
+    /*
+     * Stores the country code that was returned from the geo location service.
+     */
+    'geoLocationCountryCode': null,
+    /*
+     * The application uses two kinds of display (block and -webkit-box). This property stores 
+     * the current value when there is any popup on the screen. So the value can be restored 
+     * when the popup window is closed. 
+     */
+    'previousDisplayValueForMainScreen': '',
+    'previousOrientation': null, 
+    'originalRetailerCode': null,
+    /*
+     * Temporary workaround. This solution was put in place because the release was about to close 
+     * and refactor of code could introduce more issues. 
+     *
+     * This cover the scenatio where some countries are not allowed to do registration because local 
+     * laws doesn't allow saving information outside of that country (so far, Korea only). The 
+     * workaround deals with the case where the user typed the name of the country and decided to click on
+     * the name that shows in the filtered list. Becasue of multiple events the saveAndClose method will be
+     * called twice. That causes crash when UI closes.
+     *
+     * TODO IMPROVE THE LOGIC TO AVOID THIS WORKAROUND
+     */
+    'saveAndCloseWasCalledOnce': false,
+    /*
+     * Get the locale that the web container is running on. Example: en-US, pt-BR.
+     */
+    'getLocale': function() {
+        
+        if (Helper_.Flags.language) {
+            return Helper_.Flags.language;
+        }
+    
+        return app_.Registration.getLocale();
+        
+    },//#Helper.getLocale
+    /*
+     * Get the two letter code for the language. Basically it get the locale and remove
+     * the content after the -. Example: en (for English), pt (for Portuguese).
+     */
+    'getLanguageCode': function() {
+        return this.getLocale().substring(0, 2);
+    },//#Helper_.getLanguageCode
+    /*
+     * Get the two letter country code. This method tries to get the code of the country 
+     * specified by the user in the country field OR the country code that is returned by
+     * the locale (fallback only).
+     */
+    'getCountryCode': function() {
+        
+        var result_ = this.getLocale().substring(3);
+
+        if (countryList_.value.trim() !== "") {
+            result_ = hp.registration.Registration.getCountryCodeBasedOnName(
+                            countryList_.value);
+        }
+
+		return result_;
+
+	},//#Helper_.getCountryCode
+	/*
+	 * Get the two letter country code. This method tries this:
+	 *  1- Country code based on the name inputed by the user in the country field.
+	 *  2- If above not available and geo location worked properly. Returns the geolocation
+	 *  3- Invalid / Blank input and geolocation not used. Returns ZZ.
+	 */
+	'getCountryCodeToBeSavedAsSharedPreferences' : function() {
+
+        var result_ = hp.registration.Registration.getCountryCodeBasedOnName(
+                            countryList_.value);
+
+		if (countryList_.value.trim() === '') {
+
+			result_ = 'ZZ';
+
+		} else if (result_ == '' && Helper_.geoLocationCountryCode !== null) {
+
+			result_ = Helper_.geoLocationCountryCode;
+
+		}
+
+		return result_;
+
+	},//#getCountryCodeToBeSavedAsSharedPreferences
+	'isRunningOnWebBrowser' : function() {
+		return hp.registration.Properties.usingAlternateUserAgent;
+	},//#isRunningOnWebBrowser
+	'parseQueryString' : function() {
+
+		var url_ = document.URL, flags_ = '', length_ = 0, value_ = '';
+
+		if (url_.indexOf('?') !== -1) {
+
+			url_ = url_.substring(url_.indexOf('?') + 1);
+			console.log(url_);
+
+			flags_ = url_.split('&');
+			length_ = flags_.length;
+
+			while (length_--) {
+
+				if (flags_[length_].indexOf('=') !== -1) {
+
+					value_ = flags_[length_].split('=')[1];
+					flags_[length_] = flags_[length_].split('=')[0];
+
+				}
+
+				switch (flags_[length_].toLowerCase()) {
+				case 'alwaysshowid':
+					Helper_.Flags.alwaysShowID = true;
+					break;
+				case 'alwaysfullname':
+					Helper_.Flags.alwaysFullName = true;
+					break;
+				case 'alwaysshowerrormessages':
+					Helper_.Flags.alwaysShowErrorMessages = true;
+					break;
+				case 'alwaysshowprivacyrights':
+					Helper_.Flags.alwaysShowPrivacyRights = true;
+					break;
+				case 'language':
+					Helper_.Flags.language = value_;
+					break;
+				default:
+					break;
+				}
+			}//#while
+
+		}//#if
+
+	},//#Helper_.parseQueryString
+	'isRightToLeft' : function(inLanguageCode) {
+        var prop_ = hp.registration.Properties,
+            result_ = false;
+
+		inLanguageCode = inLanguageCode.toLowerCase();
+
+		prop_.LANGUAGES_RIGHT_TO_LEFT.forEach(function(inItem) {
+			if (inItem.toLowerCase() === inLanguageCode) {
+				result_ = true;
+			}
+		});
+
+		return result_;
+	},
+	'showElement' : function(inElement) {
+		if (inElement) {
+			inElement.style.visibility = 'visible';
+		} else {
+			console.log('Element not found');
+		}
+	},//#Helper.showElement
+	'hideElement' : function(inElement) {
+		if (inElement) {
+			inElement.style.visibility = 'hidden';
+		} else {
+			console.log('Element not found');
+		}
+	},//#Helper.hideElement
+	/*
+	 * @returns
+	 *  true: if an attempt has to be made.
+	 *  false: if there is not need to send the data.
+	 */
+	'shouldDataBeSent' : function() {
+		var loc_ = hp.registration.util.Localization;
+        var skipRegistration_ = loc_.getContent('skipregistration'),
+            fullname_ = loc_.getContent('fullname');
+
+		/*
+		 * There is one country that doesn't allow the registration unless there is a consent. 
+		 * As this consent is not available in the app yet. We must not send the data even if
+		 * the user filled form before specifying the region.
+		 */
+		if (skipRegistration_) {
+			return false;
+		}
+
+        if (fullname_) {
+            return (
+                    firstNameField_.value.trim() !== '' &&
+                    emailField_.value.trim() !== '' &&
+                    countryList_.value.trim() !== ''
+                );
+        } else {
+            return (
+                    firstNameField_.value.trim() !== '' &&
+                    lastNameField_.value.trim() !== '' &&
+                    emailField_.value.trim() !== '' &&
+                    countryList_.value.trim() !== ''
+                ); 
+		}
+	},//#Helper_.shouldDataBeSent
+	'shouldSkipRegistration' : function() {
+
+		var loc_ = app_.util.Localization;
+		var skipRegistration_ = loc_.getContent('skipregistration');
+
+		/*
+		 * There is one country that doesn't allow the registration unless there is a consent. 
+		 * As this consent is not available in the app yet. We must not send the data even if
+		 * the user filled form before specifying the region.
+		 * The country is Korea (KR). The first time the application is loaded we force to not
+		 * check. Only when the end user specify Korea in the textbox for country.
+		 */
+		/*if (Helper_.isFirstTime && Helper_.getCountryCode() === "KR") {
+		   return false;
+		}*/// TODO REMOVE THIS BLOCK AFTER QA TESTS
+
+		if (skipRegistration_ && skipRegistration_ == "yes") {
+			
+	        if ('registrationAndroid' in window) {
+	            
+	            registrationAndroid.setShouldSkipRegistration(true);	            
+	        } 
+
+			return true;
+		} else {
+			return false;
+		}
+
+	},//#Helper_.shouldSkipRegistration
+	'shouldSwapFirstAndLastName' : function() {
+
+		var loc_ = hp.registration.util.Localization, result_ = false;
+		var shouldSwap_ = loc_.getContent('swapfirstandlastname');
+
+		if (shouldSwap_ && shouldSwap_ == "yes") {
+			result_ = true;
+		}
+
+		return result_;
+
+	},//#Helper_.shouldSwapFirstAndLastName
+	'shouldShowFullName' : function() {
+
+		var loc_ = hp.registration.util.Localization, result_ = false;
+		var fullName_ = loc_.getContent('fullname');
+
+		if (fullName_ && fullName_ == "yes") {
+			result_ = true;
+		}
+
+		return result_;
+
+	},//#Helper_.shouldShowFullName
+	/*
+	 * Specify if the user has shown intent of registering but did not fill all the fields.
+     * By intent it means at least two input fields filled.
+     * Indicates if user filled out the entire form. If a new field is changed/added, please update
+     * Helper_.allFieldsEntered()
+	 * The method will also cause the error messages to show up on the screen.
+	 *
+	 * @returns
+	 *  true. If the user filled the whole form or didn't filled up to one (assumption that have up)
+	 *  false. The user filled at least two fields but didn't filled all the fields.
+	 */
+    'isFormOk': function() {
+        var fieldsToCheckOnAsianLanguages_ = [ firstNameField_, countryList_, emailField_],
+            fieldsToCheckOnOtherLanguages_ = [ firstNameField_, lastNameField_, countryList_,
+                                               emailField_ ],
+            countFilled_ = 0, countIntent_ = 2, arrayToUse_ = null,
+            loc_ = hp.registration.util.Localization;
+
+		var showFullNameField_ = loc_.getContent('fullname');
+		if (showFullNameField_) {
+			arrayToUse_ = fieldsToCheckOnAsianLanguages_;
+		} else {
+			arrayToUse_ = fieldsToCheckOnOtherLanguages_;
+		}
+
+		arrayToUse_.forEach(function(inElement) {
+			if (inElement.value.trim()) {
+				countFilled_++;
+			}
+		});
+
+		if (consentYes_.checked/* || consentNo_.checked*/) {
+			countFilled_++;
+		}
+
+		/*
+         * There are two conditions to show the error messages and prevent the user to close the app
+         * 1- The user showed intent of registering by filling at least 2 fields.
+         * 2- OR user is running from Launcher and didn't all the fields.
+         */
+        if ((countFilled_ >= countIntent_ && countFilled_ < arrayToUse_.length+1) ||
+           (!(hp.registration.Registration.isRunningDuringOOBE()) && countFilled_ < arrayToUse_.length+1)) {
+            
+            // Shoud the error message for name show up?
+            if (showFullNameField_ && firstNameField_.value.trim() === '') {
+                errorMessageName_.style.visibility = 'visible';
+            } else if (!(showFullNameField_) && (firstNameField_.value.trim() === "" ||
+                        lastNameField_.value.trim() === "")) {
+				errorMessageName_.style.visibility = 'visible';
+			} else {
+				errorMessageName_.style.visibility = 'hidden';
+			}
+
+			// Should the error message for Country show up?
+			if (countryList_.value.trim() === "") {
+				errorMessageCountry_.style.visibility = 'visible';
+			} else {
+				errorMessageCountry_.style.visibility = 'hidden';
+			}
+
+			// Should the error message for Email show up?
+			if (emailField_.value.trim() === "") {
+				errorMessageEmail_.style.visibility = 'visible';
+			} else {
+				errorMessageEmail_.style.visibility = 'hidden';
+			}
+
+			// Should the error message for consent show up?
+			if (consentYes_.checked /*|| consentNo_.checked*/) {
+				errorMessageConsentEmail_.style.visibility = 'hidden';
+			} else {
+				errorMessageConsentEmail_.style.visibility = 'visible';
+			}
+
+			return false;
+
+		} else {
+
+			return true;
+
+		}
+
+	},//#Helper_.isFormOk
+    /*
+     * Indicates if user filled out the entire form. If a new field is changed/added, please update
+     * Helper_.isFormOk()
+     * @returns
+     *  true. If the user filled the whole form
+     *  false. User didn't fill out whole form (onClickFinish will handle it)
+     */
+    'allFieldsEntered': function() { // Whether all fields have been filled out
+        var fieldsToCheckOnAsianLanguages_ = [ firstNameField_, countryList_, emailField_],
+                fieldsToCheckOnOtherLanguages_ = [ firstNameField_, lastNameField_, countryList_,
+                                                   emailField_ ],
+                countFilled_ = 0, countIntent_ = 2, arrayToUse_ = null,
+                loc_ = hp.registration.util.Localization;
+
+            var showFullNameField_ = loc_.getContent('fullname');
+            if (showFullNameField_) {
+                arrayToUse_ = fieldsToCheckOnAsianLanguages_;
+            } else {
+                arrayToUse_ = fieldsToCheckOnOtherLanguages_;
+            }
+            
+            arrayToUse_.forEach(function(inElement) {
+                if (inElement.value.trim()) {
+                    countFilled_++;
+                }
+            });
+
+            if (consentYes_.checked /*|| consentNo_.checked*/) {
+                countFilled_++;
+            }   
+            return countFilled_ === arrayToUse_.length+1;
+
+    },//#Helper_.allFieldsEntered
+	/*
+	 * Collects the data that the user inputer in the form and store in the model 
+	 * RegistrationModel. Also sets the MachineInfo.
+	 *
+	 * @returns
+	 *  null
+     */
+    'collectData': function() {
+        var regInfo_ = hp.registration.model.RegistrationInfo,
+            machineInfo_ = hp.registration.model.MachineInfo,
+            prop_ = hp.registration.Properties,
+            loc_ = hp.registration.util.Localization;
+
+		var fullname_ = loc_.getContent('fullname');
+
+		// User data
+		/*
+		 * Some languages don't show first and last name (for asian languages).
+		 * According to the backend staff in these cases, the last name should be used.
+		 * to set the name, since this field is critical for the record to be accepted 
+		 * in the backend.
+		 */
+		if (fullname_) {
+			regInfo_.firstName = '';
+			regInfo_.lastName = firstNameField_.value;
+		} else {
+			regInfo_.firstName = firstNameField_.value;
+			regInfo_.lastName = lastNameField_.value;
+		}
+		regInfo_.email = emailField_.value;
+		if (consentYes_.checked) {
+			regInfo_.consentEmail = prop_.YES;
+		} /*else if (consentNo_.checked) {
+			regInfo_.consentEmail = prop_.NO;
+		}*/
+		regInfo_.country = Helper_.getCountryCodeToBeSavedAsSharedPreferences();
+
+		// Other Data
+		regInfo_.productCreateDate = Helper_.getCurrentDateAsString();
+		if (hp.registration.Registration.isRunningDuringOOBE()) {
+
+			regInfo_.applicationId = prop_.APP_ID;
+
+		} else {
+
+			regInfo_.applicationId = prop_.APP_ID_LAUNCHER;
+
+		}
+		regInfo_.segment = prop_.DEFAULT_SEGMENT_NUMBER;
+		regInfo_.segment2 = prop_.DEFAULT_SEGMENT_NUMBER_2;
+		regInfo_.softwareBuild = machineInfo_.operatingSystem;
+		regInfo_.registrationVersion = machineInfo_.registrationVersion;
+
+		// MachineInfo
+		regInfo_.modelNumber = machineInfo_.modelNumber;
+		regInfo_.serialNumber = machineInfo_.serialNumber;
+		regInfo_.operatingSystem = prop_.OS_CODE_ANDROID;
+		regInfo_.language = machineInfo_.language.substring(0, 2);
+
+		return null;
+	},//#Helper_.collectData
+	'doesUserAgreeWithEULA' : function() {
+		return (eulaCheckbox_.checked);
+    },//#Helper_.doesUserAgreeWithEULA
+    'getCurrentDateAsString': function() {
+        var now_ = new Date();
+        var month_ = now_.getMonth() + 1,
+            day_ = now_.getDate(),
+            year_ = now_.getFullYear(),
+            hours_ = now_.getHours(),
+            minutes_ = now_.getMinutes(),
+            seconds_ = now_.getSeconds();
+
+        return (
+                ('00' + month_).slice(-2) + '/' + ('00' + day_).slice(-2) + '/' + year_ + ' ' +
+                ('00' + hours_).slice(-2) + ':' + ('00' + minutes_).slice(-2) + ':' + ('00' + seconds_).slice(-2)
+            );
+    },//#Helper_.collectData
+	'isOnline' : function() {
+
+		if ('registrationAndroid' in window) {
+			return registrationAndroid.isOnline();
+		} else {
+			return window.navigator.onLine;
+		}
+
+	},//#Helper_.isOnline
+    'getOrientation': function() {
+        var defaultOrientation = '', currentOrientation_ = '',
+            prop_ = hp.registration.Properties,
+            result_ = '';
+
+        defaultOrientation = app_.Registration.getDefaultOrientation();
+        
+
+        currentOrientation_ =  app_.Registration.getCurrentOrientation();
+
+        if (defaultOrientation == prop_.LANDSCAPE && (currentOrientation_ == 0 || currentOrientation_ == 2)) {
+
+            result_ = prop_.LANDSCAPE;
+
+        } else if (defaultOrientation == prop_.PORTRAIT && (currentOrientation_ == 0 || currentOrientation_ == 2)) {
+
+            result_ = prop_.PORTRAIT;
+
+        } else if (defaultOrientation == prop_.LANDSCAPE && (currentOrientation_ == 1 || currentOrientation_ == 3)) {
+
+            result_ = prop_.PORTRAIT;
+
+        } else {
+
+            result_ = prop_.LANDSCAPE;
+
+		}
+
+        console.log('Device Width:' + window.screen.width + ';Device Height:' + window.screen.height + 
+                    ';Default Orientation:' + defaultOrientation + ';orientation:'+result_); 
+
+        return result_;
+	},//#Helper_.getOrientation
+	'callbackGeoLocation' : function(inCode) {
+		var reg_ = hp.registration.Registration;
+
+		// If the user already filled or started filling the information do not override
+		//if (countryList_.value === '' && inCode) 
+		if (inCode)
+		{
+
+			Helper_.geoLocationCountryCode = inCode;
+
+			countryList_.value = reg_.getCountryNameBasedOnCode(inCode);
+			onFormUpdated(null);
+
+		} else {
+
+			console.log("No country code was found in the response");
+
+		}
+
+		if (inCode && inCode !== 'ZZ') { // No need to process if country was not identified.
+			onCountryChanged(null);
+
+			if (app_.Registration.isCarrierIQInstalled()) {
+
+				UI_.changeCarrierIQConsent(inCode);
+
+			}
+
+		}
+
+        
+        
+    },//#Helper_.callbackGeoLocation
+    'finishMetrics': function(inEvent) {
+        
+        var Metrics_ = hp.registration.helper.Metrics;
+        
+        Metrics_.Cache['endTime'] = new Date();
+        Metrics_.processSkip(
+            {
+                'shouldSkipRegistration': Helper_.shouldSkipRegistration(), 
+                'consentToSendData': app_.model.RegistrationInfo.consentToSendData,
+                'startTime': Metrics_.Cache['startTime'], 
+                'endTime': Metrics_.Cache['endTime'] ,
+                'currentRun': hp.registration.Registration.getCurrentRun()
+            });
+        Metrics_.processEmailConsent(
+            {
+                'yesRadioButton': consentYes_,
+             //   'noRadioButton': consentNo_,
+                'fullName': (Helper_.shouldShowFullName() ? true : false)
+            });
+        Metrics_.processLocationServiceState(
+            {
+                'locationServiceUsed': Metrics_.Cache['locationServiceUsed'],
+                'countryCodeReturned': Metrics_.Cache['countryCodeReturned']
+            });
+        Metrics_.processPrivacyStatement(
+            {
+                'privacyStatementClicked': Metrics_.Cache['privacyStatementClicked']
+            });
+        Metrics_.processDataCollection(
+            {
+                'dataCollectionClicked': Metrics_.Cache['dataCollectionClicked']
+            });
+        Metrics_.processTermsAndConditions(
+            {
+                'termsAndConditionsClicked': Metrics_.Cache['termsAndConditionsClicked']
+            });
+        Metrics_.processPrivacyRights(
+            {
+                'privacyRightsClicked': Metrics_.Cache['privacyRightsClicked'],
+                'privacyRightsElement': privacyRights_
+            });
+        Metrics_.processEULA(
+            {
+                'shouldSkipRegistration': Helper_.shouldSkipRegistration(),
+                'shouldShowFullName': Helper_.shouldShowFullName(),
+                'eulaCheckboxElement': eulaCheckbox_
+            });
+        Metrics_.processCountry(
+            {
+                'prepolutadedCountryCode': Metrics_.Cache['countryCodeReturned'],
+                'finalCountryCode': hp.registration.Registration.getCountryCodeBasedOnName(
+                            countryList_.value)
+            });
+        Metrics_.processConnectivity(
+            {
+                'isOnline': Helper_.isOnline()
+            });
+        Metrics_.processFirstName(
+            {
+                'prepolutadedFirstName': Metrics_.Cache['prepolutadedFirstName'],
+                'finalFirstName': firstNameField_.value,
+                'shouldShowFullName': Helper_.shouldShowFullName(),
+                'shouldSwapFirstAndLastName': Helper_.shouldSwapFirstAndLastName()
+            });
+        Metrics_.processLastName(
+            {
+                'prepolutadedLastName': Metrics_.Cache['prepolutadedLastName'],
+                'finalLastName': lastNameField_.value,
+                'shouldShowFullName': Helper_.shouldShowFullName(),
+                'shouldSwapFirstAndLastName': Helper_.shouldSwapFirstAndLastName()
+            });
+        Metrics_.processFullName(
+            {
+                'prepolutadedFullName': Metrics_.Cache['prepolutadedFullName'],
+                'finalFullName': firstNameField_.value,
+                'shouldShowFullName': Helper_.shouldShowFullName(),
+                'shouldSwapFirstAndLastName': Helper_.shouldSwapFirstAndLastName()
+            });
+        Metrics_.processEmail(
+            {
+                'prepolutadedEmail': Metrics_.Cache['prepolutadedEmail'],
+                'finalEmail': emailField_.value,
+                'shouldShowFullName': Helper_.shouldShowFullName()
+            });
+        Metrics_.processClearAll(
+            {
+                'clearAllUsed': Metrics_.Cache['clearAllUsed'],
+                'clearAllElement': clearAllContainer_,
+                'shouldShowFullName': Helper_.shouldShowFullName()
+            });
+        Metrics_.processAccountService(
+            {
+                'prepolutadedEmail': Metrics_.Cache['prepolutadedEmail'],
+                'prepolulatedFirstName': Metrics_.Cache['prepolutadedFirstName'],
+                'prepolutatedLastName': Metrics_.Cache['prepolutadedLastName'],
+                'prepolutadedFullName': Metrics_.Cache['prepolutadedFullName'],
+                'shouldShowFullName': Helper_.shouldShowFullName()
+            });
+        
+    },//#Helper_.finishMetrics
+    'sendMessageToCarrierIQ': function(inMessageAsBollean) {
+        
+        if (app_.Registration.isCarrierIQInstalled()) {
+            
+            var messageAsBoolean_ = inMessageAsBollean || carrierIQConsent_.checked;
+            
+            console.log('Ready to broadcast message to Carrier IQ: ' + messageAsBoolean_)
+            
+            if (messageAsBoolean_ === true) {
+         
+                app_.Registration.sendMessageToCarrierIQ('Yes');
+                
+            } else {
+             
+                app_.Registration.sendMessageToCarrierIQ('No');
+                
+            }
+            
+        }
+        
+    },//#Helper_.sendMessageToCarrierIQ
+    'shouldCarrierIQBeDisabledByDefault': function(inCountryCode) {
+     
+        var result_ = false;
+        
+        if (inCountryCode) {
+            
+            if (app_.Registration.getCarrierIQState(inCountryCode) === 'uncheck') {
+            
+                result_ = true;
+                
+            }
+            
+		}
+
+		return result_;
+	},//#Helper_.shouldCarrierIQBeDisabledByDefault
+	'forceKeyboardToGoAway' : function() {
+
+		/*
+		 * The application has several problems if the keyboard is on the screen and the user rotates of 
+		 * bring up any popup window. This helper function forces the keyboard to go away by gathering 
+		 * all elements that can cause the keyboard to be on the screen and force a blur event. 
+		 */
+
+		var elements_ = document.querySelectorAll('input');
+
+		elements_.forEach(function(inItem) {
+
+			try {
+
+				inItem.blur();
+
+			} catch (inException) {
+
+				// do nothing
+
+			}
+
+		});
+
+	},//#Helper_.forceKeyboardToGoAway
+	/*
+	 * TODO Complete the implementation and Change onClickFinish and onClickAgree to make use of this method. 
+	 *
+	 * @params
+	 *  inContainer: 
+	 *                     {
+	 *                          'callback': String, // Full qualified name of the function that 
+	 *                                              // has to be called. Optional. If not specified, defaults
+	 *                                              // to hp.registration.Registration.closeApplication
+	 *                          'createPreferenceEntryForRegistration': boolean,
+	 *                          'createPreferenceEntryForOTA': boolean,
+	 *                          'createPreferenceEntryForBeaconDuringOOBE': boolean,
+	 *                          'createPreferenceEntryForBeaconDuringAppGrid': boolean
+	 *                     }
+	 */
+	'saveAndClose' : function(inContainer) {
+
+		// See comments about saveAndCloseWasCalledOnce for more information.
+		if (Helper_.saveAndCloseWasCalledOnce === false) {
+
+			Helper_.saveAndCloseWasCalledOnce = true;
+            
+        } else {
+            
+            return;
+            
+        }
+        
+        var registrationUrl_ = null, otaMessage_ = null, otaUrl_ = null, otaQueryUrl_ = null, beaconOOBEUrl_ = null, 
+            beaconAppGridUrl_ = null, runningDuringOOBE_ = null;
+        
+        inContainer['callback'] = inContainer['callback'] || 'hp.registration.Registration.closeApplication';
+        runningDuringOOBE_ = app_.Registration.isRunningDuringOOBE();
+        
+        /*
+         * Few information are critical for the beacon.
+         */
+        if (Helper_.shouldSkipRegistration()) {
+         
+            app_.model.RegistrationInfo.country = Helper_.getCountryCodeToBeSavedAsSharedPreferences();
+            app_.model.RegistrationInfo.registrationVersion = app_.model.MachineInfo.registrationVersion;
+            app_.model.RegistrationInfo.language = app_.model.MachineInfo.language.substring(0,2);
+            
+        }
+        
+        // OTA
+        if (inContainer['createPreferenceEntryForOTA'] && 
+            inContainer['createPreferenceEntryForOTA'] === true) {
+            
+            if ((runningDuringOOBE_ && app_.Registration.doesItNeedConsentToAccessUserInfo() === false) || 
+                (runningDuringOOBE_ === false && app_.Registration.doesItNeedConsentToAccessUserInfo()) ||
+                (runningDuringOOBE_ && Helper_.shouldSkipRegistration())) {
+
+                app_.helper.OTA.buildOTAObject(app_.Registration.getOTASecret());
+
+                otaUrl_ = app_.Properties.endPointOTA;
+                otaMessage_ = app_.model.OTA.getMessageAsString();
+            }
+            
+        }
+        
+        // Metrics
+        Helper_.finishMetrics();
+     //   Helper_.saveRetailerCode();
+        
+        if (inContainer['createPreferenceEntryForBeaconDuringOOBE'] && 
+            inContainer['createPreferenceEntryForBeaconDuringOOBE'] === true) {
+            
+            beaconOOBEUrl_ = app_.helper.Metrics.getFinalBeaconURL();
+            
+        }
+        
+        if (inContainer['createPreferenceEntryForBeaconDuringAppGrid'] && 
+            inContainer['createPreferenceEntryForBeaconDuringAppGrid'] === true) {
+            
+            beaconAppGridUrl_ = app_.helper.Metrics.getFinalBeaconURL();
+            
+        }
+    
+		app_.Registration.saveDataToBeUsedByService({
+			'url' : null,
+			'message' : null,
+			'otaUrl' : otaUrl_,
+			'otaQueryUrl' : otaQueryUrl_,
+			'otaMessage' : otaMessage_,
+			'beaconUrl' : beaconOOBEUrl_,
+			'beaconUrlPostOOBE' : beaconAppGridUrl_,
+			'callback' : inContainer['callback']
+		});
+
+	},//#saveAndClose
+	'adjust' : function() {
+
+		mainContent_.style.height = '100%';
+		mainContent_.style.height = getComputedStyle(mainContent_).height;
+		
+		
+        
+    },//#adjust
+    'saveRetailerCode': function() {
+
+        if (Helper_.originalRetailerCode) {
+
+            app_.Registration.saveRetailerCode(Helper_.originalRetailerCode);
+
+        } else {
+
+            app_.Registration.saveRetailerCode('');
+
+        }
+
+        
+    },
+    'mapRetailerCode': function(inRetailerCode) {
+
+        if (inRetailerCode.indexOf('!') > -1) {
+            return app_.Properties.CRM_OTHER_CODE;
+        } else {
+            return inRetailerCode;
+        }
+
+    }
+};//#Helper_
+
+var Dropdown = {
+    "inputField": null, 
+    "listContainer": null,
+    "cache": [],
+    "keyDownCount": 0,
+    "currentItemSelected": null,
+    "working": false, 
+    "setup": function(inElement, inCollection, inField) {
+        
+        var item_ = null;
+    
+        Dropdown.listContainer = inElement;
+        Dropdown.inputField = inField;
+        
+        inCollection.forEach(function(inItem) {
+            
+            item_ = this.createElement(inItem);
+            inElement.appendChild(item_);
+            Dropdown.cache.push(item_);
+            
+        }.bind(this));
+        
+        Dropdown.inputField.addEventListener('keydown', function(inEvent) {
+                
+
+							if (inEvent.keyCode === 40) { // DOWN KEY
+
+								inEvent.preventDefault();
+
+								if (Dropdown.currentItemSelected === null) {
+
+									for ( var x = 0, len = Dropdown.listContainer.children.length; x < len; x++) {
+
+										if (Dropdown.listContainer.children[x].style.display !== 'none') {
+
+											Dropdown.currentItemSelected = Dropdown.listContainer.children[x];
+											Dropdown.currentItemSelected.className += ' itemSelected';
+
+											break;
+
+										}
+
+									}
+
+								} else {
+
+                    var previousSelected_ = Dropdown.currentItemSelected;
+                    
+                    do {
+                        
+                        Dropdown.currentItemSelected = Dropdown.currentItemSelected.nextElementSibling;
+                        
+                        if (Dropdown.currentItemSelected && 
+                            Dropdown.currentItemSelected.style.display !== 'none') {
+                         
+
+                            previousSelected_.className = 'countryItem';
+                            Dropdown.currentItemSelected.className += ' itemSelected';
+                            Dropdown.currentItemSelected.scrollIntoViewIfNeeded(false);
+                            break;
+                            
+                        } else if (Dropdown.currentItemSelected === null) {
+                            
+                            Dropdown.currentItemSelected = previousSelected_;
+                            break;   
+
+                        }
+                        
+                    } while (Dropdown.currentItemSelected !== null);
+
+								}
+
+							} else if (inEvent.keyCode === 38) { // UP KEY
+
+								inEvent.preventDefault();
+
+								if (Dropdown.currentItemSelected !== null) {
+                                      
+                    var previousSelected_ = Dropdown.currentItemSelected;
+                    
+                    do {
+                        
+                        Dropdown.currentItemSelected = Dropdown.currentItemSelected.previousElementSibling;
+                        if (Dropdown.currentItemSelected && 
+                            Dropdown.currentItemSelected.style.display !== 'none') {
+                         
+                            previousSelected_.className = 'countryItem';
+                            Dropdown.currentItemSelected.className += ' itemSelected';
+                            Dropdown.currentItemSelected.scrollIntoViewIfNeeded(true);
+                            break;
+                            
+                        } else if (Dropdown.currentItemSelected === null) {
+                            
+                            Dropdown.currentItemSelected = previousSelected_;
+                            break;
+                            
+										}
+
+									} while (Dropdown.currentItemSelected !== null);
+
+								}
+
+							} else if (inEvent.keyCode === 13) { // ENTER KEY
+
+                if (Dropdown.currentItemSelected) {
+                
+                    Dropdown.inputField.value = Dropdown.currentItemSelected.textContent;
+                    Dropdown.inputField.blur();
+                        
+                }
+                
+                Dropdown.onCountryDefined();
+                
+            } else {
+                
+                Dropdown.currentItemSelected = null;   
+                
+            }
+            
+        }, false);//#addEventListener(keydown)
+      
+        Dropdown.listContainer.addEventListener('mouseover', function(inEvent) {
+            
+			if (Dropdown.currentItemSelected) {
+
+				Dropdown.currentItemSelected.className = 'countryItem';
+
+			}
+
+		}, false);//#addEventListener(mouseover)
+
+		Dropdown.listContainer.addEventListener('mouseout', function(inEvent) {
+
+			if (Dropdown.currentItemSelected) {
+
+				Dropdown.currentItemSelected.className += ' itemSelected';
+
+			}
+
+		}, false);//#addEventListener(mouseout)
+
+	},//#Dropdown.setup
+	"createElement" : function(inText) {
+		var child_ = document.createElement('LABEL');
+		child_.textContent = inText;
+		child_.className = 'countryItem';
+
+		return child_;
+	},//#Dropdown.createElement
+	"onFieldFocus" : function(inEvent) {
+
+		inEvent && inEvent.stopPropagation();
+
+		Dropdown.cache.forEach(function(inItem) {
+			inItem.style.display = 'block';
+		});
+
+		UI_.drawCountryList();
+
+	},//#Dropdown.onFieldFocus
+    "onDropdownClick": function(inEvent) {
+
+        Dropdown.currentItemSelected = null;
+        
+        Dropdown.inputField.value = inEvent.srcElement.textContent;
+        Dropdown.listContainer.style.display = 'inline-block';
+        
+        Dropdown.onCountryDefined();
+        
+    },//#Dropdown.onDropdownClick
+    "onKeyPressed": function(inEvent) {
+        
+        if (inEvent.keyCode !== 38 && inEvent.keyCode !== 40) { // Up and Down
+            
+            if (Dropdown.listContainer.style.display === 'none') {
+                Dropdown.listContainer.style.display = 'inline-block';
+            }
+    
+            Dropdown.cache.forEach(function(inItem) {
+                if (inItem.textContent.toLowerCase().indexOf(Dropdown.inputField.value.trim().toLowerCase()) !== -1) {
+                    inItem.style.display = 'block';
+                } else {
+							inItem.style.display = 'none';
+						}
+
+						/*
+						 * workaround for webview container
+						 * Scrolling back to the top for each letter typed due to the following scenario:
+						 * If the field is empty and the user taps on the field, scrolls the list down and type a letter the
+						 * list seems to be empty. But actually is not. If the user taps the country list as he/she wants
+						 * to scroll the items show up. Scrolling to the top will avoid this behavior and always show items in 
+						 * the list.
+						 */
+						Dropdown.listContainer.scrollTop = 0;
+					});
+
+		}
+
+	},//#Dropdown.onKeyPressed
+	'onFieldBlur' : function(inEvent) {
+
+		if (Dropdown.currentItemSelected) {
+
+			Dropdown.currentItemSelected.className = 'countryItem';
+
+		}
+
+		Dropdown.currentItemSelected = null;
+
+		/*
+		 * Giving some time so the onClick on the country list can be processed. 
+		 */
+		setTimeout(function() {
+
+			if (getComputedStyle(Dropdown.listContainer).display !== 'none') {
+
+				Dropdown.listContainer.style.display = 'none';
+
+			}
+
+		}, 100);
+
+		if (Helper_['wasCountryErrorMessageOnScreen'] == true) {
+
+			Helper_['wasCountryErrorMessageOnScreen'] = false;
+			errorMessageCountry_.style.visibility = 'visible';
+
+		}
+
+		/*
+		 * If the country doesn't exist in the list then we force the field to go blank.
+		 */
+		var code_ = app_.Registration.getCountryCodeBasedOnName(this.value);
+		if (code_ !== null && code_ == 'ZZ') {
+
+			countryList_.value = '';
+
+		}
+  
+        Dropdown.onCountryDefined();
+        
+    },//#Dropdown.onFieldBlur
+    'onCountryDefined': function() {
+
+        if (Dropdown.working === false) {
+
+            Dropdown.working = true;
+
+            setTimeout(function() {
+
+                try {
+                
+                    onCountryChanged(null);
+                    onFormUpdated(null);
+
+                } catch(inError) {
+
+                    Dropdown.working = false;
+
+                }
+
+            }, 1000);
+
+        }
+
+    }//#onCountryDefined
+};//#Dropdown
+
+var getPageContent = function(URI) {
+	var state_change = function() {
+		if (xmlhttp.readyState == 4) {
+			// 4 = "loaded"
+			if (xmlhttp.status == 200) {
+				// 200 = OK
+				var content = xmlhttp.responseText;
+				//use 100% to replace all fixed width, wrokaround of formate issue
+				// content = content.replace(/\swidth=\d{3}/g," width='100%'");
+				content = content.replace(/\swidth\D*\d{3,}[^\s\d\>]*/g," width=100% ");
+				content = content.replace(/marginwidth="0"/, "marginwidth='10px'");
+				var iframe_ = document.createElement('IFRAME');
+				iframe_.srcdoc = content;
+				iframe_.style.width = '100%';
+				popupBodyForContent_.innerHTML = "";
+				popupBodyForContent_.appendChild(iframe_);
+				iframe_.focus();
+				Popup_.currentIFrame = iframe_;
+
+				// workaround for physical keyboard events
+
+				/*
+				 * workaround. Avoid a second scrolling from the container that wraps the IFRAME.
+				 *
+				 * While running on Android, up to the version 4.3, the webview uses Stock browser. Stock 
+				 * doesn't render scrollbars for IFRAMEs. We include in the parent container so the user can 
+				 * have some infication that the container can be scrolled. 
+				 *
+				 * TODO ENHANCE THE CSS AND JAVASCRIPT TO AVOID THIS.
+				 */
+
+				if (app_.Registration.isHostBasedOnChrome()) {
+
+					//popupBodyForContent_.style.overflowY = 'hidden';
+					popupBodyForContent_.style.overflowX = 'hidden';
+
+				} else {
+
+					popupBodyForContent_.style.overflowY = 'hidden';
+
+				}
+
+			}
+		}
+
+	};
+
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = state_change;
+	xmlhttp.open("GET", URI, true);
+	xmlhttp.send(null);
+
+}
+
+var Popup_ = {
+    'origin': '',
+    'SIZE_BIG': 'big',
+    'SIZE_SMALL': 'small',
+    'currentIFrame': null, // Reference to the current IFRAME on the screen. 
+    'currentContentContainer': null, // Reference to the current DIV that host the content. (no IFRAME cases)
+    /*
+     * Shows a popup windows which was suitable for content, tha most likely, will create 
+     * scrollbars.
+     * If endPoint is specified, the content is ignored (is passed).
+     *
+     * @input
+     *  inContainer: Object.
+     *               {
+     *                  'title': String,
+     *                  'content': String,
+     *                  'note': String, 
+     *                  'endPoint': String,
+     *                  'actionLabel': String,
+     *                  'action': Function,
+     *                  'actionInitialState': String,
+     *                  'rel': String,
+     *                  'type': String [optional] 
+     *                  'size': Popup_.SIZE_* [optional]
+     *               }
+     */
+    'showPopupForContent': function(inContainer) {
+        
+        inContainer['size'] = inContainer['size'] || this.SIZE_BIG;
+     
+        popupTitle_.textContent = inContainer['title'] || "";
+        popupButtonForContent_.textContent = inContainer['actionLabel'];
+
+        popupButtonForContent_.onclick = null;
+
+        // Now disable the action button if actionInitialState is set to 'disabled'
+        if ('actionInitialState' in inContainer) {
+            if ('disabled'===inContainer['actionInitialState']) {
+                // Go disable the button
+                popupButtonForContent_.classList.add('disabledButton');
+            }
+
+        } else {
+            popupButtonForContent_.addEventListener('click', inContainer['action'], true);
+        }
+
+        
+		if ('rel' in inContainer) {
+
+			popupButtonForContent_.setAttribute('rel', inContainer['rel']);
+
+		} else {
+
+			popupButtonForContent_.removeAttribute('rel');
+
+		}
+
+		// Including note if available
+		if ('note' in inContainer) {
+
+			notePopup_.textContent = inContainer['note'];
+
+		} else {
+
+			notePopup_.textContent = '';
+
+		}
+
+		if ('endPoint' in inContainer) {
+			//callback for xmlhttprequest
+			var state_change = function() {
+				if (xmlhttp.readyState == 4) {
+					// 4 = "loaded"
+					if (xmlhttp.status == 200) {
+						// 200 = OK
+						var content = xmlhttp.responseText;
+						//use 100% to replace all fixed width, wrokaround of formate issue
+						//content = content.replace(/\swidth=\d{3}/g,
+							//	" width='100%'");
+					//	content = content.replace(/\swidth\D*\d{3}\S* /g," width=100% ");
+						content = content.replace(/\swidth\D*\d{3,}[^\s\d\>]*/g," width=100% ");
+						content = content.replace(/marginwidth="0"/,
+								"marginwidth='10px'");
+						var iframe_ = document.createElement('IFRAME');
+						iframe_.srcdoc = content;
+						iframe_.style.width = '100%';
+						popupBodyForContent_.innerHTML = "";
+						popupBodyForContent_.appendChild(iframe_);
+						iframe_.focus();
+						Popup_.currentIFrame = iframe_;
+
+						// workaround for physical keyboard events
+
+						/*
+						 * workaround. Avoid a second scrolling from the container that wraps the IFRAME.
+						 *
+						 * While running on Android, up to the version 4.3, the webview uses Stock browser. Stock 
+						 * doesn't render scrollbars for IFRAMEs. We include in the parent container so the user can 
+						 * have some infication that the container can be scrolled. 
+						 *
+						 * TODO ENHANCE THE CSS AND JAVASCRIPT TO AVOID THIS.
+						 */
+
+						if (app_.Registration.isHostBasedOnChrome()) {
+
+							popupBodyForContent_.style.overflowY = 'hidden';
+							popupBodyForContent_.style.overflowX = 'hidden';
+
+						} else {
+
+							popupBodyForContent_.style.overflowY = 'hidden';
+
+						}
+
+					}
+				}
+
+			};
+
+			//use xmlhttprequest to get the html page content rather than the html page. workaroud of wps issue
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = state_change;
+			xmlhttp.open("GET", inContainer['endPoint'], true);
+			xmlhttp.send(null);
+		} else {
+
+			var div_ = document.createElement('DIV');
+			div_.innerHTML = inContainer['content'];
+
+			popupBodyForContent_.innerHTML = div_.outerHTML;
+
+			// workaround for physical keyboard events
+			//div_.firstElementChild.focus();
+			Popup_.currentContentContainer = popupBodyForContent_;//popupBodyForContent_;
+
+			switch (Helper_.getLanguageCode()) {
+			case 'he':
+			case 'ar':
+				popupBodyForContent_.setAttribute('lang', Helper_
+						.getLanguageCode());
+				popupBodyForContent_.setAttribute('dir', 'rtl');
+				popupBodyForContent_.style.textAlign = 'right';
+				popupBodyForContent_.style.direction = 'rtl';
+			default:
+				break;
+			}
+
+			/*
+			 * workaround. Put the scrolling of the container back, in case an IFRAME (above) was used before this.
+			 * TODO ENHANCE THE CSS AND JAVASCRIPT TO AVOID THIS.
+			 */
+			popupBodyForContent_.style.overflowY = 'scroll';
+			popupBodyForContent_.style.overflowX = 'hidden';
+		}
+
+		if ('action2' in inContainer && 'action2Label' in inContainer) {
+
+			popupButton2ForContent_.textContent = inContainer.action2Label;
+			popupButton2ForContent_.style.display = 'inline-block';
+			popupButton2ForContent_.addEventListener('click',
+					inContainer.action2, false);
+
+		} else {
+
+			popupButton2ForContent_.style.display = 'none';
+			popupButton2ForContent_.onclick = null;
+
+		}
+
+		popupContentScreen_.style.display = 'table';
+
+		/*
+		 * The height of the main container varies. First, we clean any old styles that define the height. And then,
+		 * set the correct height.
+		 */
+		[ 'popupContentForContentBig', 'popupContentForContentSmall' ]
+				.forEach(function(inItem) {
+
+					popupContentForContent_.classList.remove(inItem);
+
+				});
+
+		if (inContainer['size'] === this.SIZE_BIG) {
+
+			popupContentForContent_.classList.add('popupContentForContentBig');
+
+		} else if (inContainer['size'] === this.SIZE_SMALL) {
+
+			popupContentForContent_.classList
+					.add('popupContentForContentSmall');
+
+		}
+
+		/*
+		 * workaround for Android 4.2 and 4.3. This avoids the problem when the keyboard has to come up on the screen, 
+		 * so the window doesn't get resized. Need to do some work on onConfigurationChanged
+		 * TODO IMPROVE LOGIC IN FUTURE RELEASES.
+		 */
+		popupContentScreen_.style.height = '100%';
+
+		/*
+		 * workaround for webview container
+		 * Even though the Popup is taking the whole space of the viewport the UP and DOWN
+		 * of physical keyboards attached are still active in the context of the screen behind.
+		 * To avoid this problem, we hide the panel behind and show again when the user dismisses
+		 * the modal window.
+		 */
+		Helper_.previousDisplayValueForMainScreen = getComputedStyle(mainContent_).display;
+		mainContent_.style.display = 'none';
+
+		addEventListener('keydown', Popup_.onKeyDown, true);
+
+	},//#showPopupForContent
+	/*
+	 * @input
+	 *  inContainer: Object.
+	 *               {
+	 *                  'title': String,
+	 *                  'content': String,
+	 *					'actionLabel': String,
+	 *					'action': Function
+	 *                  'action2Label': String,
+	 *                  'action2': Function
+	 *               }
+	 */
+	'showPopup' : function(inContainer) {
+
+		popupButton_.textContent = inContainer['actionLabel'];
+
+		popupButton_.onclick = null;
+		popupButton_.onclick = inContainer['action'];
+
+		var body_ = popupScreen_.querySelector('#popupBodyContent');
+		body_.innerHTML = '';
+
+		if (inContainer['title']) {
+
+			popupSimpleHeader_.textContent = inContainer['title'];
+
+		} else {
+
+			popupSimpleHeader_.textContent = '';
+
+		}
+
+		if ('action2' in inContainer && 'action2Label' in inContainer) {
+
+			popupButton2_.textContent = inContainer.action2Label;
+			popupButton2_.style.visibility = 'visible';
+			popupButton2_.addEventListener('click', inContainer.action2, false);
+
+		} else {
+
+			popupButton2_.style.visibility = 'hidden';
+			popupButton2_.onclick = null;
+
+		}
+
+		if ('content' in inContainer) {
+			if (inContainer.content instanceof HTMLElement) {
+
+				body_.appendChild(inContainer.content);
+
+			} else {
+
+				body_.innerHTML = inContainer['content'];
+
+			}
+		}
+
+		popupScreen_.style.display = 'table';
+
+		/*
+		 * workaround for webview container
+		 * Even though the Popup is taking the whole space of the viewport the UP and DOWN
+		 * of physical keyboards attached are still active in the context of the screen behind.
+		 * To avoid this problem, we hide the panel behind and show again when the user dismisses
+		 * the modal window.
+		 */
+		Helper_.previousDisplayValueForMainScreen = getComputedStyle(mainContent_).display;
+		mainContent_.style.display = 'none';
+
+		//onConfigurationChanged();//DEBUG!
+
+	},//#Popup_.showPopup
+	'closePopupForContent' : function(inEvent) {
+
+		inEvent && inEvent.preventDefault && inEvent.preventDefault();
+		inEvent && inEvent.srcElement && inEvent.srcElement.blur();
+
+		popupContentScreen_.style.display = 'none';
+
+
+		/*
+		 * While the pop up was up, the background was hidden (display = none) to avoid problems
+		 * with how Android deals with up and down keys. We need to set back to -webkit-box
+		 */
+		mainContent_.style.display = Helper_.previousDisplayValueForMainScreen;
+		mainContent_.style.display = '-webkit-box';
+		Helper_.adjust();
+
+		removeEventListener('keydown', Popup_.onKeyDown);
+		Popup_.currentIFrame = null;
+		Popup_.currentContentContainer = null;
+
+	},//#Popup_.closePopupForContent
+	'closePopup' : function(inEvent) {
+
+		inEvent && inEvent.preventDefault && inEvent.preventDefault();
+		inEvent && inEvent.srcElement && inEvent.srcElement.blur();
+
+		popupScreen_.style.display = 'none';
+	
+		/*
+		 * While the pop up was up, the background was hidden (display = none) to avoid problems
+		 * with how Android deals with up and down keys. We need to set back to -webkit-box.
+		 */
+		mainContent_.style.display = Helper_.previousDisplayValueForMainScreen;
+		mainContent_.style.display = '-webkit-box';
+		Helper_.adjust();
+
+	},//#Popup_.closePopup
+	'onKeyDown' : function(inEvent) {
+
+		/*
+		 * workaround for webview container
+		 * If the user has physical keyboard, the use of up and down keys behave in an odd way.
+		 * Once the user presses down and tries to move up, the page doesn't scroll. The workaround 
+		 * below forces the focus in the IFRAME.
+		 */
+		if (inEvent.keyCode === 38 || inEvent.keyCode === 40) {
+
+            Popup_.currentIFrame && Popup_.currentIFrame.focus();
+            
+            if (inEvent.keyCode === 40) {
+                
+                Popup_.currentContentContainer && Popup_.currentContentContainer.scrollByLines(1);
+                
+            } else {
+                
+                Popup_.currentContentContainer && Popup_.currentContentContainer.scrollByLines(-1);
+                
+            }
+
+		}
+
+	}//#Popup_.onKeyDown
+};//#Popup_
+
+var UI_ = {
+    'bindContent': function() {
+        function parseLicenseTermsElement_(inElement) {
+            var link_ = inElement.querySelector('A');
+                link_.href = '#';    
+            
+            if (link_) {
+                link_.addEventListener('click', onClickEULA, false);
+            }
+        };//#parseLicenseTermsElement_
+        
+        function parseCarrierIQText_(inElement) {
+            
+            var link_ = inElement.querySelector('A');
+                    
+            
+            if (link_) {
+                
+                link_.href = '#';
+                link_.addEventListener('click', onClickCarrierIQ, false);
+                
+            }
+            
+        };//#parseLicenseTermsElement_
+
+		function parseAnonymousText_(inElement) {
+            
+            /*
+             * The localized text has two anchors (A) if in OOBE;or only one if it's running from the appgrid. 
+             * OOBE: 1st A is for license tems and 2nd A is for the the Privacy Statement.
+             * AppGrid: A is for license terms.
+             */
+            var links_ = inElement.querySelectorAll('A'),
+                link_ = null;
+            
+            if (app_.Registration.isRunningDuringOOBE()) {
+                
+                if (links_ && links_[0]) {
+
+                    link_ = links_[0];
+
+                    link_.id = 'anonymousEULA';
+                    link_.href = '#';
+                    link_.onclick = null;
+                    link_.addEventListener('click', onClickEULA, false);
+
+                } else {
+
+                    console.error('The anchor for EULA was not found in the localized content');
+
+                }
+
+				if (links_ && links_[1]) {
+
+					link_ = links_[1];
+
+                    link_.id = 'anonymousPrivacy';
+                    link_.href = '#';
+                    link_.onclick = null;
+                    link_.addEventListener('click', onClickPrivacy, false);
+
+                } else {
+
+                    console.error('The anchor for Privacy was not found in the localized content');
+
+                }
+			} else {
+
+				if (links_ && links_[0]) {
+
+					link_ = links_[0];
+
+					link_.id = 'anonymousPrivacy';
+					link_.href = '#';
+					link_.onclick = null;
+                    link_.addEventListener('click', onClickPrivacy, false);
+
+                } else {
+
+                    console.error('The anchor for Privacy was not found in the localized content');
+
+                }
+                
+            }
+            
+        };//#parseAnonymousText_
+
+		var loc_ = hp.registration.util.Localization;
+		hp.registration.Registration.setTitle(loc_.getContent('hp.oobe.registration.title'));
+       // title_.textContent = loc_.getContent('hp.oobe.registration.title');
+        intro_.textContent = loc_.getContent('hp.oobe.registration.intro');
+        countryList_.placeholder = loc_.getContent('hp.oobe.registration.captioncountry');
+        firstNameField_.placeholder = loc_.getContent('hp.oobe.registration.captionfirstname');
+        lastNameField_.placeholder = loc_.getContent('hp.oobe.registration.captionlastname');
+        emailField_.placeholder = loc_.getContent('hp.oobe.registration.captionemail');
+       
+        emailConsentText_.textContent = loc_.getContent('hp.oobe.registration.consentemail');
+        privacyRights_.textContent = loc_.getContent('hp.oobe.registration.linkprivacyrights');
+        dataCollection_.textContent = 
+                loc_.getContent('hp.oobe.registration.linkdatacollection');
+        
+        /*
+         * The note in the bottom of the screen are different between OOBE and AppGrid
+         */
+        anonymousText_.innerHTML = (app_.Registration.isRunningDuringOOBE() ?
+                                        loc_.getContent('hp.oobe.registration.completetext') : 
+                                        loc_.getContent('hp.oobe.registration.later.completetext'));
+            parseAnonymousText_(anonymousText_);
+        
+        finishButtonLabel_.textContent = loc_.getContent('hp.oobe.registration.accept');
+        finishButtonLabelandroid_.textContent = finishButtonLabel_.textContent;
+        skipButtonLabel_.textContent = loc_.getContent('hp.oobe.registration.skip');
+        countryRequiredText_.textContent = 
+                loc_.getContent('hp.oobe.registration.errorcountryselection');
+        nameRequiredText_.textContent = 
+                loc_.getContent('hp.oobe.registration.errornamerequired');
+        emailRequiredText_.textContent = loc_.getContent('hp.oobe.registration.erroremail');
+        errorMessageConsentEmail_.textContent = 
+                loc_.getContent('hp.oobe.registration.errorconsentselection');
+      //  yesText_.textContent = loc_.getContent('hp.oobe.registration.yes');
+      //  noText_.textContent = loc_.getContent('hp.oobe.registration.no');
+        clearAll_.textContent = loc_.getContent('hp.oobe.registration.clearall');
+        goAwayButtonLabel_.textContent = loc_.getContent('hp.oobe.registration.neverregister');
+        carrierIQText_.innerHTML = loc_.getContent('hp.oobe.registration.networkdiag');
+            parseCarrierIQText_(carrierIQText_);
+            
+	},//#bindContent
+	'updateUIBasedOnCountry' : function() {
+        /*
+         * The Dropdown.working gets changed in the Dropdown.onCountryDefined
+         */
+        Dropdown.working = false;
+
+        var loc_ = hp.registration.util.Localization;
+        var url_ = loc_.getContent('privacyrights');
+        
+        // Show the Privacy Rights link?
+		if (url_ && !(Helper_.isFirstTime)) {
+
+			console.log('Should show the Privacy Rights');
+			privacyRights_.style.visibility = 'visible';
+
+		} else {
+
+			privacyRights_.style.visibility = 'hidden';
+
+		}
+
+        // Pre-check consent for e-mail?
+        var consent_ = loc_.getContent('consentemail');
+        if (consent_ && !(Helper_.isFirstTime) && !(Helper_.didUserEngagedWithConsent)) {
+            if (consent_ === "yes") {
+                consentYes_.checked = true;
+            } else if (consent === "no") {
+              //  consentNo_.checked = true;
+            }
+        }
+
+		// In case the country does not allow registration
+		if (Helper_.shouldSkipRegistration()) {
+
+			function callback_() {
+                
+                Helper_.saveAndClose({
+                    'callback': 'hp.registration.Registration.closeApplicationAndKillAppGridShortcut',
+                    'createPreferenceEntryForRegistration': false,
+                    'createPreferenceEntryForOTA': true,
+                    'createPreferenceEntryForBeaconDuringOOBE': true,
+                    'createPreferenceEntryForBeaconDuringAppGrid': false
+                });   
+                mainContent_.style.display = '-webkit-box';
+            }
+            
+			if (app_.Registration.isRunningDuringOOBE()) {
+
+                console.log('The country selected does not allow registration. EULA will show up.');
+
+                var content_ = "";
+
+                mainContent_.style.display = 'none';
+
+                Popup_.showPopupForContent({
+                    'title': loc_.getContent('hp.oobe.registration.licensetermstitle'),
+                    'endPoint': loc_.getContent('eula'),
+                    'action': callback_,
+                    'actionLabel': loc_.getContent('hp.oobe.registration.agree')
+                });
+                
+            } else { // Running from AppGrid
+                
+                Helper_.saveAndClose({
+                    'callback': 'hp.registration.Registration.closeApplicationAndKillAppGridShortcut',
+                    'createPreferenceEntryForRegistration': false,
+                    'createPreferenceEntryForOTA': false,
+                    'createPreferenceEntryForBeaconDuringOOBE': false,
+                    'createPreferenceEntryForBeaconDuringAppGrid': true
+                });   
+
+			}
+		}
+
+		Helper_.isFirstTime = false;
+	},//#UI_.updateUIBasedOnCountry
+	'updateUIBasedOnLanguage' : function() {
+		var loc_ = hp.registration.util.Localization;
+		var fullname_ = loc_.getContent('fullname');
+
+        if (fullname_ == "yes" || Helper_.Flags.alwaysFullName) {
+            firstNameField_.placeholder = loc_.getContent('hp.oobe.registration.captionfullname');
+            lastNameContainer_.style.display = 'none';
+            firstNameContainer_.style.width = '100%';
+            firstNameField_.style.width = '100%';
+        }
+
+		if (Helper_.shouldSwapFirstAndLastName()) {
+			UI_.swapFirstAndLastName();
+		}
+
+	},//#UI_.updateUIBasedOnLanguage
+	/*
+	 * Some models show variations on colors. This function make adjustments based on the model.
+	 */
+	'updateUIBasedOnModel' : function() {
+
+        function changeRegistrationFormBackground_(inStylesheet) {
+            
+            inStylesheet && inStylesheet.addRule('#registrationForm', 'background-color: #b8bcbc');
+            
+        };//#changeRegistrationFormBackground_
+        
+        function changeClearAllDisabled_(inStylesheet) {
+            
+            inStylesheet && inStylesheet.addRule('#clearAllContainer.disabled > #clearAll', '#e5e8e8');
+            
+        };//#changeClearAllDisabled_
+        
+        function changeRadioButtons_(inStylesheet) {
+            
+            inStylesheet && inStylesheet.addRule('input[type="radio"]', 'background: url("../images/radio lppi.svg") center center no-repeat;');
+            inStylesheet && inStylesheet.addRule('input[type="radio"]:checked', 'background: url("../images/radio selected lppi.svg") center center no-repeat;');
+            
+        };//#changeStylesheet_
+        
+        var stylesheet_ = document.styleSheets[0],
+            reg_ = hp.registration.Registration;
+        var device_ = reg_.getPropertyOfDevice('ro.product.device');
+        
+        if (device_) {
+            
+            if (device_ === 'rk30sdk' && window.devicePixelRatio <= 1) {
+                
+                changeRegistrationFormBackground_(stylesheet_);
+                changeClearAllDisabled_(stylesheet_);
+                changeRadioButtons_(stylesheet_);
+                
+            }
+            
+        }
+
+    },//#UI_.updateUIBasedOnModel
+    'drawCountryList': function() {
+        
+        Dropdown.listContainer.style.display = 'block';
+            
+        Dropdown.listContainer.style.width = 
+            countryList_.getBoundingClientRect().width + 'px';
+        
+        if (getComputedStyle(errorMessageCountry_).visibility === 'visible') {
+            
+            errorMessageCountry_.style.visibility = 'hidden';
+            Helper_['wasCountryErrorMessageOnScreen'] = true;
+            
+        }
+        
+    },//#UI_.drawCountryList
+    'redrawCountryList': function() {
+
+        if (getComputedStyle(Dropdown.listContainer).display === 'block') {
+        
+            Dropdown.listContainer.style.width = 
+                countryList_.getBoundingClientRect().width + 'px';
+            Dropdown.listContainer.style.top = 
+                countryList_.getBoundingClientRect().bottom + 'px';
+            Dropdown.listContainer.style.left =  
+                countryList_.getBoundingClientRect().left + 'px';
+                
+        }
+
+	},//#UI_.redrawCountryList
+	'swapFirstAndLastName' : function() {
+
+		nameFieldsContainer_.removeChild(firstNameContainer_);
+		nameFieldsContainer_.removeChild(lastNameContainer_);
+
+		nameFieldsContainer_.appendChild(lastNameContainer_);
+		nameFieldsContainer_.appendChild(firstNameContainer_);
+		//   lastNameContainer_.style.float = 'none';
+		//  firstNameContainer_.style.float = 'right';
+
+	},//#UI_.swapFirstAndLastName
+	'enableClearAll' : function() {
+
+		clearAllContainer_.className = 'enable';
+
+		try {
+
+			clearAll_.addEventListener('click', onClearAllClicked, false);
+			clearAllIcon_.addEventListener('click', onClearAllClicked, false);
+
+		} catch (inException) {
+			// do nothing   
+		}
+
+	},//#UI_.enableClearAll
+	'disableClearAll' : function() {
+
+		clearAllContainer_.className = 'disabled';
+		privacyRights_.style.visibility = 'hidden';
+		try {
+
+			clearAll_.removeEventListener('click', onClearAllClicked);
+			clearAllIcon_.removeEventListener('click', onClearAllClicked);
+
+		} catch (inException) {
+			// do nothing   
+		}
+
+	},//#UI_.disableClearAll
+	'changeCarrierIQConsent' : function(inCountryCode) {
+
+		var result_ = null;
+
+		if (inCountryCode) {
+
+			result_ = app_.Registration.getCarrierIQState(inCountryCode);
+
+			if (result_ && result_ === 'precheck') {
+
+				carrierIQConsent_.checked = true;
+
+			} else if (result_ && result_ === 'uncheck') {
+
+				carrierIQConsent_.checked = false;
+
+			}
+
+			app_.helper.Metrics.Cache['carrierIQDefault'] = result_;
+
+		}
+
+	},//#UI_.changeCarrierIQConsent
+	'showConsent' : function() {
+
+		var loc_ = app_.util.Localization;
+
+		function buildText_() {
+
+			var root_ = document.createElement('ROOT');
+			var br_ = document.createElement('BR');
+
+			var text1_ = document.createTextNode(loc_
+					.getContent('hp.oobe.registration.consentnetwork'));
+			var text2_ = document.createTextNode(loc_
+					.getContent('hp.oobe.registration.consentuser'));
+
+			root_.appendChild(text1_);
+			root_.appendChild(br_);
+			root_.appendChild(text2_);
+
+			return root_.innerHTML;
+
+		}
+		;//#buildText_
+
+		function callbackRegistrationInfo_(inData) {
+
+			hp.registration.model.RegistrationInfo.init(inData);
+
+			Popup_.closePopup();
+			UI_.showMainScreen();
+
+		}
+
+		// During OOBE the label is Skip. From appgrid is "Never register"
+		var labelForDecline_ = (app_.Registration.isRunningDuringOOBE() ? loc_
+				.getContent('hp.oobe.registration.skip') : loc_
+				.getContent('hp.oobe.registration.neverregister'));
+
+		// During OOBE, the decline remains on the UI. From appgrid the app get disabled and removed from appgrid.
+		var callbackForDecline_ = (app_.Registration.isRunningDuringOOBE() ? onDeclineConsent
+				: onDeclineConsentFromAppGrid);
+
+		Popup_
+				.showPopup({
+					'title' : loc_
+							.getContent('hp.oobe.registration.consentuser.title'),
+					'content' : loc_
+							.getContent('hp.oobe.registration.consentnetwork'),
+					'action' : function(inEvent) {
+						inEvent && inEvent.preventDefault();
+						runservice = true;
+						app_.Registration.RegistrationInfo.getInfoAsync({
+							'callback' : callbackRegistrationInfo_
+						});
+						return false;
+					},
+					'actionLabel' : loc_
+							.getContent('hp.oobe.registration.accept'),
+					'action2' : callbackForDecline_,
+					'action2Label' : labelForDecline_
+				});
+
+	},//#UI_.showConsent
+
+	'showMainScreen' : function() {
+
+		var loc_ = hp.registration.util.Localization;
+
+		UI_.updateUIBasedOnLanguage();
+		UI_.updateUIBasedOnCountry();
+		UI_.updateUIBasedOnModel();
+
+		/*
+		 * If the onLoad was called from the Java layer (when rotation, or dock happened). So 
+		 * we will get cached value saved in memory. No need to set what come from the system
+		 * since the user might have changed the values. 
+             */
+
+            // Setting data that already exists in the system
+            if (loc_.getContent('fullname')) {
+                firstNameField_.value = hp.registration.model.RegistrationInfo.fullName;
+                
+                hp.registration.helper.Metrics.Cache['prepolutadedFullName'] = 
+                    hp.registration.model.RegistrationInfo.fullName || null;
+            } else {
+                firstNameField_.value = hp.registration.model.RegistrationInfo.firstName;
+                lastNameField_.value = hp.registration.model.RegistrationInfo.lastName;
+                
+                hp.registration.helper.Metrics.Cache['prepolutadedFirstName'] = 
+                    hp.registration.model.RegistrationInfo.firstName || null;
+                hp.registration.helper.Metrics.Cache['prepolutadedLastName'] = 
+                    hp.registration.model.RegistrationInfo.lastName || null;
+            }
+            emailField_.value = hp.registration.model.RegistrationInfo.email;
+         
+            hp.registration.helper.Metrics.Cache['prepolutadedEmail'] = 
+                    hp.registration.model.RegistrationInfo.email || null;
+
+            var internalFlag = hp.registration.Registration.getPreferenceForInternalTests('preventPrefill');
+            
+
+    		if (Helper_.Flags.alwaysShowErrorMessages) 
+    		{
+    			errorMessageConsentEmail_.style.visibility = "visible";
+    			errorMessageCountry_.style.visibility = "visible";
+    			errorMessageEmail_.style.visibility = "visible";
+    			errorMessageName_.style.visibility = "visible";
+    		}
+
+		if (Helper_.Flags.alwaysShowPrivacyRights) {
+			privacyRights_.style.display = 'inline';
+			privacyRights_.previousElementSibling.style.display = 'inline-block';
+		}
+
+		/*
+		 * workaround for webview container
+		 * Changing the height from % to pixels in order to help avoiding scroll bars.
+		 */
+
+		mainContent_.style.height = getComputedStyle(document.body).height;
+
+		/*
+		 * If QA set the flag to prevent prefill, don't even bother making request to get country
+		 */
+            if (!(internalFlag)) {
+                if (Helper_.isOnline()) {
+                    hp.registration.Registration.findCountryAsync(
+                            {
+                                'callback': Helper_.callbackGeoLocation
+                            }
+                    );
+                }
+            }
+
+		onFormUpdated(null);
+
+	}
+};//UI_
+
+// Event Handlers =============================================================================
+function onCountryChanged(inEvent) {
+
+    /*
+     * When country changed we need to reload the resources so we can have properties that 
+     * might be applied to that country.
+     */
+    var code_ = hp.registration.Registration.getCountryCodeBasedOnName(
+            countryList_.value);
+            
+    if (code_ !== null && code_.length === 2) {
+        hp.registration.util.Localization.loadResource(
+            {
+                'language': Helper_.getLocale(),
+                'country': code_,
+                'callback': UI_.updateUIBasedOnCountry
+            }
+        );
+    }
+    
+};//#onCountryChnaged
+
+
+
+/*function onClickAskForRetailer(inEvent) {
+
+    // If this country has a list of retailers, ask user to pick one
+    var listRetailers = hp.registration.util.Localization.getContent('retailers');
+    console.log(hp.registration.util.Localization.getContent('retailers'));
+
+   // if (listRetailers === undefined || listRetailers.length === 0 || !Helper_.allFieldsEntered()) {
+        onClickFinish(inEvent);
+        return;
+   // }
+    // There are retailers to pick from
+    
+    // Make the page with a scrollable list of options to be shown
+    var newdiv = document.createElement('div');
+
+    newdiv.setAttribute('id','main');
+    //var newarticle = document.createElement('article');
+    var newul = document.createElement('ul');
+    newul.classList.add('flip');
+    newul.classList.add('retailList');
+    //newarticle.appendChild(newul);
+    newdiv.appendChild(newul);
+
+    var html = '';
+    var currentChoice = null;
+
+    for (var i = 0, len = listRetailers.length; i < len; i++) {
+        html += '<li data-code='+ listRetailers[i].code + '>' +  listRetailers[i].name + '</li>';
+    }
+
+    newul.innerHTML = html;
+
+    newul.addEventListener("click",function(inEvent) {
+                 
+        if(inEvent.target && inEvent.target.nodeName == "LI") {
+            
+            if (currentChoice) { currentChoice.classList.remove("chosen"); }
+            currentChoice = inEvent.target;
+            currentChoice.classList.add("chosen");
+
+            popupButtonForContent_.classList.remove('disabledButton');
+            popupButtonForContent_.addEventListener('click', onClickFinish, true);
+
+            // Save the code of the retailer
+            hp.registration.model.RegistrationInfo.purchasedLocation = Helper_.mapRetailerCode(inEvent.target.getAttribute("data-code"));
+            Helper_.originalRetailerCode = inEvent.target.getAttribute('data-code');
+        } 
+    });
+                
+    Popup_.showPopupForContent({
+        'title': hp.registration.util.Localization.getContent('hp.oobe.registration.purchase'), // Hard coded for now, need to be translated
+        'content':newdiv,
+        'action': onClickFinish,
+        'actionLabel': hp.registration.util.Localization.getContent('hp.oobe.registration.accept'),
+        'actionInitialState':'disabled'
+    }); 
+
+    stroll.bind( '#main ul' ); // obvs not working, if we try doc query selecting something we made
+
+}*/
+
+function onClickFinishAndLaunchDropBox(inEvent) {
+	onClickFinish(inEvent);
+	if(Aviateinstalled && Helper_.isFormOk() && inEvent.currentTarget.getAttribute('rel') === 'finish') {
+		openAviate();		
+	}
+}
+
+function onClickFinish(inEvent) {
+    console.log("on click finish called");
+    inEvent && inEvent.preventDefault();
+    inEvent && inEvent.srcElement && inEvent.srcElement.blur();
+    
+    var action_ = inEvent.currentTarget.getAttribute('rel');
+    var loc_ = app_.util.Localization,
+        Metrics_ = app_.helper.Metrics,
+        otaUrl_ = null,
+        otaMessage_ = null;
+
+	console.log('Attempt to close the application [' + action_ + ']');
+
+	Popup_.origin = action_;
+
+	/*
+	 * If the user had the intent of registering but he/she didn't complete the form, prevent the app to close.
+	 */
+	if (!(Helper_.isFormOk()) && action_ === 'finish') {
+		app_.Registration.setSharedPreference(app_.Properties.SYSTEM_COUNTRY_CODE,
+				Helper_.getCountryCodeToBeSavedAsSharedPreferences());
+		return;
+	}
+
+	Helper_.collectData();
+
+	/*
+	 * Save the country information in an XML file so it can be re-used by other component that does image customization
+	 * based on the country.
+	 */
+	app_.Registration.setSharedPreference(app_.Properties.SYSTEM_COUNTRY_CODE,
+			Helper_.getCountryCodeToBeSavedAsSharedPreferences());
+
+	var note_ = ''; // DEPRECATED
+
+	/*
+	 * The OTA message is created in two situations:
+	 *  1- During OOBE only;
+	 *  2- From the appgrid shortcut, only if the flow that shows the consent window is the one used for the unit.
+	 */
+    if ((app_.Registration.isRunningDuringOOBE()) || 
+        (app_.Registration.isRunningDuringOOBE() === false && app_.Registration.doesItNeedConsentToAccessUserInfo())) {
+
+		app_.helper.OTA.buildOTAObject(app_.Registration.getOTASecret());
+
+		otaUrl_ = app_.Properties.endPointOTA;
+		otaMessage_ = app_.model.OTA.getMessageAsString();
+
+	} else {
+
+		/*
+		 * Cancel the notification in case the user Skipped the Registration during OOBE but opened the app from the AppGrid.
+		 * In this case the AppGrid shortcut will removed so there is no need to show Notification in the future. 
+		 */
+		app_.Registration.cancelNotification();
+
+	}
+
+	try {
+
+		if (Helper_.shouldDataBeSent()) {
+
+			if (app_.Registration.isRunningDuringOOBE()) {
+
+				Helper_.sendMessageToCarrierIQ();
+
+			}
+
+			console.log('User filled the form.');
+
+            app_.model.RegistrationInfo.consentToSendData = true;
+            
+            Helper_.finishMetrics(inEvent);
+          //  Helper_.saveRetailerCode();
+
+            app_.Registration.saveDataToBeUsedByService({
+                    'url': 
+                        app_.Properties.endPoint,
+                    'message': 
+                        app_.util.Message.serializeToXmlAsString(app_.model.RegistrationInfo),
+                    'otaUrl': 
+                        otaUrl_,
+                    'otaMessage': 
+                        otaMessage_,
+                    'beaconUrl': 
+                            (app_.Registration.isRunningDuringOOBE() ? 
+                                Metrics_.getFinalBeaconURL() : null),
+                    'beaconUrlPostOOBE':
+                            (app_.Registration.isRunningDuringOOBE() ? 
+                                null : Metrics_.getFinalBeaconURL()),
+                    'callback': 
+                            'hp.registration.Registration.closeApplication'
+                });
+
+        } else {
+
+            console.log("User didn't fill the form. Closing the application without sending registration data.");
+
+            app_.model.RegistrationInfo.consentToSendData = false;
+            
+            Helper_.finishMetrics(inEvent);
+          //  Helper_.saveRetailerCode();
+             
+            // TODO CHECK IF THE BLOCK BELOW STILL NEEDS TO BE HERE.
+            try {
+
+                hp.registration.Registration.scheduleNotification({
+                    'title': loc_.getContent('hp.oobe.registration.title'),
+                    'text': loc_.getContent('hp.oobe.registration.intro')
+                });
+
+            } catch(inException) {
+
+                console.log('A problem happened while trying to schedule the notification');
+                // do nothing
+
+            }
+
+            if (app_.Registration.isRunningDuringOOBE() && 
+                Helper_.geoLocationCountryCode && 
+                Helper_.shouldCarrierIQBeDisabledByDefault(Helper_.geoLocationCountryCode)) {
+
+                console.log('Criteria to broadcast message to Carrier IQ to disable was matched');
+
+                Helper_.sendMessageToCarrierIQ(false);
+
+            }
+
+            app_.Registration.saveDataToBeUsedByService({
+                'url': 
+                    null,
+                'message': 
+                    null,
+                'otaUrl': 
+                    otaUrl_,
+                'otaMessage': 
+                    otaMessage_,
+                'beaconUrl': 
+                            (app_.Registration.isRunningDuringOOBE() ? 
+                                Metrics_.getFinalBeaconURL() : null),
+                'beaconUrlPostOOBE':
+                            (app_.Registration.isRunningDuringOOBE() ? 
+                                null : Metrics_.getFinalBeaconURL()),
+                'callback': 
+                    'hp.registration.Registration.closeApplication'}); 
+
+        }
+
+	} catch (inError) {
+
+		console.log('A problem happened during the attempt to send data.');
+
+		if ('message' in inError) {
+			console.log('Error: ' + inError['message']);
+		}
+
+		app_.Registration.closeApplication();
+
+	}
+
+};//#onClickFinish
+
+function onClickLicenseTermsFromConsentFlow(inEvent) {
+
+	inEvent && inEvent.preventDefault();
+
+	var loc_ = hp.registration.util.Localization;
+
+	hp.registration.helper.Metrics.Cache['termsAndConditionsClicked'] = true;
+
+	var loc_ = app_.util.Localization;
+
+	Popup_.showPopupForContent({
+		'title' : loc_.getContent('hp.oobe.registration.licensetermstitle'),
+		'endPoint' : loc_.getContent('eula'),
+		'action' : callbackAgree_,
+		'actionLabel' : loc_.getContent('hp.oobe.registration.agree')
+	});
+
+	function callbackAgree_(inEvent) {
+
+		hp.registration.Registration.closeApplication();
+
+	}
+
+};//#onClickLicenseTermsFromConsentFlow
+
+function onDeclineConsent(inEvent) {
+    
+    inEvent && inEvent.preventDefault();
+    
+    var content_ = "", element_ = null,
+        loc_ = app_.util.Localization;
+    
+    function parseLicenseTermsElement_(inElement) {
+        var link_ = inElement.querySelector('A');
+            link_.href = '#';    
+        
+        if (link_) {
+            link_.addEventListener('click', onClickLicenseTermsFromConsentFlow, false);
+        }
+    };//#parseLicenseTermsElement_
+    
+    content_ = loc_.getContent('hp.oobe.registration.licensetermstext');
+    
+    element_ = document.createElement('DIV');
+    element_.innerHTML = content_;
+    
+    parseLicenseTermsElement_(element_);
+    
+    Popup_.showPopup({
+                        'actionLabel': loc_.getContent('hp.oobe.registration.agree'),
+                        'action': function() { hp.registration.model.RegistrationInfo.consentToSendData = false; 
+                                               hp.registration.Registration.closeApplication(false);  },
+                        'content': element_
+                    });
+    
+};//onDeclineConsent
+
+function onDeclineConsentFromAppGrid(inEvent) {
+    
+    inEvent && inEvent.preventDefault();
+    
+    app_.Registration.closeApplication(true);
+    
+};//onDeclineConsentFromAppGrid
+
+function onClickPrivacy(inEvent) {
+	inEvent.preventDefault();
+
+	hp.registration.helper.Metrics.Cache['privacyStatementClicked'] = true;
+
+	var loc_ = hp.registration.util.Localization;
+
+	function parseText_(inText) {
+		var root_ = document.createElement('ROOT');
+		root_.innerHTML = inText;
+		var link_ = root_.querySelector('A');
+
+		if (link_) {
+			link_.textContent = loc_.getContent('privacy');
+		}
+
+		return root_.textContent;
+	}
+	;//#parseText_
+
+	/*
+	 * workaround. Temporary solution since a new milestone is close to be finished.
+	 * TODO ENHANCE THE LOGIC TO AVOID THIS WAITING.
+	 * Waiting for a mills secs because the app might be loading new content if the country 
+	 * was changed.
+	 */
+	setTimeout(function() {
+
+		Popup_.showPopupForContent({
+			'title' : loc_.getContent('hp.oobe.registration.linkprivacy'),
+			'endPoint' : loc_.getContent('privacy'),
+			'action' : Popup_.closePopupForContent,
+			'actionLabel' : loc_.getContent('hp.oobe.registration.close')
+		});
+
+	}, 300);
+
+	try {
+
+		this.blur();
+
+	} catch (inException) {
+
+		// do nothing
+
+	}
+
+};//#onClickPrivacy
+
+function onClickPrivacyRights(inEvent) {
+	inEvent.preventDefault();
+
+	hp.registration.helper.Metrics.Cache['privacyRightsClicked'] = true;
+
+	var loc_ = hp.registration.util.Localization;
+
+	function parseText_(inText) {
+		var root_ = document.createElement('ROOT');
+		root_.innerHTML = inText;
+		var link_ = root_.querySelector('A');
+
+		if (link_) {
+			link_.textContent = loc_.getContent('privacyrights');
+		}
+
+		return root_.textContent;
+	}
+	;//#parseText_
+
+	/*
+	 * workaround. Temporary solution since a new milestone is close to be finished.
+	 * TODO ENHANCE THE LOGIC TO AVOID THIS WAITING.
+	 * Waiting for a mills secs because the app might be loading new content if the country 
+	 * was changed.
+	 */
+    setTimeout(function() {
+    
+        Popup_.showPopupForContent({
+            'title': loc_.getContent('hp.oobe.registration.linkprivacyrights'),
+        'endPoint': loc_.getContent('privacyrights'),
+            'action': Popup_.closePopupForContent,
+            'actionLabel': loc_.getContent('hp.oobe.registration.close')
+        });
+
+			}, 300);
+
+	try {
+
+		this.blur();
+
+	} catch (inException) {
+
+		// do nothing
+
+	}
+};//#onClickPrivacyRights
+
+function onClickDataCollection(inEvent) {
+	var loc_ = hp.registration.util.Localization;
+
+	hp.registration.helper.Metrics.Cache['dataCollectionClicked'] = true;
+
+	/*
+	 * workaround. Temporary solution since a new milestone is close to be finished.
+	 * TODO ENHANCE THE LOGIC TO AVOID THIS WAITING.
+	 * Waiting for a mills secs because the app might be loading new content if the country 
+	 * was changed.
+	 */
+	setTimeout(function() {
+
+		Popup_.showPopupForContent({
+			'title' : loc_.getContent('hp.oobe.registration.collectdatatitle'),
+			'actionLabel' : loc_.getContent('hp.oobe.registration.close'),
+			'action' : Popup_.closePopupForContent,
+			'content' : loc_.getContent('hp.oobe.registration.collectdatatext')
+		});
+	}, 300);
+
+	try {
+
+		this.blur();
+
+	} catch (inException) {
+
+		// do nothing
+
+	}
+
+};//#onClickDataCollection
+
+function onClickAgree(inEvent) {
+
+	inEvent && inEvent.prevendDefault && inEvent.preventDefault();
+    
+    var Metrics_ = hp.registration.helper.Metrics,
+        loc_ = hp.registration.util.Localization,
+        otaUrl_ = null, otaMessage_ = null;
+    
+    try {
+        
+        Helper_.finishMetrics(inEvent);
+      //  Helper_.saveRetailerCode();
+    
+        app_.Registration.setSharedPreference(app_.Properties.SYSTEM_COUNTRY_CODE, 
+                            Helper_.getCountryCodeToBeSavedAsSharedPreferences());
+        
+        /*
+         * The OTA message is created in two situations:
+         *  1- During OOBE only;
+         *  2- From the appgrid shortcut, only if the flow that shows the consent window is the one used for the unit.
+         */
+        if ((app_.Registration.isRunningDuringOOBE()) || 
+            (app_.Registration.isRunningDuringOOBE() === false && app_.Registration.doesItNeedConsentToAccessUserInfo())) {
+         
+            app_.helper.OTA.buildOTAObject(app_.Registration.getOTASecret());
+            
+            otaUrl_ = app_.Properties.endPointOTA;
+            otaMessage_ = app_.model.OTA.getMessageAsString();
+            
+        }
+       
+        if (Helper_.shouldDataBeSent() && Popup_.origin !== 'skip') {
+            
+            console.log('User filled the form. Attempt to send the data will be made.');
+
+            if (app_.Registration.isRunningDuringOOBE()) {
+            
+                Helper_.sendMessageToCarrierIQ();
+                
+            }
+            
+            Helper_.collectData(); 
+            
+            app_.model.RegistrationInfo.consentToSendData = true;
+
+            hp.registration.Registration.saveDataToBeUsedByService({
+                'url': 
+                    app_.Properties.endPoint,
+                'message': 
+                    app_.util.Message.serializeToXmlAsString(app_.model.RegistrationInfo),
+                'otaUrl': 
+                    otaUrl_,
+                'otaMessage': 
+                    otaMessage_,
+                'beaconUrl': 
+                    (app_.Registration.isRunningDuringOOBE() ? 
+                        Metrics_.getFinalBeaconURL() : null),
+                'beaconUrlPostOOBE':
+                    (app_.Registration.isRunningDuringOOBE() ? 
+                        null : Metrics_.getFinalBeaconURL()), 
+                'callback': 
+                    'hp.registration.Registration.closeApplication'});
+            
+        } else {
+            
+            console.log("User didn't fill the form. Closing the application without sending data.");
+
+            try {
+                
+                hp.registration.Registration.scheduleNotification({
+                            'title': loc_.getContent('hp.oobe.registration.title'),
+                            'text': loc_.getContent('hp.oobe.registration.intro')
+                        }); 
+                
+            } catch(inException) {
+                
+                // do nothing   
+                console.log('A problem happened while trying to schedule the notification');
+            }
+            
+            if (app_.Registration.isRunningDuringOOBE() && 
+                        Helper_.geoLocationCountryCode && 
+                        Helper_.shouldCarrierIQBeDisabledByDefault(Helper_.geoLocationCountryCode)) {
+
+                console.log('Criteria to broadcast message to Carrier IQ to disable was matched');
+                
+                Helper_.sendMessageToCarrierIQ(false);
+                
+            }
+            
+            hp.registration.Registration.saveDataToBeUsedByService({
+                'url': 
+                    null,
+                'message': 
+                    null,
+                'otaUrl':
+                    otaUrl_,
+                'otaMessage':
+                    otaMessage_,
+                'beaconUrl': 
+                    (app_.Registration.isRunningDuringOOBE() ? 
+                        Metrics_.getFinalBeaconURL() : null),
+                'beaconUrlPostOOBE':
+                    (app_.Registration.isRunningDuringOOBE() ? 
+                        null : Metrics_.getFinalBeaconURL()),
+                'callback': 
+                    'hp.registration.Registration.closeApplication'}); 
+            
+        }
+        
+     } catch(inError) {
+         
+        console.log('A problem happened durint the attempt to send data.')
+        hp.registration.Registration.closeApplication();   
+         
+     }
+    
+};//#onClickAgree
+
+function onClickEULA(inEvent) {
+
+	inEvent && inEvent.preventDefault && inEvent.preventDefault();
+
+	hp.registration.helper.Metrics.Cache['termsAndConditionsClicked'] = true;
+
+	var loc_ = app_.util.Localization;
+
+	/*
+	 * workaround. Temporary solution since a new milestone is close to be finished.
+	 * TODO ENHANCE THE LOGIC TO AVOID THIS WAITING.
+	 * Waiting for a mills secs because the app might be loading new content if the country 
+	 * was changed.
+	 */
+    setTimeout(function() {
+    
+        Popup_.showPopupForContent({
+            'title': loc_.getContent('hp.oobe.registration.licensetermstitle'),
+            'endPoint': loc_.getContent('eula'),
+            'action': Popup_.closePopupForContent,
+            'actionLabel': loc_.getContent('hp.oobe.registration.close')
+        });
+        
+    }, 300);
+
+	try {
+
+		this.blur();
+
+	} catch (inException) {
+
+		// do nothing
+
+	}
+
+};//#onClickEULA
+
+function onConsentChanged(inEvent) {
+
+	Helper_.didUserEngagedWithConsent = true;
+
+	onFormUpdated();
+
+};//#onConsentChanged
+
+function onFormUpdated(inEvent) {
+
+    var reg_ = hp.registration.Registration,
+        shouldEnableClearAll_ = false;
+    
+    shouldEnableClearAll_ = [countryList_, firstNameField_, lastNameField_, emailField_].some(
+        function(inItem) {
+            return (inItem.value.trim() !== '');   
+        }
+    );
+
+	if (/*consentNo_.checked ||*/ consentYes_.checked) {
+
+		shouldEnableClearAll_ = true;
+
+	}
+
+	if (shouldEnableClearAll_) {
+
+		UI_.enableClearAll();
+
+	} else {
+
+		UI_.disableClearAll();
+
+	}
+
+};//#onFormUpdated
+
+function onEulaChanged(inEvent) {
+
+	var reg_ = hp.registration.Registration;
+
+};//#onEulaChanged
+
+/*
+ * This method is called by the Java layer. It's called when events like rotation or external 
+ * keyboards are docked. 
+ */
+function onConfigurationChanged() {
+
+	/*
+	 * workaround for webview container
+	 * The orientation event presents a lot of problems. Some of the logic get to run while still 
+	 * in portrait and others in landscape (or vice versa). We give some time so the rotation can 
+	 * be completed and then run the logic.
+	 *
+	 * TODO for the next release, change the logic to query for all input elements and blur then.
+	 */
+   // var  main = document.querySelector("#main");
+   // main.style.height="100%";
+	console.log('Configuration changed');
+	Dropdown.inputField && Dropdown.inputField.blur();
+	emailField_ && emailField_.blur();
+	firstNameField_ && firstNameField_.blur();
+	lastNameField_ && lastNameField_.blur();
+
+};//#onConfigurationChanged
+
+function onClearAllClicked(inEvent) {
+
+	inEvent.preventDefault();
+	
+    hp.registration.helper.Metrics.Cache['clearAllUsed'] = true;
+    
+    [countryList_, firstNameField_, lastNameField_, emailField_].forEach(function(inItem) {
+        
+        inItem.value = ''; 
+        
+    });
+    
+    [errorMessageConsentEmail_, errorMessageCountry_, errorMessageEmail_, errorMessageName_].
+        forEach(function(inItem) {
+        
+		inItem.style.visibility = 'hidden';
+
+	});
+    consentYes_.checked = false;
+	//consentYes_.checked = consentNo_.checked = false;
+
+	
+	
+	UI_.disableClearAll();
+	onCountryChanged(null);
+};//#onClearAllClicked
+
+function onGoAwayClicked(inEvent) {
+    
+    inEvent && inEvent.preventDefault && inEvent.preventDefault();
+    
+    var reg_ = hp.registration;
+    
+    reg_.model.RegistrationInfo.consentToSendData = false;
+    
+    if (!reg_.Registration.isRunningDuringOOBE()) {
+        
+        reg_.Registration.cancelNotification();
+        
+    }
+    
+    reg_.Registration.closeApplication(true);
+    
+};//#onGoAwayClicked
+
+function onClickCarrierIQ(inEvent) {
+
+	inEvent && inEvent.preventDefault && inEvent.preventDefault();
+
+	var loc_ = hp.registration.util.Localization;
+
+	function parseText_(inText) {
+		var root_ = document.createElement('ROOT');
+		root_.innerHTML = inText;
+		var link_ = root_.querySelector('A');
+
+		if (link_) {
+			link_.textContent = loc_.getContent('learnmorecarrieriq');
+		}
+
+		return root_.textContent;
+	}
+	;//#parseText_
+
+	var content_ = parseText_(loc_
+			.getContent('hp.oobe.registration.viewhowtoconnect'));
+
+	Popup_.showPopupForContent({
+		'title' : loc_.getContent('hp.oobe.registration.learnmore'),
+		'endPoint' : loc_.getContent('learnmorecarrieriq'),
+		'action' : Popup_.closePopupForContent,
+		'actionLabel' : loc_.getContent('hp.oobe.registration.close'),
+		'type' : 'secondary',
+		'size' : Popup_.SIZE_SMALL
+	});
+
+	try {
+
+		this.blur();
+
+	} catch (inException) {
+
+		// do nothing
+
+	}
+
+};//#onClickCarrierIQ
+
+function onCheckableElementKeyPressed(inEvent) {
+
+	if (inEvent.keyCode === 13) {
+
+		this.checked = !this.checked;
+
+	}
+
+    if (inEvent.srcElement && (inEvent.srcElement === consentYes_ /*|| inEvent.srcElement === consentNo_*/)) {
+    
+        Helper_.didUserEngagedWithConsent = true;
+        
+    }
+
+	onFormUpdated();
+
+};//#onCheckableElementKeyPressed
+
+
+//added by russell
+function openDropbox(){
+	app_.Registration.openDropbox(firstNameField_.value, lastNameField_.value, emailField_.value);
+}
+
+function removeDropbox() {
+	console.log("removeDropbox");
+	dropboxinstalled = false;
+	//document.getElementById("dropbox").style.display = "none";
+}
+function openAviate(){
+	app_.Registration.openAviate(firstNameField_.value, lastNameField_.value, emailField_.value);
+}
+
+function removeAviate() {
+	console.log("removeAviate");
+	Aviateinstalled = false;
+	//document.getElementById("dropbox").style.display = "none";
+}
+//end by russell
+/*
+ * Main logic that kicks off the application. This method can also be called from the Java 
+ * layer via onConfigurationChanged (due to configuration changes; like rotation, keyboard attached...)
+ *
+ * @params
+ *  inEvent: Event,
+ *  inCache: Object [optional]
+ *           {
+ *              "firstName": String,
+ *              "lastName": String,
+ *              "email": String,
+ *              "country": String,
+ *              "emailConsent": String,
+ *              "eula": String
+ *           }
+ */
+function onLoad(inEvent) {
+
+     // Caching the UI elements, to avoid querying them everywhere.
+     popupScreen_ = document.querySelector(popupScreenSelector_);
+     popupContentScreen_ = document.querySelector(popupContentScreenSelector_);
+     popupTitle_ = document.querySelector(popupTitleSelector_);
+     popupButton_ = document.querySelector(popupButtonSelector_);
+     popupButton2_ = document.querySelector(popupButton2Selector_);
+     popupButtonForContent_ = document.querySelector(popupButtonForContentSelector_);
+     popupButton2ForContent_ = document.querySelector(popupButton2ForContentSelector_);
+     skipRegistration_ = document.querySelector(skipRegistrationSelector_);
+     submitButton_ = document.querySelector(submitButtonSelector_);
+     submitButtonandroid_ = document.querySelector(submitButtonSelectorandroid_);
+     eulaCheckbox_ = document.querySelector(eulaCheckboxSelector_);
+     firstNameField_ = document.querySelector(firstNameFieldSelector_);
+     lastNameField_ = document.querySelector(lastNameFieldSelector_);
+     emailField_ = document.querySelector(emailFieldSelector_);
+     emailConsent_ = document.querySelector(emailConsentSelector_);
+     countryList_ = document.querySelector(countryListSelector_);
+     errorMessageName_ = document.querySelector(errorMessageNameSelector_);
+     errorMessageCountry_ = document.querySelector(errorMessageCountrySelector_);
+     errorMessageConsentEmail_ = document.querySelector(errorMessageConsentEmailSelector_);
+     errorMessageEmail_ = document.querySelector(errorMessageEmailSelector_);
+     popupBodyForContent_ = document.querySelector(popupBodyForContentSelector_);
+     privacyRights_ = document.querySelector(privacyRightsSelector_);
+    // title_ = document.querySelector(titleSelector_);
+     intro_ = document.querySelector(introSelector_);
+     emailConsentText_ = document.querySelector(emailConsentTextSelector_);
+     dataCollection_ = document.querySelector(dataCollectionSelector_);
+     anonymousText_ = document.querySelector(anonymousTextSelector_);
+     licenseTermsPlainText_ = document.querySelector(licenseTermsPlainTextSelector_);
+     finishButtonLabel_ = document.querySelector(finishButtonLabelSelector_);
+     finishButtonLabelandroid_ = document.querySelector(finishButtonLabelSelectorandroid_);
+     skipButtonLabel_ = document.querySelector(skipButtonLabelSelector_);
+     countryRequiredText_ = document.querySelector(countryRequiredTextSelector_);
+     nameRequiredText_ = document.querySelector(nameRequiredTextSelector_);
+     emailRequiredText_ = document.querySelector(emailRequiredSelector_);
+    // yesText_ = document.querySelector(yesTextSelector_);
+  //   noText_ = document.querySelector(noTextSelector_);
+     consentYes_ = document.querySelector(consentYesSelector_);
+   //  consentNo_ = document.querySelector(consentNoSelector_);
+     mainContent_ = document.querySelector(mainContentSelector_);
+     lastNameContainer_ = document.querySelector(lastNameContainerSelector_);
+     firstNameContainer_ = document.querySelector(firstNameContainerSelector_);
+     formFirstName_ = document.querySelector(formFirstNameSelector_);
+     countryCollection_ = document.querySelector(countryCollectionSelector_);
+     arrowCountryList_ = document.querySelector(arrowCountryListSelector_);
+     formCountry_ = document.querySelector(formCountrySelector_);
+     formFirstName_ = document.querySelector(formFirstNameSelector_);
+     formLastName_ = document.querySelector(formLastNameSelector_);
+     formEmail_ = document.querySelector(formEmailSelector_);
+     footer_ = document.querySelector(footerSelector_);
+     nameFieldsContainer_ = document.querySelector(nameFieldsContainerSelector_);
+     mainCanvas_ = document.querySelector(mainCanvasSelector_);
+     form_ = document.querySelector(formSelector_);
+     clearAllContainer_ = document.querySelector(clearAllContainerSelector_);
+     clearAll_ = document.querySelector(clearAllSelector_);
+     clearAllIcon_ = document.querySelector(clearAllIconSelector_);
+     skipButton_ = document.querySelector(skipButtonSelector_);
+     goAwayButton_ = document.querySelector(goAwayButtonSelector_);
+     goAwayButtonLabel_ = document.querySelector(goAwayButtonLabelSelector_);
+     carrierIQContainer_ = document.querySelector(carrierIQContainerSelector_);
+     carrierIQConsent_ = document.querySelector(carrierIQConsentSelector_);
+     carrierIQText_ = document.querySelector(carrierIQTextSelector_);
+     notePopup_ = document.querySelector(notePopupSelector_);
+     popupContentForContent_ = document.querySelector(popupContentForContentSelector_);
+     popupSimpleHeader_ = document.querySelector(popupSimpleHeaderSelector_);
+     
+
+	/* 
+	 * This method should be called once the Registration.initAsync is done.
+	 * Any logic for the UI (with the exception of the caching above) should 
+	 * be placed whithin this function.
+	 */
+     function callback_() {
+    	//     var  main = document.querySelector("#main");
+    	//     main.style.height=main.clientHeight+"px";
+            var loc_ = hp.registration.util.Localization;
+
+             if (Helper_.isRightToLeft(Helper_.getLanguageCode())) {
+                document.querySelector('HTML').setAttribute('dir', 'rtl');
+             }
+
+            var availableTags_ = 
+                hp.registration.Registration.getCountryListWithNameOnly();
+
+            // Setting up events
+            submitButton_.addEventListener('click', onClickFinishAndLaunchDropBox, false);
+            submitButtonandroid_.addEventListener('click', onClickFinishAndLaunchDropBox, false);
+            skipButton_.addEventListener('click', onClickFinish,true);
+            privacyRights_.addEventListener('click', onClickPrivacyRights, false);
+            dataCollection_.addEventListener('click', onClickDataCollection, false);
+            consentYes_.addEventListener('change', onConsentChanged, false);
+          //  consentNo_.addEventListener('change', onConsentChanged, false);
+            clearAll_.addEventListener('click', onClearAllClicked, false);
+            clearAllIcon_.addEventListener('click', onClearAllClicked, false);
+            consentYes_.addEventListener('keypress', onCheckableElementKeyPressed, false);
+        //    consentNo_.addEventListener('keypress', onCheckableElementKeyPressed, false);
+            goAwayButton_.addEventListener('click', onGoAwayClicked, false);
+            
+            // Setting up the custom Dropdown
+            Dropdown.setup(countryCollection_, availableTags_, countryList_);
+    
+            countryCollection_.addEventListener('click', Dropdown.onDropdownClick, false);
+            countryList_.addEventListener('keyup', Dropdown.onKeyPressed, false);
+            countryList_.addEventListener('focus', Dropdown.onFieldFocus, false);
+            countryList_.addEventListener('blur', Dropdown.onFieldBlur, false);
+
+            form_.addEventListener('keyup', onFormUpdated, true);
+
+            // Skip button was removed, per requirement. User cleans the form and finish the app.
+            skipButton_.style.display = 'none';
+        
+           if (!(app_.Registration.isRunningDuringOOBE())) { // Running from AppGrid
+                
+                goAwayButton_.style.display = 'inline-block';
+                submitButtonandroid_.style.display =  "none";
+                submitButton_.style.display =  'inline-block';
+            } else { // Running during OOBE
+            	submitButton_.style.display = "none";
+            	submitButtonandroid_.style.display =  'inline-block';
+                
+            }
+            var inCode=Helper_.getCountryCode();
+            var name=hp.registration.Registration.getCountryNameBasedOnCode(inCode);
+            if(name)
+			{
+            	countryList_.value = name;
+			}
+            UI_.bindContent();
+            if(inCode=="RU")
+            {
+            	clearAllContainer_.style.margin="0";
+               var privacyRightsLi_= document.querySelector("#privacyRightsLi");;
+               var dataCollectionLi_= document.querySelector("#dataCollectionLi");;
+                privacyRightsLi_.style.padding="0";
+                dataCollectionLi_.style.padding="0";
+            }
+        //    if (app_.Registration.doesItNeedConsentToAccessUserInfo()) {
+                
+            //    UI_.showConsent();
+                
+        //    } else 
+            {
+            	
+                app_.Registration.RegistrationInfo.getInfoAsync({'callback': callback_registrationInfo});
+                
+            }
+    		if (Helper_.Flags.alwaysShowErrorMessages) 
+    		{
+    			errorMessageConsentEmail_.style.visibility = "visible";
+    			errorMessageCountry_.style.visibility = "visible";
+    			errorMessageEmail_.style.visibility = "visible";
+    			errorMessageName_.style.visibility = "visible";
+    		}
+
+     }//#callback_
+
+    function callback_registrationInfo(inData) {
+        
+        hp.registration.model.RegistrationInfo.init(inData);
+
+        UI_.showMainScreen();
+        
+    }
+        
+    
+    /*
+     * Helper function to set the correct orientation attribute on BODY. This can be 
+     * called multiple times. See below.
+     */
+    function adjust() {
+        
+        document.querySelector('BODY').className = Helper_.getOrientation();
+
+        
+    };
+    
+    Helper_.previousOrientation = Helper_.getOrientation();
+    
+    hp.registration.helper.Metrics.init({
+                                            'endPoint': hp.registration.Properties.endPointBeacon,
+                                            'version': hp.registration.Properties.BEACON_VERSION
+                                         });
+    hp.registration.helper.Metrics.Cache['startTime'] = new Date();
+    
+    Helper_.parseQueryString();
+    
+    console.log('Language returned by the system: ' + Helper_.getLocale());
+    console.log('Device\'s pixel ratio: ' + window.devicePixelRatio);
+    
+    /*
+     * Setting the lang attribute in the HTML element so the CSS can decide which font
+     * to use.
+     */
+     window.document.querySelector('HTML').setAttribute("lang", Helper_.getLanguageCode());
+    
+    if (Helper_.Flags.alwaysShowID) {
+        hp.registration.util.Localization.Helper.alwaysReturnID = true;
+    }
+
+    hp.registration.Registration.initAsync(
+                    {
+                        'callback': callback_,
+                        'locale': Helper_.getLocale()
+                    }
+                );
+    
+    /*
+     * workaround
+     *
+     * There is a critical class name that has to be set in the BODY in order for the layout 
+     * work properly. The function is called more than once to avoid problems when the user
+     * presses back key/sof key and come back to the applicattion. Sometimes, this cause the
+     * landscape UI to show in the portrait mode. 
+     */
+    adjust();
+    
+    setTimeout(adjust, 500);
+    
+};//#onLoad
+
+window.onload = onLoad;
+
+window.onresize = function() {
+
+	
+	/*
+	 * workaround
+	 *
+	 * This is an one-page full-screen application. The application also have different layout in 
+	 * landscape and portrait so the user can switch between these layouts by rotating the device.
+	 * In order to make the app full screen we're using flex layout. This helps with putting content
+	 * on the very top and bottom; but it creates a problem when the virtual keyboard is on the screen.
+	 * Once the virtual keyboard is on the screen any content on the bottom gets pushed up above the
+	 * keyboard, which causes UI elements to overlap. 
+	 *
+	 * The workaround below tries to treat various scenarios in order to prevent the UI to re-arrange
+	 * when the keyboard is on the screen:
+	 * - User rotates the device
+	 * - User had the virtual keyboard up and rotate (this also depends on the onConfigurationChanged
+	 *   which forces the keyboard going away from the screen).
+	 * - User left the keyboard up and locked the device and returned. (also depends on 
+	 *   onConfigurationChanged)
+	 * - User had PIN defined on the device. Brought the virtual keyboard up and locked the device. 
+	 */
+
+	if (Helper_.getOrientation() !== Helper_.previousOrientation) {
+
+		Helper_.previousOrientation = Helper_.getOrientation();
+		document.querySelector('BODY').className = Helper_.getOrientation();
+
+		/*
+		 * This is necessary since when the Android's animation stopped we still had problems with 
+		 * the UI.
+		 * Unfortunately, some devices need more time to have the correct sizes available. 
+		 */
+
+
+		setTimeout(Helper_.adjust, 500);
+
+		setTimeout(Helper_.adjust, 1000);
+
+		setTimeout(Helper_.adjust, 2000);
+	}
+}

@@ -1,0 +1,179 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.useragent = hp.registration.useragent || {};
+
+hp.registration.useragent.MachineInfoBrowser = function() {
+
+	this.getInfoAsync = function(inContainer) {
+
+		inContainer['callback'](
+				{
+					'serialNumber': '123456789',
+					'modelNumber': '123456#ABA',
+                    'model': 'Browser',
+					'language': 'en-US',
+					'registrationVersion': '1.0.0',
+					'operatingSystem': '064',
+                    'fingerPrint': 'DUMMYFINGERPRINT',
+                    'oem': 'Hewlett-Packard',
+                    'osn': 'android jb 17',
+                    'codeName': 'testCodeName',
+                    'incrementalBuildNumber': '4.2.2-17r14-04-12'
+				}
+			);
+
+		return null;
+	}//#hp.registration.useragent.MachineInfoBrowser.getInfoAsync
+
+	this.getIP = function() {
+		return "192.168.0.1";
+	};//#getIP
+    
+    this.isApplicationRunningDuringOOBE = function() {
+        return true;
+    };//#isApplicationRunningDuringOOBE
+	
+    this.getCurrentRun = function() {
+        
+        return 0;
+        
+    };//#getCurrentRun
+    
+    this.setSharedPreference = function(inKey, inValue) {
+        
+        // do nothing
+        
+    };//#setSharedPreference
+    
+    this.getPreferenceForInternalTests = function(inKey) {
+        
+        return null;
+        
+    };//#hp.registration.useragent.MachineInfoBrowser.getPreferenceForInternalTests
+    
+    this.getPropertyOfDevice = function(inKey) {
+        
+        var result_ = null;
+        
+        switch(inKey) {
+            /*
+             * Comment the property below to simulate a Chinese image. 
+             */
+            case 'ro.com.google.gmsversion':
+                //result_ = 'v1.2r';
+                break;
+            default:
+                break;
+        }
+        
+        return result_;
+        
+    };//#hp.registration.useragent.MachineInfo.getPropertyOfDevice
+    
+    /*
+     * Get a configuration set by the GBUs. 
+     *
+     * @params
+     *  inName: String. Name of the configuration.
+     *  inCountry: String. Two letter country code.
+     *
+     * @returns
+     *  String. Configuration value if a value was found. null, otherwise.
+     */
+    this.getConfigurationDefinedByGBU = function(inName, inCountry) {
+        
+        return null;
+        
+    };//#hp.registration.useragent.MachineInfo.getConfigurationDefinedByGBU
+    
+    /*
+     * Schedule a notification so the application can be re-opened. 
+     *  inContainer: Object. 
+     *              {
+     *                  'interval': String, Time (in milleseconds) that the notification should show up.
+     *                  'title': String,
+     *                  'text': String
+     *              }
+     *
+     * @returns
+     *  null
+     */
+    this.scheduleNotification = function(inContainer) {
+        
+        // do nothing
+        
+        return null;
+        
+    };//#hp.registration.useragent.MachineInfoBrowser.scheduleNotification
+    
+    /*
+     * Cancel any notification scheduled.
+     *
+     * @returns 
+     *  null.
+     */
+    this.cancelNotification = function() {
+        
+        // do nothing
+        
+        return null;
+        
+    };//#hp.registration.useragent.MachineInfoBrowser.cancelNotification
+    
+    /*
+     * Get OTA secret
+     *
+     * @returns
+     *  String.
+     */
+    this.getOTASecret = function() {
+        
+        return "TESTKEY";
+        
+    };//#hp.registration.useragent.MachineInfoBrowser.getOTASecret
+    
+    this.getDefaultOrientation = function() {
+
+        if (window.screen.width > window.screen.height) {
+            
+            return "landscape";
+            
+        } else {
+            
+            return "portrait";
+            
+        }
+
+    };//#hp.registration.useragent.MachineInfoBrowser.getDefaultOrientation
+
+    this.getCurrentOrientation = function() {
+
+        return 0;
+
+    };//#hp.registration.useragent.MachineInfoBrowser.getCurrentOrientation
+
+    this.getExternalIPHash = function() {
+        
+        return "TESTKEY";
+        
+    };//#hp.registration.useragent.MachineInfoBrowser.getExternalIPHash
+    
+    this.getLocale = function() {
+      
+        return window.navigator.language;
+        
+    };//#hp.registration.useragent.MachineInfoBrowser.getLocale
+    
+    this.isHostBasedOnChrome = function() {
+     
+        return true;
+        
+    };//#hp.registration.useragent.MachineInfo.isHostBasedOnChrome
+    
+    this.saveDataIntoPreferences = function(inKey, inVal) {
+
+        // Doesn't do anything
+        
+    };
+	return this;
+}.apply({}, null);//#hp.registration.useragent.MachineInfo

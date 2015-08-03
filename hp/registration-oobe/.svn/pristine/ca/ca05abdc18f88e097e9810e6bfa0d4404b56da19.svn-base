@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_home">登錄</string>
+    <string name="notification_title">登錄</string>
+    <string name="notification_text">請登錄此裝置，以取得個人化的服務及快速支援。</string>
+    <string name="app_name">HP OOBE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+  <string name="accept">接受</string>
+  <string name="skip">跳過</string>
+  <string name="neverregister">從不註冊</string>
+  <string name="consentnetwork">為加快您的註冊速度，HP 希望從您的設備存取您的姓名、Email 帳戶、通訊簿以及位置。您所提供的資訊可能會透過蜂窩網絡或  Wi-Fi 網絡進行傳輸，並可能產生數據使用費。</string>
+<string name="mybutton">Settings</string>
+<string name="read_provider_description">Access registration data entered during first boot.</string>
+</resources>

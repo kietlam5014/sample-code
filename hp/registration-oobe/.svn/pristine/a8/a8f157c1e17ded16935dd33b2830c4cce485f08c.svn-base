@@ -1,0 +1,1910 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Microsoft JhengHei";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@Microsoft JhengHei";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@PMingLiU";
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:13.5pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:24.0pt'><b><span
+lang=ZH-CN style='font-size:24.0pt;font-family:"PMingLiU",serif'>&#38544;&#31169;&#22768;</span></b><b><span
+style='font-size:24.0pt;font-family:"MS Gothic"'>&#26126;</span></b></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>HP </span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"MS Gothic"'>&#23562;&#37325;&#24744;&#30340;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;</span></b><b><span
+style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26435;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;&#20854;&#23376;&#20844;&#21496;&#23562;&#37325;&#24744;&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#26435;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26412;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#22768;&#26126;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#23558;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35828;&#26126;&#25105;&#20204;&#22312;&#20445;&#25252;&#38544;&#31169;&#26435;&#26041;&#38754;&#30340;&#20030;&#25514;&#65292;&#20197;&#21450;&#26377;&#20851;&#24744;&#21644;&#24744;&#30340;&#22312;&#32447;&#27963;&#21160;&#20449;&#24687;&#22914;&#20309;&#30001;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25910;&#38598;&#21644;&#20351;&#29992;&#26041;&#38754;&#65292;&#21487;&#20379;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#30340;&#36873;&#39033;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21487;&#20197;&#22312;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP.com </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20027;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#39029;&#21644;&#25152;&#26377;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#39029;&#30340;&#24213;&#37096;&#38543;&#26102;&#35775;&#38382;&#26412;&#22768;&#26126;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26159;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Council of Better
+Business Bureau</span><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#65288;&#32654;&#22269;&#21830;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#19994;&#20419;&#36827;&#23616;&#22996;&#21592;&#20250;&#65289;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32447;&#38544;&#31169;&#26435;&#35745;&#21010;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21457;&#36215;&#32773;&#20043;&#19968;&#65292;&#21516;&#26102;&#20063;&#26159;&#20855;&#26377;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BBB </span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35748;&#35777;&#30340;&#20225;&#19994;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#26435;&#20445;&#25252;&#26041;&#38754;&#30340;&#20570;&#27861;&#22343;&#31526;&#21512;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BBB </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21830;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#19994;&#34892;&#20026;&#20934;&#21017;&#30340;&#35201;&#27714;&#65292;&#21516;&#26102;&#25105;&#20204;&#20063;&#20197;&#26631;&#31034;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BBB </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26631;&#31456;&#20026;&#33635;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#21046;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35746;&#38544;&#31169;&#26435;&#25919;&#31574;&#21644;&#26631;&#20934;&#30340;&#36807;&#31243;&#20013;&#65292;&#25105;&#20204;&#23562;&#37325;&#24182;&#37325;&#35270;&#19990;&#30028;&#21508;&#22320;&#30340;&#20027;&#35201;&#21407;&#21017;&#21644;&#26694;&#26550;&#65292;&#21253;&#25324;&#32463;&#27982;&#21512;&#20316;&#19982;&#21457;&#23637;&#32452;&#32455;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (OECD) </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26377;&#20851;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#26435;&#20445;&#25252;&#21644;&#36328;&#22269;&#27969;&#21160;&#30340;&#20934;&#21017;&#12289;&#27431;&#30431;&#25351;&#20196;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 95/46/EC </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12289;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20122;&#22826;&#32463;&#27982;&#21512;&#20316;&#32452;&#32455;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (APEC) </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#26435;&#20445;&#25252;&#26694;&#26550;&#20197;&#21450;&#39532;&#24503;&#37324;&#22269;&#38469;&#38544;&#31169;&#26435;&#26631;&#20934;&#21327;&#35758;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#36981;&#23432;&#32654;&#22269;&#21830;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#37096;&#25552;&#20986;&#30340;&#20851;&#20110;&#20174;&#27431;&#30431;&#25104;&#21592;&#22269;&#21644;&#29790;&#22763;&#25910;&#38598;&#12289;&#20351;&#29992;&#21644;&#20445;&#30041;&#20010;&#20154;&#25968;&#25454;&#30340;&#32654;&#22269;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> – </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#27431;&#30431;&#23433;&#20840;&#28207;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (U.S. – E.U. Safe
+Harbor) </span><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26694;&#26550;&#21644;&#32654;&#22269;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> – </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#29790;&#22763;&#23433;&#20840;&#28207;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (U.S. - Swiss Safe
+Harbor) </span><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26694;&#26550;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24050;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35777;&#26126;&#20854;&#38544;&#31169;&#26435;&#20445;&#25252;&#20570;&#27861;&#31526;&#21512;&#23433;&#20840;&#28207;&#38544;&#31169;&#26435;&#21407;&#21017;&#65306;&#21363;&#36890;&#30693;&#12289;&#36873;&#25321;&#12289;&#36716;&#31227;&#12289;&#23433;&#20840;&#24615;&#12289;&#25968;&#25454;&#23436;&#25972;&#24615;&#12289;&#35775;&#38382;&#26435;&#21644;&#25191;&#34892;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#38656;&#20102;&#35299;&#26377;&#20851;&#23433;&#20840;&#28207;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35745;&#21010;&#30340;&#26356;&#22810;&#20449;&#24687;&#24182;&#26597;&#30475;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35748;&#35777;&#65292;&#35831;&#35775;&#38382;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>http://www.export.gov/safeharbor/</span>&nbsp;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24050;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32463;&#24314;&#31435;&#20102;&#19968;&#22871;&#26377;&#32422;&#26463;&#21147;&#30340;&#20225;&#19994;&#35268;&#21017;&#65288;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>“BCR”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65289;&#65292;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#35268;&#21017;&#24050;&#34987;&#27431;&#27954;&#32463;&#27982;&#21306;&#21644;&#29790;&#22763;&#22823;&#37096;&#20998;&#25968;&#25454;&#20445;&#25252;&#30417;&#31649;&#26426;&#26500;&#35748;&#21487;&#65292;&#24182;&#20110;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 2011 </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24180;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 6 </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26376;&#29983;&#25928;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>BCR </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#30830;&#20445;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#20840;&#29699;&#33539;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#22260;&#20869;&#30340;&#20219;&#20309;&#19968;&#23478;&#23454;&#20307;&#22312;&#22788;&#29702;&#25968;&#25454;&#26102;&#23545;&#27431;&#27954;&#32463;&#27982;&#21306;&#20869;&#27599;&#19968;&#20301;&#20844;&#27665;&#30340;&#20010;&#20154;&#20449;&#24687;&#32473;&#20104;&#20805;&#20998;&#20445;&#25252;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25353;&#29031;&#23433;&#20840;&#28207;&#21407;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21017;&#20197;&#21450;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BCR </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35268;&#23450;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25215;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35834;&#23558;&#35299;&#20915;&#29992;&#25143;&#23545;&#38544;&#31169;&#26435;&#20197;&#21450;&#25105;&#20204;&#23545;&#29992;&#25143;&#20010;&#20154;&#20449;&#24687;&#30340;&#25910;&#38598;&#25110;&#20351;&#29992;&#30340;&#25152;&#26377;&#25237;&#35785;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36824;&#36827;&#19968;&#27493;&#25215;&#35834;&#65292;&#23545;&#20110;&#27431;&#30431;&#20844;&#27665;&#25110;&#23621;&#27665;&#20851;&#20110;&#36716;&#31227;&#20854;&#20010;&#20154;&#20449;&#24687;&#30340;&#26410;&#20915;&#38544;&#31169;&#26435;&#25237;&#35785;&#65292;&#23558;&#20381;&#25454;&#23433;&#20840;&#28207;&#21407;&#21017;&#36716;&#20132;&#32473;&#29420;&#31435;&#30340;&#20105;&#35758;&#35299;&#20915;&#26426;&#26500;&#65292;&#21363;&#30001;&#32654;&#22269;&#21830;&#19994;&#20419;&#36827;&#23616;&#22996;&#21592;&#20250;&#36127;&#36131;&#36816;&#20316;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BBB </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#27431;&#30431;&#23433;&#20840;&#28207;&#26469;&#35299;&#20915;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#24744;&#27809;&#26377;&#21450;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26102;&#25910;&#21040;&#25237;&#35785;&#30830;&#35748;&#25110;&#23545;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#22788;&#29702;&#32467;&#26524;&#19981;&#28385;&#24847;&#65292;&#21487;&#20197;&#35775;&#38382;&#20197;&#19979;&#32593;&#22336;&#32852;&#31995;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BBB </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#27431;&#30431;&#23433;&#20840;&#28207;&#65306;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+padding:0in'>http://www.bbb.org/us/safe-harbor-complaints</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#24800;&#26222;&#24050;&#34987;&#25480;&#20104;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> TRUSTe </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> APEC </span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#21360;&#31456;&#65292;&#34920;&#31034;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#27492;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#22768;&#26126;&#21644;&#25105;&#20204;&#30340;&#20570;&#27861;&#24050;&#36890;&#36807;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> TRUSTe </span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23457;&#26680;&#65292;&#31526;&#21512;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> TRUSTe </span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35745;&#21010;&#30340;&#35268;&#23450;&#12290;&#24744;&#21487;&#20197;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36890;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36807;&#21333;&#20987;&#38142;&#25509;&#21040;&#27492;&#38544;&#31169;&#22768;&#26126;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> TRUSTe </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21360;&#31456;&#21644;&#31227;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#24212;&#29992;&#65292;&#22312;&#39564;&#35777;&#39029;&#38754;&#19978;&#26597;&#30475;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> TRUSTe </span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35745;&#21010;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27492;&#22768;&#26126;&#20013;&#25152;&#36848;&#30340;&#24800;&#26222;&#38544;&#31169;&#20445;&#25252;&#20570;&#27861;&#31526;&#21512;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> APEC </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#36328;&#22659;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#35268;&#21017;&#20307;&#31995;&#65292;&#21253;&#25324;&#36879;&#26126;&#24230;&#12289;&#21487;&#38752;&#24615;&#20197;&#21450;&#26377;&#20851;&#25910;&#38598;&#21644;&#20351;&#29992;&#20010;&#20154;&#20449;&#24687;&#30340;&#36873;&#25321;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>CBPR </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35748;&#35777;&#24182;&#19981;&#28085;&#30422;&#36890;&#36807;&#31532;&#19977;&#26041;&#24179;&#21488;&#19979;&#36733;&#30340;&#36719;&#20214;&#25152;&#25910;&#38598;&#30340;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26377;&#20851;&#24800;&#26222;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> APEC </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35748;&#35777;&#30340;&#38544;&#31169;&#25110;&#25968;&#25454;&#20351;&#29992;&#38382;&#39064;&#65292;&#22914;&#26524;&#24744;&#27809;&#26377;&#24471;&#21040;&#28385;&#24847;&#30340;&#31572;&#22797;&#65292;&#35831;&#32852;&#31995;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+padding:0in'>TRUSTe</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+     padding:0in'>&#26412;</span><span lang=ZH-CN style='font-size:12.0pt;
+     font-family:"Microsoft JhengHei",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'>&#38544;&#31169;&#22768;&#26126;&#30340;&#36866;&#29992;&#33539;&#22260;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#20010;&#20154;&#20449;&#24687;&#30340;&#25910;&#38598;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+     padding:0in'>&#25105;</span><span lang=ZH-CN style='font-size:12.0pt;
+     font-family:"Microsoft JhengHei",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'>&#20204;&#22914;&#20309;&#20351;&#29992;&#24744;&#30340;&#20449;&#24687;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+     padding:0in'>&#25105;</span><span lang=ZH-CN style='font-size:12.0pt;
+     font-family:"Microsoft JhengHei",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'>&#20204;&#22914;&#20309;&#20849;&#20139;&#24744;&#30340;&#20449;&#24687;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#20799;&#31461;&#30340;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+     border:none windowtext 1.0pt;padding:0in'>&#38544;&#31169;&#26435;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+     padding:0in'>&#24744;&#30340;</span><span lang=ZH-CN style='font-size:
+     12.0pt;font-family:"Microsoft JhengHei",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'>&#36873;&#39033;&#19982;&#38544;&#31169;&#26435;&#20559;&#22909;&#36873;&#25321;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+     padding:0in'>&#24744;&#30340;&#20449;&#24687;&#30340;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+     border:none windowtext 1.0pt;padding:0in'>&#35775;&#38382;&#26435;&#19982;&#20934;&#30830;&#24615;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+     padding:0in'>&#20445;&#38556;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;&#23433;&#20840;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#26412;&#22768;&#26126;&#30340;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+     border:none windowtext 1.0pt;padding:0in'>&#21464;&#26356;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Microsoft JhengHei",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'>&#32852;&#31995;&#25105;&#20204;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#20309;&#20351;&#29992;&#33258;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#25968;&#25454;&#25910;&#38598;&#24037;&#20855;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Cookie</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#32593;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+     border:none windowtext 1.0pt;padding:0in'>&#32476;&#20449;&#26631;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#20869;&#23884;&#24335;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'> Web </span><span style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+     border:none windowtext 1.0pt;padding:0in'>&#38142;&#25509;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+     padding:0in'>&#21002;&#30331;&#20110;&#31532;&#19977;&#26041;&#32593;&#31449;&#30340;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'> HP </span><span lang=ZH-CN style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#24191;&#21578;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a name=1></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>1.&nbsp;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"MS Gothic"'>&#26412;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#22768;&#26126;&#30340;&#36866;&#29992;&#33539;</span></b><b><span
+style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#22260;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26159;&#19968;&#20010;&#22312;&#19990;&#30028;&#21508;&#22320;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#25317;&#26377;&#27861;&#24459;&#23454;&#20307;&#12289;&#19994;&#21153;&#27969;&#31243;&#12289;&#31649;&#29702;&#26550;&#26500;&#21450;&#25216;&#26415;&#31995;&#32479;&#30340;&#20840;&#29699;&#24615;&#32452;&#32455;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26412;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#22768;&#26126;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#36866;&#29992;&#20110;&#25152;&#26377;&#38582;&#23646;&#20110;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;&#20854;&#20840;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36164;&#23376;&#20844;&#21496;&#30340;&#32593;&#31449;&#12289;&#32593;&#22495;&#12289;&#26381;&#21153;&#12289;&#24212;&#29992;&#21450;&#20135;&#21697;&#65288;&#32479;&#31216;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>“HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;&#25110;&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65289;&#65292;&#20294;&#26159;&#24403;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#19987;&#38376;&#38024;&#23545;&#29305;&#23450;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35745;&#21010;&#12289;&#20135;&#21697;&#25110;&#26381;&#21153;&#21457;&#24067;&#38544;&#31169;&#26435;&#25919;&#31574;&#25110;&#22768;&#26126;&#26102;&#65292;&#26412;&#38544;&#31169;&#22768;&#26126;&#23558;&#34987;&#26367;&#20195;&#25110;&#34917;&#20805;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"MS Gothic"'>&#25351;&#21521;&#38750;</span></b><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'> HP </span></b><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"MS Gothic"'>&#32593;&#31449;&#30340;</span></b><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38142;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#25509;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;&#25110;&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#20026;&#20102;&#26041;&#20415;&#24744;&#20351;&#29992;&#21644;&#33719;&#21462;&#20449;&#24687;&#65292;&#21487;&#33021;&#20250;&#25552;&#20379;&#25351;&#21521;&#31532;&#19977;&#26041;&#24212;&#29992;&#31243;&#24207;&#12289;&#20135;&#21697;&#12289;&#26381;&#21153;&#25110;&#32593;&#31449;&#30340;&#38142;&#25509;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35775;&#38382;&#36825;&#20123;&#38142;&#25509;&#65292;&#23558;&#31163;&#24320;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26080;&#27861;&#25511;&#21046;&#37027;&#20123;&#31532;&#19977;&#26041;&#32593;&#31449;&#21450;&#20854;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23545;&#20110;&#38544;&#31169;&#26435;&#30340;&#20570;&#27861;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#23427;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#21487;&#33021;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20570;&#27861;&#19981;&#21516;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#19981;&#20026;&#31532;&#19977;&#26041;&#32593;&#31449;&#36127;&#36131;&#65292;&#20063;&#19981;&#20195;&#34920;&#20219;&#20309;&#31532;&#19977;&#26041;&#32593;&#31449;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#25552;&#20379;&#32473;&#31532;&#19977;&#26041;&#32593;&#31449;&#25110;&#31532;&#19977;&#26041;&#32593;&#31449;&#25152;&#25910;&#38598;&#30340;&#24744;&#30340;&#20010;&#20154;&#25968;&#25454;&#37117;&#19981;&#22312;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#22768;&#26126;&#25152;&#28085;&#30422;&#30340;&#33539;&#22260;&#20043;&#20869;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24314;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35758;&#24744;&#22312;&#20801;&#35768;&#20854;&#25910;&#38598;&#21644;&#20351;&#29992;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;&#21069;&#65292;&#20808;&#20180;&#32454;&#26597;&#30475;&#24744;&#23558;&#35201;&#19982;&#20043;&#20114;&#21160;&#30340;&#32593;&#31449;&#30340;&#38544;&#31169;&#26435;&#25919;&#31574;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#20063;&#20250;&#25552;&#20379;&#31038;&#20132;&#23186;&#20307;&#21151;&#33021;&#65292;&#35753;&#24744;&#21487;&#20197;&#23558;&#20449;&#24687;&#20849;&#20139;&#21040;&#31038;&#20132;&#32593;&#32476;&#24182;&#22312;&#21508;&#31181;&#31038;&#20132;&#23186;&#20307;&#32593;&#31449;&#19978;&#19982;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20114;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20351;&#29992;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#21151;&#33021;&#21487;&#33021;&#20250;&#23548;&#33268;&#24744;&#30340;&#20449;&#24687;&#34987;&#25910;&#38598;&#25110;&#20849;&#20139;&#65292;&#20855;&#20307;&#24773;&#20917;&#22240;&#21151;&#33021;&#32780;&#19981;&#21516;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#24314;&#35758;&#24744;&#26597;&#30475;&#24744;&#25152;&#21442;&#19982;&#20114;&#21160;&#30340;&#31038;&#20132;&#23186;&#20307;&#32593;&#31449;&#30340;&#38544;&#31169;&#26435;&#25919;&#31574;&#21644;&#35774;&#32622;&#65292;&#20102;&#35299;&#36825;&#20123;&#32593;&#31449;&#21487;&#33021;&#20250;&#25910;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#38598;&#12289;&#20351;&#29992;&#21644;&#20849;&#20139;&#30340;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=2></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>2.&nbsp;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"MS Gothic"'>&#20010;&#20154;&#20449;&#24687;&#30340;&#25910;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#38598;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#25910;&#38598;&#12289;&#23548;&#20986;&#21644;&#20351;&#29992;&#20010;&#20154;&#20449;&#24687;&#26469;&#20445;&#25345;&#24744;&#19982;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20043;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38388;&#30340;&#33391;&#22909;&#20851;&#31995;&#65292;&#24182;&#36890;&#36807;&#20351;&#24744;&#25317;&#26377;&#20010;&#24615;&#21270;&#30340;&#20307;&#39564;&#21450;&#19982;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26102;&#21051;&#20445;&#25345;&#20114;&#21160;&#20026;&#24744;&#25552;&#20379;&#26356;&#22909;&#30340;&#26381;&#21153;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#19978;&#36848;&#20449;&#24687;&#25910;&#38598;&#34892;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#26159;&#22312;&#32463;&#36807;&#20805;&#20998;&#21578;&#30693;&#19982;&#21516;&#24847;&#65292;&#24182;&#22312;&#38656;&#35201;&#26102;&#21521;&#20449;&#24687;&#20445;&#25252;&#31649;&#29702;&#26426;&#26500;&#25552;&#20986;&#30003;&#35831;&#30340;&#24773;&#20917;&#19979;&#36827;&#34892;&#30340;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#20250;&#25910;&#38598;&#24744;&#19982;&#19979;&#21015;&#27963;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#26377;&#20851;&#30340;&#20010;&#20154;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20135;&#21697;&#25110;&#26381;&#21153;&#35746;&#36141;&#12289;&#28608;&#27963;&#21644;&#27880;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#20876;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38024;&#23545;&#22312;&#32447;&#26381;&#21153;&#30340;&#26723;&#26696;&#21019;&#24314;&#21644;&#29992;&#25143;&#39564;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35777;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#20449;&#24687;</span><span style='font-size:
+     12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35831;&#27714;&#25110;&#25237;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35785;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#24066;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#22330;&#33829;&#38144;&#12289;&#26032;&#38395;&#31295;&#25110;&#25903;&#25345;&#36164;&#26009;&#35746;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38405;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#21442;&#21152;</span><span style='font-size:
+     12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#31454;&#36187;&#25110;&#21442;&#19982;&#35843;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26597;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#21363;</span><span style='font-size:12.0pt;
+     font-family:"Microsoft JhengHei",sans-serif'>&#26102;&#20449;&#29992;&#30003;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35831;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#24037;&#20316;&#30003;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35831;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#27963;</span><span style='font-size:12.0pt;
+     font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#27880;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#20876;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Microsoft JhengHei",sans-serif'>&#35775;&#38382;&#25110;&#27983;&#35272;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#31449;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#25552;&#20379;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32473;&#25105;&#20204;&#30340;&#20010;&#20154;&#20449;&#24687;&#21487;&#33021;&#21253;&#25324;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#20010;&#20154;&#21450;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#19994;&#21153;&#32852;&#31995;&#20449;&#24687;&#65292;&#22914;&#22995;&#21517;&#12289;&#22320;&#22336;&#12289;&#30005;&#35805;&#21495;&#30721;&#21644;&#30005;&#23376;&#37038;&#20214;&#22320;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#22336;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#26576;&#20123;&#24773;&#20917;&#19979;&#65292;&#24744;&#30340;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#19994;&#21153;&#32852;&#31995;&#25968;&#25454;&#21487;&#33021;&#20250;&#30001;&#24744;&#20844;&#21496;&#25110;&#20225;&#19994;&#20869;&#30340;&#25351;&#23450;&#23454;&#20307;&#65288;&#22914;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> IT </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#37096;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38376;&#30340;&#21592;&#24037;&#65289;&#25552;&#20379;&#32473;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36130;&#21153;&#20449;&#24687;&#65292;&#22914;&#24744;&#30340;&#20449;&#29992;&#21345;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20511;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35760;&#21345;&#21495;&#30721;&#25110;&#20854;&#20182;&#24080;&#21333;&#20449;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#24687;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#25919;&#24220;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#31614;&#21457;&#30340;&#36523;&#20221;&#35777;&#21495;&#30721;&#21450;&#34218;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36164;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#20854;&#20182;&#29305;&#23450;&#30340;&#20449;&#24687;&#65292;&#22914;&#29992;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#25143;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> ID </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;&#23494;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#30721;&#12289;&#20135;&#21697;&#21151;&#33021;&#12289;&#20135;&#21697;&#19982;&#26381;&#21153;&#20559;&#22909;&#12289;&#32852;&#31995;&#26041;&#24335;&#20559;&#22909;&#12289;&#25945;&#32946;&#21644;&#24037;&#20316;&#32972;&#26223;&#65292;&#20197;&#21450;&#24037;&#20316;&#20852;&#36259;&#31561;&#26041;&#38754;&#30340;&#20449;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#24687;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#22320;&#29702;&#20301;&#32622;&#25968;&#25454;&#65292;&#22914;&#24744;&#30340;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> IP </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22320;&#22336;&#25110;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35831;&#27714;&#22522;&#20110;&#20301;&#32622;&#30340;&#26381;&#21153;&#26102;&#25152;&#22788;&#30340;&#29289;&#29702;&#20301;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#32622;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;&#30003;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35831;&#21363;&#26102;&#20449;&#29992;&#65292;&#25105;&#20204;&#21487;&#33021;&#20250;&#35831;&#24744;&#25552;&#20379;&#20854;&#20182;&#25935;&#24863;&#30340;&#20010;&#20154;&#20449;&#24687;&#65292;&#22914;&#34218;&#36164;&#12289;&#25919;&#24220;&#31614;&#21457;&#30340;&#36523;&#20221;&#35777;&#21495;&#30721;&#12289;&#38134;&#34892;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36130;&#21153;&#24080;&#25143;&#20449;&#24687;&#65292;&#20197;&#21450;&#20854;&#20182;&#36523;&#20221;&#39564;&#35777;&#20449;&#24687;&#21644;&#20449;&#29992;&#26680;&#23454;&#20449;&#24687;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#30340;&#37329;&#34701;&#26381;&#21153;&#25552;&#20379;&#21830;&#23558;&#36890;&#36807;&#36825;&#20123;&#20449;&#24687;&#26469;&#20915;&#23450;&#26159;&#21542;&#25552;&#39640;&#24744;&#30340;&#20449;&#29992;&#39069;&#24230;&#65292;&#20197;&#21450;&#25552;&#39640;&#22810;&#22823;&#30340;&#24133;&#24230;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#20351;&#29992;&#25105;&#20204;&#32593;&#31449;&#19978;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21578;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35785;&#25105;&#30340;&#26379;&#21451;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#20854;&#20182;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#31867;&#20284;&#25512;&#33616;&#35745;&#21010;&#65292;&#25105;&#20204;&#23558;&#35810;&#38382;&#24744;&#26379;&#21451;&#30340;&#30005;&#23376;&#37038;&#20214;&#22320;&#22336;&#12289;&#31038;&#20132;&#23186;&#20307;&#24080;&#25143;&#12289;&#25163;&#26426;&#21495;&#30721;&#25110;&#20854;&#20182;&#32852;&#31995;&#20449;&#24687;&#20197;&#21521;&#24744;&#30340;&#26379;&#21451;&#21457;&#36865;&#36992;&#35831;&#65292;&#36992;&#35831;&#20854;&#21442;&#19982;&#25105;&#20204;&#30340;&#35745;&#21010;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#24744;&#22312;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;&#30340;&#20844;&#20849;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35770;&#22363;&#12289;&#31038;&#20132;&#32593;&#32476;&#12289;&#21338;&#23458;&#25110;&#20854;&#20182;&#31867;&#20284;&#35770;&#22363;&#19978;&#21457;&#24086;&#12289;&#35780;&#35770;&#12289;&#36879;&#38706;&#20852;&#36259;&#25110;&#25237;&#35785;&#65292;&#25110;&#32773;&#20849;&#20139;&#20010;&#20154;&#20449;&#24687;&#65288;&#21253;&#25324;&#29031;&#29255;&#65289;&#65292;&#35831;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#27880;&#24847;&#24744;&#25152;&#25552;&#20132;&#30340;&#20219;&#20309;&#20449;&#24687;&#37117;&#21487;&#33021;&#20250;&#34987;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#35770;&#22363;&#20013;&#30340;&#20854;&#20182;&#29992;&#25143;&#38405;&#35835;&#12289;&#26597;&#30475;&#12289;&#25910;&#38598;&#25110;&#20351;&#29992;&#65292;&#24182;&#21487;&#33021;&#34987;&#29992;&#20110;&#19982;&#24744;&#32852;&#31995;&#12289;&#21521;&#24744;&#21457;&#36865;&#22403;&#22334;&#37038;&#20214;&#25110;&#29992;&#20110;&#24744;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#37117;&#26080;&#27861;&#25511;&#21046;&#30340;&#20854;&#20182;&#30446;&#30340;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23545;&#20110;&#24744;&#36873;&#25321;&#22312;&#36825;&#20123;&#35770;&#22363;&#20013;&#25552;&#20379;&#30340;&#20010;&#20154;&#20449;&#24687;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#25215;&#25285;&#20219;&#20309;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36131;&#20219;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#38500;&#20102;&#24744;&#25552;&#20379;&#30340;&#20449;&#24687;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36824;&#20250;&#22312;&#24744;&#35775;&#38382;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;&#12289;&#22522;&#20110;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Web </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#24212;&#29992;&#31243;&#24207;&#25110;&#20854;&#20182;&#20844;&#21496;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#25216;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26415;&#25903;&#25345;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#32593;&#31449;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26102;&#65292;&#36890;&#36807;&#25105;&#20204;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#33258;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#25968;&#25454;&#25910;&#38598;&#24037;&#20855;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25910;&#38598;&#20449;&#24687;&#65292;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#24037;&#20855;&#21253;&#25324;&#32593;&#32476;&#20449;&#26631;&#12289;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Cookie </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;&#23884;&#20837;&#24335;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Web </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38142;&#25509;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#24037;&#20855;&#25910;&#38598;&#24744;&#30340;&#27983;&#35272;&#22120;&#21457;&#36865;&#33267;&#32593;&#31449;&#30340;&#26576;&#20123;&#27969;&#37327;&#20449;&#24687;&#65292;&#20363;&#22914;&#24744;&#30340;&#27983;&#35272;&#22120;&#31867;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22411;&#21644;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35821;&#35328;&#12289;&#35775;&#38382;&#26102;&#38388;&#20197;&#21450;&#24744;&#20174;&#20309;&#32593;&#31449;&#38142;&#25509;&#33267;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#23427;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#21487;&#33021;&#36824;&#20250;&#25910;&#38598;&#26377;&#20851;&#24744;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> IP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22320;&#22336;&#12289;&#21807;&#19968;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35774;&#22791;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> ID</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12289;&#28857;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20987;&#27969;&#34892;&#20026;&#65288;&#21363;&#24744;&#27983;&#35272;&#30340;&#32593;&#39029;&#12289;&#24744;&#28857;&#20987;&#30340;&#38142;&#25509;&#20197;&#21450;&#19982;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;&#25110;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#25216;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26415;&#25903;&#25345;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#32593;&#31449;&#26377;&#20851;&#30340;&#20854;&#20182;&#34892;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#65289;&#30340;&#20449;&#24687;&#21644;&#20135;&#21697;&#20449;&#24687;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20063;&#21487;&#33021;&#25226;&#19968;&#20123;&#33258;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#25968;&#25454;&#25910;&#38598;&#24037;&#20855;&#19982;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21457;&#36865;&#30340;&#26576;&#20123;&#30005;&#23376;&#37038;&#20214;&#21644;&#27807;&#36890;&#20449;&#24687;&#37197;&#21512;&#20351;&#29992;&#65292;&#20197;&#20415;&#22312;&#24744;&#25171;&#24320;&#30005;&#23376;&#37038;&#20214;&#25110;&#28857;&#20987;&#30005;&#23376;&#37038;&#20214;&#20013;&#30340;&#38142;&#25509;&#26102;&#20351;&#29992;&#36825;&#20123;&#24037;&#20855;&#25910;&#38598;&#20449;&#24687;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#38656;&#20102;&#35299;&#26356;&#22810;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+border:none windowtext 1.0pt;padding:0in'>&#35831;&#21442;&#38405;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+padding:0in'> HP </span><span lang=ZH-CN style='font-size:12.0pt;font-family:
+"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#22914;&#20309;&#20351;&#29992;&#33258;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+border:none windowtext 1.0pt;padding:0in'>&#21160;&#25968;&#25454;&#25910;&#38598;&#24037;&#20855;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36824;&#20250;&#20174;&#23427;&#35748;&#20026;&#21487;&#20449;&#30340;&#20844;&#20849;&#25110;&#21830;&#19994;&#26469;&#28304;&#25910;&#38598;&#20449;&#24687;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#20449;&#24687;&#21487;&#33021;&#21253;&#25324;&#24744;&#30340;&#22995;&#21517;&#12289;&#22320;&#22336;&#12289;&#30005;&#23376;&#37038;&#20214;&#22320;&#22336;&#12289;&#20010;&#20154;&#20559;&#22909;&#12289;&#20852;&#36259;&#21644;&#20154;&#21475;&#32479;&#35745;&#26723;&#26696;&#25968;&#25454;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20174;&#20844;&#20849;&#25110;&#21830;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#19994;&#26469;&#28304;&#25910;&#38598;&#21040;&#30340;&#20449;&#24687;&#21487;&#33021;&#20250;&#19982;&#22312;&#24744;&#35775;&#38382;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26102;&#25910;&#38598;&#21040;&#30340;&#20449;&#24687;&#19968;&#36215;&#20351;&#29992;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20363;&#22914;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#20250;&#25226;&#20174;&#21830;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#19994;&#26469;&#28304;&#21462;&#24471;&#30340;&#22320;&#29702;&#20449;&#24687;&#19982;&#33258;&#21160;&#25968;&#25454;&#25910;&#38598;&#24037;&#20855;&#25910;&#38598;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> IP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22320;&#22336;&#30456;&#27604;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36739;&#65292;&#20197;&#25512;&#30693;&#24744;&#22823;&#33268;&#30340;&#22320;&#29702;&#21306;&#22495;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20316;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#21453;&#33104;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36133;&#35745;&#21010;&#30340;&#19968;&#37096;&#20998;&#65292;&#22914;&#26377;&#24517;&#35201;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20063;&#21487;&#33021;&#20351;&#29992;&#24744;&#25110;&#24744;&#30340;&#38599;&#20027;&#25552;&#20379;&#30340;&#20449;&#24687;&#65292;&#19982;&#20174;&#20844;&#24320;&#28192;&#36947;&#21450;&#20854;&#20182;&#22312;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32447;&#21644;&#31163;&#32447;&#26469;&#28304;&#33719;&#24471;&#30340;&#20449;&#24687;&#19968;&#36215;&#65292;&#23545;&#19994;&#21153;&#32852;&#31995;&#20154;&#36827;&#34892;&#23613;&#32844;&#35843;&#26597;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=3></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>3.&nbsp;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"MS Gothic"'>&#25105;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#22914;&#20309;&#20351;&#29992;&#24744;&#30340;&#20449;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#24687;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25152;&#25910;&#38598;&#29992;&#26469;&#20102;&#35299;&#24744;&#30340;&#38656;&#27714;&#19982;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20852;&#36259;&#30340;&#20449;&#24687;&#65292;&#21487;&#24110;&#21161;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36830;&#36143;&#30340;&#20010;&#24615;&#21270;&#20307;&#39564;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20363;&#22914;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#20250;&#23558;&#24744;&#30340;&#20449;&#24687;&#29992;&#20110;&#20197;&#19979;&#30446;&#30340;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#31649;&#29702;&#25105;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#19982;&#24744;&#30340;&#33391;&#22909;&#20851;&#31995;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21327;&#21161;&#24744;&#23436;&#25104;&#20132;&#26131;&#25110;&#35746;&#21333;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#36890;&#23601;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20135;&#21697;&#21644;&#26381;&#21153;&#19982;&#24744;&#36827;&#34892;&#27807;&#36890;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#23601;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20135;&#21697;&#19982;&#26381;&#21153;&#19982;&#24744;&#36827;&#34892;&#27807;&#36890;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#24182;&#25913;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36827;&#26381;&#21153;&#19982;&#25903;&#25345;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#24744;&#25552;&#20379;&#26368;&#26032;&#30340;&#26381;&#21153;&#19982;&#20248;&#24800;&#20449;&#24687;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38024;&#23545;&#24744;&#30340;&#20010;&#24615;&#21270;&#20419;&#38144;&#20449;&#24687;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#19982;&#24744;&#27807;&#36890;&#30340;&#20869;&#23481;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23545;&#26576;&#20123;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36827;&#34892;&#20010;&#24615;&#21270;&#35774;&#32622;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35780;&#20272;&#33829;&#38144;&#26041;&#26696;&#12289;&#24191;&#21578;&#21644;&#30001;&#20854;&#20182;&#20844;&#21496;&#20195;&#34920;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP“</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#25216;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26415;&#25903;&#25345;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#32593;&#31449;&#30340;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32489;&#25928;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35753;&#24744;&#21442;&#19982;&#31454;&#36187;&#19982;&#38382;&#21367;&#35843;&#26597;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#20250;&#20801;&#35768;&#24744;&#23601;&#25105;&#20204;&#21457;&#36865;&#30340;&#24066;&#22330;&#33829;&#38144;&#20449;&#24687;&#36873;&#25321;&#38544;&#31169;&#26435;&#20559;&#22909;&#65288;&#35831;&#21442;&#38405;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+padding:0in'>&#24744;&#30340;</span><span lang=ZH-CN style='font-size:12.0pt;
+font-family:"Microsoft JhengHei",sans-serif;border:none windowtext 1.0pt;
+padding:0in'>&#36873;&#39033;&#19982;&#38544;&#31169;&#26435;&#20559;&#22909;&#36873;&#25321;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65289;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20449;&#29992;&#21345;&#20449;&#24687;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20165;&#22312;&#22788;&#29702;&#20184;&#27454;&#21644;&#39044;&#38450;&#27450;&#35784;&#26102;&#25165;&#20250;&#34987;&#20351;&#29992;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;&#20854;&#37329;&#34701;&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#25552;&#20379;&#21830;&#19981;&#20250;&#23558;&#34218;&#36164;&#20449;&#24687;&#12289;&#25919;&#24220;&#31614;&#21457;&#30340;&#36523;&#20221;&#35777;&#21495;&#30721;&#19982;&#20854;&#20182;&#25935;&#24863;&#30340;&#20010;&#20154;&#20449;&#24687;&#29992;&#20110;&#20854;&#20182;&#29992;&#36884;&#65307;&#38500;&#38750;&#24744;&#35201;&#27714;&#25105;&#20204;&#20445;&#30041;&#24744;&#30340;&#20449;&#29992;&#21345;&#20449;&#24687;&#20197;&#22791;&#23558;&#26469;&#36141;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#29289;&#20043;&#29992;&#65292;&#21542;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21017;&#36825;&#20123;&#20449;&#24687;&#30340;&#20445;&#23384;&#23558;&#19981;&#20250;&#36229;&#36807;&#25552;&#20379;&#26381;&#21153;&#30340;&#24517;&#35201;&#26102;&#38388;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=4></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>4.&nbsp;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"MS Gothic"'>&#25105;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#22914;&#20309;&#20849;&#20139;&#24744;&#30340;&#20449;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#24687;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#38500;&#20102;&#26412;&#22768;&#26126;&#25152;&#25551;&#36848;&#30340;&#24773;&#20917;&#22806;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#20250;&#23558;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;&#20986;&#21806;&#12289;&#20986;&#31199;&#25110;&#31199;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36161;&#32473;&#20854;&#20182;&#26041;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20197;&#19979;&#21015;&#26041;&#24335;&#20849;&#20139;&#20010;&#20154;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#38599;&#29992;&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#25552;&#20379;&#21830;&#21644;&#20379;&#24212;&#21830;&#20197;&#31649;&#29702;&#25110;&#25903;&#25345;&#20854;&#19994;&#21153;&#36816;&#33829;&#12289;&#25552;&#20379;&#23436;&#25972;&#30340;&#20135;&#21697;&#12289;&#26381;&#21153;&#19982;&#23458;&#25143;&#35299;&#20915;&#26041;&#26696;&#65292;&#24182;&#21327;&#21161;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36827;&#34892;&#24066;&#22330;&#33829;&#38144;&#19982;&#20132;&#27969;&#27963;&#21160;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#26381;&#21153;&#25552;&#20379;&#21830;&#19982;&#20379;&#24212;&#21830;&#21253;&#25324;&#20449;&#29992;&#21345;&#22788;&#29702;&#20844;&#21496;&#12289;&#23458;&#25143;&#25903;&#25345;&#19982;&#23454;&#26102;&#26381;&#21153;&#25552;&#20379;&#21830;&#12289;&#24066;&#22330;&#33829;&#38144;&#25552;&#20379;&#21830;&#12289;&#30005;&#23376;&#37038;&#20214;&#26381;&#21153;&#25552;&#20379;&#21830;&#12289;&#33258;&#21160;&#21270;&#25968;&#25454;&#22788;&#29702;&#26381;&#21153;&#25552;&#20379;&#21830;&#20197;&#21450;&#36135;&#36816;&#20195;&#29702;&#20844;&#21496;&#31561;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25353;&#29031;&#21512;&#21516;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35268;&#23450;&#65292;&#26381;&#21153;&#25552;&#20379;&#21830;&#21644;&#20379;&#24212;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21830;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23545;&#20110;&#23427;&#20204;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25910;&#38598;&#21040;&#30340;&#20449;&#24687;&#24517;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#39035;&#20445;&#23494;&#24182;&#21152;&#20197;&#20445;&#25252;&#65292;&#19981;&#24471;&#29992;&#20110;&#38500;&#20026;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#20197;&#22806;&#30340;&#20219;&#20309;&#29992;&#36884;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26377;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26102;&#20250;&#21644;&#20854;&#20182;&#20844;&#21496;&#65288;&#21253;&#25324;&#30001;&#20854;&#20182;&#20844;&#21496;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#25216;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26415;&#25903;&#25345;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#32593;&#31449;&#65289;&#19968;&#36215;&#21442;&#19982;&#24066;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#22330;&#33829;&#38144;&#27963;&#21160;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20316;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#36825;&#20123;&#27963;&#21160;&#30340;&#19968;&#37096;&#20998;&#65292;&#26576;&#20123;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#21644;&#24066;&#22330;&#33829;&#38144;&#20449;&#24687;&#21487;&#33021;&#20250;&#19982;&#20854;&#20182;&#20844;&#21496;&#30340;&#20449;&#24687;&#21516;&#26102;&#21457;&#36865;&#32473;&#24744;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#26381;&#21153;&#21644;&#20449;&#24687;&#20013;&#65292;&#26377;&#20123;&#20250;&#35753;&#24744;&#36873;&#25321;&#26159;&#21542;&#19982;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;&#21442;&#19982;&#27963;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#30340;&#20854;&#20182;&#20844;&#21496;&#20849;&#20139;&#20010;&#20154;&#20449;&#24687;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20363;&#22914;&#65292;&#24744;&#21487;&#33021;&#20250;&#25910;&#21040;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;&#20854;&#20182;&#20844;&#21496;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21457;&#26469;&#30340;&#24066;&#22330;&#33829;&#38144;&#20449;&#24687;&#65292;&#25110;&#32773;&#24744;&#26377;&#26426;&#20250;&#22312;&#32447;&#30331;&#35760;&#20197;&#33719;&#21462;&#22810;&#23478;&#20844;&#21496;&#30340;&#36719;&#20214;&#20135;&#21697;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#21482;&#23558;&#20010;&#20154;&#20449;&#24687;&#25552;&#20379;&#32473;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#37027;&#20040;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#23558;&#19981;&#20250;&#19982;&#20854;&#20182;&#21442;&#19982;&#27963;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#30340;&#20844;&#21496;&#20849;&#20139;&#24744;&#30340;&#20449;&#24687;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#23558;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;&#25552;&#20379;&#32473;&#20854;&#20182;&#20844;&#21496;&#65292;&#21017;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;&#23558;&#20381;&#25454;&#35813;&#20844;&#21496;&#30340;&#38544;&#31169;&#26435;&#25919;&#31574;&#65288;&#35813;&#38544;&#31169;&#26435;&#25919;&#31574;&#21487;&#33021;&#19982;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#25919;&#31574;&#21644;&#20570;&#27861;&#26377;&#25152;&#19981;&#21516;&#65289;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36827;&#34892;&#22788;&#29702;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#20250;&#23558;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21457;&#36865;&#33267;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#32654;&#22269;&#22659;&#20869;&#19982;&#19990;&#30028;&#21508;&#22320;&#25152;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#25317;&#26377;&#30340;&#20854;&#20182;&#19994;&#21153;&#23454;&#20307;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;&#24403;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35775;&#38382;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;&#12289;&#27880;&#20876;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#24080;&#25143;&#25110;&#26381;&#21153;&#65292;&#25110;&#32773;&#20197;&#20854;&#20182;&#36884;&#24452;&#21521;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26102;&#65292;&#21363;&#34920;&#31034;&#24744;&#21516;&#24847;&#22312;&#25972;&#20010;&#20840;&#29699;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32476;&#23454;&#20307;&#20869;&#20256;&#36755;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#38500;&#26412;&#22768;&#26126;&#25152;&#36848;&#20043;&#22806;&#65292;&#26410;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32463;&#24744;&#30340;&#35768;&#21487;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#20250;&#19982;&#38750;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#31532;&#19977;&#26041;&#20849;&#20139;&#24744;&#25552;&#20379;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32473;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20010;&#20154;&#20449;&#24687;&#65292;&#38500;&#38750;&#22312;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32463;&#36807;&#20801;&#35768;&#24182;&#19988;&#36981;&#23432;&#36866;&#29992;&#27861;&#24459;&#30340;&#24773;&#20917;&#19979;&#65306;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (i) </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#21709;&#24212;&#35686;&#23519;&#21644;&#25919;&#24220;&#26426;&#20851;&#27491;&#24335;&#25480;&#26435;&#30340;&#20449;&#24687;&#35201;&#27714;&#65307;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (ii) </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#36981;&#23432;&#20219;&#20309;&#27861;&#24459;&#12289;&#26465;&#20363;&#12289;&#20256;&#31080;&#25110;&#27861;&#38498;&#21629;&#20196;&#65307;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (iii) </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#35843;&#26597;&#25110;&#24110;&#21161;&#39044;&#38450;&#23433;&#20840;&#23041;&#32961;&#12289;&#27450;&#35784;&#25110;&#20854;&#20182;&#24694;&#24847;&#34892;&#20026;&#65307;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (iv) </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#21152;&#24378;&#25110;&#20445;&#25252;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#20854;&#23376;&#20844;&#21496;&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26435;&#21033;&#21644;&#36130;&#20135;&#65307;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (v) </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#20445;&#25252;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12289;&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#30340;&#21592;&#24037;&#21644;&#37027;&#20123;&#27491;&#22312;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36130;&#20135;&#25110;&#19982;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36130;&#20135;&#26377;&#20851;&#30340;&#31532;&#19977;&#26041;&#30340;&#26435;&#21033;&#25110;&#20154;&#36523;&#23433;&#20840;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#26576;&#20123;&#24773;&#20917;&#19979;&#65292;&#20986;&#20110;&#31574;&#30053;&#21407;&#22240;&#25110;&#20854;&#20182;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#19994;&#21153;&#21407;&#22240;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#20250;&#20915;&#23450;&#20986;&#21806;&#12289;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36141;&#20080;&#12289;&#21512;&#24182;&#25110;&#20197;&#20854;&#20182;&#26041;&#24335;&#37325;&#32452;&#22312;&#26576;&#20123;&#22269;&#23478;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22320;&#21306;&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#19994;&#21153;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#31181;&#20132;&#26131;&#21487;&#33021;&#28041;&#21450;&#21521;&#28508;&#22312;&#25110;&#23454;&#38469;&#20080;&#20027;&#25259;&#38706;&#20010;&#20154;&#20449;&#24687;&#65292;&#25110;&#26159;&#20174;&#21334;&#26041;&#25509;&#21463;&#20010;&#20154;&#20449;&#24687;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20570;&#27861;&#26159;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#36825;&#31867;&#20132;&#26131;&#20013;&#30340;&#20449;&#24687;&#25552;&#20379;&#36866;&#24403;&#20445;&#25252;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=5></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>5.&nbsp;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"MS Gothic"'>&#20799;&#31461;&#30340;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;</span></b><b><span
+style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26435;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#20250;&#21051;&#24847;&#25910;&#38598;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 13 </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23681;&#65288;&#25110;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 14 </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23681;&#65292;&#22312;&#38889;&#22269;&#65289;&#20197;&#19979;&#20799;&#31461;&#30340;&#20449;&#24687;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#32593;&#31449;&#20063;&#19981;&#20250;&#20197;&#27492;&#24180;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#40836;&#20197;&#19979;&#30340;&#20799;&#31461;&#20026;&#21463;&#20247;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#40723;&#21169;&#23478;&#38271;&#19982;&#30417;&#25252;&#20154;&#31215;&#26497;&#21442;&#19982;&#20799;&#31461;&#30340;&#22312;&#32447;&#21644;&#25163;&#26426;&#27963;&#21160;&#21450;&#20852;&#36259;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=6></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>6.&nbsp;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"MS Gothic"'>&#24744;&#30340;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#39033;&#19982;&#38544;&#31169;&#26435;&#20559;&#22909;&#36873;</span></b><b><span
+style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#25321;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20250;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35753;&#24744;&#36873;&#25321;&#26159;&#21542;&#25509;&#25910;&#25105;&#20204;&#20135;&#21697;&#21644;&#26381;&#21153;&#30340;&#21508;&#31181;&#34917;&#20805;&#20449;&#24687;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21487;&#20197;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35746;&#38405;&#26576;&#20123;&#20135;&#21697;&#21644;&#26381;&#21153;&#30340;&#29305;&#23450;&#20449;&#24687;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#20063;&#21487;&#20197;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#25509;&#25910;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#24120;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35268;&#36890;&#20449;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#20250;&#35753;&#24744;&#36873;&#25321;&#26159;&#36890;&#36807;&#37038;&#23492;&#12289;&#30005;&#23376;&#37038;&#20214;&#12289;&#30005;&#35805;&#36824;&#26159;&#31227;&#21160;&#35774;&#22791;&#25509;&#25910;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#24120;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35268;&#36890;&#20449;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21487;&#20197;&#22312;&#25968;&#25454;&#25910;&#38598;&#28857;&#25110;&#36890;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36807;&#20351;&#29992;&#22914;&#19979;&#25152;&#21015;&#30340;&#20854;&#23427;&#26041;&#24335;&#65292;&#23601;&#25509;&#25910;&#35746;&#38405;&#36890;&#20449;&#36824;&#26159;&#25509;&#25910;&#24120;&#35268;&#36890;&#20449;&#36827;&#34892;&#36873;&#25321;&#25110;&#32773;&#26356;&#25913;&#24744;&#30340;&#36873;&#25321;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#27492;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#39033;&#19981;&#36866;&#29992;&#20110;&#31649;&#29702;&#35746;&#21333;&#23436;&#25104;&#12289;&#21512;&#21516;&#12289;&#25903;&#25345;&#12289;&#20135;&#21697;&#23433;&#20840;&#24615;&#35686;&#21578;&#12289;&#39537;&#21160;&#31243;&#24207;&#26356;&#26032;&#25110;&#20854;&#20182;&#31649;&#29702;&#21644;&#20132;&#26131;&#36890;&#30693;&#31561;&#20107;&#39033;&#30340;&#36890;&#20449;&#65292;&#22240;&#20026;&#27492;&#31867;&#36890;&#20449;&#30340;&#20027;&#35201;&#30446;&#30340;&#22312;&#26412;&#36136;&#19978;&#19981;&#26159;&#20026;&#20102;&#20419;&#38144;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35746;&#38405;&#36890;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#20449;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35746;&#38405;&#36890;&#20449;&#21253;&#25324;&#30005;&#23376;&#37038;&#20214;&#26032;&#38395;&#19982;&#36719;&#20214;&#26356;&#26032;&#20449;&#24687;&#31561;&#65292;&#21487;&#20197;&#26159;&#30001;&#24744;&#26126;&#30830;&#25552;&#20986;&#35746;&#38405;&#25110;&#26159;&#24744;&#21516;&#24847;&#25509;&#25910;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#24744;&#35201;&#27714;&#25509;&#25910;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#31867;&#36890;&#20449;&#20043;&#21518;&#65292;&#24744;&#21487;&#20197;&#29992;&#19979;&#21015;&#26041;&#27861;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20572;&#27490;&#25509;&#25910;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#30005;&#23376;&#37038;&#20214;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#36864;&#20986;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21462;&#28040;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35746;&#38405;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38142;&#25509;&#65292;&#25110;&#32773;&#25353;&#29031;&#27599;&#19968;&#39033;&#30005;&#23376;&#37038;&#20214;&#35746;&#38405;&#36890;&#20449;&#20013;&#30340;&#36864;&#20986;&#25351;&#31034;&#25805;&#20316;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#35201;&#21462;&#28040;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35746;&#38405;&#21457;&#36865;&#21040;&#31227;&#21160;&#35774;&#22791;&#30340;&#28040;&#24687;&#65292;&#35831;&#23545;&#35813;&#28040;&#24687;&#22238;&#22797;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>“STOP”</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>“END”</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#22238;&#21040;&#24744;&#21407;&#26469;&#27880;&#20876;&#20559;&#22909;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#39033;&#30340;&#32593;&#39029;&#65292;&#24182;&#25353;&#29031;&#36864;&#20986;&#25351;&#31034;&#25805;&#20316;&#12290;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#38656;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35746;&#38405;&#22810;&#31181;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#36890;&#20449;&#65292;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35831;&#35775;&#38382;<span
+     style='border:none windowtext 1.0pt;padding:0in'>&#35746;&#38405;&#32773;&#30340;&#36873;&#25321;&#39029;&#38754;</span></span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#33268;&#20449;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+     style='border:none windowtext 1.0pt;padding:0in'>HP </span></span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+     border:none windowtext 1.0pt;padding:0in'>&#38544;&#31169;&#26435;&#21150;&#20844;&#23460;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35831;&#21153;&#24517;&#25552;&#20379;&#24744;&#30340;&#22995;&#21517;&#12289;&#30456;&#20851;&#32852;&#31995;&#20449;&#24687;&#20197;&#21450;&#24744;&#35201;&#20572;&#27490;&#35746;&#38405;&#30340;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#36890;&#20449;&#30340;&#30456;&#20851;&#20449;&#24687;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35831;&#27880;&#24847;&#65292;&#24403;&#25509;&#25910;&#36890;&#20449;&#26159;&#33719;&#21462;&#26381;&#21153;&#30340;&#20808;&#20915;&#26465;&#20214;&#26102;&#65292;&#33509;&#24744;&#36864;&#20986;&#26576;&#20123;&#36890;&#20449;&#35746;&#38405;&#65292;&#21487;&#33021;&#20250;&#24433;&#21709;&#24744;&#36873;&#25321;&#25509;&#25910;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>HP </span></b><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"MS Gothic"'>&#30340;&#24120;</span></b><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35268;&#36890;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#20449;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#24120;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35268;&#36890;&#20449;&#25552;&#20379;&#26377;&#20851;&#20135;&#21697;&#12289;&#26381;&#21153;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#25903;&#25345;&#30340;&#20449;&#24687;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#20449;&#24687;&#21487;&#33021;&#21253;&#25324;&#26032;&#20135;&#21697;&#25110;&#26381;&#21153;&#20449;&#24687;&#12289;&#29305;&#27530;&#20248;&#24800;&#25110;&#21442;&#21152;&#24066;&#22330;&#35843;&#26597;&#25110;&#21512;&#35268;&#24615;&#23457;&#26597;&#30340;&#36992;&#35831;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#36890;&#24120;&#65292;&#24744;&#21487;&#20197;&#36890;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36807;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>HP Passport</span>&nbsp;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#34920;&#26126;&#24744;&#26159;&#21542;&#24895;&#24847;&#25509;&#21463;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#24120;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35268;&#36890;&#20449;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP Passport </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26159;&#19968;&#31181;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21333;&#19968;&#30331;&#24405;&#26381;&#21153;&#65292;&#24744;&#21487;&#20197;&#20351;&#29992;&#19968;&#20010;&#24744;&#33258;&#24049;&#36873;&#25321;&#30340;&#21333;&#19968;&#29992;&#25143;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> ID </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;&#23494;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#30721;&#65292;&#22312;&#25152;&#26377;&#21551;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP Passport </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#32593;&#31449;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36827;&#34892;&#27880;&#20876;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP Passport </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26469;&#23384;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20648;&#24744;&#30340;&#22522;&#26412;&#20010;&#20154;&#20449;&#24687;&#65292;&#22240;&#27492;&#24403;&#24744;&#20877;&#27425;&#35775;&#38382;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20219;&#20309;&#32593;&#31449;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26102;&#65292;&#19981;&#38656;&#37325;&#26032;&#36755;&#20837;&#36825;&#20123;&#20449;&#24687;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP Passport </span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36824;&#20801;&#35768;&#24744;&#35774;&#32622;&#24744;&#30340;&#38544;&#31169;&#26435;&#20559;&#22909;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#30340;&#20559;&#22909;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#23558;&#24212;&#29992;&#20110;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP Passport </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;&#31449;&#12289;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#30005;&#23376;&#37038;&#20214;&#21450;&#20854;&#20182;&#36890;&#20449;&#24037;&#20855;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;&#26080;&#27861;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP Passport</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#24744;&#21487;&#20197;&#20351;&#29992;&#20197;&#19979;&#26041;&#27861;&#20043;&#19968;&#21462;&#28040;&#25509;&#25910;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#24120;&#35268;&#36890;&#20449;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#30005;&#23376;&#37038;&#20214;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#36864;&#20986;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21462;&#28040;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35746;&#38405;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38142;&#25509;&#65292;&#25110;&#32773;&#25353;&#29031;&#27599;&#19968;&#39033;&#30005;&#23376;&#37038;&#20214;&#36890;&#20449;&#20013;&#30340;&#36864;&#20986;&#25351;&#31034;&#25805;&#20316;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#35201;&#21462;&#28040;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35746;&#38405;&#21457;&#36865;&#21040;&#31227;&#21160;&#35774;&#22791;&#30340;&#28040;&#24687;&#65292;&#35831;&#23545;&#35813;&#28040;&#24687;&#22238;&#22797;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>“STOP”</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>“END”</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#33268;&#20449;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+     style='border:none windowtext 1.0pt;padding:0in'>HP </span></span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+     border:none windowtext 1.0pt;padding:0in'>&#38544;&#31169;&#26435;&#21150;&#20844;&#23460;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35831;&#21153;&#24517;&#25552;&#20379;&#24744;&#30340;&#22995;&#21517;&#12289;&#30456;&#20851;&#32852;&#31995;&#20449;&#24687;&#20197;&#21450;&#19982;&#24744;&#30340;&#38544;&#31169;&#26435;&#20559;&#22909;&#30456;&#20851;&#30340;&#20449;&#24687;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=7></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>7.&nbsp;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"MS Gothic"'>&#24744;&#30340;&#20449;&#24687;&#30340;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35775;&#38382;&#26435;&#19982;&#20934;&#30830;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#24615;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20250;&#31469;&#21147;&#20445;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35777;&#24744;&#20010;&#20154;&#20449;&#24687;&#35760;&#24405;&#30340;&#20934;&#30830;&#24615;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#23454;&#26045;&#20102;&#19968;&#20123;&#25216;&#26415;&#12289;&#31649;&#29702;&#27969;&#31243;&#21644;&#25919;&#31574;&#26469;&#20445;&#25345;&#25968;&#25454;&#30340;&#20934;&#30830;&#24615;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#20010;&#20154;&#25552;&#20379;&#21512;&#29702;&#30340;&#35775;&#38382;&#26435;&#20197;&#35775;&#38382;&#20854;&#25552;&#20132;&#32473;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20010;&#20154;&#20449;&#24687;&#65292;&#24182;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32473;&#20104;&#21512;&#29702;&#30340;&#26435;&#38480;&#26597;&#30475;&#21644;&#20462;&#25913;&#36825;&#20123;&#20449;&#24687;&#25110;&#22312;&#36866;&#24403;&#30340;&#24773;&#20917;&#19979;&#36827;&#34892;&#21311;&#21517;&#12289;&#23553;&#38145;&#25110;&#21024;&#38500;&#31561;&#25805;&#20316;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#20102;&#20445;&#25252;&#24744;&#30340;&#38544;&#31169;&#19982;&#23433;&#20840;&#65292;&#22312;&#35775;&#38382;&#24744;&#30340;&#20449;&#24687;&#20043;&#21069;&#65292;&#25105;&#20204;&#20250;&#37319;&#21462;&#36866;&#24403;&#30340;&#27493;&#39588;&#20197;&#30830;&#23450;&#24744;&#30340;&#36523;&#20221;&#65292;&#22914;&#35201;&#27714;&#25552;&#20379;&#23494;&#30721;&#19982;&#29992;&#25143;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> ID</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#27442;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26597;&#30475;&#21644;&#26356;&#25913;&#24744;&#30452;&#25509;&#25552;&#20379;&#32473;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20010;&#20154;&#20449;&#24687;&#65292;&#21487;&#20197;&#22238;&#21040;&#21407;&#26469;&#25552;&#20132;&#20010;&#20154;&#20449;&#24687;&#30340;&#32593;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#39029;&#65292;&#25353;&#29031;&#32593;&#39029;&#19978;&#30340;&#35828;&#26126;&#25805;&#20316;&#65292;&#22312;&#36866;&#24403;&#30340;&#24773;&#20917;&#19979;&#20063;&#21487;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>HP Passport</span>&nbsp;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32852;&#31995;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>HP </span></span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+border:none windowtext 1.0pt;padding:0in'>&#38544;&#31169;&#26435;&#21150;&#20844;&#23460;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=8></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>8.&nbsp;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"MS Gothic"'>&#20445;&#38556;&#24744;&#20010;&#20154;&#20449;&#24687;&#30340;&#23433;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#20840;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35748;&#30495;&#23545;&#24453;&#24744;&#23545;&#25105;&#20204;&#30340;&#20449;&#20219;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#20102;&#36991;&#20813;&#26410;&#32463;&#25480;&#26435;&#30340;&#35775;&#38382;&#25110;&#27844;&#38706;&#12289;&#20445;&#25345;&#25968;&#25454;&#30340;&#20934;&#30830;&#24615;&#20197;&#21450;&#30830;&#20445;&#20449;&#24687;&#30340;&#36866;&#24403;&#20351;&#29992;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#37319;&#29992;&#20102;&#19968;&#20123;&#21512;&#29702;&#12289;&#36866;&#24403;&#30340;&#29289;&#29702;&#12289;&#25216;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26415;&#20197;&#21450;&#31649;&#29702;&#26041;&#27861;&#26469;&#20445;&#25252;&#25105;&#20204;&#25910;&#38598;&#21644;&#22788;&#29702;&#30340;&#20449;&#24687;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20165;&#20026;&#20102;&#21512;&#27861;&#30340;&#19994;&#21153;&#30446;&#30340;&#19988;&#25353;&#29031;&#24403;&#22320;&#27861;&#24459;&#30340;&#35201;&#27714;&#25110;&#35768;&#21487;&#26469;&#20445;&#23384;&#25968;&#25454;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#25910;&#38598;&#25110;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20256;&#36755;&#25935;&#24863;&#20449;&#24687;&#65288;&#20363;&#22914;&#20449;&#29992;&#21345;&#20449;&#24687;&#65289;&#26102;&#65292;&#25105;&#20204;&#20250;&#20351;&#29992;&#21508;&#31181;&#39069;&#22806;&#30340;&#23433;&#20840;&#25216;&#26415;&#21644;&#26041;&#27861;&#26469;&#38450;&#27490;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21463;&#21040;&#38750;&#25480;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26435;&#30340;&#35775;&#38382;&#12289;&#20351;&#29992;&#25110;&#27844;&#38706;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#23558;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;&#23384;&#20648;&#22312;&#35745;&#31639;&#26426;&#31995;&#32479;&#20013;&#65292;&#32780;&#36825;&#20123;&#35745;&#31639;&#26426;&#31995;&#32479;&#20301;&#20110;&#35775;&#38382;&#26435;&#26377;&#38480;&#30340;&#21463;&#25511;&#21306;&#22495;&#20013;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#20114;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32852;&#32593;&#19978;&#20256;&#36865;&#39640;&#24230;&#26426;&#23494;&#30340;&#20449;&#24687;&#65288;&#20363;&#22914;&#20449;&#29992;&#21345;&#21495;&#25110;&#23494;&#30721;&#65289;&#26102;&#65292;&#25105;&#20204;&#20250;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#23433;&#20840;&#22871;&#25509;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23618;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>” (SSL) </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21327;&#35758;&#31561;&#21152;&#23494;&#25216;&#26415;&#26469;&#20445;&#25252;&#36825;&#20123;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20449;&#29992;&#21345;&#21495;&#21482;&#20250;&#34987;&#29992;&#20110;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#22788;&#29702;&#20184;&#27454;&#65292;&#19981;&#20250;&#34987;&#29992;&#20110;&#20219;&#20309;&#20854;&#23427;&#29992;&#36884;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23454;&#26102;&#20184;&#27454;&#30340;&#22788;&#29702;&#36807;&#31243;&#20013;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#37319;&#29992;&#20102;&#19968;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#39033;&#27450;&#35784;&#31649;&#29702;&#26381;&#21153;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#39033;&#26381;&#21153;&#35753;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#38450;&#27490;&#20449;&#29992;&#21345;&#27450;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35784;&#21644;&#20445;&#25252;&#24744;&#30340;&#36130;&#21153;&#25968;&#25454;&#23433;&#20840;&#19978;&#37117;&#22686;&#21152;&#20102;&#19968;&#23618;&#20445;&#38556;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=9></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>9.&nbsp;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"MS Gothic"'>&#26412;&#22768;&#26126;&#30340;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21464;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#26356;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#30340;&#38544;&#31169;&#22768;&#26126;&#26377;&#20219;&#20309;&#21464;&#26356;&#65292;&#25105;&#20204;&#23558;&#22312;&#27492;&#20844;&#24067;&#26356;&#25913;&#20043;&#21518;&#30340;&#22768;&#26126;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#24182;&#38468;&#19978;&#26356;&#26032;&#26085;&#26399;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#30340;&#22768;&#26126;&#26377;&#37325;&#22823;&#21464;&#26356;&#65288;&#20174;&#26412;&#36136;&#19978;&#25913;&#21464;&#25105;&#20204;&#30340;&#38544;&#31169;&#24815;&#20363;&#65289;&#65292;&#21017;&#22312;&#21464;&#26356;&#29983;&#25928;&#20043;&#21069;&#65292;&#25105;&#20204;&#36824;&#20250;&#20197;&#20854;&#20182;&#26041;&#24335;&#36890;&#30693;&#24744;&#65292;&#22914;&#21457;&#36865;&#30005;&#23376;&#37038;&#20214;&#25110;&#23558;&#36890;&#30693;&#21457;&#24067;&#22312;&#25105;&#20204;&#30340;&#23448;&#32593;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#31038;&#20132;&#23186;&#20307;&#32593;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#39029;&#19978;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=10></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>10.&nbsp;</span></b><b><span
+lang=ZH-CN style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32852;&#31995;&#25105;</span></b><b><span
+style='font-size:18.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#38750;&#24120;&#37325;&#35270;&#24744;&#30340;&#24847;&#35265;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23545;&#25105;&#20204;&#30340;&#38544;&#31169;&#22768;&#26126;&#12289;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#26435;&#20445;&#25252;&#26377;&#20219;&#20309;&#24847;&#35265;&#25110;&#30097;&#38382;&#25110;&#24819;&#35201;&#36827;&#34892;&#25237;&#35785;&#65292;&#35831;&#23558;&#24744;&#30340;&#24847;&#35265;&#12289;&#38382;&#39064;&#25110;&#25237;&#35785;&#21457;&#36865;&#33267;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>HP </span></span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+border:none windowtext 1.0pt;padding:0in'>&#38544;&#31169;&#26435;&#21150;&#20844;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+padding:0in'>&#23460;</span><span lang=ZH-CN style='font-size:12.0pt;
+font-family:"MS Gothic"'>&#25110;&#20889;&#20449;&#33267;&#20197;&#19979;&#22320;&#22336;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><b><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21152;&#25343;&#22823;&#12289;&#25289;&#19969;&#32654;&#27954;&#22823;&#37096;&#20998;&#22320;&#21306;&#21644;&#32654;&#22269;</span></b><b><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP
+Privacy Mailbox</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>11445
+Compaq Center Drive W.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Mailstop
+040307</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Houston,
+Texas 77070</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>USA</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><b><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#22696;&#35199;&#21733;</span></b><b><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hewlett-Packard</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Legal
+Department</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Prolongación
+Reforma No. 700</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Colonia
+Lomas de Santa Fe</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>México,
+D.F., C.P.01210</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><b><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#27431;&#27954;&#12289;&#20013;</span></b><b><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#19996;&#21644;&#38750;&#27954;</span></b><b><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>EMEA
+Privacy Office</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hewlett
+Packard</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>MS 250</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>1 Avenue
+du Canada</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP Les
+Ulis -91947 – France</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><b><span style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20122;&#22826;&#22320;&#21306;&#21644;&#26085;&#26412;</span></b><b><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP APJ
+Privacy Office</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hewlett
+Packard</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>PO Box
+384</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Concord
+West, NSW 2138</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Australia</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21313;&#26376;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 2014</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><a name=utmca></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>HP </span></b><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"MS Gothic"'>&#22914;&#20309;&#20351;&#29992;&#33258;</span></b><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#25968;&#25454;&#25910;&#38598;&#24037;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#20855;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20197;&#19979;&#21508;&#37096;&#20998;&#25552;&#20379;&#20102;&#26377;&#20851;&#26222;&#36941;&#20351;&#29992;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Web </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25216;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26415;&#24037;&#20855;&#30340;&#26356;&#22810;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><a name=cks></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>Cookie</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Cookie </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26159;&#19968;&#31181;&#30001;&#32593;&#31449;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20256;&#36755;&#21040;&#24744;&#35745;&#31639;&#26426;&#30828;&#30424;&#19978;&#30340;&#23567;&#22411;&#25968;&#25454;&#25991;&#20214;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24403;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#25105;&#20204;&#30340;&#32593;&#31449;&#25110;&#21253;&#21547;&#25105;&#20204;&#24191;&#21578;&#30340;&#32593;&#31449;&#12289;&#36141;&#20080;&#12289;&#32034;&#21462;&#20449;&#24687;&#12289;&#23545;&#20449;&#24687;&#36827;&#34892;&#20010;&#24615;&#21270;&#25110;&#32773;&#27880;&#20876;&#26576;&#20123;&#26381;&#21153;&#26102;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#20854;&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#25552;&#20379;&#21830;&#23601;&#20250;&#21457;&#36865;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21040;&#24744;&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35745;&#31639;&#26426;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;&#25509;&#21463;&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#30340;&#32593;&#31449;&#12289;&#30001;&#20854;&#20182;&#20844;&#21496;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#25216;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26415;&#25903;&#25345;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#32593;&#31449;&#25110;&#21253;&#21547;&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#24191;&#21578;&#30340;&#32593;&#31449;&#25152;&#20351;&#29992;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#23601;&#21487;&#20197;&#35775;&#38382;&#24744;&#30340;&#27983;&#35272;&#34892;&#20026;&#20449;&#24687;&#65292;&#20174;&#32780;&#21487;&#33021;&#21033;&#29992;&#36825;&#20123;&#20449;&#24687;&#26469;&#20010;&#24615;&#21270;&#24744;&#30340;&#20307;&#39564;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36890;&#24120;&#20998;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20026;&#38454;&#27573;&#24615;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;&#27704;&#20037;&#24615;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38454;&#27573;&#24615;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#24744;&#20851;&#25481;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#22120;&#21518;&#19981;&#20250;&#20445;&#30041;&#22312;&#24744;&#30340;&#35745;&#31639;&#26426;&#19978;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#27704;&#20037;&#24615;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20250;&#19968;&#30452;&#20445;&#30041;&#22312;&#24744;&#30340;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35745;&#31639;&#26426;&#19978;&#65292;&#30452;&#21040;&#24744;&#23558;&#23427;&#20204;&#21024;&#38500;&#25110;&#23427;&#20204;&#36807;&#26399;&#12290;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22823;&#37096;&#20998;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#22120;&#26159;&#40664;&#35748;&#33258;&#21160;&#25509;&#21463;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#20294;&#26159;&#36890;&#24120;&#24744;&#21487;&#20197;&#36890;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36807;&#35843;&#25972;&#27983;&#35272;&#22120;&#30340;&#20559;&#22909;&#36873;&#39033;&#26469;&#25298;&#32477;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#25110;&#32773;&#26377;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#22320;&#25509;&#21463;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#20851;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38381;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#24744;&#21487;&#33021;&#23601;&#26080;&#27861;&#20351;&#29992;&#25105;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#32593;&#31449;&#30340;&#26576;&#20123;&#21151;&#33021;&#65292;&#32780;&#19988;&#26377;&#20123;&#32593;&#39029;&#20063;&#21487;&#33021;&#23558;&#26080;&#27861;&#27491;&#24120;&#26174;&#31034;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#26576;&#20123;&#22269;&#23478;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22320;&#21306;&#65292;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36824;&#21487;&#20197;&#36890;&#36807;&#20351;&#29992;&#27491;&#22312;&#35775;&#38382;&#30340;&#32593;&#31449;&#19978;&#26412;&#22768;&#26126;&#20013;&#25552;&#20379;&#30340;&#20559;&#22909;&#36873;&#39033;&#31649;&#29702;&#22120;&#24037;&#20855;&#26469;&#35843;&#25972;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP.com </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;&#30456;&#20851;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20559;&#22909;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#39033;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21487;&#20197;&#22312;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#22120;&#30340;&#24110;&#21161;&#21644;&#25903;&#25345;&#37096;&#20998;&#25214;&#21040;&#26377;&#20851;&#24120;&#29992;&#27983;&#35272;&#22120;&#20197;&#21450;&#22914;&#20309;&#35843;&#25972;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20559;&#22909;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#39033;&#30340;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26377;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26102;&#20250;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26412;&#22320;&#20849;&#20139;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#23545;&#35937;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (LSO) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26469;&#23384;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20648;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20869;&#23481;&#20449;&#24687;&#21644;&#20559;&#22909;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#39033;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> LSO </span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#25191;&#34892;&#19982;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HTML </span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#22120;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30456;&#20284;&#30340;&#21151;&#33021;&#65292;&#24182;&#23558;&#23567;&#25991;&#20214;&#23384;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20648;&#22312;&#24744;&#30340;&#35745;&#31639;&#26426;&#19978;&#65292;&#36825;&#36890;&#24120;&#34987;&#31216;&#20026;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19982;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#22120;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#21516;&#65292;&#24744;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#22120;&#25152;&#25552;&#20379;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#31649;&#29702;&#24037;&#20855;&#21487;&#33021;&#26080;&#27861;&#31227;&#38500;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35201;&#20102;&#35299;&#26377;&#20851;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;&#22914;&#20309;&#31649;&#29702;&#30456;&#20851;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38544;&#31169;&#26435;&#21644;&#23384;&#20648;&#35774;&#32622;&#30340;&#26356;&#22810;&#20449;&#24687;&#65292;&#35831;&#35775;&#38382;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>Adobe Systems </span></span><span
+style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+padding:0in'>&#32593;&#31449;</span><span style='font-size:12.0pt;font-family:
+"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>&nbsp;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><a name=wb></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"MS Gothic"'>&#32593;</span></b><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32476;&#20449;</span></b><b><span
+style='font-size:15.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26631;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26377;&#20123;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP.com </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#39029;&#21644;&#31532;&#19977;&#26041;&#32593;&#39029;&#12289;&#24212;&#29992;&#31243;&#24207;&#20197;&#21450;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HTML </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26684;&#24335;&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#30005;&#23376;&#37038;&#20214;&#65292;&#20250;&#20165;&#20351;&#29992;&#32593;&#32476;&#20449;&#26631;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#23558;&#32593;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32476;&#20449;&#26631;&#19982;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32467;&#21512;&#20351;&#29992;&#26469;&#32534;&#35793;&#24744;&#23545;&#32593;&#31449;&#30340;&#20351;&#29992;&#24773;&#20917;&#20449;&#24687;&#20197;&#21450;&#24744;&#19982;&#30005;&#23376;&#37038;&#20214;&#20114;&#21160;&#24773;&#20917;&#30340;&#20449;&#24687;&#65292;&#24182;&#35780;&#20272;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP.com</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12289;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#24212;&#29992;&#31243;&#24207;&#21644;&#30001;&#20854;&#20182;&#20844;&#21496;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#25216;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26415;&#25903;&#25345;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#32593;&#31449;&#30340;&#24615;&#33021;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32476;&#20449;&#26631;&#26159;&#19968;&#31181;&#34987;&#31216;&#20026;&#21333;&#19968;&#20687;&#32032;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (1x1) </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#28165;&#26224;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> GIF </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#30005;&#23376;&#22270;&#20687;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#32593;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32476;&#20449;&#26631;&#21487;&#20197;&#35782;&#21035;&#35745;&#31639;&#26426;&#19978;&#30340;&#26576;&#20123;&#20449;&#24687;&#31867;&#22411;&#65292;&#20363;&#22914;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12289;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#39029;&#38754;&#30340;&#26102;&#38388;&#21644;&#26085;&#26399;&#20197;&#21450;&#32593;&#32476;&#20449;&#26631;&#25152;&#22312;&#39029;&#38754;&#30340;&#25551;&#36848;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26681;&#25454;&#20855;&#20307;&#24773;&#20917;&#65292;&#32593;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32476;&#20449;&#26631;&#20063;&#21487;&#33021;&#20250;&#24341;&#29992;&#31532;&#19977;&#26041;&#26381;&#21153;&#22120;&#19978;&#30340;&#20869;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#23481;&#65292;&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#25552;&#20379;&#21830;&#21487;&#33021;&#20250;&#21033;&#29992;&#23427;&#21521;&#24744;&#21457;&#36865;&#30456;&#20851;&#24191;&#21578;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21487;&#20197;&#36890;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36807;&#19981;&#19979;&#36733;&#30005;&#23376;&#37038;&#20214;&#20013;&#30340;&#22270;&#20687;&#26469;&#31105;&#29992;&#20854;&#20013;&#30340;&#32593;&#32476;&#20449;&#26631;&#65288;&#27492;&#21151;&#33021;&#23558;&#38543;&#24744;&#35745;&#31639;&#26426;&#19978;&#20351;&#29992;&#30340;&#30005;&#23376;&#37038;&#20214;&#36719;&#20214;&#32780;&#26377;&#25152;&#19981;&#21516;&#65289;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20294;&#26159;&#65292;&#30001;&#20110;&#20855;&#20307;&#30340;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#30005;&#23376;&#37038;&#20214;&#36719;&#20214;&#21151;&#33021;&#19981;&#21516;&#65292;&#36825;&#26679;&#20570;&#24182;&#19981;&#19968;&#23450;&#33021;&#22312;&#30005;&#23376;&#37038;&#20214;&#20013;&#31105;&#29992;&#32593;&#32476;&#20449;&#26631;&#25110;&#20854;&#20182;&#33258;&#21160;&#25968;&#25454;&#25910;&#38598;&#24037;&#20855;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#38656;&#20102;&#35299;&#26356;&#22810;&#26377;&#20851;&#27492;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38382;&#39064;&#30340;&#20449;&#24687;&#65292;&#35831;&#21442;&#32771;&#24744;&#30340;&#30005;&#23376;&#37038;&#20214;&#36719;&#20214;&#25110;&#26381;&#21153;&#25552;&#20379;&#21830;&#25552;&#20379;&#30340;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#25509;&#21463;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#24066;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#22330;&#33829;&#38144;&#30005;&#23376;&#37038;&#20214;&#25110;&#26032;&#38395;&#31295;&#65292;&#20381;&#29031;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+padding:0in'>&#24744;&#30340;</span><span lang=ZH-CN style='font-size:12.0pt;
+font-family:"Microsoft JhengHei",sans-serif;border:none windowtext 1.0pt;
+padding:0in'>&#36873;&#25321;&#19982;&#36873;&#25321;&#24744;&#30340;&#38544;&#31169;&#26435;&#20559;&#22909;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#20250;&#33258;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21160;&#25910;&#38598;&#26377;&#20851;&#24744;&#30340;&#20010;&#20154;&#20449;&#24687;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20363;&#22914;&#65292;&#36890;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36807;&#20869;&#23884;&#20110;&#36825;&#20123;&#30005;&#23376;&#37038;&#20214;&#25110;&#26032;&#38395;&#31295;&#20013;&#30340;&#32593;&#32476;&#20449;&#26631;&#21644;&#20010;&#24615;&#21270;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> URL</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#20197;&#36319;&#36394;&#24744;&#26159;&#21542;&#25171;&#24320;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36807;&#36825;&#20123;&#37038;&#20214;&#65292;&#20197;&#21450;&#24744;&#26159;&#21542;&#28857;&#20987;&#36807;&#36825;&#20123;&#37038;&#20214;&#20013;&#25152;&#21253;&#21547;&#30340;&#38142;&#25509;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26377;&#20851;&#20869;&#23884;&#24335;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Web </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38142;&#25509;&#30340;&#35814;&#32454;&#20449;&#24687;&#65292;&#35831;&#38405;&#35835;&#19979;&#38754;&#30340;&#35828;&#26126;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><a name=ewl></a><b><span lang=ZH-CN style='font-size:15.0pt;font-family:
+"MS Gothic"'>&#20869;&#23884;&#24335;</span></b><b><span style='font-size:15.0pt;
+font-family:"Arial",sans-serif'> Web </span></b><b><span lang=ZH-CN
+style='font-size:15.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38142;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#25509;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30001;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21457;&#36865;&#30340;&#30005;&#23376;&#37038;&#20214;&#12289;&#32463;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#39044;&#20808;&#35774;&#32622;&#22909;&#30340;&#20114;&#32852;&#32593;&#38190;&#30424;&#38190;&#20197;&#21450;&#39044;&#20808;&#23433;&#35013;&#22312;&#24744;&#35745;&#31639;&#26426;&#26700;&#38754;&#19978;&#30340;&#20419;&#38144;&#22270;&#26631;&#65292;&#36890;&#24120;&#37117;&#20351;&#29992;&#35774;&#35745;&#22909;&#30340;&#38142;&#25509;&#65292;&#22312;&#32463;&#30001;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#22120;&#30340;&#37325;&#23450;&#21521;&#20043;&#21518;&#65292;&#23558;&#24744;&#24341;&#23548;&#21040;&#32593;&#32476;&#19978;&#30340;&#30456;&#20851;&#21306;&#22495;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#37325;&#23450;&#21521;&#31995;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32479;&#22312;&#24517;&#35201;&#26102;&#21487;&#20197;&#35753;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25913;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21464;&#36825;&#20123;&#38142;&#25509;&#30340;&#30446;&#26631;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> URL</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#20063;&#21487;&#20197;&#30830;&#23450;&#25105;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#24066;&#22330;&#33829;&#38144;&#27963;&#21160;&#30340;&#25928;&#26524;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#30005;&#23376;&#37038;&#20214;&#20013;&#65292;&#36825;&#26679;&#30340;&#32593;&#32476;&#38142;&#25509;&#20063;&#21487;&#20197;&#35753;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#30693;&#36947;&#24744;&#26159;&#21542;&#26366;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32463;&#28857;&#20987;&#36807;&#30005;&#23376;&#37038;&#20214;&#20013;&#30340;&#38142;&#25509;&#65292;&#32780;&#25105;&#20204;&#21487;&#33021;&#20250;&#23558;&#36825;&#26679;&#30340;&#20114;&#21160;&#20449;&#24687;&#19982;&#24744;&#30340;&#20010;&#20154;&#36523;&#20221;&#30456;&#20851;&#32852;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#24744;&#19981;&#24819;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35753;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25910;&#38598;&#26377;&#20851;&#24744;&#28857;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20987;&#36825;&#20123;&#38142;&#25509;&#30340;&#20449;&#24687;&#65292;&#24744;&#21487;&#20197;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#26356;&#25913;&#24744;&#20174;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25509;&#25910;&#36890;&#20449;&#30340;&#26041;&#24335;&#65288;&#21363;&#22914;&#26524;&#21487;&#33021;&#65292;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#32431;&#25991;&#26412;&#20449;&#24687;&#65289;&#25110;&#36873;&#25321;&#19981;&#28857;&#20987;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21457;&#36865;&#30340;&#30005;&#23376;&#37038;&#20214;&#20013;&#30340;&#38142;&#25509;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21024;&#38500;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#39044;&#20808;&#23433;&#35013;&#22312;&#24744;&#35745;&#31639;&#26426;&#26700;&#38754;&#19978;&#30340;&#20419;&#38144;&#22270;&#26631;&#65292;&#25110;&#19981;&#28857;&#20987;&#37027;&#20123;&#22270;&#26631;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#65307;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#26576;&#20123;&#22411;&#21495;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35745;&#31639;&#26426;&#19978;&#37325;&#26032;&#35774;&#32622;&#20114;&#32852;&#32593;&#38190;&#30424;&#38190;&#65292;&#25353;&#29031;&#24744;&#35745;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#31639;&#26426;&#25152;&#38468;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#24102;&#30340;&#25351;&#31034;&#35828;&#26126;&#65292;&#35774;&#32622;&#19968;&#20010;&#24744;&#33258;&#24049;&#36873;&#25321;&#30340;&#30446;&#26631;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> URL</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><a name=hptpw></a><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"MS Gothic"'>&#21002;&#30331;&#20110;&#31532;&#19977;&#26041;&#32593;&#31449;&#30340;</span></b><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'> HP </span></b><b><span
+lang=ZH-CN style='font-size:15.0pt;font-family:"MS Gothic"'>&#24191;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#21578;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#19982;&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#25552;&#20379;&#21830;&#31614;&#32422;&#65292;&#23558;&#24191;&#21578;&#21002;&#30331;&#22312;&#31532;&#19977;&#26041;&#32593;&#31449;&#19978;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#27492;&#22806;&#65292;&#26576;&#20123;&#32593;&#31449;&#21487;&#20197;&#30001;&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#25552;&#20379;&#21830;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>“</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#25216;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26415;&#25903;&#25345;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>”</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#20197;&#20415;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20135;&#21697;&#12290;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#26381;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21153;&#25552;&#20379;&#21830;&#21487;&#33021;&#20250;&#32463;&#30001;&#31532;&#19977;&#26041;&#32593;&#31449;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> hp.com </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21457;&#36865;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#24182;&#22312;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36825;&#20123;&#32593;&#31449;&#19978;&#20351;&#29992;&#32593;&#32476;&#20449;&#26631;&#12290;&#36825;&#20123;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;&#32593;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32476;&#20449;&#26631;&#21487;&#20197;&#35753;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#25910;&#38598;&#21040;&#24744;</span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#32593;&#39029;&#21644;&#28857;&#20987;&#38142;&#25509;&#30340;&#26377;&#20851;&#20449;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#26377;&#20851;&#32593;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32476;&#24191;&#21578;&#21450;&#22914;&#20309;&#36864;&#20986;&#30340;&#26356;&#22810;&#20449;&#24687;&#65292;&#35831;&#35775;&#38382;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>http://www.aboutads.info&nbsp;</span></span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#20174;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>http://www8.hp.com/us/en/privacy/privacy.html</span></span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#33719;&#21462;&#26412;&#25919;&#31574;&#30340;&#33521;&#25991;&#29256;&#20027;&#21103;&#26412;&#12290;&#20026;&#26041;&#20415;&#24744;&#29702;&#35299;&#65292;&#25552;&#20379;&#20102;&#25152;&#26377;&#32763;&#35793;&#29256;&#26412;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Microsoft JhengHei",sans-serif'>© 2015 Hewlett-Packard Development Company,
+L.P.</span></p>
+
+</div>
+
+</body>
+
+</html>

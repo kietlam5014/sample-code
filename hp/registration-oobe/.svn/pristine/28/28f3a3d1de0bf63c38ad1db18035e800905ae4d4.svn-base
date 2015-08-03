@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="rtl" lang="ar" xml:lang="ar">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						كجزء من التزام HP‏ بتوفير تجربة عمل أفضل، تم تزويد هذا الجهاز ببرنامج للتشخيص.  يجمع هذا البرنامج بيانات التشخيص المجهولة الهوية، بما في ذلك المعلومات حول المكونات الصلبة والبرامج الخاصة بالجهاز وتكوين الشبكة وحالتها ومعدلات استخدام التطبيقات. نستخدم هذه المعلومات لتحسين المنتج وعروض الخدمات.  تكون بيانات التشخيص مرتبطة بالجهاز، ولن يتم تفريقها بين المستخدمين. تتم مشاركة البيانات المجهولة الهوية مع موفر برنامج التشخيص فقط. قد تجري جلسات تحميل البيانات عبر شبكة خليوية أو شبكة WiFi‏ وتستند إلى معايير الأمان لـ HP‏.  تكون كمية البيانات المرسَلة إلى موفر برنامج التشخيص عبر الشبكة الخليوية ضئيلة ومن المتوقع ألا تؤثر سلبيًا على توزيع البيانت من قبل موفر الخدمات المحمولة. إذا رغبت في تعطيل ميزات التشخيص مثل هذه، فيرجى الانتقال إلى ’إعدادات‘.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

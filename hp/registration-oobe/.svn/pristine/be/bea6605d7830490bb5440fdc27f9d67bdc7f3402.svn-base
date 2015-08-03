@@ -1,0 +1,44 @@
+package hp.oobe.internals;
+
+import hp.oobe.internals.output.Output;
+import hp.oobe.internals.output.OutputBOD;
+import hp.oobe.internals.output.OutputOTA;
+import hp.oobe.internals.output.OutputOTAResponse;
+import hp.oobe.internals.output.OutputPreferences;
+import hp.oobe.internals.output.OutputProvider;
+import hp.oobe.internals.output.OutputQuery;
+import hp.oobe.internals.output.OutputQueryResponse;
+import hp.oobe.internals.output.OutputRegistration;
+import hp.oobe.internals.output.OutputRegistrationResponse;
+
+import java.util.ArrayList;
+
+import android.content.ContentResolver;
+
+public class OutputFactory
+{
+	protected ContentResolver contentResolver;
+	
+	public OutputFactory(ContentResolver contentResolver)
+	{
+		this.contentResolver = contentResolver;		
+	}	
+	
+	public ArrayList<Output> getOutputs()
+	{
+		ArrayList<Output> outputs = new ArrayList<Output>();
+		
+		
+		outputs.add(new OutputPreferences(contentResolver));
+		outputs.add(new OutputOTA(contentResolver));
+		outputs.add(new OutputOTAResponse(contentResolver));
+		outputs.add(new OutputProvider(contentResolver));
+		outputs.add(new OutputQuery(contentResolver));
+		outputs.add(new OutputQueryResponse(contentResolver));
+		outputs.add(new OutputBOD(contentResolver));
+		outputs.add(new OutputRegistration(contentResolver));
+		outputs.add(new OutputRegistrationResponse(contentResolver));
+		
+		return outputs;		
+	}
+}

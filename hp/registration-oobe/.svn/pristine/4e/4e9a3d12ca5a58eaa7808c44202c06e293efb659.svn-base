@@ -1,0 +1,80 @@
+package hp.oobe.utilities;
+
+import java.nio.charset.Charset;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.SecretKeySpec;
+
+import android.provider.Settings.Secure;
+import android.util.Base64;
+import android.util.Log;
+
+public class Cryptography {
+	private static final String PBE_ALGORITHM = "PBEWithSHA256And256BitAES-CBC-BC";
+	private static final String CIPHER_ALGORITHM = "AES/CBC/PKCS5Padding";
+	private static final int NUM_OF_ITERATIONS = 1000;
+	private static final int KEY_SIZE = 256;
+	private static final byte[] salt = "BuIcR".getBytes();
+	private static final byte[] iv = "SaAswLdD0dDdaAaA".getBytes();
+
+	
+	public static String encrypt(String plainText, String secret) {
+		byte[] encryptedText = null;
+		String finalText = "";
+	
+		try {
+			PBEKeySpec pbeKeySpec = new PBEKeySpec(secret.toCharArray(), 
+					Cryptography.salt, Cryptography.NUM_OF_ITERATIONS, Cryptography.KEY_SIZE);
+			SecretKeyFactory keyFactory = SecretKeyFactory.getInstance(Cryptography.PBE_ALGORITHM);
+			
+			SecretKey key = keyFactory.generateSecret(pbeKeySpec);
+			SecretKey privateKey = new SecretKeySpec(key.getEncoded(), "AES");
+			
+			IvParameterSpec ivSpec = new IvParameterSpec(Cryptography.iv);
+			
+			Cipher encCipher = Cipher.getInstance(Cryptography.CIPHER_ALGORITHM);
+			encCipher.init(Cipher.ENCRYPT_MODE, privateKey, ivSpec);
+			
+			encryptedText = encCipher.doFinal(plainText.getBytes());
+			
+			finalText = Base64.encodeToString(encryptedText, 0);
+		} catch(Exception e) {
+			// DO NOTHING?
+		}
+		
+		return finalText;
+	}
+	
+	public static String decrypt(String cipherText, String secret) {
+		byte[] decryptedText = null;
+		String finalText = "";
+		
+		try {
+			PBEKeySpec pbeKeySpec = new PBEKeySpec(secret.toCharArray(), 
+					Cryptography.salt, Cryptography.NUM_OF_ITERATIONS, Cryptography.KEY_SIZE);
+			SecretKeyFactory keyFactory = SecretKeyFactory.getInstance(Cryptography.PBE_ALGORITHM);
+			
+			SecretKey key = keyFactory.generateSecret(pbeKeySpec);
+			SecretKey privateKey = new SecretKeySpec(key.getEncoded(), "AES");
+			
+			IvParameterSpec ivSpec = new IvParameterSpec(Cryptography.iv);
+			
+			Cipher decCipher = Cipher.getInstance(Cryptography.CIPHER_ALGORITHM);
+			decCipher.init(Cipher.DECRYPT_MODE, privateKey, ivSpec);
+			
+			decryptedText = decCipher.doFinal(Base64.decode(cipherText, 0));
+			
+			
+			finalText = new String(decryptedText);
+		} catch(Exception e) {
+			e.printStackTrace();
+			// DO NOTHING?
+		}
+		
+		return finalText;
+	}
+}

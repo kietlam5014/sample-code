@@ -1,0 +1,140 @@
+/*
+ * @depends
+ *  hp.registration.model.OTA
+ *  hp.registration.model.MachineInfo
+ *  hp.registration.model.RegistrationInfo
+ */
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.helper = hp.registration.helper || {};
+
+hp.registration.helper.OTA = function() {
+    
+    /*
+     * ============================================================================================
+     * PRIVATE MEMBERS
+     * ============================================================================================
+     */
+    var CLIENT_ID_VALUE = '4028876441ccf1c20141e734ecc30090',
+        GRANT_TYPE_VALUE = 'anonymous_credentials',
+        OSNAME_VALUE = 'Android';
+    
+    /*
+     * ============================================================================================
+     * PUBLIC MEMBERS
+     * ============================================================================================
+     */
+    
+    /*
+     * Set the properties of hp.registration.model.OTA object by collecting 
+     * data from different models. 
+     *
+     * @params
+     *  inSecret: String. 
+     *
+     * @returns
+     *  boolean. If set successfully. False otherwise.
+     */
+    this.buildOTAObject = function(inSecret) {
+        
+        var result_ = true,
+            MachineInfo_ = hp.registration.model.MachineInfo || {},
+            RegistrationInfo_ = hp.registration.model.RegistrationInfo || {},
+            OTA_ = hp.registration.model.OTA || {},
+            obj_ = {},
+            missingFields_ = [],
+            key_ = '';
+        
+        function getUniqueID_() {
+        
+            return (obj_[OTA_.UNIQUE_ID] = MachineInfo_['serialNumber']);
+            
+        };//getDeviceID_
+        
+        function getDeviceModel_() {
+         
+            return (obj_[OTA_.DEVICE_MODEL] = MachineInfo_['modelNumber']);
+            	
+        };//#getDeviceModel_
+        
+        function getBornOnDate_() {
+			//As per web service group, suggested BOD only supports the value with format +**00 
+			var sBod=MachineInfo_['bornOnDate'];
+
+            try {
+            
+                sBod=sBod.substring(0,sBod.length-4)+'0000';
+                
+            } catch(inException) {
+                
+                sBod = '';
+                
+            }
+			
+            return (obj_[OTA_.SUGGESTED_BORNONDATE] = sBod);;
+            
+        };//#getDeviceModel_
+        
+        function getOSVersion_() {
+            //As per web service group, android OS version should start with 96, so prefixing 96
+            return (obj_[OTA_.OS_VERSION] = "96"+MachineInfo_['operatingSystem']);
+            
+        };//#getFirmwareVersion_
+        
+        // Main logic =============================================================================
+        
+        // Setting the constants
+        obj_[OTA_.CLIENT_ID] = CLIENT_ID_VALUE;
+        obj_[OTA_.GRANT_TYPE] = GRANT_TYPE_VALUE;
+    	obj_[OTA_.OS_NAME] = OSNAME_VALUE;
+        
+        // Setting the secret
+        if (!inSecret) {
+            
+            result_ = false;   
+            missingFields_.push(OTA_.CLIENT_SECRET);
+            
+        } else {
+            
+            obj_[OTA_.CLIENT_SECRET] = inSecret;
+            
+        }
+        
+        // Collecting data from MachineInfo model
+        [getUniqueID_, getDeviceModel_, getBornOnDate_, getOSVersion_].forEach(function(inFunction) { // BOD CHANGE
+            
+            var return_ = inFunction();
+            if (!return_) {
+             
+                result_ = false;
+                
+            }
+            
+        });
+        
+        // Collecting the fields missing, if any
+        if (result_ === false) {
+         
+            Object.keys(obj_).forEach(function(inKey) { 
+                
+                if (!obj_[inKey]) {
+                 
+                    missingFields_.push(inKey);
+                    
+                }
+                
+            });
+            console.log('There was a problem building the OTA message. Not all fields were filled:' + 
+                        missingFields_.join(','));
+            
+        }
+        
+        hp.registration.model.OTA.setKeys(obj_);
+        
+        return result_;
+        
+    };//#hp.registration.helper.OTA.buildOTAObject
+    
+    return this;
+    
+}.apply({}, null);

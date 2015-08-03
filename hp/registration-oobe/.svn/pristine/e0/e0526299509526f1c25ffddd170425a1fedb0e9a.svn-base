@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="tr" xml:lang="tr">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						HP'nin daha iyi bir aygıt deneyimi sunma taahhüdünün bir parçası olarak, bu aygıt tanılama yazılımıyla donatılmıştır.  Bu yazılım aygıt donanım ve yazılım bilgileri, ağ yapılandırması ve durumu ve uygulama kullanım verileri dahil olmak üzere anonim tanılama verileri toplamaktadır. Bu bilgiler sunduğumuz ürün ve hizmetleri geliştirmek amacıyla kullanılacaktır.  Tanılama verileri aygıta bağlıdır ve kullanıcılar arasında farklılık göstermeyecektir. Anonim veriler yalnızca tanılama yazılımı sağlayıcısıyla paylaşılacaktır. Veri yükleme oturumları hücresel şebeke veya Wi-Fi ağı üzerinden gerçekleşebilir ve HP Güvenlik standartlarıyla tutarlı olacaktır.  Hücresel ağ üzerinden tanılama hizmeti sağlayıcısına gönderilen veri miktarı çok az olacaktır ve cep telefonu operatörünün sağladığı veri kotasını olumsuz etkilememelidir. Bu tür tanılama özelliklerini devre dışı bırakmak istiyorsanız, lütfen Ayarlar'a gidin.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

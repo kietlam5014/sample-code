@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HP OOBE</string>
+    <string name="notification_title">Register</string>
+    <string name="notification_text">Please register this device for personalized care and faster support.</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_home">Register</string>
+    <string name="action_settings">Settings</string>
+    <string name="accept">Accept</string>
+    <string name="skip">skip</string>
+    <string name="neverregister">Never Register</string>
+    <string name="consentnetwork">In order to speed your registration, HP would like to access from your device your name, Email account, contacts book and location. The information you provide may be transmitted over a cellular or Wi-Fi network and may impact your data usage fees.</string>
+    <string name="mybutton">Settings</string>
+    <string name="read_provider_description">Access registration data entered during first boot.</string>
+
+</resources>

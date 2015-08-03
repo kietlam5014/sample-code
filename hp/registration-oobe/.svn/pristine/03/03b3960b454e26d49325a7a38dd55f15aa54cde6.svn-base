@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						Com a part del comprimís d'HP per entregar una millor experiència amb els dispositius, aquest dispositiu està equipat amb programari de diagnòstic.  Aquest programari recull les dades de diagnòstic anònimes, inclosa la informació del programari y del maquinari del dispositiu, l'estat i la configuració de la xarxa i l'ús de les aplicacions. Aquesta informació s'utilitza per millorar la nostra oferta de serveis i productes.  Les dades de diagnòstic estan vinculades al dispositiu i no diferencien els usuaris. Les dades anònimes només es comparteixen amb el proveïdor de programari de diagnòstic. Les sessions de càrrega de dades es poden produir a través d'una xarxa sense fil o mòbil i són compatibles amb els estàndards d'HP Security.  La quantitat de dades enviades al proveïdor de diagnòstic a través d'una xarxa mòbil és mínima i no hauria de tenir cap impacte sobre la cobertura de l'operador mòbil. Si voleu inhabilitar aquestes funcions de diagnòstic, aneu a Configuració.
+
+	</body>
+</html>

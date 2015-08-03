@@ -1,0 +1,20 @@
+package hp.oobe.internals.output;
+
+import android.content.ContentResolver;
+
+public class OutputOTAResponse extends Output
+{
+	public static final String OTA_RESPONSE = "/data/data/hp.oobe/files/ota_response";	
+	
+	public OutputOTAResponse(ContentResolver contentResolver)
+	{
+		super(contentResolver);
+		title = OTA_RESPONSE;
+	}
+
+	@Override
+	public String readOutput()
+	{
+		return readFile(OTA_RESPONSE, true);
+	}	
+}

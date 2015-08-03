@@ -1,0 +1,13 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						Bilang bahagi ng pangako ng HP sa paghahatid ng mas mahusay na karanasan sa device, may kasama ang device na ito na diagnostic software.  Nangongolekta ang software na ito ng hindi nakikilalang data na pang-diagnostic, kabilang ang impormasyon sa hardware at software ng device, configuration at status ng network, at paggamit ng application. Ginagamit ang impormasyong ito upang pahusayin ang mga inaalok naming produkto at serbisyo.  Iniuugnay ang data na pang-diagnostic sa device, at hindi mag-iiba-iba sa pagitan ng mga user. Ibinabahagi lang ang hindi nakikilalang data sa provider ng software na pang-diagnostic. Maaaring maganap ang mga session sa pag-upload ng data sa cellular o WiFi network at sumusunod sa mga pamantayan sa Seguridad ng HP.  Kaunti lang ang data na ipinapadala sa provider ng diagnostic sa cellular network at hindi dapat negatibong makaapekto sa paglalaan ng data mula sa mobile operator. Kung gusto mong huwag paganahin ang mga naturang tampok sa diagnostic, mangyaring pumunta sa Mga Setting.
+
+
+	</body>
+</html>

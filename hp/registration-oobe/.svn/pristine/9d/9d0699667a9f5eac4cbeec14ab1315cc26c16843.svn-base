@@ -1,0 +1,1062 @@
+/*
+ * @depends
+ *  hp.registration.model.MachineInfo
+ *  hp.registration.model.RegistrationInfo
+ *  hp.registration.Properties
+ *  hp.registration.Registration
+ */
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.helper = hp.registration.helper || {};
+
+hp.registration.helper.Metrics = function() {
+    
+    var misc_ = [];
+    
+    function buildBeaconParameters() {
+        
+        var rootNamespace_ = hp.registration;
+        
+        var params_ = [],
+            MachineInfo_ = rootNamespace_.model.MachineInfo,
+            RegistrationInfo_ = rootNamespace_.model.RegistrationInfo,
+            Properties_ = rootNamespace_.Properties;
+        var cc_ = RegistrationInfo_.country;
+            if (cc_) {
+                
+                cc_ = cc_.toLowerCase();
+             
+                /*
+                 * The backend responsible for beacon does not recognize the country code ZZ
+                 * (which is the standard for registration backend). The value for country not
+                 * recognized if ww. 
+                 */
+                if (cc_ === Properties_.DEFAULT_UNKNOWN_COUNTRY_CODE_REGISTRATION_BACKEND.toLowerCase()) {
+                    
+                    cc_ = Properties_.DEFAULT_UNKNOWN_COUNTRY_CODE_BEACON_BACKEND.toLowerCase();
+                    
+                }
+            }
+        
+        params_.push('hptp=21');
+        params_.push('hppid=44');
+        params_.push('n=1');
+        params_.push('tp=OOBE-AND');
+        
+        params_.push('mdl=' + encodeURI(MachineInfo_.model)); 
+        params_.push('sku=' + encodeURI(parseModelNumber_(MachineInfo_.modelNumber)));
+        params_.push('iid=' + encodeURI(MachineInfo_.fingerPrint));
+        params_.push('oem=' + encodeURI(MachineInfo_.oem));
+        params_.push('osn=' + encodeURI(MachineInfo_.osn));
+        params_.push('osv=' + encodeURI(RegistrationInfo_.registrationVersion));
+        params_.push('timestamp=' + (new Date()).getTime());
+        
+        params_.push('lang=' + RegistrationInfo_.language);
+        params_.push('cc=' + cc_);
+        params_.push('batt=1'); // 1 = pre-installed.
+        
+        /*
+         * The version that comes after the misc= indicates if a QA team is running tests. In 
+         * that case they override a property in Preferences.xml that changes the version used
+         * in the final URL so we can filter reports (by removing the tests).
+         */
+        var version_ = rootNamespace_.Registration.getPreferenceForInternalTests(
+            Properties_.QA_METRICS_VERSION_KEY_NAME);
+            
+        version_ = version_ || Properties_.BEACON_VERSION;
+        
+        params_.push('misc=' + version_ + '/' + buildMisc());
+        
+        return params_.join('&');
+        
+    };//#buildBeaconParameters
+    
+    function buildMisc() {
+        
+        return misc_.join("/");
+        
+    };
+    
+    function parseModelNumber_(inModelNumber) {
+		var prop_ = hp.registration.Properties;
+		var result_ = null;
+
+		['#', '-'].forEach(
+				function(inItem) {
+					var index_ = inModelNumber.indexOf(inItem);
+					if (index_ !== -1) {
+						result_ = inModelNumber.substring(0, index_);
+					}
+				}
+			);
+
+		if (result_ === null) {
+			result_ = inModelNumber.substring(0, prop_.MAX_LENGTH_MODEL_ID);
+		} 
+
+		return result_;
+	}
+    
+    /*
+     * ============================================================================================
+     * Public members
+     * ============================================================================================
+     */
+    Object.defineProperties(this, {
+                            'endPoint': 
+                                {
+                                    'value': null,
+                                    'writable': true
+                                },
+                            'Cache': 
+                                {
+                                    'value': {},
+                                    'writable': true
+                                },
+                            'FLAG_FIRST_NAME':
+                                {
+                                    'value': 'fn',
+                                    'writable': false
+                                }
+    });//#Object.defineProperties
+    
+    /*
+     * Initialize the component.
+     *
+     * @params
+     *  inContainer: Object.
+     *              {
+     *                  'endPoint': String,
+     *                  'version': String
+     *              }
+     */
+    this.init = function(inContainer) {
+        
+        // inContainer['version'] is ignored. 
+        
+        this.endPoint = inContainer['endPoint'];
+        
+    };//#hp.registration.metrics.Metrics.init
+    
+    this.getFinalBeaconURL = function() {
+        
+        var url_ = this.endPoint + '?' + buildBeaconParameters();
+
+        misc_ = []; // Cleaning the cache to avoid problems in tests.
+  
+        return url_;
+        
+    };//#hp.registration.metrics.Metrics.
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'shouldSkipregistration': boolean,
+     *                      'consentToSendData': boolean,
+     *                      'startTime': Date,
+     *                      'endTime': Date,
+     *                      'currentRun': int
+     *                  }
+     */
+    this.processSkip = function(inContainer) {
+        
+        var result_ = '',
+            YES = 'y',
+            NO = 'n',
+            NO_REGISTRATION = 'x',
+            SKIP_NO = '0',
+            SKIP_FAR_REGISTER = '3',
+            SKIP_CLOSE_REGISTER = '9';
+        
+        var startTime_ = inContainer['startTime'],
+            endTime_ = inContainer['endTime'],
+            currentRun_ = inContainer['currentRun'],
+            diff_ = null;
+        
+        result_ += 'skipped:';
+        if ('shouldSkipRegistration' in inContainer &&
+            inContainer['shouldSkipRegistration'] === true) {
+         
+            result_ += NO_REGISTRATION;
+            
+        } else if ('consentToSendData' in inContainer &&
+                    inContainer['consentToSendData'] === false) {
+            
+            result_ += YES;   
+            
+        } else {
+            
+            result_ += NO;
+            
+        }
+ 
+        /* 
+         * No born on date. So the second param is always x
+         * This information gets updated by the Service, once it has the born on date coming from 
+         * the OTA Server.
+         */
+        result_ += ':x:';
+        
+        // Position of the action button. New version of the app doesn't have the skip button.
+        result_ += SKIP_NO + ':';
+        
+        // Checking how long the user spent in the app
+        if (startTime_ && endTime_ && startTime_ instanceof Date && endTime_ instanceof Date) {
+         
+            diff_ = endTime_ - startTime_;
+            
+            diff_ = Math.abs(diff_/1000); // converting to seconds
+            
+            if (diff_ <= 15) {
+                
+                result_ += '000';
+                
+            } else if (diff_ > 15 && diff_ <= 30) {
+                
+                result_ += '015';
+                
+            } else if (diff_ > 30 && diff_ <= 60) {
+             
+                result_ += '030';
+                
+            } else if (diff_ > 60 && diff_ <= 120) {
+                
+                result_ += '060';
+                
+            } else if (diff_ > 120 && diff_ <= 240) {
+                
+                result_ += '120';
+                
+            } else if (diff_ > 240) {
+             
+                result_ += '240';
+                
+            }
+            
+        } else {
+                
+            result_ += 'xxx';
+                
+        }
+        
+        
+        if (currentRun_ == 0) {
+            
+            result_ += ':0';   
+            
+        } else if (currentRun_ == 1) {
+            
+            result_ += ':1';
+            
+        } else if (currentRun_ >= 2) {
+            
+            result_ += ':2';
+            
+        } else {
+            
+            result_ += ':x';
+            
+        }
+        
+        misc_.push(result_);
+        return result_;
+        
+    };//#hp.registration.metrics.Metrics.processSkip
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'yesRadioButton': HTMLElement,
+     *                      'noRadioButton': HTMLElement,
+     *                  }
+     */
+    this.processEmailConsent = function(inContainer) {
+        
+        var YES = 'y',
+            NO = 'n',
+            NEITHER = 'e',
+            HIDDEN = 'x',
+            yesRadioButton_ = inContainer['yesRadioButton'],
+            noRadioButton_ = inContainer['noRadioButton'];
+        
+        /*
+         * If full name field is on the screen it means that the index of this 
+         * field is 4 (not 5).
+         */
+        var indexOfElement_ = (inContainer['fullName'] ? 4 : 5),
+            result_ = 'eo:';
+        
+        if (yesRadioButton_ && noRadioButton_) {
+            
+            if (getComputedStyle(yesRadioButton_).display === 'none' &&
+                getComputedStyle(noRadioButton_).display === 'none') {
+         
+                result += HIDDEN;
+                
+            } else if (yesRadioButton_.checked) {
+                       
+                result_ += YES;   
+                    
+            } else if (noRadioButton_.checked) {
+                       
+                result_ += NO;
+                       
+            } else {
+                       
+                result_ += NEITHER;
+                       
+            }
+            
+            result_ += ':' + indexOfElement_;
+                       
+            misc_.push(result_);
+            return result_;
+                       
+        } 
+        
+    };//#hp.registration.metrics.Metrics.processEmailConsent
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'countryCodeReturned': String,
+     *                      'locationServiceUsed': boolean
+     *                  }
+     */
+    this.processLocationServiceState = function(inContainer) {
+        
+        var LOCATION_RETURNED = 'y',
+            LOCATION_RETURNED_AND_NOT_RECOGNIZED = 'z',
+            SERVICE_WAS_NOT_USED = 'e',
+            countryCodeReturned_ = inContainer['countryCodeReturned'],
+            locationServiceUsed_ = inContainer['locationServiceUsed'];
+        
+        var result_ = 'ls:';
+        
+        if (locationServiceUsed_ === true && countryCodeReturned_ !== null && 
+            countryCodeReturned_ !== "") {
+            
+            result_ += LOCATION_RETURNED;
+            
+        } else if (locationServiceUsed_ === true && 
+                   (countryCodeReturned_ === null || countryCodeReturned_ === "")) {
+            
+            result_ += LOCATION_RETURNED_AND_NOT_RECOGNIZED;   
+            
+        } else {
+            
+            result_ += SERVICE_WAS_NOT_USED;   
+            
+        }
+        
+        misc_.push(result_);
+        return result_;
+        
+    };//#hp.registration.metrics.Metrics.processLocationServiceState
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'privacyStatementClicked': Boolean,
+     *                  }
+     */
+    this.processPrivacyStatement = function(inContainer) {
+        
+        var YES = 'y',
+            NO = 'n';
+        
+        var result_ = 'pl:',
+            privacyStatementClicked_ = inContainer['privacyStatementClicked'];
+        
+        if (privacyStatementClicked_ !== undefined && privacyStatementClicked_ === true) {
+            
+            result_ += YES;   
+            
+        } else {
+            
+            result_ += NO;   
+            
+        }
+        
+        misc_.push(result_);
+        return result_;
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'dataCollectionClicked': String,
+     *                  }
+     */
+    this.processDataCollection = function(inContainer) {
+        
+        var YES = 'y',
+            NO = 'n';
+        
+        var result_ = 'dl:',
+            dataCollectiontClicked_ = inContainer['dataCollectionClicked'];
+        
+        if (dataCollectiontClicked_ !== undefined && dataCollectiontClicked_ === true) {
+            
+            result_ += YES;   
+            
+        } else {
+            
+            result_ += NO;   
+            
+        }
+        
+        misc_.push(result_);
+        return result_;
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'termsAndConditionsClicked': Boolean
+     *                  }
+     */
+    this.processTermsAndConditions = function(inContainer) {
+        
+        var YES = 'y',
+            NO = 'n',
+            NOT_VISIBLE = 'x';
+        
+        var result_ = 'tl:',
+            termsAndConditionsClicked_ = inContainer['termsAndConditionsClicked'];
+        
+        if (termsAndConditionsClicked_ !== undefined && termsAndConditionsClicked_ === true) {
+            
+            result_ += YES;   
+            
+        } else {
+            
+            result_ += NO;   
+            
+        }
+        
+        misc_.push(result_);
+        return result_;
+        
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'privacyRightsClicked': String,
+     *                      'privacyRightsElement': HTMLElement
+     *                  }
+     */
+    this.processPrivacyRights = function(inContainer) {
+        
+        var YES = 'y',
+            NO = 'n',
+            NOT_VISIBLE = 'x';
+        
+        var result_ = 'rl:',
+            privacyRightsClicked_ = inContainer['privacyRightsClicked'],
+            privacyRightsElement_ = inContainer['privacyRightsElement'];
+        
+        if (privacyRightsElement_ && getComputedStyle(privacyRightsElement_).display === 'none') {
+            
+            result_ +=  NOT_VISIBLE;
+            
+        } else if (privacyRightsClicked_ !== undefined && privacyRightsClicked_ === true) {
+            
+            result_ += YES;   
+            
+        } else {
+            
+            result_ += NO;   
+            
+        }
+        
+        misc_.push(result_);
+        return result_;
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'shouldSkipRegistration': boolean,
+     *                      'shouldShowFullName': boolean,
+     *                      'eulaCheckbox': HTMLElement
+     *                  }
+     */
+    this.processEULA = function(inContainer) {
+        
+        var YES = 'y',
+            NO = 'n',
+            NOT_VISIBLE = 'x';
+        
+        var result_ = 'tc:',
+            shouldSkipRegistration_ = inContainer['shouldSkipRegistration'],
+            shouldShowFullName_ = inContainer['shouldShowFullName'],
+            eulaCheckbox_ = inContainer['eulaCheckboxElement'];
+        
+        /*
+         * Due to the changes made by UX, the checkbox is not shown on the screen anymore.
+         */
+        var indexOfElement_ = 0;   
+        result_ +=  NOT_VISIBLE;
+        
+        result_ += ':' + indexOfElement_
+        
+        misc_.push(result_);
+        return result_;
+        
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'prepolutadedCountryCode': String,
+     *                      'finalCountryCode': String
+     *                  }
+     */
+    this.processCountry = function(inContainer) {
+        
+        var PREPOPULATED = 'i',
+            USER_CHANGED_PREPOLUTION = 'u',
+            USER_INPUTED_INVALID_COUNTRY = 'd',
+            YES = 'y',
+            NO = 'n', // Informed but invalid
+            NO_INPUT = 'e',
+            NOT_VISIBLE = 'x'; // N/A
+        
+        var result_ = 'cs:',
+            prepolutadedCountryCode_ = inContainer['prepolutadedCountryCode'],
+            finalCountryCode_ = inContainer['finalCountryCode'];
+        
+        var indexOfElement_ = 1; // Always the first field.
+        
+        if (prepolutadedCountryCode_ && prepolutadedCountryCode_ === finalCountryCode_) {
+         
+            result_ += PREPOPULATED;
+            
+        } else if (prepolutadedCountryCode_ && prepolutadedCountryCode_ !== finalCountryCode_ &&
+                   finalCountryCode_ !== 'ZZ') {
+            
+            result_ += USER_CHANGED_PREPOLUTION;
+            
+        } else if (prepolutadedCountryCode_ && finalCountryCode_ === 'ZZ') {
+            
+            result_ += USER_INPUTED_INVALID_COUNTRY;
+            
+        } else if (!(prepolutadedCountryCode_) && finalCountryCode_ !== 'ZZ') {
+            
+            result_ += YES;   
+            
+        } else {
+         
+            result_ += NO_INPUT;
+            
+        }
+        
+        result_ += ':' + indexOfElement_;
+        
+        misc_.push(result_);
+        return result_;
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'isOnline': boolean
+     *                  }
+     */
+    this.processConnectivity = function(inContainer) {
+        
+        var YES = 'y',
+            NO = 'n', 
+            NOT_DETERMINED = 'x'; // N/A
+        
+        var result_ = 'in:',
+            isOnline_ = inContainer['isOnline'];
+        
+        if (isOnline_) {
+            
+            result_ += YES;   
+            
+        } else {
+            
+            result_ += NO;   
+            
+        }
+        
+        // TODO STILL NEED TO CHECK HOW TO RETRIEVE THE TYPE OF CONNECTIVITY
+        result_ += ':xxx';
+        
+        misc_.push(result_);
+        return result_;
+        
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'prepolutadedFirstName': String,
+     *                      'finalFirstName': String,
+     *                      'shouldShowFullName': boolean,
+     *                      'shouldSwapFirstAndLastName': boolean
+     *                  }
+     */
+    this.processFirstName = function(inContainer) {
+        
+        var PREPOPULATED = 'i',
+            USER_CHANGED_PREPOLUTION = 'u',
+            USER_INPUTED_INVALID_FIRST_NAME = 'd',
+            YES = 'y',
+            NO = 'n', // Informed but invalid
+            NO_INPUT = 'e',
+            NOT_VISIBLE = 'x'; // N/A
+        
+        var result_ = 'fn:',
+            prepolutadedFirstName_ = inContainer['prepolutadedFirstName'],
+            finalFirstName_ = inContainer['finalFirstName'],
+            shouldShowFullName_ = inContainer['shouldShowFullName'],
+            firstNameElement_ = inContainer['firstNameElement'],
+            shouldSwapFirstAndLastName_ = inContainer['shouldSwapFirstAndLastName'];
+        
+        var indexOfElement_ = 0; 
+        if (shouldShowFullName_) {
+            
+            indexOfElement_ = 0;
+            
+        } else if (shouldSwapFirstAndLastName_) {
+            
+            indexOfElement_ = 3;
+            
+        } else {
+            
+            indexOfElement_ = 2;
+            
+        }
+        
+        if (shouldShowFullName_) {
+            
+            result_ += NOT_VISIBLE;
+            
+        } else if (shouldShowFullName_ == false && prepolutadedFirstName_ && 
+                   "" === finalFirstName_.trim()) {
+            
+            result_ += USER_INPUTED_INVALID_FIRST_NAME;
+            
+        } else if (shouldShowFullName_ == false && prepolutadedFirstName_ && 
+                   prepolutadedFirstName_ === finalFirstName_) {
+         
+            result_ += PREPOPULATED;
+            
+        } else if (shouldShowFullName_ == false && prepolutadedFirstName_ && 
+                   prepolutadedFirstName_ !== finalFirstName_) {
+            
+            result_ += USER_CHANGED_PREPOLUTION;
+            
+        } else if (shouldShowFullName_ == false && !(prepolutadedFirstName_) && 
+                   finalFirstName_ !== '') {
+            
+            result_ += YES;   
+            
+        } else {
+         
+            result_ += NO_INPUT;
+            
+        }
+        
+        result_ += ':' + indexOfElement_;
+        
+        misc_.push(result_);
+        return result_;
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'prepolutadedLastName': String,
+     *                      'finalLastName': String,
+     *                      'shouldShowFullName': boolean,
+     *                      'shouldSwapFirstAndLastName': boolean
+     *                  }
+     */
+    this.processLastName = function(inContainer) {
+        
+        var PREPOPULATED = 'i',
+            USER_CHANGED_PREPOLUTION = 'u',
+            USER_INPUTED_INVALID_LAST_NAME = 'd',
+            YES = 'y',
+            NO = 'n', // Informed but invalid
+            NO_INPUT = 'e',
+            NOT_VISIBLE = 'x'; // N/A
+        
+        var result_ = 'ln:',
+            prepolutadedLastName_ = inContainer['prepolutadedLastName'],
+            finalLastName_ = inContainer['finalLastName'],
+            shouldShowFullName_ = inContainer['shouldShowFullName'],
+            shouldSwapFirstAndLastName_ = inContainer['shouldSwapFirstAndLastName'];
+        
+        var indexOfElement_ = 0; 
+        if (shouldShowFullName_) {
+            
+            indexOfElement_ = 0;
+            
+        } else if (shouldSwapFirstAndLastName_) {
+            
+            indexOfElement_ = 2;
+            
+        } else {
+            
+            indexOfElement_ = 3;
+            
+        }
+        
+        if (shouldShowFullName_) {
+            
+            result_ += NOT_VISIBLE;
+            
+        } else if (shouldShowFullName_ == false && prepolutadedLastName_ && 
+                   "" === finalLastName_.trim()) {
+            
+            result_ += USER_INPUTED_INVALID_LAST_NAME;
+            
+        } else if (shouldShowFullName_ == false && prepolutadedLastName_ && 
+                   prepolutadedLastName_ === finalLastName_) {
+         
+            result_ += PREPOPULATED;
+            
+        } else if (shouldShowFullName_ == false && prepolutadedLastName_ && 
+                   prepolutadedLastName_ !== finalLastName_) {
+            
+            result_ += USER_CHANGED_PREPOLUTION;
+            
+        } else if (shouldShowFullName_ == false && !(prepolutadedLastName_) && 
+                   finalLastName_ !== '') {
+            
+            result_ += YES;   
+            
+        } else {
+         
+            result_ += NO_INPUT;
+            
+        }
+        
+        result_ += ':' + indexOfElement_;
+        
+        misc_.push(result_);
+        return result_;
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'prepolutadedFullName': String,
+     *                      'finalFullName': String,
+     *                      'shouldShowFullName': boolean,
+     *                      'shouldSwapFirstAndLastName': boolean
+     *                  }
+     */
+    this.processFullName = function(inContainer) {
+        
+        var PREPOPULATED = 'i',
+            USER_CHANGED_PREPOLUTION = 'u',
+            USER_INPUTED_INVALID_FULL_NAME = 'd',
+            YES = 'y',
+            NO = 'n', // Informed but invalid
+            NO_INPUT = 'e',
+            NOT_VISIBLE = 'x'; // N/A
+        
+        var result_ = 'fu:',
+            prepolutadedFullName_ = inContainer['prepolutadedFullName'],
+            finalFullName_ = inContainer['finalFullName'],
+            shouldShowFullName_ = inContainer['shouldShowFullName'],
+            shouldSwapFirstAndLastName_ = inContainer['shouldSwapFirstAndLastName'];
+        
+        var indexOfElement_ = 0; 
+        if (shouldShowFullName_) {
+            
+            indexOfElement_ = 2;
+            
+        } else if (shouldSwapFirstAndLastName_) {
+            
+            indexOfElement_ = 0;
+            
+        } else {
+            
+            indexOfElement_ = 0;
+            
+        }
+        
+        if (shouldShowFullName_ == true && prepolutadedFullName_ && 
+                   prepolutadedFullName_ === finalFullName_) {
+         
+            result_ += PREPOPULATED;
+            
+        } else if (shouldShowFullName_ == true && prepolutadedFullName_ && 
+                   "" === finalFullName_.trim()) {
+            
+            result_ += USER_INPUTED_INVALID_FULL_NAME;
+            
+        } else if (shouldShowFullName_ == true && prepolutadedFullName_ && 
+                   prepolutadedFullName_ !== finalFullName_) {
+            
+            result_ += USER_CHANGED_PREPOLUTION;
+            
+        } else if (shouldShowFullName_ == true && !(prepolutadedFullName_) && 
+                   finalFullName_ !== '') {
+            
+            result_ += YES;   
+            
+        } else if (shouldShowFullName_ == true && !(prepolutadedFullName_) && 
+                   finalFullName_ === '') {
+            
+            result_ += NO_INPUT;   
+            
+        } else {
+         
+            result_ += NOT_VISIBLE;
+            
+        }
+        
+        result_ += ':' + indexOfElement_;
+        
+        misc_.push(result_);
+        return result_;
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'prepolutadedEmail': String,
+     *                      'finalEmail': String,
+     *                      'shouldShowFullName': boolean
+     *                  }
+     */
+    this.processEmail = function(inContainer) {
+        
+        var PREPOPULATED = 'i',
+            USER_CHANGED_PREPOLUTION = 'u',
+            USER_INPUTED_INVALID_EMAIL = 'd',
+            YES = 'y',
+            NO = 'n', // Informed but invalid
+            NO_INPUT = 'e',
+            NOT_VISIBLE = 'x'; // N/A
+        
+        var result_ = 'ea:',
+            prepolutadedEmail_ = inContainer['prepolutadedEmail'],
+            finalEmail_ = inContainer['finalEmail'],
+            shouldShowFullName_ = inContainer['shouldShowFullName'];
+        
+        var indexOfElement_ = (shouldShowFullName_ ? 3 : 4);
+        
+        if (prepolutadedEmail_ && prepolutadedEmail_ === finalEmail_) {
+         
+            result_ += PREPOPULATED;
+            
+        } else if (prepolutadedEmail_ && "" === finalEmail_.trim()) {
+            
+            result_ += USER_INPUTED_INVALID_EMAIL;
+            
+        } else if (prepolutadedEmail_ && prepolutadedEmail_ !== finalEmail_) {
+            
+            result_ += USER_CHANGED_PREPOLUTION;
+            
+        } else if (!(prepolutadedEmail_) && finalEmail_ !== '') {
+            
+            result_ += YES;   
+            
+        } else if (!(prepolutadedEmail_) && finalEmail_ === '') {
+            
+            result_ += NO_INPUT;   
+            
+        } else {
+         
+            result_ += NOT_VISIBLE;
+            
+        }
+        
+        result_ += ':' + indexOfElement_;
+        
+        misc_.push(result_);
+        return result_;
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'clearAllUsed': boolean,
+     *                      'clearAllElement: HTMLElement,
+     *                      'shouldShowFullName': boolean
+     *                  }
+     */
+    this.processClearAll = function(inContainer) {
+        
+        var BUTTON_USED ='y',
+            BUTTON_NOT_USED = 'n',
+            BUTTON_NOT_VISIBLE = 'x';
+        
+        var result_ = 'cf:',
+            clearAllUsed_ = inContainer['clearAllUsed'],
+            clearAllElement_ = inContainer['clearAllElement'],
+            shouldShowFullName_ = inContainer['shouldShowFullName'];
+        
+        var indexOfElement_ = (shouldShowFullName_ ? 5 : 6);
+        
+        if (clearAllElement_ && getComputedStyle(clearAllElement_).display === 'none') {
+            
+            result_ += BUTTON_NOT_VISIBLE;
+            
+        } else if (clearAllUsed_) {
+            
+            result_ += BUTTON_USED;   
+            
+        } else {
+            
+            result_ += BUTTON_NOT_USED;
+            
+        }
+        
+        result_ += ':' + indexOfElement_;
+        
+        misc_.push(result_);
+        return result_;
+        
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      'prepolutadedEmail': String,
+     *                      'prepolulatedFirstName': String,
+     *                      'prepolutatedLastName': String,
+     *                      'prepopulatedEmail': String,
+     *                      'shouldShowFullName': boolean
+     *                  }
+     */
+    this.processAccountService = function(inContainer) {
+        
+        var YES = 'y',
+            NO = 'n', // Informed but invalid
+            NOT_USED = 'x';
+        
+        var result_ = 'as:',
+            prepolutadedEmail_ = inContainer['prepolutadedEmail'],
+            prepolulatedFirstName_ = inContainer['prepolulatedFirstName'],
+            prepolutatedLastName_ = inContainer['prepolutatedLastName'],
+            prepolulatedFullName_ = inContainer['prepolutadedFullName'],
+            shouldShowFullName_ = inContainer['shouldShowFullName'];
+        
+        if (shouldShowFullName_ && prepolulatedFullName_ && prepolutadedEmail_) {
+         
+            result_ += YES;
+            
+        } else if (shouldShowFullName_ == false && prepolulatedFirstName_ && prepolutatedLastName_ && 
+                   prepolutadedEmail_) {
+         
+            result_ += YES;
+            
+        } else  {
+            
+            result_ += NO;
+            
+        } 
+        
+        misc_.push(result_);
+        return result_;
+    }
+    
+    /*
+     * @params
+     *  inContainer: Object.
+     *                  {
+     *                      carrierIQConsentCheckbox: HTMLElement,
+     *                      carrierIQDefault: boolean,
+     *                      shouldShowFullName: boolean
+     *                  }
+     */
+    this.processCarrierIQConsent = function(inContainer) {
+        
+        var PREPOPULATED = 'i',
+            USER_CHANGED_PREPOLUTION = 'u',
+            YES = 'y',
+            NO = 'n', 
+            NO_INPUT = 'e',
+            NOT_VISIBLE = 'x';
+        
+        var result_ = 'iq:', // TBD
+            carrierIQConsentCheckbox_ = inContainer['carrierIQConsentCheckbox'],
+            carrierIQDefault_ = inContainer['carrierIQDefault'],
+            shouldShowFullName_ = inContainer['shouldShowFullName'],
+            carrierIQDefaultAsBoolean_ = null;
+        
+        var indexOfElement_ = 0; 
+        if (shouldShowFullName_) {
+            
+            indexOfElement_ = 5;
+            
+        } else {
+            
+            indexOfElement_ = 6;
+            
+        }
+        
+        if (carrierIQDefault_ && carrierIQDefault_.toLowerCase() === "uncheck") {
+            
+            carrierIQDefaultAsBoolean_ = false;
+            
+        } else if (carrierIQDefault_ && carrierIQDefault_.toLowerCase() === "precheck") {
+            
+            carrierIQDefaultAsBoolean_ = true;
+            
+        }
+        
+        if (carrierIQConsentCheckbox_ && 
+            getComputedStyle(carrierIQConsentCheckbox_).display === 'none') {
+            
+            result_ += NOT_VISIBLE;
+            
+        } else if (carrierIQConsentCheckbox_ && carrierIQDefaultAsBoolean_ && 
+                   carrierIQDefaultAsBoolean_ !== carrierIQConsentCheckbox_.checked) {
+            
+            result_ += USER_CHANGED_PREPOLUTION;
+            
+        } else if (carrierIQConsentCheckbox_ && carrierIQDefaultAsBoolean_ && 
+                   carrierIQDefaultAsBoolean_ === carrierIQConsentCheckbox_.checked) {
+         
+            result_ += PREPOPULATED;
+            
+        } else if (carrierIQDefaultAsBoolean_ === null && 
+                   carrierIQConsentCheckbox_.checked === true) {
+            
+            result_ += YES;
+            
+        } else if (carrierIQDefaultAsBoolean_ === null && 
+                   carrierIQConsentCheckbox_.checked === false) {
+            
+            result_ += NO;
+            
+        } 
+        
+        result_ += ':' + indexOfElement_;
+        
+        misc_.push(result_);
+        return result_;
+    }
+    
+    return this;
+    
+}.apply({}, null);//#hp.registration.metrics.Metrics

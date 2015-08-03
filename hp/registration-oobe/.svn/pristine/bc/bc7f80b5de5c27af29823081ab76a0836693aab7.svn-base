@@ -1,0 +1,132 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.util = hp.registration.util || {};
+
+hp.registration.util.Message = function() {
+
+	// Private members ============================================================================
+	function buildHeader(inXmlDoc, inRegistrationInfo) {
+		var _header = inXmlDoc.createElement('header');
+	    var _securityInfo = inXmlDoc.createElement('security-info');
+	    var _p = hp.registration.Properties;
+
+	    _securityInfo.setAttribute('principal', '8139896598082565369');
+	    _securityInfo.setAttribute('credentials', 'B46mldGm5LiFrb8WbdFKew==');
+	    _securityInfo.setAttribute('version', '1.0.0');
+
+	    var _source = inXmlDoc.createElement('source');
+	    _source.setAttribute(_p.ATTR_APP_ID, inRegistrationInfo.applicationId);
+
+	    _header.appendChild(_securityInfo);
+	    _header.appendChild(_source);
+
+	    inXmlDoc.documentElement.appendChild(_header);
+	    return null;
+	}//#buildHeader
+
+	function buildPayload(inXmlDoc, inRegistrationInfo) {
+	    var _payload = inXmlDoc.createElement('payload');
+	    var _p = hp.registration.Properties;
+
+	    var _registration_redirect = inXmlDoc.createElement(_p.ELEMENT_REGISTRATION_REDIRECT);
+	    _registration_redirect.setAttribute('originator', 'rrdaemon');
+	    _payload.appendChild(_registration_redirect);
+
+	    var _registration = inXmlDoc.createElement('registration');
+	    _registration.setAttribute('action', 'create');
+	    _payload.appendChild(_registration);
+
+	    // Custom Block 
+	    // ========================================================================================
+	    var _customBlock = inXmlDoc.createElement(_p.ELEMENT_CUSTOM_BLOCK);
+	    var _extendedRegistrationSubBlock =
+	        inXmlDoc.createElement(_p.ELEMENT_EXTENDED_REGISTRATION_SUB_BLOCK);
+
+	    _extendedRegistrationSubBlock.setAttribute(_p.ATTR_REGISTRATION_VERSION, 
+	    											inRegistrationInfo.registrationVersion);
+	    _extendedRegistrationSubBlock.setAttribute('born_on_dt', '');
+	    _extendedRegistrationSubBlock.setAttribute('soft_build', inRegistrationInfo.softwareBuild);
+
+	    // Fields that don't need to be included. But leaving in the code as comment.
+	    //_extendedRegistrationSubBlock.setAttribute(_p.ATTR_SEQUENCE,
+		//											inRegistrationInfo.sequence);
+	    //_extendedRegistrationSubBlock.setAttribute(_p.ATTR_REASON, 
+	    //											inRegistrationInfo.reason);
+
+	    _customBlock.appendChild(_extendedRegistrationSubBlock);
+	    _registration.appendChild(_customBlock);
+
+	    // Foundation block
+	    // ========================================================================================
+	    var _foundationBlock = inXmlDoc.createElement(_p.ELEMENT_FOUNDATION_BLOCK);
+	    var _now = new Date();
+	    _foundationBlock.setAttribute(_p.ATTR_MODEL_NUMBER, inRegistrationInfo.modelNumber); 
+	    _foundationBlock.setAttribute(_p.ATTR_PRODUCT_CREATE_DT, inRegistrationInfo.productCreateDate);
+	    _foundationBlock.setAttribute(_p.ATTR_SERIAL_NUMBER, inRegistrationInfo.serialNumber);
+	    _foundationBlock.setAttribute(_p.ATTR_FIRST_NAME, inRegistrationInfo.firstName);
+	    _foundationBlock.setAttribute(_p.ATTR_LAST_NAME, inRegistrationInfo.lastName);
+	    _foundationBlock.setAttribute(_p.ATTR_SEGMENT, inRegistrationInfo.segment);
+	    _foundationBlock.setAttribute(_p.ATTR_SEGMENT2, inRegistrationInfo.segment2);
+	    _foundationBlock.setAttribute(_p.ATTR_CONSENT_EMAIL, inRegistrationInfo.consentEmail);
+	    _foundationBlock.setAttribute(_p.ATTR_EMAIL, inRegistrationInfo.email);
+	    _foundationBlock.setAttribute(_p.ATTR_COUNTRY, inRegistrationInfo.country);
+
+	    // Fields that don't need to be sent for OOBE. But leaving the code as comment.
+	    /*_foundationBlock.setAttribute(_p.ATTR_ADDRESS1, inRegistrationInfo.address1);
+	    _foundationBlock.setAttribute(_p.ATTR_ADDRESS2, inRegistrationInfo.address2);
+	    _foundationBlock.setAttribute(_p.ATTR_CITY, inRegistrationInfo.city);
+	    _foundationBlock.setAttribute(_p.ATTR_STATE, inRegistrationInfo.state);
+	    _foundationBlock.setAttribute(_p.ATTR_ZIP_CODE, inRegistrationInfo.zipCode);
+	    _foundationBlock.setAttribute(_p.ATTR_PHONE_CODE, inRegistrationInfo.phoneCode);
+	    _foundationBlock.setAttribute(_p.ATTR_PHONE_NUMBER, inRegistrationInfo.phoneNumber);
+	    _foundationBlock.setAttribute(_p.ATTR_CONSENT_PHONE, inRegistrationInfo.consentPhone);
+	    _foundationBlock.setAttribute(_p.ATTR_CONSENT_POSTAL, inRegistrationInfo.consentPostal);*/
+
+	    _registration.appendChild(_foundationBlock);
+
+	    // Library block
+	    // ========================================================================================
+	    var _libraryBlock = inXmlDoc.createElement(_p.ELEMENT_LIBRARY_BLOCK);
+	    
+	    _libraryBlock.setAttribute(_p.ATTR_LANG_CODE, inRegistrationInfo.language);
+	    _libraryBlock.setAttribute(_p.ATTR_OPERATING_SYSTEM, inRegistrationInfo.operatingSystem);
+	    _libraryBlock.setAttribute(_p.ATTR_PURCHASED_LOCATION, inRegistrationInfo.purchasedLocation);
+
+		// Fields that don't need to be included. But leaving in the code as comment.
+		/*_libraryBlock.setAttribute(_p.ATTR_PURCHASED_LOCATION, inRegistrationInfo.purchasedLocation); */
+		
+	    _registration.appendChild(_libraryBlock);
+
+
+	    inXmlDoc.documentElement.appendChild(_payload);
+	    return null;
+	};//#buildPayload
+
+	// Public members =============================================================================
+	this.serializeToXmlAsString = function(inRegistrationInfo) {
+
+		var _rootAsString = '<?xml version=\"1.0\" encoding=\"utf-8\"?>' +
+		'<registration-request version=\"1.0.0\"  response_type=\"synchronous\" ' +
+	    'xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ' +
+	    'xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"> </registration-request>';
+
+	    var _parser = new DOMParser();
+	    var _xmlDoc = _parser.parseFromString(_rootAsString, 'text/xml');
+	    
+	    buildHeader(_xmlDoc, inRegistrationInfo);
+	    buildPayload(_xmlDoc, inRegistrationInfo);
+
+	    var _serializer = new XMLSerializer();
+	    var _result = _serializer.serializeToString(_xmlDoc.documentElement);
+	    _result = '<?xml version=\"1.0\" encoding=\"utf-8\"?>' + _result;
+
+	    return _result;
+
+	};//#hp.registration.util.Message.serializeToXmlAsString
+
+	this.deserializeFromXmlAsString = function(inRegistrationInfo) {
+
+	};//#hp.registration.util.Message.deserializeFromXmlAsString
+
+	return this;
+}.apply({}, null);//#hp.registration.util.Message

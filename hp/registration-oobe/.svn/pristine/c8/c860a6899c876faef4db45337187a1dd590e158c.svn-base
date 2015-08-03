@@ -1,0 +1,29 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.useragent = hp.registration.useragent || {};
+
+hp.registration.useragent.CarrierIQBrowser = function() {
+
+    Object.defineProperty(this, 'isInstalled', {
+        'get': function() {
+        console.log('==>Browser object called');//DEBUG!    
+            return true;
+            
+        }
+    });
+    
+    this.sendMessageToCarrierIQ = function(inUserSelection) {
+      
+        // do nothing
+        
+    };
+    
+    this.getCurrentState = function() {
+      
+        return false;
+        
+    };
+    
+    return this;
+    
+}.apply({}, null);//#hp.registration.useragent.CarrierIQBrowser

@@ -1,0 +1,1442 @@
+package hp.oobe;
+
+import hp.oobe.utilities.Cryptography;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StringReader;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Set;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Text;
+import org.xml.sax.InputSource;
+
+import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.app.Activity;
+
+import android.app.AlertDialog;
+
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.database.Cursor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.provider.ContactsContract;
+import android.provider.Settings.Secure;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Display;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
+import android.webkit.JavascriptInterface;
+import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+public class Registration {
+	
+	private SharedPreferences settings = null;
+	private String endPoints = "";
+	private boolean checkedIfRunningDuringOOBE = false;
+	private boolean runningDuringOOBE = false;
+	private boolean iscancle = false;
+	private boolean shouldSkipRegistration = false;
+	Intent dropbox_intent = null;
+	private CarrierIQ carrierIQ = null;
+	public boolean IsWait = true;
+	private boolean IsOver=false;
+	public String resultDropbox = Consts.TAG_3PART_NONE;
+	public String resultLauncher = Consts.TAG_3PART_NONE;
+	Context mContext;
+	WebView mWebView;
+	String mBeaconEndPoint=null;
+	Registration(Context c, WebView w) {
+
+		mContext = c;
+		mWebView = w;
+		
+		// Carrier IQ
+		carrierIQ = new CarrierIQ(mContext);
+		
+	}
+	
+	/*
+	 * Persist a content in the sandbox as a file. The content of this file will be encrypted.
+	 * 
+	 * @param fileName. Name of the file in disk.
+	 * @param content. Content to be saved within the file.
+	 */
+	private void persistContent(String fileName, String content) {
+		
+		FileOutputStream fos;
+		Activity activity = (Activity)mContext;
+
+		try {
+			
+			activity.deleteFile(fileName);
+			
+			fos = activity.openFileOutput(fileName, Context.MODE_PRIVATE);
+			fos.write(content.getBytes());
+			
+			fos.close();
+			
+		} catch (FileNotFoundException e1) {
+			
+			e1.printStackTrace();
+			
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+			
+		}
+		
+	}//#persistContent
+	
+	/*
+	 * Tells the Android platform to disable a specific component (in this case, an Activity).
+	 * 
+	 * @param activity
+	 * @param c
+	 */
+	private void disableActivity(Activity activity, @SuppressWarnings("rawtypes") Class c) {
+		
+		PackageManager pm = activity.getPackageManager();
+		ComponentName name = new ComponentName(activity, c);
+		
+		pm.setComponentEnabledSetting(name,  PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+	
+	}//#disableActivity
+	
+	/*
+	 * Return the content of a file
+	 * 
+	 * @param fullPath. Path + file name that should be opened.
+	 * 
+	 * @returns
+	 * String. Content of the file.
+	 */
+	private String openFile(String fullPath) {
+		
+		String result = null;
+		BufferedReader reader = null;
+		
+		try {
+			
+			File f1 = new File(fullPath);
+			FileInputStream fin = new FileInputStream(f1);
+			reader = new BufferedReader(new InputStreamReader(fin));
+			StringBuilder sb = new StringBuilder();
+			String line = null;
+			
+			while((line = reader.readLine()) != null) {
+				sb.append(line).append("\n");
+			}
+			
+			result = sb.toString();
+			
+			if (reader != null) {
+				reader.close();
+			}
+			
+		} catch (FileNotFoundException e1) {
+			
+			Log.d(Consts.TAG, "The file " + Consts.FILE_NAME_REQUEST_REGISTRATION + " was not found while attempting to open it.");
+			e1.printStackTrace();
+			
+		} catch (Exception e) {
+			
+			Log.d(Consts.TAG, "There was a problem while trying to access + " + fullPath);
+			e.printStackTrace();
+			
+		}
+		
+		return result;
+		
+	}//#openFile
+	
+	/*
+	 * Saves enpoints into the Preferences.xml and content in a file (if needed).
+	 * 
+	 * @param endPointID. How the URL will be referenced in prereferences.xml
+	 * @param endPoint. URL that has to be used for request
+	 * @param fileName. Name of the file that has to be saved (if needed. If not, pass null).
+	 * @param fileContent. Content of the message that will be sent to the endPoint (if needed. If not, pass null)
+	 * @param encrypt. Indicates if the message in the file should be encrypted. 
+	 */
+	private void saveDataToBeUsedByService(String endPointID, String endPoint, String fileName, 
+											String fileContent, boolean encrypt) {
+		
+		
+		if (endPoint != null && endPointID != null && !endPoint.equals("") && !endPointID.equals("")) {
+		
+			SharedPreferences settings = mContext.getSharedPreferences(Consts.PREFERENCES, 0);
+			SharedPreferences.Editor editor = settings.edit();
+			
+			editor.putString(endPointID, endPoint);
+			
+			if (encrypt == true && fileContent != null) {
+				
+				String pwd = Secure.getString(mContext.getContentResolver(), Secure.ANDROID_ID);
+					
+				fileContent = new String(Cryptography.encrypt(fileContent, pwd).getBytes());
+				
+			}
+			
+			if (fileName != null && fileContent != null) {
+			
+				persistContent(fileName, fileContent);
+				
+			}
+			
+		
+			editor.commit();
+			
+		}
+		
+	}//#saveDataToBeUsedByService
+	
+	/*
+	 * ============================================================================================
+	 * METHODS EXPOSED TO JAVASCRIPT LAYER VIA registrationAndroid
+	 * ============================================================================================
+	 */
+	
+	@JavascriptInterface
+	public void scheduleNotification(int timeInHours, String title, String text) {
+				
+		RegistrationNotificationManager nManager = new RegistrationNotificationManager(mContext);
+		
+		// Calculating when the BroadcastReceiver should wake up
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTimeInMillis(System.currentTimeMillis());
+		calendar.add(Calendar.HOUR, timeInHours);
+		
+		// Saving the date (in millsecs) so that can be re-used during reboot; so the notification can be re-scheduled
+		SharedPreferences.Editor editor = settings.edit();
+		editor.putString(Consts.PREFERENCE_NOTIFICATION_LAST_DATE_SCHEDULED, String.valueOf(System.currentTimeMillis()));
+		editor.commit();
+		
+		nManager.scheduleNotification(calendar.getTime(), title, text);
+		
+	}
+	@JavascriptInterface
+	public boolean issmall() {
+		boolean small = false;
+		float inch = 0;
+		DisplayMetrics metric = new DisplayMetrics();
+		Display display = ((Activity) mContext).getWindowManager()
+				.getDefaultDisplay();
+		display.getRealMetrics(metric);
+		float width = metric.widthPixels;
+		float height = metric.heightPixels;
+		int densityDpi = metric.densityDpi;
+		inch = width / densityDpi * width / densityDpi + height / densityDpi
+				* height / densityDpi;
+		if (inch < 24)
+			small = true;
+		return small;
+	}
+	public void adapterUI() {
+		DisplayMetrics metric = new DisplayMetrics();
+		Display display =  ((Activity)mContext).getWindowManager().getDefaultDisplay();
+		display.getRealMetrics(metric);
+		float width = metric.widthPixels; 
+		float height = metric.heightPixels; 
+		int densityDpi = metric.densityDpi; 
+		float Screen=width/densityDpi > height/densityDpi?height/densityDpi:width/densityDpi;	
+	//	if (Screen >= 4.9) {
+		//	 ((Activity)mContext).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+	//	} else {
+			 ((Activity)mContext).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+		//}
+	}
+	
+	public void backUI()
+	{
+		
+		// ((Activity)mContext).setRequestedOrientation(r);
+	}
+	/**
+	 * Helper function to know if the application is running during OOBE or via launcher.
+	 * 
+	 * @return 
+	 * 	true. If it's running during OOBE. false, otherwise.
+	 */
+	@JavascriptInterface
+	public boolean isRunningDuringOOBE() {
+		
+		/*
+		 * This behavior has the option to be overridden in Preferences.xml via the key
+		 * Consts.PREFERENCE_RUNNING_DURING_OOBE.
+		 */
+		String internalFlag = getPreferenceForInternalTests(Consts.PREFERENCE_RUNNING_DURING_OOBE);
+		if (internalFlag != null) {
+			
+			internalFlag = internalFlag.toLowerCase().trim();
+			
+			if (internalFlag.equals("yes")) {
+				
+				return true;
+				
+			} else if (internalFlag.equals("no")) {
+				
+				return false;
+				
+			}
+			
+		}
+		
+		Activity activity = (Activity)mContext;
+		Intent intent = activity.getIntent();
+		Set<String> categories = intent.getCategories();
+		
+		if (!checkedIfRunningDuringOOBE) {
+			
+			checkedIfRunningDuringOOBE = true;
+			
+			if (categories == null) {
+				/*
+				 * When the activity opens from the notification bar there is not intent information.
+				 */
+				runningDuringOOBE = false;
+				
+			} else {
+				
+			
+				for(String category : categories) {
+					
+					if (category.toLowerCase().equals("android.intent.category.home")) {
+						
+						runningDuringOOBE = true;
+						break;
+						
+					}
+					
+				}
+			}
+			
+		} 
+		
+		return runningDuringOOBE;
+		
+	}//#isRunningDuringOOBE
+	
+	/**
+	 * Checks if the webview is based on chrome. Up to 4.3 the browser used by the webview 
+	 * was Stock Browser. Staring on kitkat, the webview uses Chrome-based engine. 
+	 * 
+	 * @return true if chrome-based. false if Stock-based.
+	 */
+	@JavascriptInterface
+	public boolean isHostBasedOnChrome() {
+		
+		return (android.os.Build.VERSION.SDK_INT >= 19);
+		
+	}//#isBasedOnChrome
+	
+	/**
+	 * Gets a key from the Preferences.xml
+	 * 
+	 * @param key Name of the key in the SharePref file.
+	 * @return String value. If the keys doesn't exist null is returned.
+	 */
+	@JavascriptInterface
+	public String getPreferenceForInternalTests(String key) {
+		
+		String result = null;
+		
+		SharedPreferences preferences = mContext.getSharedPreferences(Consts.PREFERENCES, 0);
+		result = preferences.getString(key, null);
+		
+		if (result != null && result.equals("")) {
+
+			result = null;
+			
+		}
+		
+		return result;
+		
+	}
+	
+	/**
+	 * Indicates if the user is connected to the internet or not.
+	 * 
+	 * @return true if connected. False, otherwise.
+	 */
+	@JavascriptInterface
+	public boolean isOnline() {
+		
+		ConnectivityManager connectivityManager = 
+				(ConnectivityManager)mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeInfo = connectivityManager.getActiveNetworkInfo();
+		
+		return (activeInfo != null && activeInfo.isConnected());
+		
+	}//#isOnline
+	
+	/**
+	 * Retrieves the first name, last name and e-mail from the user. Assuming that the user logged in 
+	 * during SetupWizard.
+	 * 
+	 * @param callback: Full qualified name of the JavaScript function that should be called when 
+	 * 					the work finishes. This callback must have one Object parameter as input.
+	 * 
+	 * @return Empty String.
+	 */
+	@JavascriptInterface
+	public String getUserInfo(String callback) {
+		
+		ProfileTask profile = new ProfileTask((Activity)mContext, mWebView, callback);
+		profile.execute();
+		
+		return "";
+		
+	}//#getUserInfo
+	
+	/**
+	 * Retrieves basic information about the machine.
+	 * 
+	 * @return String representation of a JSON object.
+	 */
+	@JavascriptInterface
+	public String getMachineInfo() {
+		JSONObject obj_ = new JSONObject();
+		String version_ = "", serialNumber_ = "", modelNumber_ = "" , model="" ;
+		
+		PackageInfo info_;
+		try {
+			
+			info_ = mContext.getPackageManager().getPackageInfo(mContext.getPackageName(), 0);
+			version_ = info_.versionName;
+		
+		} catch (NameNotFoundException e1) {
+			
+			e1.printStackTrace();
+			
+		}
+		
+		/*
+		 * Few properties can be overwritten in the Preferences.xml for test purposes.
+		 */
+		if (settings == null) {
+			
+			settings = mContext.getSharedPreferences(Consts.PREFERENCES, 0);
+			
+		}
+		
+		serialNumber_ = settings.getString(Consts.PREFERENCE_QA_SERIAL_NUMBER, getProperty("ro.serialno"));
+		//settings.getString(Consts.PREFERENCE_QA_SERIAL_NUMBER, android.os.Build.SERIAL);
+		modelNumber_ = settings.getString(Consts.PREFERENCE_QA_MODEL_NUMBER, android.os.Build.BOARD);
+		if(modelNumber_.length()==0||modelNumber_.equals("unknown"))
+		{
+			modelNumber_ = settings.getString(Consts.PREFERENCE_QA_MODEL_NUMBER, getProperty("ro.product.board"));
+		}
+		
+		
+		model = settings.getString(Consts.PREFERENCE_QA_MODEL_NUMBER, android.os.Build.MODEL);
+		try {
+			
+			obj_.put("serialNumber", serialNumber_);
+			obj_.put("modelNumber", modelNumber_);
+			obj_.put("model", model);
+			obj_.put("operatingSystem", android.os.Build.VERSION.RELEASE);
+			obj_.put("registrationVersion", version_);
+			obj_.put("fingerPrint", android.os.Build.FINGERPRINT);
+			obj_.put("oem", android.os.Build.MANUFACTURER);
+			obj_.put("osn", "android:" + android.os.Build.VERSION.RELEASE + "-" + 
+					android.os.Build.VERSION.CODENAME + "-" + android.os.Build.VERSION.SDK_INT);
+			obj_.put("codeName", getProperty("ro.product.name"));
+			obj_.put("incrementalBuildNumber", getProperty("ro.build.version.incremental"));
+			obj_.put("buildTimestamp", getProperty("ro.build.date.utc"));
+			obj_.put("bornOnDate", getSuggestedBornOnDate(false));
+			
+		} catch (JSONException e) {
+			
+			e.printStackTrace();
+			
+		}
+
+		return obj_.toString();
+		
+	}//#getMachineInfo
+	
+	/**
+	 * Saves some data that will be used by the Service.
+	 * 
+	 * @param registrationEndPoint. URL of the Registration service.
+	 * @param registrationMessage. XML message that will be sent by the service.
+	 * @param otaEndPoint. OTA end point.
+	 * @param otaEndPoint. OTA Query end point.
+	 * @param otaMessage. Message that has to be sent to OTA server.
+	 * @param beaconEndPoint. Beacon URL that has to be pinged.
+	 * @param beaconEndPointPostOOBE. Beacon URL that was created from the app grid.
+	 * @param callbackName. Javascript function that has to be called when it's done.
+	 */
+	@JavascriptInterface
+	public void saveDataToBeUsedByService(String registrationEndPoint, 
+											String registrationMessage, 
+											String otaEndPoint,
+											String otaQueryEndPoint,
+											String otaMessage,
+											String beaconEndPoint, 
+											String beaconEndPointPostOOBE,
+											String callbackName) {
+		
+		/*
+		 * Saving the endpoints so the Service component can have access to them later on.
+		 */
+		SharedPreferences settings = mContext.getSharedPreferences(Consts.PREFERENCES, 0);
+		SharedPreferences.Editor editor = settings.edit();
+		
+		if (registrationEndPoint != null && !registrationEndPoint.equals("")) {
+			
+			saveDataToBeUsedByService(Consts.PREFERENCE_ENDPOINT, 
+					registrationEndPoint, Consts.FILE_NAME_REQUEST_REGISTRATION, 
+					registrationMessage, true);
+			
+		}
+		
+		if (otaEndPoint != null && !otaEndPoint.equals("")) {
+			
+			String endPoint = settings.getString(Consts.PREFERENCE_QA_OTA_REGISTRATION_ENDPOINT, otaEndPoint);
+			
+			saveDataToBeUsedByService(Consts.PREFERENCE_ENDPOINT_OTA, 
+					endPoint, Consts.FILE_NAME_OTA, 
+					otaMessage, true);
+			
+		}
+		if (otaQueryEndPoint != null && !otaQueryEndPoint.equals("")) {
+			
+			String endPoint = settings.getString(Consts.PREFERENCE_QA_OTA_QUERY_ENDPOINT, otaQueryEndPoint);
+			
+			saveDataToBeUsedByService(Consts.PREFERENCE_ENDPOINT_OTA_QUERY, 
+					endPoint, null, null, false);
+			
+		}
+		
+		if (beaconEndPoint != null && !beaconEndPoint.equals("")) {
+			mBeaconEndPoint = beaconEndPoint;
+			HPoobeApp.setContent(Consts.METRICS,beaconEndPoint);
+			saveDataToBeUsedByService(Consts.PREFERENCE_ENDPOINT_BEACON,
+					mBeaconEndPoint, null, null, false);
+
+		}
+		
+		if (beaconEndPointPostOOBE != null && !beaconEndPointPostOOBE.equals("")) {
+			
+			saveDataToBeUsedByService(Consts.PREFERENCE_ENDPOINT_BEACON_POST_OOBE, 
+					beaconEndPointPostOOBE, null, null, false);
+		}
+		
+		editor.commit();	
+		
+		if (callbackName != null && !callbackName.equals("")) {
+			
+			try {
+				final String x = callbackName;
+				mWebView.post(new Runnable() {
+					@Override
+					public void run() {
+						mWebView.loadUrl("javascript:" + x + "();");
+						
+					}
+					
+				});
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+	}//#saveDataToBeUsedByService
+
+	
+	/**
+	 * Put a string key-value pair into preferences.xml.
+	 * 
+	 * @param key
+	 * @param val
+	 */
+	@JavascriptInterface
+	public void saveDataIntoPreferences(String key, String val) {
+		SharedPreferences settings = mContext.getSharedPreferences(Consts.PREFERENCES, 0);
+		SharedPreferences.Editor editor = settings.edit();
+		editor.putString(key, val);
+		editor.commit();
+		
+	}
+	
+	/**
+	 * Tells the Android platform that the Home and Launcher activity should be disabled. 
+	 * 
+	 * @param alsoKillLauncher. If the user gave the consent to register, this parameter should be
+	 * true. False, otherwise.
+	 */
+	@JavascriptInterface
+	public void closeApplication(boolean alsoKillLauncher) {
+
+		try {
+			Log.d(Consts.TAG, "IsWait ="+String.valueOf(IsWait));
+			IsOver=Boolean.valueOf(HPoobeApp.getContent(Consts.ISCOLSE));
+			if(!IsOver)
+			{
+				IsOver = alsoKillLauncher;
+				HPoobeApp.setContent(Consts.ISCOLSE,String.valueOf(IsOver));
+			}
+			
+			if (!shouldSkipRegistration&&IsWait ) {
+			//	IsWait=false;
+				return;
+			}
+
+			Activity activity = (Activity) mContext;
+
+			// We will start the HP OOBE Service, which is responsible for sending
+			// the data (if there was an intent to send the data)
+			PackageManager localPackageManager = mContext.getPackageManager();
+			PackageInfo storeAppInfo=null;	
+			
+			try {
+				storeAppInfo = localPackageManager.getPackageInfo(
+						"com.google.android.gms", PackageManager.GET_SERVICES);
+			} catch (NameNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				storeAppInfo = null;
+			}
+			if (isRunningDuringOOBE())
+			{
+				if(mBeaconEndPoint==null)
+				{
+					mBeaconEndPoint = HPoobeApp.getContent(Consts.METRICS);
+					resultDropbox = HPoobeApp.getContent(Consts.DROPBOX);
+					resultLauncher = HPoobeApp.getContent(Consts.HPLAUNCHER);
+				}
+				if(mBeaconEndPoint != null){
+					int f=mBeaconEndPoint.indexOf("&misc");
+					String first=mBeaconEndPoint.substring(0, f);
+					String end=mBeaconEndPoint.substring(f, mBeaconEndPoint.length());
+					first+="&db:"+String.valueOf(resultDropbox)+"&dp:0&hl:"+resultLauncher+"&ot:0";
+					saveDataToBeUsedByService(Consts.PREFERENCE_ENDPOINT_BEACON,
+							first+end, null, null, false);
+				}
+
+			}
+			if(shouldSkipRegistration) //if korea not send any 
+			{
+				iscancle=true;
+				storeAppInfo=null;
+			}
+			
+			if(!iscancle||storeAppInfo!=null)
+			{
+				if (endPoints != null) {
+					ComponentName result = null; 
+					Intent intent = new Intent(mContext, hp.oobe.service.Registration.class);
+					intent.putExtra(Consts.EXTRA_TOUCHPOINT_UI, "yes");
+					
+					result = activity.startService(intent);
+					
+					if (result == null) {
+						Log.d(Consts.TAG, "The HP OOBE Service component is not available in the system.");
+					} else {
+						Log.d(Consts.TAG, "HP OOBE Service component was started.");
+					}
+				}
+			}
+			/*
+			 * Checking if QA informed the app to avoid disabling the app.
+			 */
+			String internalFlag = getPreferenceForInternalTests(Consts.PREFERENCE_AVOID_DISABLING_ACTIVITY);
+			if (internalFlag != null) {
+
+				internalFlag = internalFlag.toLowerCase().trim();
+				
+				if (internalFlag.equals("yes")) {
+				
+					return;
+					
+				} else if (internalFlag.equals("no")) {
+					
+					// do nothing
+					
+				}
+				
+			}
+			
+			// and then close the HP OOBE.
+			disableActivity(activity, hp.oobe.MainActivity.class);
+			IsOver=Boolean.valueOf(HPoobeApp.getContent(Consts.ISCOLSE));
+			if (IsOver || alsoKillLauncher || !isRunningDuringOOBE()) {
+				cancelNotification();
+				disableActivity(activity, hp.oobe.HomeActivity.class);
+				IsOver = false;
+				HPoobeApp.setContent(Consts.ISCOLSE,String.valueOf(IsOver));
+			}
+/*		
+			activity.startActivity(new Intent(Intent.ACTION_MAIN,null)
+				.addCategory(Intent.CATEGORY_HOME)
+				.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED));*/
+			
+			/*
+			 * Save the date/time that the application ran during OOBE. This information is useful to 
+			 * reschedule the hp.oobe.service.Registration in case the user reboots the device so the 
+			 * service can be rescheduled. 
+			 */
+			if (isRunningDuringOOBE()) {
+				
+				String dt = String.valueOf((new Date()).getTime());
+				saveDataToBeUsedByService(Consts.PREFERENCE_FIRST_TIME_APP_RUN, dt, null, null, false);
+				
+			}
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		try {
+			
+			((Activity)mContext).finish();
+			
+		} catch (Exception e) {
+			
+			Log.d(Consts.TAG, "Problem while finishing the app");
+			
+		}
+		
+	}//#closeApplication
+
+	/**
+	 * Get System property from the system. Properties that are retrieved via 'adb shell getprop'
+	 * 
+	 * @param propertyName. Property that wants to be retrieved.
+	 * 
+	 * @return A string with the value for the key. Or null, if the key was not found.
+	 */
+	@JavascriptInterface
+	public String getProperty(String propertyName) {
+		
+		String result = null;
+
+		try {
+			
+			Process process = Runtime.getRuntime().exec(new String[] {"getprop", propertyName});
+			BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+			
+			result = reader.readLine();
+			
+		} catch (IOException e) {
+			
+			Log.d(Consts.TAG, "Problem retrieving the property " + propertyName);
+			e.printStackTrace();
+			
+		}
+		
+		return result;
+		
+	}//#getProperty
+	
+	
+	@JavascriptInterface
+	public void setTitle(final String title) {
+		
+		final TextView text=	(TextView)((Activity)mContext).findViewById(R.id.editText1);
+		
+		Handler myHandler = new Handler();  
+	     myHandler.post(new Runnable(){
+	       public void run(){
+	    		try {
+	    			text.setText(title);
+	    			text.forceLayout();
+	    		} catch (Exception e) {
+	    			// TODO Auto-generated catch block
+	    			e.printStackTrace();
+	    		} 
+	     }
+	     });
+
+
+
+	}//#setTitle
+	
+	
+	@JavascriptInterface
+	public void setSharedPreference(String key, String value) {
+		
+		if (key != null && value != null) {
+
+			SharedPreferences pref = mContext.getSharedPreferences("hp.oobe", Context.MODE_WORLD_READABLE);
+			SharedPreferences.Editor editor = pref.edit();
+			
+			editor.putString(key, value);
+			editor.commit();
+			
+		}
+		
+	}//#setSharedPreference
+	
+	/**
+	 * Get configuration defined by the GBU in /system/vendor/hp/hp.oobe/configs.xml
+	 * 
+	 * @param name. Name of configuration.
+	 * @param countryCode. Two-letter country code.
+	 * @return
+	 * 	String. The content of the configuration. null, if the key (name + countryCode) doens't exist.
+	 */
+	@JavascriptInterface
+	public String getConfigurationDefinedByGBU(String name, String countryCode) {
+		
+		String contentOfFile = openFile(Consts.FILE_FULL_PATH_CONFIGS),
+				content = null;
+		
+		
+		if (contentOfFile != null) {
+			
+			try {
+				
+				DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+				InputSource is = new InputSource();
+				
+				is.setCharacterStream(new StringReader(contentOfFile));
+				
+				Document doc = db.parse(is);
+				
+				NodeList list = doc.getElementsByTagName("config");
+				NamedNodeMap attributes = null;
+				
+				for(int count=0,len=list.getLength();count < len;count++) {
+					
+					attributes = list.item(count).getAttributes();
+					
+					if (attributes.getNamedItem("name").getTextContent().equalsIgnoreCase(name) && 
+							attributes.getNamedItem("country").getTextContent().equalsIgnoreCase(countryCode)) {
+						
+						content = attributes.getNamedItem("action").getNodeValue();
+						break;
+						
+					}
+					
+				}
+				
+			} catch (ParserConfigurationException e) {
+				
+				Log.d(Consts.TAG, "Problem while trying to parse the configuration file fro GBU.");
+				e.printStackTrace();
+				
+			} catch(Exception e) {
+				
+				Log.d(Consts.TAG, "Problem while trying to access the configuration file fro GBU.");
+				e.printStackTrace();
+				
+			}
+			
+		}
+		
+		return content;
+		
+	}//#getConfigurationDefinedByGBU
+	
+	/**
+	 * Gets a count that indicates how many times the App run (OOBE and Launcher). 0 indicates that the 
+	 * app is running during OOBE.
+	 * 
+	 * @return Integer indicating how many times the application ran.
+	 */
+	@JavascriptInterface
+	public int getCurrentRun() {
+		
+		SharedPreferences preferences = mContext.getSharedPreferences(Consts.PREFERENCES, 0);
+		int currentRun = preferences.getInt(Consts.PREFERENCE_HOW_MANY_TIMES_RAN, -1);
+		
+		return currentRun;
+		
+	}//#getCurrentRun
+	
+	/**
+	 * Helper method to allow testers to override the IP that will be used in the geo location
+	 * 
+	 * @param useIPv4. Always true (legacy code).
+	 * 
+	 * @return String. The IP address specified in the shared_prefs/Preferences.xml. Empty string 
+	 * is returned if the key was not found.
+	 */
+	@JavascriptInterface
+	public String getIpAddressFromPreferences(boolean useIPv4)
+	{
+		String ipAddress = "";
+		settings = mContext.getSharedPreferences(Consts.PREFERENCES, 0);
+		
+		if (settings != null)
+		{
+			ipAddress = settings.getString("ip", "");
+		}
+		
+		return ipAddress;
+	}
+	
+	@JavascriptInterface
+	public boolean isCarrierIQInstalled() {
+		
+		boolean result = false;
+		
+		String internalFlag = getPreferenceForInternalTests(Consts.PREFERENCE_CARRIERIQ_INSTALLED);
+		
+		if (internalFlag != null) {
+			
+			Log.d(Consts.TAG, Consts.PREFERENCE_CARRIERIQ_INSTALLED + " flag was set in the Preferences.xml");
+			
+			if (internalFlag.toLowerCase().equals("yes")) {
+				
+				result = true;
+				
+			} else if (internalFlag.toLowerCase().equals("no")) {
+				
+				result = false;
+				
+			}
+			
+		} else {
+		
+			if (carrierIQ != null) {
+				
+				result = carrierIQ.isInstalled();
+				
+			}
+		
+		}
+		
+		Log.d(Consts.TAG, "CarrierIQ installed? " + result);
+		
+		return result;
+		
+	}
+	
+	@JavascriptInterface
+	public void sendMessageToCarrierIQ(String userSelection) {
+		
+		if (carrierIQ != null) {
+			
+			carrierIQ.sendMessage(userSelection);
+			
+		}
+		
+	}
+	
+	@JavascriptInterface
+	public void cancelNotification() {
+		
+		RegistrationNotificationManager nManager = new RegistrationNotificationManager(mContext);
+		nManager.cancelNotification();
+		
+	}
+	
+	/**
+	 * Get the locale code (e.g. en-US). Prior to the kitkat (4.4) the application was relying 
+	 * on the browser's global object to get this code. But on Android 4.4 that value doesn't 
+	 * get updated when the user changes the language of the system.
+	 * 
+	 * @return
+	 * 	Locale code. 
+	 */
+	@JavascriptInterface
+	public String getLocale() {
+		
+		Locale current = mContext.getResources().getConfiguration().locale;
+		String languageCode = current.getLanguage();
+		String countryCode = current.getCountry();
+		
+		/*
+		 * Java layer and weblayer use different country code for a few languages. We replace 
+		 * with the code that the weblayer understands.
+		 */
+		if (languageCode.equals("iw")) {
+			
+			languageCode = "he";
+			
+		} else if (languageCode.equals("in")) {
+			
+			languageCode = "id";
+			
+		}
+		
+		return (languageCode + "-" + countryCode);
+		
+	}//#getLocale
+	
+	/**
+	* Helper function that generates the hash code passed to the geo location service. 
+	*  
+	* @param The IP address that will be used in the hash.
+	* 
+	* @return HASHCODE (IP + Secret)
+	*/
+	@JavascriptInterface
+	public static String encryptToHexString(String ip) throws NoSuchAlgorithmException 
+	{
+		
+		  String sourceDigest = ip + "WSTAXOOBEGEOLOCATION";
+		
+	      byte[] destDigest = null;
+	      // encryption
+	      MessageDigest dig = MessageDigest.getInstance("MD5");
+	      dig.reset();
+	      destDigest = dig.digest(sourceDigest.trim().getBytes());
+	     
+	      // parse to Hex String
+	        StringBuffer destDigestStr = new StringBuffer(); 
+	        for (int i = 0; i < destDigest.length; ++i) { 
+	          destDigestStr.append(Integer.toHexString((destDigest[i] & 0xFF) | 0x100).substring(1, 3)); 
+	        } 
+	        
+	      return destDigestStr.toString();
+	      
+	}//#encryptTOHexString
+	
+	@JavascriptInterface
+	public String getExternalIPHash() {
+		
+		return hp.oobe.utilities.MD5Util.hmacSign("HPANDROID!", "Eipd@Autumn");
+		
+	}//#getExternalIPHash
+	
+	
+	/**
+	 * Retrieves a date that possibly is the born on date, but the date coming from the OTA server 
+	 * (which could be the same as this one) will be the real born on date. This one is just a guess 
+	 * when we do a Product registration at the OTA server.
+	 *    
+	 * @param Indicates if the return should be milliseconds (true). Or as MM/dd/yyyy hh:mm:ss (false)
+	 * 	
+	 *    
+	 * @return
+	 * 	Date in milliseconds.
+	 */
+	@JavascriptInterface
+	public String getSuggestedBornOnDate(boolean inMills) {
+		
+		long result = 0;
+		String firstBoot = getProperty("ro.runtime.firstboot");
+
+		if (firstBoot != null && !firstBoot.equals("")) {
+			
+			result = Long.parseLong(firstBoot);
+			
+		} else {
+			
+			result = (new Date()).getTime();
+			
+			Log.d(Consts.TAG, "The firstboot property was not used to suggest a born on date.");
+		
+		}
+		
+		String dateAsString = null;
+
+		if (inMills == false) {
+		
+			Date date = new Date(result);
+			dateAsString = (new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ", Locale.ENGLISH)).format(date);
+		} else {
+			
+			dateAsString = String.valueOf(result);
+			
+		}
+		
+		return dateAsString;
+		
+	}//#getSuggestedBornOnDate
+
+	@JavascriptInterface
+	public boolean getCarrierIQState() {
+	
+		CarrierIQ cIQ = new CarrierIQ(mContext);
+		
+		cIQ.sendMessageToFindState();
+		
+		return CarrierIQ.currentState;
+		
+	}//#getCarrierIQState
+	
+	@JavascriptInterface
+	public String getOTASecret() {
+		
+		return Consts.OTA_SECRET;
+		
+	}//#getOTASecret
+	
+	@SuppressWarnings("deprecation")
+	@JavascriptInterface
+	public String getDefaultOrientation() {
+		String result = "";
+		int rotation = 0, width = 0, height = 0;
+		final String LANDSCAPE = "landscape";
+		final String PORTRAIT = "portrait";
+		
+		Display display = ((Activity)mContext).getWindowManager().getDefaultDisplay();
+		rotation = display.getRotation();
+		width = display.getWidth();
+		height = display.getHeight();
+		
+		if ((rotation == 0 || rotation == 2) && width > height) {
+			
+			result = LANDSCAPE;
+			
+		} else if ((rotation == 0 || rotation == 2) && width < height) {
+			
+			result = PORTRAIT;
+			
+		} else if ((rotation == 1 || rotation == 3) && width < height) {
+			
+			result = LANDSCAPE;
+			
+		} else {
+			
+			result = PORTRAIT;
+			
+		}
+		
+		return result;
+	}//#getDefaultOrientation
+	
+	@JavascriptInterface
+	public int getCurrentOrientation() {
+		
+		Display display = ((Activity)mContext).getWindowManager().getDefaultDisplay();
+		
+		return display.getRotation();
+		
+	}//#getDefaultOrientation
+	
+	@JavascriptInterface
+	public void setShouldSkipRegistration(boolean is) {
+		shouldSkipRegistration = is;
+	}//#getDefaultOrientation
+	private void setCancle(Boolean is)
+	{		
+		iscancle = is;
+	}
+	public void addView(WebView w)
+	{		
+		mWebView = w;
+	}
+	public void closeInputKeyboard() {
+		final Activity activity = (Activity)mContext;
+		InputMethodManager mInputMethodManager;
+		mInputMethodManager = (InputMethodManager) activity
+				.getSystemService(Context.INPUT_METHOD_SERVICE);
+		if (mInputMethodManager != null && activity.getCurrentFocus() != null) {
+			mInputMethodManager.hideSoftInputFromWindow(activity
+					.getCurrentFocus().getWindowToken(),
+					InputMethodManager.HIDE_NOT_ALWAYS);
+		}
+
+
+	}
+	
+
+
+	public void dialogCta(Bundle savedInstanceState,final RequestCallback callback)
+	{
+		final Activity activity = (Activity)mContext;
+		final Boolean isrunoobe=isRunningDuringOOBE();
+        int labelForDecline_ = isrunoobe ? 
+                R.string.skip :
+                R.string.neverregister;
+        
+       
+		new AlertDialog.Builder(mContext,AlertDialog.THEME_HOLO_DARK)
+		.setCancelable(false)
+		.setMessage(R.string.consentnetwork
+				)
+		.setNegativeButton(labelForDecline_, new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				try {
+					setCancle(true);
+					if(isrunoobe)
+					{
+						WebView webview1 = new WebView(mContext);;
+						activity.setContentView(R.layout.cta); 
+						webview1.loadUrl("file:///android_asset/content/eula/EULA_zh_CN.htm");
+						ScrollView Container = (ScrollView) activity.findViewById(R.id.scrollView1);
+						Container.addView(webview1);
+						
+						Button button = (Button) activity.findViewById(R.id.button1);
+						button.setOnClickListener(new OnClickListener(){
+							@Override
+							public
+							 void onClick(View v) {
+								IsWait = false;
+								closeApplication(false);
+							}
+							
+						} );
+					}
+					else
+					{
+						IsWait = false;
+						closeApplication(true);
+					}
+					callback.requestNotify(false);
+					
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//webviewl.set
+			}
+		}).setPositiveButton(R.string.accept, new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				try {
+					setCancle(false);
+					callback.requestNotify(true);					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}).show();
+	};
+	
+	public abstract class RequestCallback {
+
+	    public RequestCallback() {
+		// TODO Auto-generated constructor stub
+	    }
+
+	    public abstract void requestNotify(Boolean isSucceed);
+	}
+	private boolean appInstalled(String packageName) {
+		boolean appInstalled = false;
+		PackageManager  pm = mContext.getPackageManager();
+		try {
+			pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+			appInstalled = true;
+		} catch (NameNotFoundException e) {
+			appInstalled = false;
+		}
+		return appInstalled;
+		
+	}
+	@JavascriptInterface
+	public void openAviate(String firstName, String lastName,
+			String emailAddress) {
+		if(!IsWait)
+		{
+			return ;
+		}
+
+		if(appInstalled("com.dropbox.android")){
+			try {
+				
+				dropbox_intent = new Intent("com.dropbox.intent.action.STD_OOBE")
+						.putExtra("EXTRA_EMAIL_PREFILL", emailAddress)
+						.putExtra("EXTRA_FIRST_NAME_PREFILL", firstName)
+						.putExtra("EXTRA_LAST_NAME_PREFILL", lastName);
+				
+				Activity activity = (Activity) mContext;
+
+				// activity.startActivity(dropbox_intent);
+				activity.startActivityForResult(dropbox_intent, Consts.TAG_DROPBOX);
+				System.out.println("open drop box !!!");
+			} catch (ActivityNotFoundException e) {
+				System.out.println("no drop box installed");
+				resultDropbox=Consts.TAG_3PART_NONE;
+				
+				setSharedPreference(Consts.DROPBOX,
+						String.valueOf(Consts.TAG_3PART_NONE));
+			//	return;
+			}
+		}else
+		{   
+			resultDropbox=Consts.TAG_3PART_NONE;		    
+			setSharedPreference(Consts.DROPBOX,
+					String.valueOf(Consts.TAG_3PART_NONE));
+		}
+		HPoobeApp.setContent(Consts.DROPBOX,resultDropbox);
+		
+		if(dropbox_intent==null)
+		{
+			IsWait = false;
+			Log.d(Consts.TAG, "no dropbox closeApplication launcher HP");
+			
+			try {
+				Intent intent = mContext.getPackageManager()
+						.getLaunchIntentForPackage(
+								"com.hp.android.launcher.hplauncher");
+				if (intent != null) {
+					mContext.startActivity(intent);
+					resultLauncher="0";
+					
+					setSharedPreference(Consts.HPLAUNCHER,
+							String.valueOf(0));
+				}
+				else
+				{
+					resultLauncher=Consts.TAG_3PART_NONE;
+					setSharedPreference(Consts.HPLAUNCHER,
+							String.valueOf(Consts.TAG_3PART_NONE));
+				}
+			} catch (Exception e) { // TODO Auto-generated catch block
+				resultLauncher=Consts.TAG_3PART_NONE;
+				setSharedPreference(Consts.HPLAUNCHER,
+						String.valueOf(Consts.TAG_3PART_NONE));			
+				System.out
+						.println("no com.hp.android.launcher.hplauncher installed");
+				e.printStackTrace();
+			}
+			HPoobeApp.setContent(Consts.HPLAUNCHER,resultLauncher);
+			
+			closeApplication(false);
+		}
+		
+
+		 
+	}
+	class ProfileTask extends AsyncTask<Void, Void, Void> {
+	    private WebView webview;
+	    private Activity activity;
+	    private String callback;
+
+	    public ProfileTask(Activity activity, WebView webview, String callback) {
+	        this.webview = webview;
+	        this.activity = activity;
+	        this.callback = callback;
+	    }
+
+	    protected Void doInBackground(Void... params) {
+	        return null;
+	    }
+
+	    protected void onPostExecute(Void result) {
+	    	StringBuilder json = new StringBuilder();
+	    	String googleAccount = "", displayName = "";
+	    	
+	    	try {
+		    	// Getting the e-mail address.
+		    	AccountManager manager = (AccountManager)this.activity.getSystemService(this.activity.ACCOUNT_SERVICE);
+				Account[] accounts = manager.getAccountsByType("com.google");
+				
+				if (accounts != null && accounts.length != 0) {
+					googleAccount = accounts[0].name;
+				}
+		    	
+				// Getting the full name (Last Name, First Name)
+		    	Cursor c = this.activity.getContentResolver()
+		    			.query(ContactsContract.Profile.CONTENT_URI, null, null, null, null);
+				int count = c.getCount();
+				boolean b = c.moveToFirst();
+				int position = c.getPosition();
+				
+				if (count == 1 && position == 0) {
+		    	        displayName = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME_ALTERNATIVE));
+				}
+				
+				json.append("{");
+					json.append("\"displayName\":" + "\"" + displayName + "\",");
+					json.append("\"email\":" + "\"" + googleAccount + "\"");
+				json.append("}");
+				
+				// Making the callback to the Web layer
+				String internalFlag = getPreferenceForInternalTests(Consts.PREFERENCE_PREVENT_PREFILL);
+				internalFlag = (internalFlag != null ? internalFlag.toLowerCase().trim() : "");
+				
+				if (internalFlag.equals("yes")) {
+					
+					if (this.callback != null && !this.callback.equals("")) {
+						
+						final String x = this.callback;
+						mWebView.post(new Runnable() {
+							@Override
+							public void run() {
+								mWebView.loadUrl("javascript:" + x + "();");								
+							}
+							
+						});
+						//this.webview.loadUrl("javascript:" + this.callback + "({});");
+						
+					}
+					
+				} else {
+					
+					if (this.callback != null && !this.callback.equals("")) {
+						
+						final String x = this.callback ;
+						final StringBuilder jsonx=json;
+					
+						mWebView.post(new Runnable() {
+							@Override
+							public void run() {
+								mWebView.loadUrl("javascript:" + x + "(" + jsonx.toString() + ");");								
+							}
+							
+						});
+						//this.webview.loadUrl("javascript:" + this.callback + "(" + json.toString() + ");");
+					}
+					
+				}
+				
+				c.close();
+	    	} catch(Exception e) {
+	    		
+	    		/*
+	    		 * QA can reproduce a problem that DEV can't. The problem seems to be originated from one of 
+	    		 * the calls above. If a problem happened, one of the critical callback to make the application ready
+	    		 * would never happen. Thus, the app could become not useful. The callback below at least guarantee that
+	    		 * the flow continues. 
+	    		 */
+	    		if (this.callback != null && !this.callback.equals("")) {
+					
+				//	this.webview.loadUrl("javascript:" + this.callback + "({});");
+					final String x = this.callback ;
+					mWebView.post(new Runnable() {
+						@Override
+						public void run() {
+							mWebView.loadUrl("javascript:" + x+ "({});");
+							
+						}
+						
+					});
+				}
+	    	}//#catch Exception
+			
+	    }
+	}  
+	
+}
+
+ 

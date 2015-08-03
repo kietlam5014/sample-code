@@ -1,0 +1,66 @@
+/*
+ * @depends
+ *	hp.registration.Properties
+ */
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.useragent = hp.registration.useragent || {};
+
+hp.registration.useragent.RegistrationInfo = function() {
+
+	var callback = function() {};
+
+	function getFirstName(inFullName) {
+        
+        inFullName = inFullName || '';
+        
+		var array_ = inFullName.split(","),
+			result_ = '';
+
+		result_ = (array_[1] ? array_[1].trim() : '');
+
+		return result_;
+        
+	};//#getFirstName
+
+	function getLastName(inFullName) {
+        
+        inFullName = inFullName || '';
+        
+		var array_ = inFullName.split(","),
+			result_ = '';
+
+		result_ = (array_[0] ? array_[0].trim() : '');
+
+		return result_;
+        
+	};//#getLastName
+
+	this.getInfoAsync = function(inContainer) {
+
+		callback = inContainer['callback'];
+
+		registrationAndroid.getUserInfo(
+			'hp.registration.useragent.RegistrationInfo.callbackUserProfile');
+
+		return null;
+	};//#hp.registration.useragent.RegistrationInfo.getInfoAsync
+
+	this.callbackUserProfile = function(inData) {
+		
+		inData.firstName = getFirstName(inData.displayName);
+		inData.lastName = getLastName(inData.displayName);
+		inData.fullName = (inData.firstName + ' ' + inData.lastName).trim();
+		
+		callback(inData);
+		
+	};//#hp.registration.useragent.RegistrationInfo.callbackUserProfile
+    
+    this.getPreferenceForInternalTests = function(inKey) {
+        
+        return registrationAndroid.getPreferenceForInternalTests(inKey);
+        
+    };//#hp.registration.useragent.RegistrationInfo.getPreferenceForInternalTests
+    
+	return this;
+}.apply({}, null);//#hp.registration.useragent.RegistrationInfo

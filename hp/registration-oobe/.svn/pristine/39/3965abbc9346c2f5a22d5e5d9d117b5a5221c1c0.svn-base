@@ -1,0 +1,1701 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Gulim;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Microsoft JhengHei";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@Microsoft JhengHei";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Gulim";
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:13.5pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:24.0pt'><b><span
+style='font-size:24.0pt;font-family:"MS Mincho"'>&#31169;&#38577;&#32882;</span></b><b><span
+style='font-size:24.0pt;font-family:"MS Gothic"'>&#26126;</span></b></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>HP </span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#23562;&#37325;&#24744;&#30340;&#31169;&#38577;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#27402;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;&#20854;&#23376;&#20844;&#21496;&#23562;&#37325;&#24744;&#30340;&#31169;&#38577;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26412;&#12300;&#31169;&#38577;&#32882;&#26126;&#12301;&#26088;&#22312;&#21578;&#30693;&#24744;&#65292;&#25105;&#20497;&#30340;&#31169;&#38577;&#20445;&#35703;&#23526;&#21209;&#12289;&#23565;&#26044;&#21253;&#25324;&#26377;&#38364;&#24744;&#20197;&#21450;&#24744;&#30340;&#32178;&#32097;&#27963;&#21205;&#36039;&#35338;&#30340;&#33936;&#38598;&#24744;&#21487;&#20197;&#20570;&#20986;&#30340;&#36984;&#25799;&#65292;&#20197;&#21450;&#36889;&#20123;&#36039;&#35338;&#23559;&#22914;&#20309;&#20351;&#29992;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP.com </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#39318;&#38913;&#21450;&#25152;&#26377;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#38913;&#19979;&#26041;&#22343;&#25552;&#20379;&#27492;&#32882;&#26126;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26159;&#21271;&#32654;&#21830;&#35709;&#20419;&#36914;&#23616;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (Council of Better
+Business Bureau)</span><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#12300;&#32178;&#32097;&#31169;&#38577;&#35336;&#21123;&#12301;&#30340;&#30332;&#36215;&#32773;&#20043;&#19968;&#65292;&#20006;&#28858;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BBB </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35469;&#21487;&#30340;&#20225;&#26989;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#31169;&#38577;&#20445;&#35703;&#23526;&#21209;&#31526;&#21512;&#12300;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>BBB </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21830;&#26989;&#24931;&#20363;&#23432;&#21063;&#12301;&#65292;&#20006;&#19988;&#25105;&#20497;&#23565;&#33021;&#27161;&#31034;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BBB </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#27161;&#31456;&#28858;&#27054;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#21046;&#35330;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#31169;&#38577;&#25919;&#31574;&#21644;&#27161;&#28310;&#30340;&#36942;&#31243;&#20013;&#65292;&#25105;&#20497;&#23562;&#37325;&#20006;&#32771;&#24942;&#19990;&#30028;&#21508;&#22320;&#30340;&#25152;&#26377;&#37325;&#22823;&#21407;&#21063;&#21644;&#26550;&#27083;&#65292;&#21253;&#25324;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> OECD</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12300;&#31169;&#38577;&#20445;&#35703;&#21450;&#36328;&#22283;&#27969;&#21205;&#28310;&#21063;&#12301;&#12289;&#27472;&#30431;&#25351;&#20196;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 95/46/EC</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12289;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>APEC</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12300;&#31169;&#38577;&#26550;&#27083;&#12301;&#20197;&#21450;&#12300;&#39340;&#24503;&#37324;&#22283;&#38555;&#31169;&#38577;&#27161;&#28310;&#27770;&#35696;&#12301;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#26681;&#25818;&#32654;&#22283;&#21830;&#21209;&#37096;&#23565;&#24478;&#27472;&#30431;&#25104;&#21729;&#22283;&#21644;&#29790;&#22763;&#33936;&#38598;&#12289;&#20351;&#29992;&#21450;&#20445;&#30041;&#20491;&#20154;&#36039;&#26009;&#25152;&#20570;&#30340;&#35215;&#23450;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36981;&#23432;&#12300;&#32654;&#22283;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> – </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#27472;&#30431;&#23433;&#20840;&#28207;&#12301;&#26550;&#27083;&#21450;&#12300;&#32654;&#22283;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> - </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#29790;&#22763;&#23433;&#20840;&#28207;&#12301;&#26550;&#27083;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24050;&#35657;&#26126;&#20854;&#36981;&#24490;&#12300;&#23433;&#20840;&#28207;&#31169;&#38577;&#28310;&#21063;&#12301;&#20013;&#38364;&#26044;&#36890;&#30693;&#12289;&#36984;&#25799;&#12289;&#36681;&#20986;&#12289;&#23433;&#20840;&#12289;&#36039;&#26009;&#23436;&#25972;&#24615;&#12289;&#23384;&#21462;&#21450;&#23526;&#26045;&#20043;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#20839;&#23481;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#35201;&#30637;&#35299;&#12300;&#23433;&#20840;&#28207;&#12301;&#35336;&#21123;&#30340;&#35443;&#32048;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#35498;&#26126;&#20006;&#27298;&#35222;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#35469;&#35657;&#65292;&#35531;&#36896;&#35370;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+padding:0in'>http://www.export.gov/safeharbor/</span><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span><span style='font-size:
+12.0pt;font-family:"MS Gothic"'>&#12290;</span><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'> HP </span><span style='font-size:12.0pt;
+font-family:"MS Gothic"'>&#36996;&#21046;&#35330;&#20102;&#19968;&#22871;&#20855;&#26377;&#32004;&#26463;&#21147;&#30340;&#20844;&#21496;&#35215;&#21063;&#65288;&#31777;&#31281;&#12300;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>BCR</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12301;&#65289;&#65292;&#27492;&#22871;&#35215;&#21063;&#32147;&#27472;&#27954;&#32147;&#28639;&#21312;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (EEA) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;&#29790;&#22763;&#30340;&#22823;&#37096;&#20998;&#36039;&#26009;&#20445;&#35703;&#31649;&#29702;&#27231;&#27083;&#30340;&#35469;&#35657;&#65292;&#26044;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 2011 </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24180;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 6 </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26376;&#29983;&#25928;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>BCR </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30906;&#20445;&#20219;&#20309;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20840;&#29699;&#23526;&#39636;&#22312;&#34389;&#29702;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> EEA </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20491;&#20154;&#36039;&#26009;&#26178;&#65292;&#23565;&#27492;&#39006;&#36039;&#26009;&#21152;&#20197;&#20805;&#20998;&#20445;&#35703;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#28858;&#36981;&#23432;&#12300;&#23433;&#20840;&#28207;&#21407;&#21063;&#12301;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BCR </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35215;&#23450;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25215;&#35582;&#23559;&#26371;&#35299;&#27770;&#38364;&#26044;&#24744;&#20491;&#20154;&#31169;&#38577;&#20197;&#21450;&#25105;&#20497;&#33936;&#38598;&#25110;&#20351;&#29992;&#24744;&#20491;&#20154;&#36039;&#35338;&#26041;&#38754;&#30340;&#30003;&#35380;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20134;&#24050;&#25215;&#35582;&#20381;&#29031;&#12300;&#23433;&#20840;&#28207;&#21407;&#21063;&#12301;&#65292;&#23559;&#27472;&#30431;&#20844;&#27665;&#25110;&#23621;&#27665;&#23565;&#36681;&#36865;&#20854;&#20491;&#20154;&#36039;&#26009;&#20043;&#30456;&#38364;&#26410;&#32080;&#26696;&#31169;&#38577;&#30003;&#35380;&#65292;&#36681;&#33267;&#19968;&#29544;&#31435;&#29229;&#31471;&#35299;&#27770;&#27231;&#21046;&#65292;&#21363;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BBB </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#27472;&#30431;&#23433;&#20840;&#28207;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30001;&#21830;&#35709;&#20419;&#36914;&#23616;&#36000;&#36012;&#36939;&#20316;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>)</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;&#27794;&#26377;&#25353;&#26178;&#25910;&#21040;&#38364;&#26044;&#24744;&#30340;&#30003;&#35380;&#20043;&#30906;&#35469;&#36890;&#30693;&#65292;&#25110;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26410;&#20196;&#24744;&#28415;&#24847;&#22320;&#35299;&#27770;&#30003;&#35380;&#65292;&#24744;&#21487;&#20197;&#30331;&#20837;&#20197;&#19979;&#32178;&#22336;&#33287;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> BBB </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#27472;&#30431;&#23433;&#20840;&#28207;&#21462;&#24471;&#32879;&#32097;&#65306;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+padding:0in'>http://www.bbb.org/us/safe-harbor-complaints</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24050;&#21462;&#24471;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> TRUSTe APEC </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#31169;&#38577;&#27402;&#27161;&#35468;&#35469;&#35657;&#65292;&#36889;&#34920;&#26126;&#26412;&#31169;&#38577;&#32882;&#27402;&#26126;&#33287;&#23526;&#26045;&#20570;&#27861;&#32147;&#23529;&#26680;&#31526;&#21512;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> TRUSTe </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35336;&#21123;&#30340;&#35201;&#27714;&#65292;&#25353;&#19968;&#19979;&#36899;&#32080;&#26412;&#31169;&#38577;&#27402;&#32882;&#26126;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> TRUSTe </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#27161;&#35468;&#21450;&#27969;&#21205;&#25033;&#29992;&#31243;&#24335;&#65292;&#21363;&#21487;&#22312;&#39511;&#35657;&#38913;&#38754;&#19978;&#28687;&#35261;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> TRUSTe </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35336;&#21123;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#20839;&#23481;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26412;&#32882;&#26126;&#25152;&#36848;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#31169;&#38577;&#27402;&#23526;&#26045;&#20570;&#27861;&#31526;&#21512;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> APEC </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36328;&#22659;&#31169;&#38577;&#35215;&#21063;&#39636;&#31995;&#65292;&#21253;&#25324;&#20491;&#20154;&#36039;&#35338;&#25910;&#38598;&#21450;&#20351;&#29992;&#30340;&#36879;&#26126;&#24230;&#12289;&#21839;&#36012;&#21046;&#20197;&#21450;&#36984;&#25799;&#24615;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> CBPR </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35469;&#35657;&#20006;&#19981;&#28085;&#33995;&#21487;&#36879;&#36942;&#31532;&#19977;&#26041;&#24179;&#21488;&#19979;&#36617;&#20043;&#36575;&#20214;&#25910;&#38598;&#30340;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26377;&#38364;&#26044;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> APEC </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35469;&#35657;&#26410;&#35299;&#27770;&#30340;&#31169;&#38577;&#27402;&#25110;&#36039;&#26009;&#20351;&#29992;&#21839;&#38988;&#65292;&#32780;&#26412;&#20844;&#21496;&#26410;&#33021;&#20197;&#20196;&#20154;&#28415;&#24847;&#30340;&#26041;&#24335;&#35299;&#27770;&#65292;&#35531;&#32879;&#32097;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>TRUSTe</span>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#36969;&#29992;&#26412;&#12300;&#31169;&#38577;&#32882;&#26126;&#12301;&#30340;&#32178;&#31449;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#20491;&#20154;&#36039;&#35338;&#30340;&#33936;&#38598;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#25105;&#20497;&#22914;&#20309;&#20351;&#29992;&#24744;&#30340;&#36039;&#35338;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#25105;&#20497;&#22914;&#20309;&#20998;&#20139;&#24744;&#30340;&#36039;&#35338;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#20818;&#31461;&#30340;&#31169;&#38577;&#27402;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#24744;&#30340;&#36984;&#25799;&#21450;&#36984;&#25799;&#24744;&#30340;&#31169;&#38577;&#27402;&#20559;&#22909;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#24744;&#30340;&#36039;&#35338;&#30340;&#23384;&#21462;&#27402;&#21450;&#28310;&#30906;&#24615;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#32173;&#35703;&#24744;&#30340;&#36039;&#35338;&#23433;&#20840;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#26412;&#32882;&#26126;&#20043;&#35722;&#26356;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#32879;&#32097;&#25105;&#20497;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#20309;&#20351;&#29992;&#33258;&#21205;&#36039;&#26009;&#33936;&#38598;&#24037;&#20855;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Cookie</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#32593;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+     border:none windowtext 1.0pt;padding:0in'>&#32476;&#20449;&#26631;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#20869;&#23884;&#24335;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'> Web </span><span style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif;
+     border:none windowtext 1.0pt;padding:0in'>&#38142;&#25509;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+     padding:0in'>&#21002;&#30331;&#20110;&#31532;&#19977;&#26041;&#32593;&#31449;&#30340;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'> HP </span><span lang=ZH-CN style='font-size:12.0pt;
+     font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#24191;&#21578;</span><a
+     name=1></a></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>1.&nbsp;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#36969;&#29992;&#26412;&#12300;&#31169;&#38577;&#32882;&#26126;&#12301;&#30340;&#32178;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#31449;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26159;&#19968;&#20491;&#22312;&#19990;&#30028;&#21508;&#22320;&#25793;&#26377;&#27861;&#24459;&#23526;&#39636;&#12289;&#26989;&#21209;&#27969;&#31243;&#12289;&#31649;&#29702;&#26550;&#27083;&#21450;&#25216;&#34899;&#31995;&#32113;&#30340;&#20840;&#29699;&#32068;&#32340;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26412;&#12300;&#31169;&#38577;&#32882;&#26126;&#12301;&#36969;&#29992;&#26044;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;&#20854;&#20840;&#36039;&#23376;&#20844;&#21496;&#25793;&#26377;&#30340;&#25152;&#26377;&#32178;&#31449;&#12289;&#32178;&#22495;&#12289;&#26381;&#21209;&#12289;&#25033;&#29992;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20197;&#19979;&#31777;&#31281;&#12300;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#25110;&#26381;&#21209;&#12301;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>)</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#24799;&#26377;&#37341;&#23565;&#29305;&#23450;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#31243;&#24335;&#12289;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#25110;&#26381;&#21209;&#20043;&#31169;&#38577;&#25919;&#31574;&#25110;&#32882;&#26126;&#26041;&#21487;&#21462;&#20195;&#25110;&#35036;&#20805;&#26412;&#12300;&#31169;&#38577;&#32882;&#26126;&#12301;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#38750;</span></b><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'> HP </span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#30340;&#36899;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#32080;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#28858;&#20102;&#24744;&#30340;&#26041;&#20415;&#21450;&#36039;&#35338;&#21462;&#24471;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#25110;&#26381;&#21209;&#21487;&#33021;&#25552;&#20379;&#31532;&#19977;&#26041;&#25033;&#29992;&#31243;&#24335;&#12289;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#12289;&#26381;&#21209;&#25110;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#30340;&#36899;&#32080;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;&#30331;&#20837;&#27492;&#39006;&#36899;&#32080;&#65292;&#24744;&#23559;&#26371;&#38626;&#38283;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#28961;&#27861;&#25511;&#21046;&#27492;&#39006;&#31532;&#19977;&#26041;&#32178;&#31449;&#21450;&#20854;&#31169;&#38577;&#27402;&#35215;&#31684;&#65292;&#23427;&#20497;&#21487;&#33021;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#35215;&#31684;&#19981;&#21516;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#19981;&#28858;&#31532;&#19977;&#26041;&#32178;&#31449;&#32972;&#26360;&#65292;&#20063;&#19981;&#23565;&#20219;&#20309;&#31532;&#19977;&#26041;&#32178;&#31449;&#25552;&#20379;&#20445;&#35657;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#36984;&#25799;&#25552;&#20379;&#32102;&#31532;&#19977;&#26041;&#32178;&#31449;&#30340;&#20491;&#20154;&#36039;&#26009;&#25110;&#31532;&#19977;&#26041;&#32178;&#31449;&#25152;&#33936;&#38598;&#21040;&#30340;&#24744;&#30340;&#30456;&#38364;&#20491;&#20154;&#36039;&#35338;&#65292;&#30342;&#19981;&#22312;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12300;&#31169;&#38577;&#27402;&#32882;&#26126;&#12301;&#28085;&#33995;&#31684;&#22285;&#20043;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#20839;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24314;&#35696;&#24744;&#22312;&#20801;&#35377;&#20219;&#20309;&#33287;&#24744;&#20114;&#21205;&#20043;&#32178;&#31449;&#33936;&#38598;&#21644;&#20351;&#29992;&#20491;&#20154;&#36039;&#35338;&#21069;&#65292;&#20808;&#27298;&#35222;&#20854;&#31169;&#38577;&#27402;&#25919;&#31574;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#36996;&#23559;&#25552;&#20379;&#31038;&#20132;&#23186;&#39636;&#21151;&#33021;&#65292;&#35731;&#24744;&#21487;&#20197;&#22312;&#31038;&#20132;&#32178;&#32097;&#20013;&#20998;&#20139;&#36039;&#35338;&#65292;&#20006;&#22312;&#21508;&#31278;&#31038;&#20132;&#23186;&#39636;&#32178;&#31449;&#19978;&#33287;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20114;&#21205;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#20351;&#29992;&#36889;&#20123;&#21151;&#33021;&#30340;&#34892;&#28858;&#21487;&#33021;&#26371;&#36896;&#25104;&#33936;&#38598;&#25110;&#20998;&#20139;&#38364;&#26044;&#24744;&#30340;&#36039;&#35338;&#65288;&#35222;&#21151;&#33021;&#32780;&#23450;&#65289;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24314;&#35696;&#24744;&#23529;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#25152;&#24448;&#20358;&#20043;&#31038;&#20132;&#23186;&#39636;&#32178;&#31449;&#19978;&#30340;&#31169;&#38577;&#25919;&#31574;&#21450;&#35373;&#23450;&#65292;&#20197;&#30906;&#20445;&#24744;&#30637;&#35299;&#21487;&#33021;&#32147;&#30001;&#36889;&#39006;&#32178;&#31449;&#33936;&#38598;&#12289;&#20351;&#29992;&#21644;&#20998;&#20139;&#30340;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=2></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>2.&nbsp;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#20491;&#20154;&#36039;&#35338;&#30340;&#33936;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#38598;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26371;&#33936;&#38598;&#12289;&#21295;&#20986;&#21644;&#20351;&#29992;&#24744;&#30340;&#20491;&#20154;&#36039;&#35338;&#65292;&#21521;&#24744;&#25552;&#20379;&#33287;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20114;&#21205;&#30340;&#20491;&#20154;&#21270;&#39636;&#39511;&#65292;&#24478;&#32780;&#26356;&#22909;&#22320;&#31649;&#29702;&#24744;&#33287;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#38364;&#20418;&#21450;&#25552;&#20379;&#26356;&#22909;&#30340;&#26381;&#21209;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20294;&#26159;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26371;&#22312;&#20805;&#20998;&#21578;&#30693;&#21450;&#21462;&#29554;&#24471;&#21516;&#24847;&#30340;&#24773;&#27841;&#19979;&#65292;&#20197;&#21450;&#26044;&#24517;&#35201;&#26178;&#21521;&#36039;&#35338;&#20445;&#35703;&#31649;&#29702;&#27231;&#27083;&#25552;&#20986;&#30003;&#35531;&#24460;&#65292;&#25165;&#33936;&#38598;&#27492;&#39006;&#20491;&#20154;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#26371;&#33936;&#38598;&#20197;&#19979;&#33287;&#24744;&#30456;&#38364;&#30340;&#20491;&#20154;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#35330;&#36092;&#12289;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21855;&#21205;&#25110;&#30331;&#35352;&#29986;&#21697;&#25110;&#26381;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#21209;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#32218;&#19978;&#26381;&#21209;&#30340;&#20491;&#20154;&#36039;&#26009;&#27284;&#24314;&#31435;&#21450;&#29992;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;&#36523;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#20221;&#39511;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#35657;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#36039;&#35338;&#32034;&#21462;&#25110;&#25237;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#35380;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#35330;</span><span style='font-size:12.0pt;
+     font-family:"Gulim",sans-serif'>&#38321;&#29151;&#37559;&#12289;&#26178;&#20107;&#36890;&#35338;&#25110;&#25903;&#25588;&#36039;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#26009;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#21443;&#21152;&#31478;&#36093;&#25110;&#21443;&#33287;&#21839;&#21367;&#35519;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26597;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#30003;&#35531;&#21363;&#26178;&#20449;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#29992;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#30003;&#35531;&#24037;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#20316;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#27963;&#21205;&#35387;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#20874;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#36896;&#35370;&#25110;&#28687;&#35261;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#31449;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#25552;&#20379;&#32102;&#25105;&#20497;&#30340;&#20491;&#20154;&#36039;&#35338;&#21487;&#33021;&#21253;&#25324;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#20491;&#20154;&#21450;&#20844;&#21496;&#32879;&#32097;&#36039;&#35338;&#65292;&#22914;&#22995;&#21517;&#12289;&#22320;&#22336;&#12289;&#38651;&#35441;&#34399;&#30908;&#21644;&#38651;&#23376;&#37109;&#20214;&#22320;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#22336;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#22312;&#26576;&#20123;&#24773;&#27841;&#19979;&#65292;&#24744;&#25152;&#22312;&#26989;&#21209;&#37096;&#38272;&#25110;&#20225;&#26989;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#20839;&#30340;&#25351;&#23450;&#23526;&#39636;&#65288;&#22914;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> IT </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#37096;&#38272;&#30340;&#25104;&#21729;&#65289;&#21487;&#33021;&#26371;&#23559;&#24744;&#30340;&#26989;&#21209;&#32879;&#32097;&#36039;&#26009;&#25552;&#20379;&#32102;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#36001;&#21209;&#36039;&#35338;&#65292;&#22914;&#24744;&#30340;&#20449;&#29992;&#21345;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#31805;&#24115;&#21345;&#34399;&#30908;&#25110;&#20854;&#20182;&#24115;&#21934;&#36039;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#35338;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#25919;&#24220;&#31805;&#30332;&#30340;&#35672;&#21029;&#30908;&#21644;&#34218;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#36039;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#20854;&#20182;&#29305;&#23450;&#36039;&#35338;&#65292;&#22914;&#29992;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> ID </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;&#23494;&#30908;&#12289;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#21151;&#33021;&#12289;&#29986;&#21697;&#21450;&#26381;&#21209;&#20559;&#22909;&#12289;&#20559;&#22909;&#30340;&#32879;&#32097;&#26041;&#24335;&#12289;&#25945;&#32946;&#31243;&#24230;&#21450;&#24037;&#20316;&#32147;&#39511;&#12289;&#24037;&#20316;&#33288;&#36259;&#26041;&#38754;&#30340;&#36039;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#26009;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#22320;&#29702;&#23450;&#20301;&#36039;&#26009;&#65292;&#35576;&#22914;&#35531;&#27714;&#20351;&#29992;&#23450;&#20301;&#26381;&#21209;&#26178;&#30340;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> IP </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#22320;&#22336;&#25110;&#23526;&#38555;&#20301;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#32622;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;&#30003;&#35531;&#21363;&#26178;&#20449;&#29992;&#65292;&#25105;&#20497;&#36996;&#38656;&#35531;&#24744;&#25552;&#20379;&#20854;&#20182;&#20491;&#20154;&#36039;&#35338;&#65292;&#22914;&#34218;&#36039;&#12289;&#25919;&#24220;&#31805;&#30332;&#30340;&#35672;&#21029;&#34399;&#12289;&#37504;&#34892;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36001;&#21209;&#24115;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;&#36039;&#35338;&#21644;&#20854;&#20182;&#36039;&#35338;&#65292;&#20197;&#26680;&#23526;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#30340;&#36523;&#20221;&#20006;&#39511;&#35657;&#24744;&#30340;&#20449;&#35709;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#30340;&#37329;&#34701;&#26381;&#21209;&#25552;&#20379;&#32773;&#23559;&#20197;&#36889;&#20123;&#36039;&#35338;&#20358;&#27770;&#23450;&#26159;&#21542;&#25552;&#39640;&#24744;&#30340;&#20449;&#29992;&#38989;&#24230;&#20197;&#21450;&#25552;&#39640;&#31243;&#24230;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;&#36984;&#25799;&#20351;&#29992;&#25105;&#20497;&#32178;&#31449;&#19978;&#30340;&#12300;&#21578;&#35380;&#25105;&#30340;&#26379;&#21451;&#12301;&#35336;&#21123;&#25110;&#39006;&#20284;&#30340;&#25512;&#20171;&#35336;&#21123;&#65292;&#25105;&#20497;&#23559;&#35426;&#21839;&#24744;&#26379;&#21451;&#30340;&#38651;&#23376;&#37109;&#20214;&#22320;&#22336;&#12289;&#31038;&#20132;&#23186;&#39636;&#25511;&#21046;&#30908;&#12289;&#25163;&#27231;&#34399;&#30908;&#25110;&#20854;&#20182;&#32879;&#32097;&#36039;&#26009;&#65292;&#20197;&#33258;&#21205;&#21521;&#24744;&#30340;&#26379;&#21451;&#23492;&#36865;&#36992;&#35531;&#35338;&#24687;&#65292;&#36992;&#35531;&#20854;&#21152;&#20837;&#35336;&#21123;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#24744;&#22312;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP<br>
+</span><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#19978;&#30340;&#20219;&#20309;&#20844;&#38283;&#35542;&#22727;&#12289;&#31038;&#20132;&#32178;&#32097;&#12289;&#37096;&#33853;&#26684;&#25110;&#20219;&#20309;&#39006;&#20284;&#35542;&#22727;&#65292;&#30332;&#24086;&#12289;&#35413;&#35542;&#12289;&#36879;&#38706;&#33288;&#36259;&#24859;&#22909;&#25110;&#30003;&#35380;&#12289;&#25110;&#20998;&#20139;&#20491;&#20154;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21253;&#25324;&#29031;&#29255;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>)</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#21063;&#35531;&#27880;&#24847;&#65292;&#36889;&#20123;&#35542;&#22727;&#30340;&#20854;&#20182;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;&#23559;&#21487;&#38321;&#35712;&#12289;&#27298;&#35222;&#12289;&#33936;&#38598;&#25110;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#25152;&#25552;&#20132;&#30340;&#20219;&#20309;&#36039;&#35338;&#65292;&#20006;&#21487;&#36879;&#36942;&#36889;&#20123;&#36039;&#35338;&#21521;&#24744;&#23492;&#36865;&#38468;&#26377;&#38750;&#35531;&#27714;&#36039;&#35338;&#30340;&#37109;&#20214;&#25110;&#20986;&#26044;&#24744;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22343;&#28961;&#27861;&#25484;&#25511;&#20043;&#30446;&#30340;&#65292;&#33287;&#24744;&#21462;&#24471;&#32879;&#32097;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#33509;&#36984;&#25799;&#21521;&#36889;&#20123;&#35542;&#22727;&#19978;&#25552;&#20132;&#20491;&#20154;&#36039;&#35338;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#25215;&#25812;&#20219;&#20309;&#36012;&#20219;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#38500;&#20102;&#24744;&#25152;&#25552;&#20379;&#30340;&#36039;&#35338;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20063;&#21487;&#33021;&#22312;&#24744;&#30331;&#20837;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#12289;&#22522;&#26044;&#32178;&#32097;&#30340;&#25033;&#29992;&#31243;&#24335;&#25110;&#30001;&#20854;&#20182;&#20844;&#21496;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12300;&#20195;&#31649;&#12301;&#30340;&#32178;&#31449;&#26178;&#65292;&#36879;&#36942;&#25105;&#20497;&#30340;&#12300;&#33258;&#21205;&#36039;&#26009;&#33936;&#38598;&#24037;&#20855;&#12301;&#33936;&#38598;&#36039;&#35338;&#65292;&#36889;&#20123;&#24037;&#20855;&#21253;&#25324;&#32178;&#32097;&#20449;&#27161;&#12289;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#20839;&#23884;&#24335;&#32178;&#32097;&#36899;&#32080;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36889;&#20123;&#24037;&#20855;&#33936;&#38598;&#30001;&#24744;&#30340;&#28687;&#35261;&#22120;&#20659;&#36865;&#21040;&#32178;&#31449;&#30340;&#26576;&#20123;&#27969;&#37327;&#36039;&#35338;&#65292;&#22914;&#24744;&#30340;&#28687;&#35261;&#22120;&#39006;&#22411;&#21644;&#35486;&#35328;&#12289;&#23384;&#21462;&#26178;&#38291;&#12289;&#20197;&#21450;&#24744;&#24478;&#21738;&#20491;&#32178;&#31449;&#36899;&#32080;&#33267;&#35442;&#32178;&#31449;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#23427;&#20497;&#20063;&#21487;&#33021;&#33936;&#38598;&#26377;&#38364;&#24744;&#30340;&#32178;&#38555;&#32178;&#32097;&#36890;&#35338;&#21332;&#23450;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (IP) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20301;&#22336;&#12289;&#35037;&#32622;&#21807;&#19968;&#35672;&#21029;&#30908;&#12289;&#40670;&#36984;&#27969;&#21521;&#34892;&#28858;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21363;&#24744;&#28687;&#35261;&#30340;&#32178;&#38913;&#12289;&#24744;&#40670;&#36984;&#30340;&#36899;&#32080;&#21450;&#25505;&#21462;&#30340;&#33287;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#25110;&#12300;&#20195;&#31649;&#12301;&#32178;&#31449;&#26377;&#38364;&#30340;&#20854;&#20182;&#34892;&#28858;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#36039;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20063;&#21487;&#33021;&#25226;&#36889;&#20123;&#33258;&#21205;&#36039;&#26009;&#33936;&#38598;&#24037;&#20855;&#20013;&#30340;&#19968;&#20123;&#24037;&#20855;&#33287;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#23492;&#20986;&#30340;&#29305;&#23450;&#38651;&#23376;&#37109;&#20214;&#21450;&#35338;&#24687;&#36899;&#32080;&#65292;&#20197;&#22312;&#24744;&#25171;&#38283;&#38651;&#23376;&#37109;&#20214;&#25110;&#40670;&#36984;&#38651;&#23376;&#37109;&#20214;&#20013;&#30340;&#36899;&#32080;&#26178;&#20351;&#29992;&#36889;&#20123;&#24037;&#20855;&#33936;&#38598;&#36039;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#38656;&#30637;&#35299;&#26356;&#22810;&#36039;&#35338;&#65292;<span
+style='border:none windowtext 1.0pt;padding:0in'>&#35531;&#21443;</span></span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif;border:none windowtext 1.0pt;
+padding:0in'>&#38321;</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+border:none windowtext 1.0pt;padding:0in'> HP </span><span style='font-size:
+12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;padding:0in'>&#22914;&#20309;&#20351;&#29992;&#33258;&#21205;&#36039;&#26009;&#33936;&#38598;&#24037;&#20855;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20063;&#24478;&#20854;&#35469;&#28858;&#21487;&#20449;&#30340;&#20844;&#38283;&#25110;&#21830;&#26989;&#20358;&#28304;&#34389;&#33936;&#38598;&#36039;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#27492;&#39006;&#36039;&#35338;&#21487;&#33021;&#21253;&#25324;&#24744;&#30340;&#22995;&#21517;&#12289;&#22320;&#22336;&#12289;&#38651;&#23376;&#37109;&#20214;&#22320;&#22336;&#12289;&#20559;&#22909;&#12289;&#33288;&#36259;&#24859;&#22909;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;&#21475;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20491;&#20154;&#36039;&#26009;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30001;&#20844;&#38283;&#25110;&#21830;&#26989;&#20358;&#28304;&#33936;&#38598;&#21040;&#30340;&#36039;&#35338;&#21487;&#33021;&#33287;&#20854;&#22312;&#24744;&#28687;&#35261;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#26178;&#25152;&#33936;&#38598;&#21040;&#30340;&#36039;&#35338;&#32080;&#21512;&#20351;&#29992;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20363;&#22914;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#27604;&#36611;&#30001;&#21830;&#26989;&#20358;&#28304;&#21462;&#24471;&#30340;&#22320;&#29702;&#36039;&#35338;&#33287;&#33258;&#21205;&#36039;&#26009;&#33936;&#38598;&#24037;&#20855;&#25152;&#21462;&#24471;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> IP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20301;&#22336;&#65292;&#20197;&#25512;&#30693;&#24744;&#23621;&#20303;&#30340;&#22823;&#33268;&#22320;&#29702;&#21312;&#22495;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#24517;&#35201;&#24773;&#27841;&#19979;&#65292;&#20570;&#28858;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21453;&#36010;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27745;&#35336;&#21123;&#30340;&#19968;&#37096;&#20998;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#20351;&#29992;&#24744;&#25110;&#24744;&#30340;&#20721;&#20027;&#25552;&#20379;&#30340;&#36039;&#26009;&#20197;&#21450;&#24478;&#20844;&#20849;&#12289;&#20854;&#20182;&#32218;&#19978;&#21450;&#38626;&#32218;&#20358;&#28304;&#29554;&#24471;&#30340;&#36039;&#26009;&#36914;&#34892;&#38364;&#26044;&#26989;&#21209;&#20358;&#24448;&#30340;&#23560;&#26989;&#35519;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26597;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=3></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>3.&nbsp;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#22914;&#20309;&#20351;&#29992;&#24744;&#30340;&#36039;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#35338;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25152;&#33936;&#38598;&#29992;&#20358;&#30637;&#35299;&#24744;&#30340;&#38656;&#27714;&#33287;&#33288;&#36259;&#30340;&#36039;&#35338;&#65292;&#21487;&#24171;&#21161;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#22987;&#32066;&#22914;&#19968;&#30340;&#20491;&#20154;&#21270;&#39636;&#39511;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20363;&#22914;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#20351;&#29992;&#24744;&#30340;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#31649;&#29702;&#25105;&#20497;&#33287;&#24744;&#30340;&#38364;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#20418;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#21332;&#21161;&#24744;&#23436;&#25104;&#20132;&#26131;&#25110;&#19979;&#35330;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#21934;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#38450;&#31684;&#21450;&#27298;&#28204;&#23433;&#20840;&#23041;&#33029;&#12289;&#35408;&#27450;&#25110;&#20854;&#20182;&#24801;&#24847;&#27963;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#21205;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#33287;&#24744;&#23601;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#21450;&#26381;&#21209;&#36914;&#34892;&#28317;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#36890;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#25552;&#20379;&#26381;&#21209;&#21450;&#25903;&#25588;&#65292;&#20006;&#21152;&#20197;&#25913;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#36914;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#26356;&#26032;&#33287;&#24744;&#26377;&#38364;&#30340;&#26032;&#26381;&#21209;&#21450;&#20778;&#24800;&#35338;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#24687;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#25552;&#20379;&#37341;&#23565;&#24744;&#30340;&#20491;&#20154;&#21270;&#20778;&#24800;&#26041;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#26696;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#36984;&#25799;&#33287;&#24744;&#28317;&#36890;&#30340;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#20839;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#23481;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#20491;&#20154;&#21270;&#26576;&#20123;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#31449;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#35413;&#37327;&#29151;&#37559;&#27963;&#21205;&#12289;&#24291;&#21578;&#21450;&#20854;&#20182;&#20844;&#21496;&#20195;&#34920;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12300;&#20195;&#31649;&#12301;&#32178;&#31449;&#30340;&#32318;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#25928;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#35731;&#24744;&#24471;&#20197;&#21443;&#33287;&#31478;&#36093;&#33287;&#21839;&#21367;&#35519;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26597;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#23559;&#28858;&#24744;&#25552;&#20379;&#27231;&#26371;&#65292;&#37341;&#23565;&#25105;&#20497;&#25152;&#30332;&#36865;&#20043;&#29151;&#37559;&#35338;&#24687;&#36984;&#25799;&#24744;&#30340;&#31169;&#38577;&#20559;&#22909;&#65288;&#35531;&#27298;&#35222;&#24744;&#30340;&#36984;&#25799;&#20197;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+padding:0in'>&#21450;&#36984;&#25799;&#24744;&#30340;&#31169;&#38577;&#20559;&#22909;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65289;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#20449;&#29992;&#21345;&#36039;&#35338;&#20677;&#36969;&#29992;&#26044;&#20184;&#27454;&#34389;&#29702;&#21450;&#38928;&#38450;&#35408;&#27450;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#30340;&#37329;&#34701;&#26381;&#21209;&#25552;&#20379;&#32773;&#25110;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#26371;&#23559;&#34218;&#36039;&#36039;&#35338;&#12289;&#25919;&#24220;&#31805;&#30332;&#35672;&#21029;&#34399;&#20197;&#21450;&#20854;&#20182;&#25935;&#24863;&#30340;&#20491;&#20154;&#36039;&#35338;&#20316;&#28858;&#20854;&#20182;&#29992;&#36884;&#65307;&#38500;&#38750;&#24744;&#35201;&#27714;&#25105;&#20497;&#20445;&#30041;&#24744;&#30340;&#20449;&#29992;&#21345;&#36039;&#35338;&#20197;&#20633;&#23559;&#20358;&#36092;&#29289;&#20043;&#29992;&#65292;&#21542;&#21063;&#36889;&#20123;&#36039;&#35338;&#30340;&#20786;&#23384;&#23559;&#19981;&#26371;&#36229;&#36942;&#25552;&#20379;&#26381;&#21209;&#30340;&#24517;&#35201;&#26178;&#38291;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=4></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>4.&nbsp;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#22914;&#20309;&#20998;&#20139;&#24744;&#30340;&#36039;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#35338;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#38500;&#20102;&#26412;&#32882;&#26126;&#25551;&#36848;&#20043;&#24773;&#27841;&#22806;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#26371;&#23559;&#24744;&#30340;&#20491;&#20154;&#36039;&#35338;&#20986;&#21806;&#12289;&#20986;&#31199;&#25110;&#31199;&#20511;&#32102;&#20854;&#20182;&#20154;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20197;&#19979;&#21015;&#26041;&#24335;&#20998;&#20139;&#20491;&#20154;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20721;&#29992;&#26381;&#21209;&#25552;&#20379;&#32773;&#21644;&#20379;&#25033;&#21830;&#20197;&#31649;&#29702;&#25110;&#25903;&#25588;&#20854;&#26989;&#21209;&#36939;&#20316;&#12289;&#25552;&#20379;&#23436;&#25972;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#12289;&#26381;&#21209;&#21450;&#23458;&#25142;&#35299;&#27770;&#26041;&#26696;&#65292;&#20006;&#21332;&#21161;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#38283;&#23637;&#29151;&#37559;&#21450;&#20132;&#27969;&#27963;&#21205;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36889;&#20123;&#26381;&#21209;&#25552;&#20379;&#32773;&#21450;&#20379;&#25033;&#21830;&#21253;&#25324;&#65292;&#20363;&#22914;&#65292;&#20449;&#29992;&#21345;&#34389;&#29702;&#20844;&#21496;&#12289;&#23458;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;&#25903;&#25588;&#21644;&#21363;&#26178;&#26381;&#21209;&#25552;&#20379;&#32773;&#12289;&#29151;&#37559;&#20844;&#21496;&#12289;&#38651;&#23376;&#37109;&#20214;&#26381;&#21209;&#25552;&#20379;&#32773;&#12289;&#33258;&#21205;&#21270;&#36039;&#26009;&#34389;&#29702;&#26989;&#32773;&#20197;&#21450;&#36008;&#36939;&#20195;&#29702;&#21830;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20381;&#29031;&#21512;&#32004;&#35215;&#23450;&#65292;&#20379;&#25033;&#21830;&#21644;&#26381;&#21209;&#25552;&#20379;&#32773;&#23565;&#26044;&#20182;&#20497;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25152;&#33936;&#38598;&#21040;&#30340;&#36039;&#35338;&#24517;&#38920;&#20445;&#23432;&#27231;&#23494;&#65292;&#32780;&#19988;&#19981;&#24471;&#29992;&#26044;&#38500;&#20102;&#28858;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22519;&#34892;&#26381;&#21209;&#20197;&#22806;&#30340;&#20219;&#20309;&#29992;&#36884;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26377;&#26178;&#26371;&#33287;&#20854;&#20182;&#20844;&#21496;&#19968;&#36215;&#21443;&#33287;&#29151;&#37559;&#27963;&#21205;&#65292;&#21253;&#25324;&#30001;&#20854;&#20182;&#20844;&#21496;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12300;&#20195;&#31649;&#12301;&#30340;&#32178;&#31449;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20316;&#28858;&#27963;&#21205;&#30340;&#19968;&#37096;&#20998;&#65292;&#26576;&#20123;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#26381;&#21209;&#21644;&#29151;&#37559;&#35338;&#24687;&#21487;&#33021;&#26371;&#33287;&#20854;&#20182;&#20844;&#21496;&#30340;&#35338;&#24687;&#21516;&#26178;&#20659;&#36865;&#32102;&#24744;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#36889;&#20123;&#26381;&#21209;&#21644;&#29151;&#37559;&#35338;&#24687;&#20013;&#65292;&#26377;&#20123;&#26371;&#21521;&#24744;&#25552;&#20379;&#36984;&#25799;&#65292;&#21487;&#33287;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21450;&#20854;&#20182;&#21443;&#33287;&#27963;&#21205;&#30340;&#20844;&#21496;&#20998;&#20139;&#20491;&#20154;&#36039;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20363;&#22914;&#65292;&#24744;&#21487;&#33021;&#25910;&#21040;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;&#20854;&#20182;&#20844;&#21496;&#30340;&#29151;&#37559;&#35338;&#24687;&#65292;&#25110;&#24744;&#26377;&#27231;&#26371;&#32178;&#32097;&#30331;&#35352;&#20197;&#21462;&#24471;&#22810;&#23478;&#20844;&#21496;&#30340;&#36575;&#20214;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;&#36984;&#25799;&#20677;&#21521;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#20491;&#20154;&#36039;&#35338;&#65292;&#21063;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#26371;&#33287;&#20854;&#20182;&#21443;&#33287;&#27963;&#21205;&#30340;&#20844;&#21496;&#20998;&#20139;&#24744;&#30340;&#36039;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#24744;&#36984;&#25799;&#23559;&#24744;&#30340;&#20491;&#20154;&#36039;&#35338;&#25552;&#20379;&#32102;&#20854;&#20182;&#20844;&#21496;&#65292;&#21063;&#24744;&#30340;&#20491;&#20154;&#36039;&#35338;&#23559;&#20381;&#27492;&#39006;&#20844;&#21496;&#30340;&#31169;&#38577;&#25919;&#31574;&#34389;&#29702;&#65292;&#32780;&#37027;&#20123;&#25919;&#31574;&#21487;&#33021;&#33287;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#25919;&#31574;&#21450;&#20570;&#27861;&#19981;&#21516;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#26371;&#23559;&#24744;&#30340;&#20491;&#20154;&#36039;&#35338;&#20659;&#36865;&#33267;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25793;&#26377;&#30340;&#20301;&#26044;&#32654;&#22283;&#21644;&#19990;&#30028;&#20854;&#20182;&#22320;&#21312;&#30340;&#26989;&#21209;&#23526;&#39636;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19968;&#26086;&#23384;&#21462;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#12289;&#35387;&#20874;&#24115;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;&#25110;&#26381;&#21209;&#65292;&#25110;&#21521;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#24744;&#30340;&#20491;&#20154;&#36039;&#35338;&#65292;&#21363;&#34920;&#31034;&#24744;&#21516;&#24847;&#25105;&#20497;&#22312;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20840;&#29699;&#23526;&#39636;&#32178;&#32097;&#20013;&#23565;&#24744;&#30340;&#20491;&#20154;&#36039;&#35338;&#36914;&#34892;&#27492;&#39006;&#20659;&#36865;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#38500;&#20102;&#26412;&#32882;&#26126;&#25551;&#36848;&#20043;&#24773;&#27841;&#22806;&#65292;&#26410;&#32147;&#24744;&#30340;&#25480;&#27402;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#26371;&#23559;&#24744;&#25552;&#20379;&#32102;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20491;&#20154;&#36039;&#35338;&#33287;&#38750;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#31532;&#19977;&#26041;&#20998;&#20139;&#65292;&#38500;&#38750;&#65306;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (i) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#28858;&#22238;&#25033;&#35686;&#26041;&#21450;&#25919;&#24220;&#27231;&#38364;&#27491;&#24335;&#25480;&#27402;&#30340;&#36039;&#35338;&#35201;&#27714;&#65307;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (ii) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#28858;&#36981;&#23432;&#20219;&#20309;&#27861;&#24459;&#12289;&#26781;&#20363;&#12289;&#20659;&#31080;&#25110;&#27861;&#38498;&#21629;&#20196;&#65307;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (iii) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#28858;&#35519;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#26597;&#21450;&#21332;&#21161;&#38928;&#38450;&#23433;&#20840;&#23041;&#33029;&#12289;&#35408;&#27450;&#25110;&#20854;&#20182;&#24801;&#24847;&#27963;&#21205;&#65307;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (iv) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#28858;&#22519;&#34892;&#25110;&#20445;&#35703;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#20854;&#23376;&#20844;&#21496;&#30340;&#27402;&#21033;&#21644;&#36001;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#65307;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (v) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#28858;&#20445;&#35703;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12289;&#25105;&#20497;&#30340;&#21729;&#24037;&#25110;&#22312;&#32147;&#25209;&#20934;&#20006;&#36981;&#24490;&#36969;&#29992;&#27861;&#24459;&#20043;&#35215;&#23450;&#30340;&#24773;&#27841;&#19979;&#22312;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36001;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#20013;&#25110;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36001;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#30340;&#31532;&#19977;&#26041;&#20043;&#27402;&#21033;&#25110;&#20154;&#36523;&#23433;&#20840;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#26576;&#20123;&#24773;&#27841;&#19979;&#65292;&#28961;&#35542;&#26159;&#20986;&#26044;&#31574;&#30053;&#21407;&#22240;&#36996;&#26159;&#20854;&#20182;&#26989;&#21209;&#21407;&#22240;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26371;&#27770;&#23450;&#22312;&#26576;&#20123;&#22283;&#23478;&#20986;&#21806;&#12289;&#36092;&#36023;&#12289;&#21512;&#20341;&#25110;&#20197;&#20854;&#20182;&#26041;&#24335;&#37325;&#32068;&#26989;&#21209;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36889;&#31278;&#20132;&#26131;&#21487;&#33021;&#28041;&#21450;&#21521;&#28507;&#22312;&#25110;&#23526;&#38555;&#36023;&#20027;&#25259;&#38706;&#20491;&#20154;&#36039;&#35338;&#65292;&#25110;&#26159;&#24478;&#36067;&#26041;&#25509;&#25910;&#20491;&#20154;&#36039;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20570;&#27861;&#26159;&#23565;&#36889;&#39006;&#20132;&#26131;&#20013;&#30340;&#36039;&#35338;&#23563;&#27714;&#36969;&#30070;&#20445;&#35703;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=5></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>5.&nbsp;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#20818;&#31461;&#30340;&#31169;&#38577;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#27402;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#26371;&#21051;&#24847;&#25910;&#38598;&#26410;&#28415;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 13 </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21608;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#27506;&#20818;&#31461;&#30340;&#36039;&#35338;&#65288;&#38867;&#22283;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#28858;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 14 </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21608;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#27506;&#65289;&#65292;&#19988;&#20854;&#32178;&#31449;&#19981;&#23565;&#25237;&#25918;&#32102;&#27492;&#39006;&#20818;&#31461;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#40723;&#21237;&#23478;&#38263;&#21450;&#30435;&#35703;&#20154;&#23565;&#20818;&#31461;&#30340;&#32178;&#32097;&#21450;&#25163;&#27231;&#27963;&#21205;&#33287;&#33288;&#36259;&#24859;&#22909;&#30332;&#25582;&#31309;&#26997;&#30340;&#20316;&#29992;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=6></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>6.&nbsp;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#24744;&#30340;&#36984;&#25799;&#21450;&#36984;&#25799;&#24744;&#30340;&#31169;&#38577;&#27402;&#20559;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#22909;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26371;&#35731;&#24744;&#36984;&#25799;&#26159;&#21542;&#25509;&#25910;&#25105;&#20497;&#21508;&#31278;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#21450;&#26381;&#21209;&#30340;&#35036;&#20805;&#36039;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21487;&#20197;&#35330;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#29305;&#23450;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#21450;&#26381;&#21209;&#30340;&#23560;&#23660;&#36039;&#35338;&#65292;&#20134;&#21487;&#20197;&#36984;&#25799;&#25509;&#25910;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#19968;&#33324;&#35338;&#24687;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26371;&#35731;&#24744;&#36984;&#25799;&#20197;&#37109;&#23492;&#12289;&#38651;&#23376;&#37109;&#20214;&#12289;&#38651;&#35441;&#25110;&#25163;&#27231;&#26041;&#24335;&#25910;&#21462;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#19968;&#33324;&#35338;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21487;&#20197;&#22312;&#36039;&#26009;&#33936;&#38598;&#40670;&#25110;&#20351;&#29992;&#19979;&#25991;&#20013;&#25152;&#21015;&#20043;&#20854;&#20182;&#26041;&#24335;&#65292;&#23601;&#25509;&#25910;&#35330;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#36039;&#35338;&#25110;&#25509;&#25910;&#19968;&#33324;&#35338;&#24687;&#65292;&#36914;&#34892;&#36984;&#25799;&#25110;&#35722;&#26356;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#30340;&#36984;&#25799;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36889;&#20123;&#36984;&#25799;&#20006;&#19981;&#36969;&#29992;&#26044;&#31649;&#29702;&#35330;&#21934;&#23436;&#25104;&#12289;&#21512;&#32004;&#12289;&#25903;&#25588;&#12289;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#23433;&#20840;&#35686;&#31034;&#12289;&#39493;&#21205;&#31243;&#24335;&#26356;&#26032;&#25110;&#20854;&#20182;&#31649;&#29702;&#21644;&#20132;&#26131;&#36890;&#30693;&#65292;&#22240;&#28858;&#36889;&#39006;&#35338;&#24687;&#20043;&#20027;&#35201;&#30446;&#30340;&#22312;&#26412;&#36074;&#19978;&#19981;&#26159;&#28858;&#20102;&#20419;&#37559;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#35330;</span></b><b><span
+style='font-size:15.0pt;font-family:"Gulim",sans-serif'>&#38321;&#36890;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#35338;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#35330;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#35338;&#24687;&#21253;&#25324;&#38651;&#23376;&#22577;&#21450;&#36575;&#20214;&#26356;&#26032;&#36039;&#35338;&#31561;&#65292;&#21487;&#30001;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#26126;&#31034;&#25552;&#20986;&#35330;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#35201;&#27714;&#25110;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21516;&#24847;&#25509;&#25910;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#35531;&#27714;&#25509;&#25910;&#36889;&#39006;&#35338;&#24687;&#20043;&#24460;&#65292;&#20173;&#21487;&#36879;&#36942;&#19979;&#21015;&#26041;&#27861;&#20572;&#27490;&#32380;&#32396;&#25509;&#25910;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#36984;&#21462;&#38651;&#23376;&#37109;&#20214;&#12300;&#36864;&#20986;&#12301;&#25110;&#12300;&#21462;&#28040;&#35330;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#12301;&#36899;&#32080;&#65292;&#25110;&#36981;&#29031;&#27599;&#19968;&#38917;&#38651;&#23376;&#37109;&#20214;&#35330;&#38321;&#35338;&#24687;&#20013;&#30340;&#36864;&#20986;&#25351;&#31034;&#22519;&#34892;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#33509;&#35201;&#21462;&#28040;&#35330;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#20659;&#36865;&#21040;&#25163;&#27231;&#30340;&#31777;&#35338;&#65292;&#35531;&#22238;&#35206;&#31777;&#35338;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#20006;&#36664;&#20837;&#12300;&#20572;&#27490;&#12301;&#25110;&#12300;&#32080;&#26463;&#12301;&#31561;&#25991;&#23383;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#36820;&#22238;&#24744;&#26368;&#21021;&#35387;&#20874;&#20559;&#22909;&#36984;&#38917;&#30340;&#32178;&#38913;&#65292;&#20006;&#19988;&#36981;&#29031;&#36864;&#20986;&#25351;&#31034;&#22519;&#34892;&#12290;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#35201;&#36914;&#20837;&#22810;&#20491;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#35330;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#36984;&#38917;&#65292;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+     padding:0in'>&#35531;&#33267;&#12300;&#35330;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'>&#38321;&#32773;&#30340;&#36984;&#25799;&#12301;&#32178;&#38913;&#12290;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#23531;&#20449;&#33267;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'>HP </span><span lang=ZH-CN style='font-size:12.0pt;
+     font-family:"Microsoft JhengHei",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'>&#38544;&#31169;&#26435;&#21150;&#20844;&#23460;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#35531;&#21209;&#24517;&#25552;&#20379;&#24744;&#30340;&#22995;&#21517;&#12289;&#30456;&#38364;&#32879;&#32097;&#36039;&#35338;&#20197;&#21450;&#24744;&#24076;&#26395;&#19981;&#20877;&#25509;&#25910;&#30340;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#36890;&#35338;&#35330;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#20043;&#29305;&#23450;&#36039;&#35338;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#35531;&#27880;&#24847;&#65292;&#33509;&#24744;&#25509;&#25910;&#35338;&#24687;&#26159;&#20316;&#28858;&#21462;&#24471;&#26381;&#21209;&#20043;&#26781;&#20214;&#65292;&#37027;&#40636;&#24744;&#36864;&#20986;&#26576;&#20123;&#35338;&#24687;&#35330;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#26178;&#65292;&#21063;&#21487;&#33021;&#24433;&#38911;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#24050;&#36984;&#25799;&#25509;&#21463;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26381;&#21209;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>HP </span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#30340;&#19968;&#33324;&#36890;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#35338;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#19968;&#33324;&#35338;&#24687;&#25552;&#20379;&#26377;&#38364;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#12289;&#26381;&#21209;&#21450;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#25903;&#25588;&#30340;&#36039;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36889;&#21487;&#33021;&#21253;&#25324;&#26032;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#25110;&#26381;&#21209;&#36039;&#35338;&#12289;&#29305;&#21029;&#20778;&#24800;&#25110;&#21443;&#33287;&#24066;&#22580;&#35519;&#26597;&#25110;&#21512;&#35215;&#23529;&#26680;&#20043;&#36992;&#35531;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#36890;&#24120;&#65292;&#24744;&#21487;&#36879;&#36942;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>HP </span></span><span
+style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+padding:0in'>&#35703;&#29031;&#34920;&#26126;&#24744;&#26159;&#21542;&#39000;&#24847;&#25509;&#21463;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP
+</span><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#19968;&#33324;&#36890;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35703;&#29031;&#26159;&#19968;&#31278;&#21934;&#19968;&#30331;&#20837;&#26381;&#21209;&#65292;&#36879;&#36942;&#35442;&#26381;&#21209;&#65292;&#24744;&#21487;&#20351;&#29992;&#33258;&#24049;&#36984;&#25799;&#30340;&#19968;&#20491;&#21934;&#19968;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> ID </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;&#23494;&#30908;&#65292;&#22312;&#25152;&#26377;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21855;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35703;&#29031;&#30340;&#32178;&#31449;&#36914;&#34892;&#35387;&#20874;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35703;&#29031;&#21033;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20786;&#23384;&#24744;&#30340;&#20491;&#20154;&#22522;&#26412;&#36039;&#35338;&#65292;&#22240;&#27492;&#24744;&#23559;&#20358;&#30331;&#20837;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20219;&#20309;&#32178;&#31449;&#26178;&#65292;&#28961;&#38656;&#37325;&#26032;&#36664;&#20837;&#36889;&#20123;&#36039;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35703;&#29031;&#36996;&#20801;&#35377;&#24744;&#35373;&#23450;&#33258;&#24049;&#30340;&#31169;&#38577;&#27402;&#20559;&#22909;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#30340;&#20559;&#22909;&#23559;&#36969;&#29992;&#26044;&#25152;&#26377;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#31449;&#12289;&#38651;&#23376;&#37109;&#20214;&#21644;&#20854;&#20182;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35703;&#29031;&#30340;&#28040;&#24687;&#24037;&#20855;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#24744;&#28961;&#27861;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35703;&#29031;&#65292;&#21063;&#24744;&#21487;&#36879;&#36942;&#20197;&#19979;&#20854;&#20013;&#19968;&#20491;&#26041;&#27861;&#20572;&#27490;&#25509;&#25910;&#27492;&#39006;&#19968;&#33324;&#28040;&#24687;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#36984;&#21462;&#38651;&#23376;&#37109;&#20214;&#12300;&#36864;&#20986;&#12301;&#25110;&#12300;&#21462;&#28040;&#35330;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#12301;&#36899;&#32080;&#65292;&#25110;&#32773;&#36981;&#29031;&#27599;&#23553;&#38651;&#23376;&#37109;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#20214;&#20013;&#21253;&#21547;&#30340;&#36864;&#20986;&#25351;&#31034;&#36914;&#34892;&#25805;&#20316;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#33509;&#35201;&#21462;&#28040;&#35330;</span><span
+     style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;&#20659;&#36865;&#21040;&#25163;&#27231;&#30340;&#31777;&#35338;&#65292;&#35531;&#22238;&#35206;&#31777;&#35338;&#20006;&#36664;&#20837;&#12300;&#20572;&#27490;&#12301;&#25110;&#12300;&#32080;&#26463;&#12301;&#31561;&#25991;&#23383;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#23531;&#20449;&#33267;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+     padding:0in'>HP </span><span style='font-size:12.0pt;font-family:"MS Gothic";
+     border:none windowtext 1.0pt;padding:0in'>&#31169;&#38577;&#27402;&#36774;&#20844;&#23460;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;&#35531;&#21209;&#24517;&#25552;&#20379;&#24744;&#30340;&#22995;&#21517;&#12289;&#30456;&#38364;&#32879;&#32097;&#36039;&#35338;&#20197;&#21450;&#33287;&#24744;&#30340;&#31169;&#38577;&#27402;&#20559;&#22909;&#30456;&#38364;&#30340;&#29305;&#23450;&#36039;&#35338;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=7></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>7.&nbsp;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#24744;&#30340;&#36039;&#35338;&#30340;&#23384;&#21462;&#27402;&#21450;&#28310;&#30906;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#24615;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#31469;&#21147;&#32173;&#35703;&#24744;&#20491;&#20154;&#36039;&#35338;&#35352;&#37636;&#30340;&#28310;&#30906;&#24615;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#25505;&#34892;&#20102;&#19968;&#20123;&#25216;&#34899;&#12289;&#31649;&#29702;&#27969;&#31243;&#21644;&#25919;&#31574;&#20358;&#32173;&#35703;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;&#36039;&#26009;&#30340;&#28310;&#30906;&#24615;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21521;&#20491;&#20154;&#25552;&#20379;&#21512;&#29702;&#30340;&#23384;&#21462;&#27402;&#20197;&#23384;&#21462;&#20182;&#20497;&#21521;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#30340;&#20491;&#20154;&#36039;&#35338;&#65292;&#20006;&#19988;&#25552;&#20379;&#21512;&#29702;&#30340;&#33021;&#21147;&#65292;&#20197;&#20415;&#20491;&#20154;&#27298;&#35222;&#21644;&#20462;&#27491;&#36889;&#20123;&#36039;&#35338;&#65292;&#25110;&#26044;&#24517;&#35201;&#26178;&#21487;&#35201;&#27714;&#20104;&#20197;&#21311;&#21517;&#12289;&#23553;&#37782;&#25110;&#21034;&#38500;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#29234;&#20102;&#20445;&#35703;&#24744;&#30340;&#31169;&#38577;&#33287;&#23433;&#20840;&#65292;&#22312;&#25480;&#20104;&#24744;&#36039;&#26009;&#23384;&#21462;&#27402;&#20043;&#21069;&#65292;&#25105;&#20497;&#20063;&#26371;&#25505;&#21462;&#36969;&#30070;&#30340;&#27493;&#39519;&#20358;&#39511;&#35657;&#24744;&#30340;&#36523;&#20221;&#65292;&#22914;&#35201;&#27714;&#23494;&#30908;&#21450;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> ID</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#35201;&#27298;&#35222;&#21644;&#26356;&#25913;&#24744;&#30452;&#25509;&#25552;&#20379;&#32102;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#20491;&#20154;&#36039;&#26009;&#65292;&#24744;&#21487;&#20197;&#36820;&#22238;&#21040;&#21407;&#20358;&#25552;&#20379;&#20491;&#20154;&#36039;&#26009;&#30340;&#32178;&#38913;&#65292;&#20006;&#19988;&#36981;&#29031;&#32178;&#38913;&#19978;&#30340;&#25351;&#31034;&#25805;&#20316;&#65292;&#22312;&#36969;&#29992;&#30340;&#24773;&#27841;&#19979;&#20063;&#21487;&#20197;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>HP </span></span><span
+style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+padding:0in'>&#35703;&#29031;&#25110;&#32879;&#32097;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;</span><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#32852;&#31995;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>HP </span></span><span
+style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+padding:0in'>&#31169;&#38577;&#36774;&#20844;&#23460;&#12290;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=8></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>8.&nbsp;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#32173;&#35703;&#24744;&#30340;&#20491;&#20154;&#36039;&#35338;&#23433;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#20840;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35469;&#30495;&#30475;&#24453;&#24744;&#23565;&#25105;&#20497;&#30340;&#20449;&#20219;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#29234;&#20102;&#38450;&#31684;&#26410;&#32147;&#25480;&#27402;&#30340;&#23384;&#21462;&#25110;&#27945;&#38706;&#12289;&#32173;&#35703;&#36039;&#26009;&#30340;&#28310;&#30906;&#24615;&#65292;&#20197;&#21450;&#30906;&#20445;&#36039;&#35338;&#30340;&#36969;&#30070;&#20351;&#29992;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25505;&#21462;&#20102;&#19968;&#20123;&#21512;&#29702;&#19988;&#36969;&#30070;&#30340;&#23526;&#36074;&#19978;&#12289;&#25216;&#34899;&#19978;&#20197;&#21450;&#31649;&#29702;&#19978;&#30340;&#31243;&#24207;&#65292;&#20197;&#20445;&#35703;&#25105;&#20497;&#33936;&#38598;&#21644;&#34389;&#29702;&#30340;&#36039;&#35338;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21482;&#26377;&#22312;&#25033;&#26412;&#22320;&#27861;&#24459;&#35201;&#27714;&#25110;&#20801;&#35377;&#19988;&#20986;&#26044;&#21512;&#27861;&#20043;&#21830;&#26989;&#30446;&#30340;&#24773;&#27841;&#19979;&#65292;&#25165;&#26371;&#20786;&#23384;&#36039;&#26009;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#33936;&#38598;&#25110;&#20659;&#36865;&#25935;&#24863;&#36039;&#35338;&#65288;&#20363;&#22914;&#20449;&#29992;&#21345;&#36039;&#35338;&#65289;&#26178;&#65292;&#25105;&#20497;&#26371;&#20351;&#29992;&#22810;&#31278;&#23433;&#20840;&#25216;&#34899;&#21644;&#31243;&#24207;&#20358;&#24171;&#21161;&#20445;&#35703;&#24744;&#30340;&#20491;&#20154;&#36039;&#35338;&#65292;&#20197;&#20813;&#36973;&#21463;&#26410;&#32147;&#25480;&#27402;&#30340;&#23384;&#21462;&#12289;&#20351;&#29992;&#25110;&#22806;&#27945;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#25552;&#20379;&#32102;&#25105;&#20497;&#30340;&#20491;&#20154;&#36039;&#35338;&#23559;&#20786;&#23384;&#22312;&#38651;&#33126;&#31995;&#32113;&#20013;&#65292;&#32780;&#36889;&#20123;&#38651;&#33126;&#31995;&#32113;&#26371;&#25918;&#22312;&#22196;&#23494;&#25511;&#31649;&#30340;&#22580;&#25152;&#20006;&#38480;&#23450;&#23384;&#21462;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30070;&#25105;&#20497;&#36879;&#36942;&#32178;&#38555;&#32178;&#32097;&#20659;&#36865;&#39640;&#24230;&#27231;&#23494;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20363;&#22914;&#20449;&#29992;&#21345;&#34399;&#25110;&#23494;&#30908;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26178;&#65292;&#25105;&#20497;&#26371;&#20351;&#29992;&#23433;&#20840;&#22871;&#25509;&#23652;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (SSL) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21332;&#35696;&#31561;&#21152;&#23494;&#25216;&#34899;&#20358;&#20445;&#35703;&#36889;&#20123;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#20449;&#29992;&#21345;&#34399;&#21482;&#26371;&#29992;&#26044;&#34389;&#29702;&#20184;&#27454;&#65292;&#32780;&#19981;&#26371;&#29992;&#26044;&#20219;&#20309;&#20854;&#20182;&#29992;&#36884;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#21363;&#26178;&#20184;&#27454;&#30340;&#34389;&#29702;&#36942;&#31243;&#20013;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25505;&#34892;&#38450;&#35408;&#27450;&#31649;&#29702;&#26381;&#21209;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36889;&#38917;&#26381;&#21209;&#35731;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#20449;&#29992;&#21345;&#35408;&#27450;&#30340;&#23433;&#20840;&#38450;&#35703;&#19978;&#22810;&#20102;&#19968;&#23652;&#20445;&#38556;&#65292;&#20006;&#19988;&#33021;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#22816;&#20445;&#35703;&#24744;&#30340;&#36001;&#21209;&#36039;&#26009;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=9></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>9.&nbsp;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#26412;&#32882;&#26126;&#20043;&#35722;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#26356;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#27492;&#12300;&#31169;&#38577;&#27402;&#32882;&#26126;&#12301;&#26377;&#20219;&#20309;&#35722;&#26356;&#65292;&#25105;&#20497;&#26371;&#22312;&#27492;&#20844;&#20296;&#20462;&#35330;&#32882;&#26126;&#65292;&#20006;&#38468;&#19978;&#26368;&#26032;&#20462;&#35330;&#26085;&#26399;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#27492;&#32882;&#26126;&#26377;&#37325;&#22823;&#35722;&#26356;&#65292;&#33268;&#20351;&#31169;&#38577;&#27402;&#23526;&#21209;&#30332;&#29983;&#23526;&#36074;&#24615;&#25913;&#35722;&#65292;&#25105;&#20497;&#20063;&#26371;&#22312;&#35722;&#26356;&#29983;&#25928;&#21069;&#20197;&#20854;&#20182;&#26041;&#24335;&#36890;&#30693;&#24744;&#65292;&#22914;&#23492;&#36865;&#38651;&#23376;&#37109;&#20214;&#25110;&#22312;&#25105;&#20497;&#30340;&#20844;&#21496;&#32178;&#31449;&#21644;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#31038;&#20132;&#23186;&#39636;&#38913;&#38754;&#19978;&#30332;&#20296;&#36890;&#30693;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;line-height:16.5pt'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=10></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>10.&nbsp;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#32879;&#32097;&#25105;</span></b><b><span
+style='font-size:18.0pt;font-family:"MS Gothic"'>&#20497;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#25105;&#20497;&#38750;&#24120;&#37325;&#35222;&#24744;&#30340;&#24847;&#35211;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#33509;&#23565;&#25105;&#20497;&#30340;&#12300;&#31169;&#38577;&#27402;&#32882;&#26126;&#12301;&#26377;&#20219;&#20309;&#24847;&#35211;&#25110;&#30097;&#21839;&#65292;&#35531;&#23559;&#23427;&#20497;&#23492;&#33267;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>HP </span></span><span
+style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+padding:0in'>&#31169;&#38577;&#27402;&#36774;&#20844;&#23460;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;</span><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#23531;&#20449;&#33267;&#20197;&#19979;&#22320;&#22336;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><b><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#21152;&#25343;&#22823;&#12289;&#25289;&#19969;&#32654;&#27954;&#22823;&#37096;&#20998;&#22283;&#23478;</span></b><b><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span></b><b><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22320;&#21312;&#21644;&#32654;&#22283;</span></b><b><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP
+Privacy Mailbox</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>11445
+Compaq Center Drive W.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Mailstop
+040307</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Houston,
+Texas 77070</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>USA</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><b><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#22696;&#35199;&#21733;</span></b><b><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hewlett-Packard</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Legal
+Department</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Prolongación
+Reforma No. 700</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Colonia
+Lomas de Santa Fe</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>México,
+D.F., C.P.01210</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><b><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#27472;&#27954;&#12289;&#20013;&#26481;&#21644;&#38750;&#27954;</span></b><b><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>EMEA
+Privacy Office</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hewlett
+Packard</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>MS 250</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>1 Avenue
+du Canada</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP Les
+Ulis -91947 – France</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><b><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#20126;&#22826;&#22320;&#21312;&#21450;&#26085;&#26412;</span></b><b><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP APJ
+Privacy Office</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hewlett
+Packard</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>PO Box
+384</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Concord
+West, NSW 2138</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#28595;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#27954;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#21313;&#26376;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> 2014</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+<br>
+<a name=utmca></a></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>HP </span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#22914;&#20309;&#20351;&#29992;&#33258;&#21205;&#36039;&#26009;&#33936;&#38598;&#24037;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#20855;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#19979;&#21015;&#21508;&#31680;&#25552;&#20379;&#38364;&#26044;&#24120;&#29992;&#32178;&#32097;&#25216;&#34899;&#24037;&#20855;&#30340;&#20854;&#20182;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+<br>
+<a name=cks></a></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>Cookie</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#12300;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12301;&#26159;&#32178;&#31449;&#20659;&#36865;&#21040;&#24744;&#38651;&#33126;&#30828;&#30879;&#30340;&#23567;&#36039;&#26009;&#27284;&#26696;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#28687;&#35261;&#25105;&#20497;&#30340;&#32178;&#31449;&#65288;&#25110;&#39023;&#31034;&#26377;&#25105;&#20497;&#30340;&#24291;&#21578;&#30340;&#32178;&#31449;&#65289;&#12289;&#36092;&#36023;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#21697;&#12289;&#32034;&#21462;&#36039;&#35338;&#25110;&#23559;&#36039;&#35338;&#20491;&#20154;&#21270;&#65292;&#25110;&#35387;&#20874;&#26576;&#20123;&#26381;&#21209;&#26178;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#20854;&#26381;&#21209;&#25552;&#20379;&#21830;&#26371;&#20659;&#36865;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25509;&#21463;&#25105;&#20497;&#30340;&#32178;&#31449;&#12289;&#20854;&#20182;&#20844;&#21496;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12300;&#20195;&#31649;&#12301;&#30340;&#32178;&#31449;&#65292;&#25110;&#20986;&#29694;&#25105;&#20497;&#24291;&#21578;&#30340;&#32178;&#31449;&#19978;&#25152;&#20351;&#29992;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#21487;&#33021;&#26371;&#20801;&#35377;&#25105;&#20497;&#23384;&#21462;&#38364;&#26044;&#24744;&#28687;&#35261;&#34892;&#28858;&#30340;&#36039;&#35338;&#65292;&#25105;&#20497;&#21487;&#33021;&#26371;&#20351;&#29992;&#36889;&#20123;&#36039;&#35338;&#20358;&#20491;&#20154;&#21270;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#25142;&#39636;&#39511;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36890;&#24120;&#20998;&#39006;&#28858;&#12300;&#24037;&#20316;&#38542;&#27573;&#12301;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#12300;&#27704;&#32396;&#24615;&#12301;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38454;&#27573;&#24615;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#24744;&#20851;&#25481;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#22120;&#21518;&#19981;&#20250;&#20445;&#30041;&#22312;&#24744;&#30340;&#35745;&#31639;&#26426;&#19978;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span lang=ZH-CN
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#27704;&#20037;&#24615;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#20250;&#19968;&#30452;&#20445;&#30041;&#22312;&#24744;&#30340;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#35745;&#31639;&#26426;&#19978;&#65292;&#30452;&#21040;&#24744;&#23558;&#23427;&#20204;&#21024;&#38500;&#25110;&#23427;&#20204;&#36807;&#26399;&#12290;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22823;&#37096;&#20998;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#27983;&#35272;&#22120;&#26159;&#40664;&#35748;&#33258;&#21160;&#25509;&#21463;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#20294;&#26159;&#36890;&#24120;&#24744;&#21487;&#20197;&#36890;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36807;&#35843;&#25972;&#27983;&#35272;&#22120;&#30340;&#20559;&#22909;&#36873;&#39033;&#26469;&#25298;&#32477;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#25110;&#32773;&#26377;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#36873;&#25321;&#22320;&#25509;&#21463;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#20851;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#38381;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#24744;&#21487;&#33021;&#23601;&#26080;&#27861;&#20351;&#29992;&#25105;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#20204;&#32593;&#31449;&#30340;&#26576;&#20123;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"MS Gothic"'>&#21151;&#33021;&#65292;&#32780;&#19988;&#26377;&#20123;&#32593;</span><span
+     lang=ZH-CN style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#39029;&#20063;&#21487;&#33021;&#23558;&#26080;&#27861;&#27491;&#24120;&#26174;&#31034;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#26576;&#20123;&#22283;&#23478;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>/</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22320;&#21312;&#65292;&#24744;&#36996;&#21487;&#20197;&#20351;&#29992;&#24744;&#25152;&#36896;&#35370;&#32178;&#31449;&#19978;&#26412;&#32882;&#26126;&#25552;&#21450;&#30340;&#20559;&#22909;&#31649;&#29702;&#21729;&#24037;&#20855;&#20358;&#35519;&#25972;&#24744;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP.com </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21644;&#30456;&#38364;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20559;&#22909;&#36984;&#38917;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21487;&#20197;&#22312;&#28687;&#35261;&#22120;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#35498;&#26126;&#21644;&#25903;&#25588;&#21312;&#27573;&#25214;&#21040;&#26377;&#38364;&#21463;&#27489;&#36814;&#28687;&#35261;&#22120;&#30340;&#36039;&#35338;&#20197;&#21450;&#22914;&#20309;&#35519;&#25972;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20559;&#22909;&#36984;&#38917;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#23559;&#38568;&#26178;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26412;&#22320;&#20849;&#20139;&#29289;&#20214;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (LSO) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20358;&#20786;&#23384;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash </span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#20839;&#23481;&#36039;&#35338;&#21450;&#20559;&#22909;&#36984;&#38917;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> LSO </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#21151;&#33021;&#39006;&#20284;&#26044;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HTML </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#28687;&#35261;&#22120;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#26371;&#22312;&#24744;&#30340;&#38651;&#33126;&#19978;&#20786;&#23384;&#23567;&#27284;&#26696;&#65292;&#36890;&#24120;&#31281;&#28858;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33287;&#28687;&#35261;&#22120;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19981;&#21516;&#65292;&#20006;&#19988;&#24744;&#30340;&#28687;&#35261;&#22120;&#25552;&#20379;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#31649;&#29702;&#24037;&#20855;&#23559;&#19981;&#26371;&#31227;&#38500;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#38656;&#30637;&#35299;&#26377;&#38364;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Flash Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#20197;&#21450;&#22914;&#20309;&#31649;&#29702;&#30456;&#38364;&#31169;&#38577;&#27402;&#21644;&#20786;&#23384;&#35373;&#23450;&#30340;&#26356;&#22810;&#36039;&#35338;&#65292;&#35531;&#36896;&#35370;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>Adobe Systems </span></span><span
+style='font-size:12.0pt;font-family:"MS Gothic";border:none windowtext 1.0pt;
+padding:0in'>&#32593;&#31449;</span><span style='font-size:12.0pt;font-family:
+"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+<br>
+<a name=wb></a></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#32178;&#32097;&#20449;&#27161;</span></b><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'> (Web beacon)</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#26576;&#20123;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP.com</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12289;&#31532;&#19977;&#26041;&#32178;&#38913;&#12289;&#25033;&#29992;&#31243;&#24335;&#20197;&#21450;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HTML </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#26684;&#24335;&#30340;&#38651;&#23376;&#37109;&#20214;&#26371;&#20351;&#29992;&#32178;&#32097;&#20449;&#27161;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20677;&#20351;&#29992;&#32178;&#32097;&#20449;&#27161;&#65292;&#25110;&#33287;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25645;&#37197;&#20351;&#29992;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20358;&#32232;&#35695;&#38364;&#26044;&#24744;&#20351;&#29992;&#32178;&#31449;&#21450;&#33287;&#38651;&#23376;&#37109;&#20214;&#20114;&#21205;&#20043;&#34892;&#28858;&#30340;&#36039;&#35338;&#65292;&#20197;&#21450;&#35413;&#37327;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> hp.com</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12289;&#25033;&#29992;&#31243;&#24335;&#21450;&#20854;&#20182;&#20844;&#21496;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12300;&#20195;&#31649;&#12301;&#30340;&#32178;&#31449;&#20043;&#32318;&#25928;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#32097;&#20449;&#27161;&#26159;&#19968;&#31278;&#38651;&#23376;&#24433;&#20687;&#65292;&#31281;&#28858;&#21934;&#20687;&#32032;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (1x1) </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25110;&#36879;&#26126;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> GIF</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#32178;&#32097;&#20449;&#27161;&#21487;&#35672;&#21029;&#24744;&#38651;&#33126;&#19978;&#30340;&#29305;&#23450;&#39006;&#22411;&#36039;&#35338;&#65292;&#20363;&#22914;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12289;&#27298;&#35222;&#32178;&#38913;&#30340;&#26085;&#26399;&#21644;&#26178;&#38291;&#65292;&#20197;&#21450;&#25918;&#32622;&#32178;&#32097;&#20449;&#27161;&#20043;&#32178;&#38913;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#35498;&#26126;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#35222;&#20351;&#29992;&#29872;&#22659;&#32780;&#23450;&#65292;&#32178;&#32097;&#20449;&#27161;&#20063;&#21487;&#33021;&#24341;&#29992;&#31532;&#19977;&#26041;&#20282;&#26381;&#22120;&#19978;&#30340;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#20839;&#23481;&#65292;&#20006;&#19988;&#21487;&#33021;&#34987;&#26381;&#21209;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;&#21830;&#29992;&#26044;&#21521;&#24744;&#25552;&#20379;&#30456;&#38364;&#24291;&#21578;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21487;&#20197;&#36879;&#36942;&#19981;&#19979;&#36617;&#25152;&#25910;&#21040;&#35338;&#24687;&#20013;&#21547;&#26377;&#30340;&#22294;&#20687;&#65292;&#24478;&#32780;&#20572;&#29992;&#38651;&#23376;&#37109;&#20214;&#35338;&#24687;&#20013;&#30340;&#32178;&#32097;&#20449;&#27161;&#65288;&#27492;&#21151;&#33021;&#35222;&#24744;&#20491;&#20154;&#38651;&#33126;&#19978;&#20351;&#29992;&#30340;&#38651;&#23376;&#37109;&#20214;&#36575;&#20214;&#32780;&#23450;&#65289;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#28982;&#32780;&#65292;&#30001;&#26044;&#29305;&#23450;&#38651;&#23376;&#37109;&#20214;&#36575;&#20214;&#21151;&#33021;&#19981;&#21516;&#65292;&#25925;&#27492;&#33289;&#19981;&#19968;&#23450;&#32317;&#26159;&#33021;&#20572;&#29992;&#32178;&#32097;&#20449;&#27161;&#25110;&#20854;&#20182;&#33258;&#21205;&#36039;&#26009;&#33936;&#38598;&#24037;&#20855;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#38656;&#35443;&#32048;&#36039;&#35338;&#65292;&#35531;&#21443;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#38321;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#30340;&#38651;&#23376;&#37109;&#20214;&#36575;&#20214;&#25110;&#26381;&#21209;&#25552;&#20379;&#21830;&#25152;&#25552;&#20379;&#30340;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#33509;&#20381;&#29031;&#24744;&#30340;&#36984;&#25799;&#33287;&#36984;&#25799;&#24744;&#30340;&#31169;&#38577;&#27402;&#20559;&#22909;&#19968;&#31680;&#20013;&#25152;&#36848;&#65292;<span
+style='border:none windowtext 1.0pt;padding:0in'>&#36984;&#25799;&#25509;&#25910;</span></span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#30340;&#29151;&#37559;&#38651;&#23376;&#37109;&#20214;&#25110;&#38651;&#23376;&#22577;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#33021;&#26371;&#33258;&#21205;&#33936;&#38598;&#38364;&#26044;&#24744;&#30340;&#20491;&#20154;&#36039;&#26009;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20363;&#22914;&#65292;&#36879;&#36942;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#20839;&#23884;&#26044;&#36889;&#20123;&#38651;&#23376;&#37109;&#20214;&#25110;&#38651;&#23376;&#22577;&#20013;&#30340;&#32178;&#32097;&#20449;&#27161;&#21450;&#20491;&#20154;&#21270;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> URL</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33021;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#22816;&#36861;&#36452;&#24744;&#26159;&#21542;&#24050;&#25171;&#38283;&#36889;&#20123;&#35338;&#24687;&#65292;&#20197;&#21450;&#24744;&#26159;&#21542;&#24050;&#40670;&#25353;&#36889;&#20123;&#35338;&#24687;&#20013;&#25152;&#21547;&#30340;&#36899;&#32080;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#38656;&#26377;&#38364;</span><span
+style='font-size:12.0pt;font-family:"Gulim",sans-serif'>&#20839;&#23884;&#24335;&#32178;&#32097;&#36899;&#32080;&#30340;&#26356;&#22810;&#36039;&#35338;&#65292;&#35531;&#30331;&#20837;&#20197;&#19979;&#32178;&#22336;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+<br>
+<a name=ewl></a></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Gulim",sans-serif'>&#20839;&#23884;&#24335;&#32178;&#32097;&#36899;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#32080;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20659;&#36865;&#30340;&#38651;&#23376;&#37109;&#20214;&#12289;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#38928;&#20808;&#32068;&#24907;&#30340;&#32178;&#38555;&#32178;&#32097;&#37749;&#30436;&#25353;&#37749;&#65292;&#20197;&#21450;&#24744;&#38651;&#33126;&#26700;&#38754;&#19978;&#38928;&#20808;&#23433;&#35037;&#30340;&#20419;&#37559;&#22294;&#27161;&#65292;&#24120;&#20351;&#29992;&#35373;&#35336;&#22909;&#30340;&#36899;&#32080;&#65292;&#36879;&#36942;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20282;&#26381;&#22120;&#37325;&#26032;&#23566;&#21521;&#24460;&#65292;&#24341;&#23566;&#24744;&#21069;&#24448;&#32178;&#32097;&#19978;&#30456;&#38364;&#21312;&#22495;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24517;&#35201;&#26178;&#65292;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#21487;&#20351;&#29992;&#37325;&#26032;&#23566;&#21521;&#31995;&#32113;&#35722;&#26356;&#36889;&#20123;&#36899;&#32080;&#20043;&#30446;&#30340;&#22320;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> URL</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#20006;&#21028;&#26039;&#25105;&#20497;&#29151;&#37559;&#27963;&#21205;&#30340;&#25928;&#26524;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#22312;&#38651;&#23376;&#37109;&#20214;&#20013;&#65292;&#27492;&#39006;&#32178;&#32097;&#36899;&#32080;&#20063;&#21487;&#33021;&#35731;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#24471;&#20197;&#21028;&#26039;&#24744;&#26159;&#21542;&#24050;&#40670;&#25353;&#38651;&#23376;&#37109;&#20214;&#20013;&#30340;&#36899;&#32080;&#65292;&#19988;&#36889;&#38917;&#33287;&#38651;&#23376;&#37109;&#20214;&#20114;&#21205;&#20043;&#30456;&#38364;&#36039;&#35338;&#20063;&#21487;&#33021;&#33287;&#24744;&#30340;&#20491;&#20154;&#36523;&#20221;</span><span
+style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#29986;&#29983;&#36899;&#32080;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#22914;&#26524;&#24744;&#19981;&#24076;&#26395;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33936;&#38598;&#38364;&#26044;&#24744;&#25152;&#40670;&#25353;&#20043;&#36899;&#32080;&#30340;&#36039;&#35338;&#65292;&#24744;&#21487;&#20197;&#25505;&#21462;&#19979;&#21015;&#34892;&#21205;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65306;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#35722;&#26356;&#24744;&#26377;&#38364;&#22914;&#20309;&#25509;&#25910;&#20358;&#33258;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#35338;&#24687;&#30340;&#36984;&#25799;&#65288;&#21363;&#22312;&#20801;&#35377;&#30340;&#24773;&#27841;&#19979;&#36984;&#25799;&#25991;&#23383;&#29256;&#31777;&#35338;&#65289;&#65292;&#25110;&#36984;&#25799;&#19981;&#40670;&#25353;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#25152;&#23492;&#36865;&#38651;&#37109;&#20013;&#30340;&#36899;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#32080;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#21034;&#38500;</span><span style='font-size:
+     12.0pt;font-family:"Arial",sans-serif'> HP </span><span style='font-size:
+     12.0pt;font-family:"MS Gothic"'>&#38928;&#20808;&#23433;&#35037;&#22312;&#24744;&#38651;&#33126;&#26700;&#38754;&#19978;&#30340;&#20419;&#37559;&#22294;&#27161;&#65292;&#25110;&#36984;&#25799;&#19981;&#40670;&#25353;&#36889;&#20123;&#22294;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#27161;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"MS Gothic"'>&#20381;&#24744;&#38651;&#33126;&#25552;&#20379;&#30340;&#25351;&#31034;&#65292;&#37325;&#26032;&#32068;&#24907;&#26576;&#20123;&#38651;&#33126;&#22411;&#34399;&#19978;&#30340;&#32178;&#38555;&#32178;&#32097;&#37749;&#30436;&#25353;&#37749;&#65292;&#20197;&#38283;</span><span
+     style='font-size:12.0pt;font-family:"Microsoft JhengHei",sans-serif'>&#21855;&#24744;&#33258;&#34892;&#36984;</span><span
+     style='font-size:12.0pt;font-family:"MS Gothic"'>&#25799;&#20043;&#30446;&#30340;&#22320;</span><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> URL</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><a name=hptpw></a><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#25237;&#25918;&#26044;&#31532;&#19977;&#26041;&#32178;&#31449;&#30340;</span></b><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'> HP </span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#24291;&#21578;&#21450;&#26381;</span></b><b><span
+style='font-size:15.0pt;font-family:"MS Gothic"'>&#21209;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33287;&#26381;&#21209;&#25552;&#20379;&#21830;&#31805;&#35330;&#21512;&#32004;&#65292;&#22312;&#31532;&#19977;&#26041;&#25793;&#26377;&#30340;&#32178;&#31449;&#19978;&#25237;&#25918;&#24291;&#21578;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#27492;&#22806;&#65292;&#26576;&#20123;&#32178;&#31449;&#21487;&#33021;&#30001;&#26381;&#21209;&#25552;&#20379;&#21830;&#12300;&#20195;&#31649;&#12301;&#65292;&#20197;&#20195;&#34920;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#25552;&#20379;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20043;&#26381;&#21209;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36889;&#20123;&#26381;&#21209;&#25552;&#20379;&#21830;&#21487;&#33021;&#26371;&#24478;&#36889;&#20123;&#31532;&#19977;&#26041;&#32178;&#31449;&#21450;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> hp.com </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20659;&#36865;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Cookie</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#65292;&#25110;&#22312;&#36889;&#20123;&#32178;&#31449;&#19978;&#20351;&#29992;&#32178;&#32097;&#20449;&#27161;&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Cookie </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33287;&#32178;&#32097;&#20449;&#27161;&#21487;&#24171;&#21161;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> HP </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#33936;&#38598;&#38364;&#26044;&#24744;&#25152;&#27298;&#35222;&#20043;&#32178;&#38913;&#21450;&#24744;&#25152;&#40670;&#25353;&#20043;&#36899;&#32080;&#30340;&#36039;&#35338;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#24744;&#21487;&#28687;&#35261;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>http://www.aboutads.info&nbsp;</span></span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#36914;&#19968;&#27493;&#30637;&#35299;&#32178;&#32097;&#24291;&#21578;&#20197;&#21450;&#22914;&#20309;&#36864;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#20986;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"MS Gothic"'>&#27492;&#25919;&#31574;&#30340;&#20027;&#35201;&#29256;&#26412;&#20197;&#33521;&#25991;&#22312;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>http://www8.hp.com/us/en/privacy/privacy.html</span></span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#19978;&#25552;&#20379;&#12290;&#28858;&#26041;&#20415;&#36215;&#35211;&#65292;&#25552;&#20379;&#25152;&#26377;&#35486;&#35328;&#30340;&#35695;&#25991;</span><span
+style='font-size:12.0pt;font-family:"MS Gothic"'>&#12290;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt'>© 2015 Hewlett-Packard Development
+Company, L.P.</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

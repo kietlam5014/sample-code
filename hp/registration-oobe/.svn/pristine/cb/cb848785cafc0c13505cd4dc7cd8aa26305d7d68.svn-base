@@ -1,0 +1,966 @@
+/*
+ * workaround for webview container
+ * If different rules need to be applied for landscape and portrait, do not use the media query 
+ * orientation. This showed to be really buggy in webview. Instead, use BODY.portrait or 
+ * BODY.portrait; The JavaScript is setting the proper class name during orientation changes.
+ */
+
+/*General styles=================================================================================*/
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+
+ul {
+	list-style-type:none;
+}
+
+a {
+	color:#007DBA;
+	text-decoration:none;
+    cursor: pointer;
+}
+
+a:hover {
+	color:#F05332;
+	text-decoration:underline;
+}
+
+a:active {
+	color:#F05332;
+	text-decoration:underline;
+}
+
+a.btn:hover, a.btn:active {
+    color:#FFFFFF;
+	text-decoration:none;
+}
+
+input[type="radio"] {
+	-webkit-appearance: none;
+	background: url("../images/radio.svg") center center no-repeat;
+	background-size: 20px;
+	clear: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 15px 15px;
+}
+
+input[type="radio"]:checked {
+	-webkit-appearance: none;
+	background: url("../images/radio selected.svg") center center no-repeat;
+	background-size: 20px;
+	clear: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 15px 15px;
+}
+
+input[type="radio"]:focus {
+    outline: none;
+}
+    
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	background: url("../images/checkbox.svg") center center no-repeat;
+	background-size: 20px;
+	clear: none;
+	cursor: pointer;
+	margin: 0;
+	width: 18px;
+	height: 18px;
+}
+
+input[type="checkbox"]:checked {
+	-webkit-appearance: none;
+	background: url("../images/checkbox checked.svg") center center no-repeat;
+	background-size: 20px;
+	clear: none;
+	cursor: pointer;
+	margin: 0;
+	width: 18px
+	height: 18px;
+}
+
+IFRAME {
+    border: none;   
+}
+
+::-webkit-input-placeholder {
+	color: #686868;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(113,112,107,0.1);
+	-webkit-border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	background-color: rgba(0,0,0,.2);
+	-webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+	background: rgba(0,0,0,.2);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+	background-color: rgba(0,0,0,.2);
+	-webkit-border-radius: 6px;
+}
+
+
+
+/*Custom Fonts===================================================================================*/
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../font/Roboto-Regular-webfont.svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@font-face {
+    font-family: 'RobotoRegular_TTF';
+    src: url('../font/Roboto-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HPSimplifiedRegular';
+    src: url('../font/HPSimplifiedW01-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+@font-face {
+    font-family: 'HPSimplifiedRegular_SVG';
+    src: url('../font/HPSimplifiedW01-Regular.svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hpbold';
+    src: url('../font/HPSimplifiedW02-Bold.eot');
+    src: url('../font/HPSimplifiedW02-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.introMain {
+    font-style: "HPSimplifiedRegular_SVG", "HPSimplifiedRegular";   
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/*
+ * Some languages are not supported by the RobotoRegular but the webcontainer tries to apply 
+ * it anyway. This causes problem with some characters that are not part of the font. So, 
+ * for some languages we will use Arial font to avoid this kind of problem. 
+ */
+[lang] {
+	font-family:"RobotoRegular", "RobotoRegular_TTF";
+}
+
+[lang="hr"],[lang="hr"] #mainTitle,[lang="hr"] .btn, /*Croatian*/
+[lang="de"],[lang="de"] #mainTitle,[lang="de"] .btn, /*German*/
+[lang="sv"],[lang="sv"] #mainTitle,[lang="sv"] .btn, /*Swedish*/
+[lang="pl"],[lang="pl"] #mainTitle,[lang="pl"] .btn, /*Polish*/
+[lang="cs"],[lang="cs"] #mainTitle,[lang="cs"] .btn, /*Czech*/
+[lang="el"],[lang="el"] #mainTitle,[lang="el"] .btn, /*Greek*/
+[lang="lt"],[lang="lt"] #mainTitle,[lang="lt"] .btn, /*Lithuanian*/
+[lang="ro"],[lang="ro"] #mainTitle,[lang="ro"] .btn, /*Romanian*/
+[lang="sk"],[lang="sk"] #mainTitle,[lang="sk"] .btn, /*Slovak*/
+[lang="sl"],[lang="sl"] #mainTitle,[lang="sl"] .btn, /*Slovenian*/
+[lang="uk"],[lang="uk"] #mainTitle,[lang="uk"] .btn, /*Ukranian*/
+[lang="lv"],[lang="lv"] #mainTitle,[lang="lv"] .btn, /*Latvian*/
+[lang="hu"],[lang="hu"] #mainTitle,[lang="hu"] .btn, /*Hungarian*/
+[lang="sr"],[lang="sr"] #mainTitle,[lang="sr"] .btn, /*Serbian*/
+[lang="vi"],[lang="vi"] #mainTitle,[lang="vi"] .btn, /*Vietnamese*/
+[lang="tr"],[lang="tr"] #mainTitle,[lang="tr"] .btn {/*Turkish*/
+	font-family: "Arial" !important;
+}
+
+#wrapper {
+	box-sizing: border-box;
+	display: -webkit-box;
+	height: 100%;
+	margin: 0 auto 0 auto;
+	
+	-webkit-box-orient: vertical;
+}
+
+.header, .footer {
+	display: inline-block;
+	width: 100%;
+
+	-webkit-box-flex: 0;
+}
+
+.main {
+    -webkit-box-flex: 1;   
+}
+
+#inputSection {
+	margin-top: 10px;
+}
+
+BODY.landscape #wrapper {
+    max-width: 90%;
+    min-width: 90%;
+}
+
+BODY.portrait #wrapper {
+	max-width: 90%;
+	min-width: 90%;
+}
+
+#mainSection {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+BODY.landscape #inputSection, BODY.landscape #consentSection {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+BODY.landscape #registrationForm, BODY.landscape #consentContent {
+    box-sizing: border-box;
+    mmin-height: 320px;
+}
+
+BODY.landscape #consentContent {
+    padding: 0 10px;
+}
+
+#consentQuestion {
+    display: inline-block;
+    
+    -webkit-box-flex: 1;
+}
+
+
+BODY.landscape #SubtitleContent {
+    display: -webkit-box;
+    margin-bottom: 14px;/*.error-message.font-size*/
+    
+    -webkit-box-align: end;
+    -webkit-box-flex: 1;
+}
+
+BODY.landscape #privacyStatements {
+    display: -webkit-box;
+    
+    -webkit-box-align: center;
+    -webkit-box-flex: 2;
+}
+
+#clearAllContainer {
+    margin: 10px 0;
+}
+
+BODY.landscape .mainContent { 
+    -webkit-box-flex: 0;
+}
+
+BODY.landscape #inputSection,BODY.landscape #consentSection {
+    height: 100%;
+}
+
+BODY.landscape #mainSection { 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*HEADER=========================================================================================*/
+.header {
+    margin-top: 10px;
+	white-space: nowrap;
+}
+
+#Title {
+   display: block;
+   max-height: 45px;
+   min-height: 30px;
+   max-width: 100%;
+   min-width: 100%;
+   padding-top: 10px;
+   font-size: large;
+}
+
+.headerHalf {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	width: 50%;
+	vertical-align: text-top;
+}
+
+
+
+.hpLogo {
+	height: 68px;
+	width: 68px;
+}
+
+HEADER .logo {
+	text-align: right;
+}
+
+[dir="rtl"] HEADER .logo {
+	text-align: left;
+}
+
+/*FOOTER=========================================================================================*/
+FOOTER {
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	
+}
+@media screen and (min-height:1100px){
+	FOOTER {
+	margin-bottom: 40px;
+	margin-top: 40px;
+    }
+}
+
+@media screen and (min-height:1300px){
+	FOOTER {
+	margin-bottom: 60px;
+	margin-top: 40px;
+    }
+}
+
+.mainHeader {
+    color:#000;
+    font-family:'HPSimplifiedRegular';
+	font-size:50px;
+	margin:0px;
+	padding:0px;
+}
+
+#agreeHP, #buttons {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 100%;
+}
+
+#buttons {
+	text-align: right;
+}
+
+[dir="rtl"] #buttons {
+	text-align: left;
+}
+
+#buttons > * {
+	display: inline-block;
+}
+
+[dir="rtl"] #btnConatiner {
+	float: left;
+}
+
+#btnContainer, #btnContainerSkip {
+	display: inline-block;
+}
+
+#btnContainerSkip {
+	margin-right: 5px;
+}
+#btnConatinerandroid{
+	text-align:center;
+	height:auto;
+	width:100%;
+}
+#finishButtonLabelandroid
+{
+	width:100%;
+	padding: 5px 4px;
+}
+
+[dir="rtl"] #btnContainerSkip {
+	margin-left: 5px;
+	margin-right: 0;
+}
+
+.btn {
+    border:medium none;
+	border-radius:0 4px 0 4px;
+	color:#FFFFFF   !important;
+	display:inline-block;
+ 
+    font-size:17px;
+	padding:5px 29px 4px 29px;
+	text-align:center;
+	text-decoration:none 	!important;
+    text-shadow:none;
+}
+
+.btn-primary {
+	background-color: #2B91CC;
+}
+
+.btn-secondary {
+	background-color: #767676;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#licenseTermsPlainText {
+	padding: 0 10px;
+}
+
+#agreeHP  .agreeHPContent {
+	margin-top:10px;
+}
+
+.agreeHPContent > * {
+	vertical-align: middle;
+}
+
+BODY.landscape #consentContent {
+    padding: 0 30px;
+}
+
+/*FORM===========================================================================================*/
+#registrationForm {
+	bbackground-color:#E5E8E8; /*See Index.js#UI_updateUIBasedOnModel*/
+	border:0px solid #999;
+	mmargin-top: 20px;
+	
+	-webkit-border-radius:8px;
+}
+
+#registrationForm label {
+    font-style:normal;
+}
+
+.base-field-style {
+	background-image: url("../images/side hover.svg"), url("../images/baseline hover.svg"), 
+					  url("../images/side hover.svg");
+	background-position: left bottom, left bottom,right bottom ;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.list-field-style {
+	background-image: url("../images/baseline hover.svg"), url("../images/triangle hover.svg");
+	background-position: left bottom,right bottom ;
+	background-repeat: no-repeat, no-repeat;
+}
+
+[dir="rtl"] .list-field-style {
+	background-image: url("../images/triangle rtl hover.svg"), url("../images/baseline hover.svg");
+	background-position: left bottom,right bottom ;
+	background-repeat: no-repeat, no-repeat;
+}
+
+.base-field-style:hover, .base-field-style:focus {
+	background-image: url("../images/side hover.svg"), url("../images/baseline hover.svg"), 
+						url("../images/side hover.svg");
+	background-position: left bottom, left bottom,right bottom ;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.list-field-style:hover {
+	background-image: url("../images/baseline hover.svg"), url("../images/triangle hover.svg");
+	background-position: left bottom,right bottom ;
+	background-repeat: no-repeat, no-repeat;
+}
+
+.field {
+	background-color: transparent;
+	border: none;
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1.5em;
+	outline: none;
+}
+
+#firstNameOuterContainer, #lastNameOuterContainer, #emailOuterContainer {
+	width: 100%;
+}
+
+#firstName, #lastName, #email, #CountryLst {
+	width: 100%;
+}
+
+#countryContainer, #nameContainer, #emailContainer {
+	margin-bottom: 40px;
+	max-height: 40px;
+}
+
+#CountryErrorMsg, #FrstNameErrorMsg, #EmailErrorMsg, #LastNameErrorMsg {
+	margin-left:5px;
+	visibility: hidden;
+}
+
+#EmailConsentErrorMsg {
+	margin-left: 0;
+	visibility: hidden;
+}
+
+.error-msg {
+  color: red;
+}
+
+#nameContainer {
+	white-space: nowrap;
+}
+
+#firstNameContainer, #lastNameContainer {
+	display: inline-block;
+	width: 45%;
+}
+
+#lastNameContainer {
+	float: right;
+}
+
+[dir="rtl"] #lastNameContainer {
+	float: left;
+}
+
+#formContainer {
+	width: 45%;
+}
+
+#nameContainer, #emailContainer {
+	mmargin-top: 20px;
+}
+
+#clearAllContainer {
+	display: -webkit-box;
+	-webkit-box-align: center;
+}
+
+#clearAllContainer > * {
+    cursor: pointer;
+	ddisplay: -webkit-box;
+	
+	d-webkit-box-align: end;
+}
+
+
+
+#clearAll {
+	color: #686868;
+    cursor: pointer;
+	font-family: 'HPSimplifiedRegular';
+    white-space: nowrap;
+}
+
+#clearAll:hover {
+    text-decoration: none;   
+}
+
+#clearAllIcon, #clearAllContainer.disabled > #clearAllIcon {
+    background-size: 25px 25px;
+    height: 25px;
+    width: 25px;
+}
+
+#clearAllIcon {
+    background: url('../images/clearall.svg') center center no-repeat;
+}
+
+
+#clearAllContainer.disabled > #clearAll {
+    color: #a9acac;   
+    visibility:hidden;
+}
+#clearAllContainer.enable > #clearAll {
+    color: #000000;   
+     visibility:visible;
+}
+#clearAllContainer.disabled > #clearAllIcon {
+    background: url('../images/clearall disabled.svg') center center no-repeat;
+    visibility:hidden
+}
+#clearAllContainer.enable > #clearAllIcon {
+    background: url('../images/clearall disabled.svg') center center no-repeat;
+     visibility:visible;
+}
+
+/*E-MAIL CONSENT=================================================================================*/
+#consentSection {
+    mmargin-top: 10px;   
+}
+
+#consentQuestion {
+    margin-top: 10px;   
+}
+
+#emailMeblck {
+    font-size:16px;
+}
+
+#emailMeblck span {
+	padding-left:0px;
+}
+
+#emailConsentText {
+ 
+ 	display: block;
+}
+ 
+#privacyStatements {
+	margin-top:10px;
+}
+ 
+ #privacyStatements ul {
+	margin:0px;
+	padding:0px;
+    max-width: 100%;
+ }
+
+#privacyStatements ul li {
+	padding:5px 5px 5px 0 ;
+}
+
+#privacyStatements span{
+	color:#007DBA;
+}
+
+#SubtitleContent {
+	margin:12px 0 0 0;
+}
+
+#emailMeblck input, #emailMeblck label {
+	vertical-align: middle;
+}
+
+
+
+/*POP UP WINDOW==================================================================================*/
+.simpleHeader {
+    color: rgb(8, 115, 162);
+    margin: 0 0 7px;
+}
+
+#popupCanvas, #popupCanvasForContent {
+	display: none;
+	z-index: 10;
+}
+
+#popupCanvas, #popupCanvasForContent {
+	background-color: rgba(0, 0, 0, .9);
+	display: none; /* In code switches to table when popup is visible*/
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+#popupWindowForContent, #popupWindow {
+	display: table-cell;
+	/*padding is specific per size*/
+	vertical-align: middle;
+}
+
+#popupWindowForContent > * {
+	display: table;
+}
+
+.popupContent {
+	background-color: rgb(255, 255, 255);
+	display: inline-block;
+	margin: 0;
+    width: 100%;
+}
+
+#popupTitle {
+	color: rgb(8, 115, 162);
+	margin: 0 0 7px;
+	text-align: left;
+}
+
+#popupTitle.secondary {
+      color: #767676; 
+}
+
+[dir="rtl"] #popupTitle {
+	color: rgb(8, 115, 162);
+	margin: 0 0 7px;
+	text-align: right;
+}
+
+[dir="rtl"] #popupTitle.secondary {
+    color: #767676;   
+}
+
+#popupBodyContent {
+	height: 100%;
+	padding: 30px;
+	text-align: left;
+	overflow-y: scroll;
+}
+
+#popupContentBodyContent {
+	height: 100%;
+	overflow-y: scroll;/*DEBUG!*/
+	padding: 0;
+}
+
+#popupContentBodyContent IFRAME {
+	height: 100%;
+}
+
+#popupContentBodyContent > ARTICLE, #popupContentBodyContent > DIV {
+	padding: 30px;
+}
+
+#popupBodyContent {
+	display: table;
+	word-break: break-word;
+}
+
+[dir="rtl"] #popupBodyContent, [dir="rtl"] #popupContentBodyContent {
+	text-align: right;
+	overflow-y: scroll;
+}
+
+#popupButton, #popupButton2 {
+	float: right;
+	margin: 20px 10px;
+}
+
+[dir="rtl"] #popupButton, [dir="rtl"] #popupButton2 {
+	float: left;
+	margin: 20px;
+}
+
+#popupButtonForContent, #popupButton2ForContent {
+	float: right;
+	margin: 20px 0 0 0;
+	white-space: nowrap;
+	z-index: 20;
+}
+
+#popupButton2ForContent {
+    margin-right: 20px;   
+}
+
+[dir="rtl"] #popupButtonForContent, [dir="rtl"] #popupButton2ForContent {
+	float: left;
+	margin: 20px 0 0 0;
+	white-space: nowrap;
+	z-index: 20;
+}
+
+[dir="rtl"] #popupButton2ForContent {
+    margin-right: 20px;   
+}
+
+/*Country Pulldown===============================================================================*/
+#countryCollection {
+	background-color: white;
+	display: none;
+	overflow-x: hidden;
+	overflow-y: scroll;
+    position: relative;
+	top: 0;
+	left: 0;
+    z-index: 100;
+}
+
+BODY.landscape #countryCollection {
+	max-height: 150px;
+}
+
+BODY.portrait #countryCollection {
+	max-height: 150px;
+}
+
+.countryItem {
+	display: block;
+	margin: 0;
+	padding: 5px 0 5px 5px;
+    font-family: Arial;/*The other custom fonts used by the app have problem to render some chars*/
+}
+
+.countryItem:hover, .itemSelected {
+	background-color: rgb(0, 125, 186);
+	color: white;
+}
+
+#btnContainerGoAway {
+    display: none;   
+}
+
+[dir="rtl"] #btnContainerGoAway {
+    margin-left: 5px;  
+}
+
+#carrierIQContainer {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+#carrierIQContainer A:active {
+    background-color: #e5e8e8;   
+}
+
+#carrierIQTextContainer {
+    margin: 0 10px;
+    white-space: normal !important;
+}
+
+#carrierIQContainer > DIV {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#carrierIQText {
+    white-space: normal !important;   
+}
+
+/* TODO MOVED FROM BASE.CSS */
+BODY.portrait #agreeHP, BODY.portrait #buttons {
+    display: block;
+    width: 100%;
+}
+
+BODY.portrait #agreeHP {
+    margin-bottom: 15px;
+}
+
+[lang="en"] BODY.portrait #agreeHP {
+    margin-bottom: 0px;
+}
+
+/*====*/
+BODY.portrait #Title {
+    -webkit-box-flex:0;   
+}
+
+BODY.portrait #mainContent {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-flex: 1;
+}
+
+BODY.portrait #inputSection {
+    -webkit-box-flex: 0;   
+}
+
+BODY.portrait #consentSection {
+    -webkit-box-flex: 1;
+    -webkit-box-align: end;
+    display: -webkit-box;
+}
+
+BODY.portrait #consentContent {
+    margin-bottom: 20px;   
+}
+
+BODY.portrait #carrierIQContainer {
+    margin-top: 30px;   
+}
+
+#carrierIQContainer {
+    display: none;
+}
+
+#btnContainerSkip {
+    display: none;   
+}
+
+
+ul.retailList {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	list-style: none;
+
+	-webkit-perspective: 400px;
+	        perspective: 400px;
+}
+
+ul.retailList li {
+	position: relative;
+	padding: 20px;
+	background: #fff;
+	color: #0096D6;
+    font-family:'HPSimplifiedRegular';
+	font-size: 18px;
+    border: solid 1px lightgray;
+}
+
+ul.retailList li:nth-child(odd) {
+	fbackground: #cceafd; 
+}
+
+.chosen {
+	background: #006699 !important;
+    color: white !important;
+}
+
+.flip {
+	-webkit-perspective: 400px;
+	        perspective: 400px;
+
+	-webkit-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.flip li {
+	-webkit-transition: all 800ms ease,
+						opacity 300ms ease;
+	        transition: all 800ms ease,
+	        			opacity 300ms ease;
+    
+
+	-webkit-transform-origin: 0% 0%;
+	        transform-origin: 0% 0%;
+}
+.flip li.past {
+	opacity: 0;
+
+	-webkit-transform-origin: 0% 100%;
+	        transform-origin: 0% 100%;
+
+	-webkit-transform: rotateX(70deg );
+	        transform: rotateX( 70deg );
+}
+.flip li.future {
+	opacity: 0;
+
+	-webkit-transform: rotateX(-70deg );
+	        transform: rotateX(-70deg );
+	        animation: fadein 2s;
+}
+
+#main {
+    height:100%;
+    padding:0 !important;
+}
+
+.disabledButton {
+    background-color: lightgray;
+    color:darkgray;
+}

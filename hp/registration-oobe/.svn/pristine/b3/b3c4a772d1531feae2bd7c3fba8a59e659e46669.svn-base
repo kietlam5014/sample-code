@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="es" xml:lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Como parte del compromiso de HP de ofrecer una mejor experiencia de dispositivo, este dispositivo está equipado con software de diagnóstico.  Este software recopila datos de diagnóstico anónimos, incluyendo información sobre hardware y software del dispositivo, configuración y estado de la red y uso de las aplicaciones. Esta información se usa para mejorar nuestras ofertas de productos y servicios.  Los datos de diagnóstico están vinculados al dispositivo y no diferenciarán entre usuarios. Los datos anónimos solo se comparten con el proveedor de software de diagnóstico. Estas sesiones de carga de datos pueden ocurrir a través de una red WiFi o celular y cumplen con los estándares de la Seguridad HP.  La cantidad de datos enviados al proveedor de diagnóstico a través de la red celular es mínima y no debería influir de forma negativa en la cobertura de datos del operador móvil. Si desea desactivar estas características de diagnóstico, vaya a Configuración.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

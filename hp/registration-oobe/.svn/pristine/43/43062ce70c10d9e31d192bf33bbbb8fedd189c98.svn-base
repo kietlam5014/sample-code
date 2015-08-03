@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_home">Regisztráció</string>
+    <string name="notification_title">Regisztráció</string>
+    <string name="notification_text">Kérjük, regisztrálja a készüléket a személyre szabott segítségnyújtás és a gyorsabb támogatás érdekében.</string>
+    <string name="app_name">HP OOBE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+<string name="mybutton">Settings</string>
+<string name="read_provider_description">Access registration data entered during first boot.</string>
+</resources>

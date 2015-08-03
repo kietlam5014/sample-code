@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'HPSimplifiedRegular';
+    src: url('../res/HPSimplifiedW01-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hpbold';
+    src: url('../res/HPSimplifiedW02-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+BODY {
+    font-family: 'HPSimplifiedRegular';   
+    margin: 0;
+}
+
+H1 {
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+TABLE {
+    width: 100% !important;   
+}
+
+
+
+UL {
+    list-style: none;
+    padding: 0;
+}
+
+LI  {
+
+   padding: 5px;
+   padding-left: 20px;
+   color:blue;
+   display: block;
+   font-size: 14px;
+   line-height: 23px;
+   border-bottom: solid 1px #cccccc;
+  
+}
+
+UL.links > LI > A {
+    border-bottom: solid 1px #cccccc;
+    display: block;
+    font-size: 14px;
+    line-height: 23px;
+    padding: 5px;
+    text-decoration: none;
+}
+.region {
+    color: black;
+    font-weight: bold;
+    padding-left: 10px !important;
+}
+
+.itemsOfRegion A {
+    padding-left: 20px !important;   
+}
+
+.firstRegion {
+    border-top: solid 1px #cccccc;   
+}
+
+#header {
+    padding-left: 10px;
+    padding-top: 10px;
+}

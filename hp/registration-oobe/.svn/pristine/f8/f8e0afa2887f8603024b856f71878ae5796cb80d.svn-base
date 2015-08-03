@@ -1,0 +1,197 @@
+package hp.oobe;
+
+import hp.oobe.utilities.Cryptography;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Writer;
+import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
+import java.util.TimeZone;
+
+import android.content.Context;
+import android.os.UserManager;
+import android.util.Log;
+
+public class Util {
+	
+	/**
+	 * Saves a file
+	 * 
+	 * @param filePath. absolute location of the file (path + file name)
+	 * @param content. the content of the file.
+	 */
+	public void persistContent(String filePath, String content) {
+		
+		try {
+			File file = new File(filePath);
+			Writer writer = new BufferedWriter(new FileWriter(file));
+			writer.write(content);
+			
+			writer.close();
+		
+		} catch(IOException e) {
+			
+			Log.d(Consts.TAG, "Problem while persisting data in " + filePath  + ".");
+			e.printStackTrace();
+			
+		}
+		
+	}//#persistContent
+	
+	/**
+	 * Encrypt the content and persist into filePath
+	 * 
+	 * @param filePath. absolute location of the file (path + file name).
+	 * @param content. content to be encrypted and saved.
+	 * @param keyToEncrypt. The key that will be used to encrypt the content.
+	 * 
+	 */
+	public void encryptAndPersistContent(String filePath, String content, String keyToEncrypt) {
+		
+		String encryptedContent = null;
+		
+		encryptedContent = Cryptography.encrypt(content, keyToEncrypt);
+		
+		persistContent(filePath, encryptedContent);
+		
+	}//#encryptAndPersistContent
+	
+	public String readBornOnDateFromFile(String keyToDecryptContent) {
+		try {
+			String result = null;
+
+			result = readContentOfFileAndDecrypt(Consts.FILES_ROOT
+					+ Consts.FILE_NAME_BOD, keyToDecryptContent);
+			if (result != null && !result.isEmpty()) {
+			
+				/*
+				 * workaround
+				 * When the clock is in the future, the backend uses the current date 
+				 * as the born on date. The problem is that when the date comes back 
+				 * the hours:minute:seconds part come screwed up. Luckily, this part is
+				 * ignored in the Registration backend. So we are removing that part from the date.
+				 */
+				result = result.substring(0, result.indexOf("T"));
+				
+				SimpleDateFormat fmtIn = new SimpleDateFormat(
+						"yyyy-MM-dd", Locale.ENGLISH);
+				fmtIn.setTimeZone(TimeZone.getTimeZone("GMT"));
+				//Calendar cal = new GregorianCalendar();
+				//fmtIn.setCalendar(cal);
+				Date date = fmtIn.parse(result);
+
+				SimpleDateFormat fmtOut = new SimpleDateFormat(
+						"MM-dd-yyyy HH:mm:ssZ",Locale.ENGLISH);
+				fmtOut.setTimeZone(TimeZone.getTimeZone("GMT"));
+				//fmtOut.setCalendar(cal);
+				String bod = fmtOut.format(date);
+				return bod;
+			} else
+				return null;
+		} catch (Exception ex) {
+			Log.e(Consts.TAG, ex.getMessage());
+			ex.printStackTrace();
+			return null;
+		}
+
+	}// #readBornOnDate
+	/**
+	 * Open an encrypted file and return the plain text (decrypted). 
+	 * 
+	 * @param filePath. absolute location of the file (path + file name)
+	 * @param keyToDecrypt. The key that was used to encrypt the file.
+	 * 
+	 * @return
+	 * 	Decrypted content.
+	 */
+	public String readContentOfFileAndDecrypt(String filePath, String keyToDecrypt) {
+		
+		String result = null;
+		String pwd = keyToDecrypt;
+		BufferedReader reader = null;
+		
+		try {
+			
+			File f1 = new File(filePath);
+			FileInputStream fin = new FileInputStream(f1);
+			reader = new BufferedReader(new InputStreamReader(fin));
+			StringBuilder sb = new StringBuilder();
+			String line = null;
+			
+			while((line = reader.readLine()) != null) {
+				sb.append(line).append("\n");
+			}
+			
+			result = sb.toString();
+			
+			if (reader != null) {
+				reader.close();
+			}
+			
+		} catch (FileNotFoundException e1) {
+			
+			Log.d(Consts.TAG, "The file " + filePath + " was not found while attempting to open it.");
+			e1.printStackTrace();
+			
+		} catch (IOException e) {
+			
+			Log.d(Consts.TAG, "There was a problem while trying to parse " + filePath);
+			e.printStackTrace();
+			
+		} 
+		
+		if (result != null) {
+			result = Cryptography.decrypt(result, pwd);
+		}
+		
+		return result;
+		
+	}//#readContentOfFileAndDecrypt
+	
+	/**
+	 * Helper function to convert the InputStream to String.
+	 * 
+	 * @param stream Response from the server as InputStream.
+	 * @return Response
+	 * @throws IOException
+	 */
+	public String convertToString(InputStream stream) throws IOException {
+		StringBuilder out = new StringBuilder();
+		BufferedReader br = new BufferedReader(new InputStreamReader(stream));
+		
+		for(String line=br.readLine();line != null;line=br.readLine()) {
+			out.append(line);
+		}
+		
+		br.close();
+		
+		return out.toString();
+	}
+	
+	public boolean isCurrentUserOwner(Context context)
+	{
+	    try
+	    {
+	        Method getUserHandle = UserManager.class.getMethod("getUserHandle");
+	        int userHandle = (Integer) getUserHandle.invoke(context.getSystemService(Context.USER_SERVICE));
+	        return userHandle == 0;
+	    }
+	    catch (Exception ex)
+	    {
+	        return false;
+	    }
+	}
+	
+}

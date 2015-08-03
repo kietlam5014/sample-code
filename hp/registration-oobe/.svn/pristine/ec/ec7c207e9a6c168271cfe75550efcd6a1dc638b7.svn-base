@@ -1,0 +1,24 @@
+package hp.oobe;
+
+import java.util.Date;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
+public class RegistrationScheduleManager {
+	private Context context;
+	private SharedPreferences preferences = null;
+	
+	public RegistrationScheduleManager(Context context) {
+		this.context = context;
+		preferences = this.context.getSharedPreferences(Consts.PREFERENCES,  0);
+	}
+	
+	/*
+	 * If the user turns off and turns on the device, the reminder to register again
+	 * gets reset.
+	 */
+	public void rescheduleNotification(Date when) {
+	
+	}
+}

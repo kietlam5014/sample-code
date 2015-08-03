@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						Som en del av HPs innsats for å levere en bedre enhetsopplevelse er denne enheten utstyrt med diagnoseprogramvare.  Denne programvaren samler inn anonyme diagnosedata, medregnet informasjon om enhetens maskinvare og programvare, nettverkskonfigurasjon og bruk av applikasjoner. Denne informasjonen brukes for å forbedre vårt produkt og våre servicetilbud.  Diagnosedataene er knyttet til enheten og vil ikke skille mellom brukere. Anonyme data deles bare med leverandøren av diagnoseprogramvaren. Dataopplastingsøktene kan finne sted over et mobil- eller WiFi-nettverk og overholder nøye HPs sikkerhetsstandarder.  Det er en minimal mengde data som sendes over mobilnettet til diagnoseleverandøren, og den bør ikke ha betydning for datakvotene dine hos mobiloperatøren. Hvis du gjerne vil deaktivere slike diagnosefunksjoner, vennligst gå til Innstillinger.
+
+	</body>
+</html>

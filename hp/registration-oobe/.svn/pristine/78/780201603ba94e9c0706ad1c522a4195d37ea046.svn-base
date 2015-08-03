@@ -1,0 +1,188 @@
+package hp.oobe.tasks;
+
+import hp.oobe.Consts;
+import hp.oobe.Util;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
+import java.util.TimeZone;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.util.Log;
+
+public final class BeaconTask extends HTTPTask implements IOOBETask {
+
+	private Util util = new Util();
+	private String response = null;
+	private String bod = null;
+	private String keyToDecryptContent = null;
+	private Context context = null;
+
+	// ============================================================================================
+	// PUBLIC MEMBERS
+	// ============================================================================================
+	public BeaconTask(Context context, String name, String endPoint,
+			String keyToDecryptContent) {
+		
+		super(name, endPoint);
+		super.message = ""; // Beacons has no body content.
+		this.keyToDecryptContent = keyToDecryptContent;
+		this.context = context;
+	}
+	public void setSharedPreference(String key, String value) {
+		
+		if (key != null && value != null) {
+
+			SharedPreferences pref = context.getSharedPreferences("hp.oobe", Context.MODE_PRIVATE);
+			SharedPreferences.Editor editor = pref.edit();
+			
+			editor.putString(key, value);
+			editor.commit();
+			
+		}
+		
+	}//#setSharedPreference
+	@Override
+	public boolean isValid(String response) {
+
+		if (response != null && response.trim().equals("")) {
+
+			return true;
+
+		} else {
+
+			return false;
+
+		}
+
+	}
+
+	@Override
+	public void run() {
+
+		InputStream is = null;
+		HttpURLConnection conn = null;
+		this.bod = util.readBornOnDateFromFile(this.keyToDecryptContent);
+		String daysBW = "x";
+		try {
+
+			if (this.bod != null && !this.bod.isEmpty()) {
+				SimpleDateFormat fmtOut = new SimpleDateFormat(
+						"MM-dd-yyyy HH:mm:ssZ",Locale.ENGLISH);
+				fmtOut.setTimeZone(TimeZone.getTimeZone("GMT"));
+
+				Date dateBOD = fmtOut.parse(this.bod);
+				Date dateNow = new Date();// Current date
+				long startDay = dateBOD.getTime() / 1000 / 60 / 60 / 24;
+				long endDay = dateNow.getTime() / 1000 / 60 / 60 / 24;
+
+				// Find the difference
+				long daysBetween = endDay - startDay;
+
+				if (daysBetween >= 28)
+					daysBW = "28";
+				else if (daysBetween >= 14 && daysBetween <= 27)
+					daysBW = "14";
+				else if (daysBetween >= 7 && daysBetween <= 13)
+					daysBW = "07";
+				else if (daysBetween >= 3 && daysBetween <= 6)
+					daysBW = "03";
+				else if (daysBetween >= 1 && daysBetween <= 2)
+					daysBW = "01";
+				else if (daysBetween < 1)
+					daysBW = "00";
+			} else {
+				daysBW = "x";
+			}
+
+		} catch (java.text.ParseException ex) {
+			ex.printStackTrace();
+		}
+		try {
+
+			if (endPoint.contains("skipped")) {
+				String urlSubtr1 = endPoint.substring(0,
+						endPoint.indexOf("skipped") + 10);
+
+				String urlSubtr2 = endPoint.substring(endPoint
+						.indexOf("skipped") + 11);
+				endPoint = urlSubtr1 + daysBW + urlSubtr2;
+				saveBeaconURLinPreferences(endPoint);
+			}
+			URL url = new URL(endPoint);
+			conn = (HttpURLConnection) url.openConnection();
+
+			conn.setDoOutput(false);
+
+			is = conn.getInputStream();
+			
+			response = util.convertToString(is);
+		
+		} catch (Exception e) {
+
+			Log.d(Consts.TAG, "Problem while sending the data of " + name
+					+ ". Error: " + e.getMessage());
+			e.printStackTrace();
+
+		} finally {
+
+			if (is != null) {
+
+				try {
+
+					is.close();
+
+				} catch (IOException e) {
+
+					e.printStackTrace();
+
+				}
+
+			}
+
+			conn.disconnect();
+
+		}
+
+		this.sent = isValid(response);
+		setSharedPreference(Consts.METRICS,String.valueOf(this.sent));
+	}
+
+	private void saveBeaconURLinPreferences(String url) {
+		SharedPreferences preferences = this.context.getSharedPreferences(
+				Consts.PREFERENCES, 0);
+		SharedPreferences.Editor editor = preferences.edit();
+		editor.putString(getName(), url);
+		
+		editor.commit();
+	}
+
+	@Override
+	public String getName() {
+
+		return this.name;
+
+	}
+
+	@Override
+	public boolean getStatus() {
+
+		return this.sent;
+
+	}
+
+	@Override
+	public void setStatus(boolean status) {
+
+		this.sent = status;
+
+	}
+}

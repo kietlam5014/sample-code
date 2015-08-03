@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						HP on sitoutunut parantamaan laitteiden käyttöelämystä, ja osana tätä pyrkimystä laite on varustettu vianmääritysohjelmistolla.  Ohjelmisto kerää anonyymeja vianmääritystietoja, esimerkiksi tietoja laitteistosta ja ohjelmistosta, verkkomäärityksistä, verkon tilasta ja sovellusten käytöstä. Näitä tietoja käytetään tuotteiden ja palveluiden kehittämiseen.  Vianmääritystiedot ovat laitekohtaisia eikä niitä voi yhdistää käyttäjiin. Anonyymit vianmääritystiedot jaetaan vain vianmääritysohjelmiston toimittajan kanssa. HP:n tietoturvastandardeja vastaavat tiedonsiirtoistunnot voidaan toteuttaa matkapuhelin- tai Wi-Fi-verkon välityksellä.  Vianmäärityspalveluiden tarjoajalle lähetetään matkapuhelinverkon kautta vain vähän tietoja, joten tämän ei pitäisi vaikuttaa negatiivisesti matkapuhelinoperaattorin määrittämään datakiintiöön. Jos haluat poistaa vianmääritystoiminnot käytöstä, voit tehdä tämän Asetukset-kohdassa.
+
+	</body>
+</html>

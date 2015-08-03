@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="sk" xml:lang="sk">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						V rámci záväzku spoločnosti HP zlepšovať používanie zariadení je toto zariadenie vybavené diagnostickým softvérom.  Tento softvér zhromažďuje anonymné diagnostické dáta vrátane informácií o hardvéri a softvéri zariadenia, konfigurácii a stave siete a používaní aplikácií. Tieto informácie sa používajú na zlepšovanie produktov a služieb, ktoré ponúkame.  Diagnostické dáta sú viazané na zariadenie a nerozlišuje sa v nich medzi jednotlivými používateľmi. Anonymné dáta sa zdieľajú len s poskytovateľom diagnostického softvéru. Dáta sa odovzdávajú cez mobilnú alebo Wi-Fi sieť a odovzdávanie zodpovedá štandardom zabezpečenia spoločnosti HP.  Cez mobilnú sieť sa poskytovateľovi diagnostiky odovzdáva len minimálne množstvo dát, ktoré by nemalo mať negatívny vplyv na množstvo dát pridelených mobilným operátorom. Tieto diagnostické funkcie môžete vypnúť v nastaveniach.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

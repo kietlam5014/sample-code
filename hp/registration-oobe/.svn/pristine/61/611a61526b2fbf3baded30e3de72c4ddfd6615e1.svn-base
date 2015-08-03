@@ -1,0 +1,933 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+
+/*
+ * This object works as facade for the various point of the application.
+ * 
+ * @depends
+ * 	hp.registration.Properties
+ */
+hp.registration.Registration = function() {
+
+	/*
+     * ============================================================================================
+     * Private members 
+     * ============================================================================================
+     */
+	var MachineInfo = null, RegistrationInfo = null, Transporter = null, Localization = null,
+        NetworkInfo = null, CarrierIQ = null;
+
+    var sufix_ = '';
+
+    /*
+     * The UI can run outside of the Android container (on Chrome). In order to do that, for each 
+     * useragent object that exist, there is a copy of it but named with and Browser in the end. 
+     * The logic below define aliases and set the correct useragent. 
+     */
+    if (isRunningOnBrowser()) {
+        
+        hp.registration.Properties.usingAlternateUserAgent = true;
+        console.log('Application is running on desktop browser.');
+        
+    }
+
+    if (hp.registration.Properties.usingAlternateUserAgent) {
+        
+        sufix_ = hp.registration.Properties.ALTERNATE_PROVIDER_SUFIX;
+        
+    }
+
+    MachineInfo = hp.registration.useragent['MachineInfo' + sufix_];
+    NetworkInfo = hp.registration.useragent['NetworkInfo' + sufix_];
+    RegistrationInfo = hp.registration.useragent['RegistrationInfo' + sufix_];
+    Transporter = hp.registration.useragent['Transporter' + sufix_];
+    CarrierIQ = hp.registration.useragent['CarrierIQ' + sufix_];
+    Localization = hp.registration.util.Localization;
+    
+    /*
+     * Checks if the code is running on a regular browser. This might be useful for
+     * UX team to see UI without the need of real device or Android emulator
+     *
+     * @returns
+     *  Boolean. true if it's running on regular browser. Otherwise, false (running on emulator
+     *  or device).
+     */
+    function isRunningOnBrowser() {
+
+        var result_ = true;
+
+        /*
+         * When running on Android, the Java layer exposes an object called registrationAndroid. 
+         * This object doesn't exist if it's running on browser. 
+         */
+        if ('registrationAndroid' in window) {
+            
+            result_ = false;
+            
+        }
+
+        return result_;
+
+    };//#isRunningOnBrowser
+    
+    /*
+     * Extract the country code from the response replied by the GeoLocation service.
+     * 
+     * @params
+     * 	inXml: Object.
+     * 
+     * @returns
+     * 	String. Two-letter country code if found. Otherwise, it returns null.
+     */
+    function extractCountryCode(inXml) {
+    	var result_ = null;
+    	
+    	if (!inXml) {
+    		console.log('The source must be in XML format. Other format was received.');
+    		result_ = null;
+    	} else {
+    		var element_ = inXml.querySelector('CountryCode');
+    		
+    		if (element_) {
+    			result_ = element_.textContent.toUpperCase();
+    		} else {
+    			console.log('XML message does not have CountryCode.');
+    		}
+    	}
+
+    	return result_;
+    };//#extractCountryCode
+
+    /*
+     * The media queries (CSS) has shown not to be reliable while running in the Android's web container. Specifically, 
+     * the ones with dynamic content. 
+     *
+     * This method makes tests based on mix of conditions; some using CSS media query (for the static properties) and 
+     * others from the Java layer. 
+     *
+     * @params
+     *  inDefaultOrientation: String. 
+     *                        landscape OR
+     *                        portrait
+     */
+    function includeCorrectStylesheet(inDefaultOrientation) {
+
+        var prop_ = hp.registration.Properties;
+        var size_ = prop_.NORMAL_SCREEN,
+            width_ = getWidth(inDefaultOrientation), height_ = getHeight(inDefaultOrientation);
+        
+     if( width_ >= 700) 
+    {
+
+            size_ = prop_.BIG_SCREEN;
+       }
+        /*
+        if (window.matchMedia('(-webkit-min-device-pixel-ratio:1) and (-webkit-max-device-pixel-ratio:1.4)').matches &&
+            width_ >= 600) {
+
+            size_ = prop_.BIG_SCREEN;
+
+        } 
+       
+        else if (window.matchMedia('(-webkit-device-pixel-ratio:1.5)').matches) {
+
+            if (width_ >= 1200 && height_ >= 1100) {
+
+                size_ = prop_.BIG_SCREEN;
+
+            } else {
+
+                size_ = prop_.SMALL_SCREEN;
+
+            }
+
+        } else if (window.matchMedia('(-webkit-device-pixel-ratio:2)').matches) {
+
+            if (height_ >= 600 && width_ >= 800) {
+
+                size_ = prop_.BIG_SCREEN;
+
+            } 
+
+        } else if (window.matchMedia('(-webkit-min-device-pixel-ratio:2)').matches) {
+
+            if (width_ >= 640 && width_ <= 1200 && height_ >= 1000 && height_ <= 1800) {
+
+                size_ = prop_.SMALL_SCREEN;
+
+            }
+
+        }
+*/
+        console.log('Stylesheet that will be applied is ' + size_);
+
+        // Adding the LINK element
+        var link_ = document.createElement('LINK');
+            link_.setAttribute('rel', 'stylesheet');
+            link_.href = 'css/' + size_;
+
+        var head_ = document.querySelector('HEAD');
+            head_.appendChild(link_);
+
+    };//#includeCorrectStylesheet
+    
+    /*
+     * Get the width of the device. The width will always be the largest width of the device. In other words,
+     * when the device has its default orientation as portrait, the height is the width. 
+     */
+    function getWidth(inDefaultOrientation) {
+
+        var result_ = 0;
+        var height= document.body.clientHeight;
+        var width= document.body.clientWidth;
+      //  result_ = ((window.screen.width > window.screen.height) ? window.screen.width : window.screen.height);
+        result_ = ((width >height) ? width: height);
+        /*
+         * Android's webcontainer doesn't return the device independent pixel (dip); it returns the real size. 
+         * The webbrowser (when Chromium is used to debug the API) does return in dip. The logic to define the
+         * right stylesheet relies of the physical pixel count. Below, we transform that to the physical pixel 
+         * if the user runs outside of Android's container. 
+         */
+        if (isRunningOnBrowser()) {
+         
+            result_ *= window.devicePixelRatio;
+            
+        }
+
+        return result_;
+    };//#getWidth
+
+    /*
+     * Get the height of the device. The height will always be the largest width of the device. 
+     */
+    function getHeight(inDefaultOrientation) {
+
+        var result_ = 0;
+        
+        result_ = ((window.screen.height < window.screen.width) ? window.screen.height : window.screen.width);
+
+        /*
+         * Android's webcontainer doesn't return the device independent pixel (dip); it returns the real size. 
+         * The webbrowser (when Chromium is used to debug the API) does return in dip. The logic to define the
+         * right stylesheet relies of the physical pixel count. Below, we transform that to the physical pixel 
+         * if the user runs outside of Android's container. 
+         */
+        if (isRunningOnBrowser()) {
+         
+            result_ *= window.devicePixelRatio;
+            
+        }
+        
+        return result_;
+        
+    };//#getHeight
+
+    /*
+     * Tells what kind of image the application in running on. 
+     *
+     * @returns
+     *  String. 2-char code.   
+     */
+    function getBuildType() {
+        
+        var result_ = null;
+        
+        /*
+         * By the time of this coding, there were two images: WW (world wide) and CN (Chinese).
+         * CN images don't have GMS package, from Google, installed. 
+         */
+        var gms_ = MachineInfo.getPropertyOfDevice('ro.com.google.gmsversion');
+        
+        result_ = (gms_ ? hp.registration.Properties.BUILD_TYPE_WW : 
+                            hp.registration.Properties.BUILD_TYPE_CN);
+        
+
+        console.log('BuildType: ' + result_);
+        
+        return result_;
+        
+    };//#getBuildType
+    
+	/* 
+     * ============================================================================================
+     * Public members 
+     * ============================================================================================
+     */
+    this.RegistrationInfo = RegistrationInfo;
+	this.Cache = {
+		'countryList': [
+					{
+						'name': 'United Kingdom',
+						'code': 'GB'
+					},
+					{
+						'name': 'United States',
+						'code': 'US'
+					},
+					{
+						'name': 'Brazil',
+						'code': 'BR'
+					},
+					{
+						'name': 'India',
+						'code': 'IN'
+					}
+				]
+	};//#hp.registration.Registration.Cache
+
+	/*
+	 * Starts critical resources for the functioning of the app.
+	 *
+	 * @input
+	 *	inContainer: Object.
+	 *				 {
+	 *					'callback': Function,
+	 *					'locale': String
+	 *				 }
+	 */
+	this.initAsync = function(inContainer) {
+		var totalModelsToWait_ = 2, howManyModelsDone_ = 0;
+
+		function callback_localization() {
+			
+			callback_("localization");
+		}
+
+		function callback_machineInfo(inData) {
+			hp.registration.model.MachineInfo.init(inData);
+
+			callback_("machineinfo");
+		}
+
+		/*function callback_registrationInfo(inData) {
+			hp.registration.model.RegistrationInfo.init(inData);
+
+			callback_("registrationinfo");
+		}*/
+
+		function callback_(inMilestone) {
+			howManyModelsDone_++;
+			inMilestone = inMilestone || "UNKNOWN";
+
+			console.log('Init phase ' + howManyModelsDone_ + '/' + totalModelsToWait_ + ' done ' + 			
+				'[' + inMilestone + ']');
+
+			if (howManyModelsDone_ === totalModelsToWait_) {
+				hp.registration.Registration.Cache['countryList'] = 
+					hp.registration.util.Localization.getContent('countries');
+			
+				inContainer['callback']();
+                console.log('Application initialized');
+			}
+		}
+
+        includeCorrectStylesheet(MachineInfo.getDefaultOrientation());
+
+		Localization.loadResource(
+									{
+										'language': inContainer['locale'],
+										'country': inContainer['locale'].substring(3),
+										'callback': callback_localization
+									});
+		MachineInfo.getInfoAsync({'callback': callback_machineInfo});
+		//RegistrationInfo.getInfoAsync({'callback': callback_registrationInfo});
+	};//#hp.registration.Registration.initAsync
+
+    /*
+     * Get the locale.
+     *
+     * @returns
+     *  String.
+     */
+    this.getLocale = function() {
+        
+        return MachineInfo.getLocale();
+        
+    };//#hp.registration.Registration.getLocale
+    
+    /*
+     * The component responsible for sending the data is the Service. This method persist the data
+     * in two places so the service can use: Preferences.xml and registration.
+     *
+     * @params
+     *  inContainer: Object.
+     *               {
+     *                  'url': String. Registration endpoint,
+     *                  'message': String. Registration XML file,
+     *                  'otaUrl': String,
+     *                  'otaMessage': String,
+     *                  'beaconUrl': String. Beacon endpoint,
+     *                  'beaconUrlPostOOBE': String. Beacon enpoint. (when it ran from app grid)
+     *                  'callback': String. Name of the function that should be called when it's done.
+     *               }
+     */
+	this.saveDataToBeUsedByService = function(inContainer) {
+        
+		Transporter.saveDataToBeUsedByService({
+				'url': inContainer['url'],
+				'message': inContainer['message'],
+                'otaUrl': inContainer['otaUrl'],
+                'otaQueryUrl': hp.registration.Properties.endPointOTAQuery,
+                'otaMessage': inContainer['otaMessage'],
+                'beaconUrl': inContainer['beaconUrl'], 
+                'beaconUrlPostOOBE': inContainer['beaconUrlPostOOBE'],
+				'callback': inContainer['callback']
+			});
+
+		return null;
+        
+	};//#hp.registration.Registration.saveDataToBeUsedByService
+
+    /*
+	 * This method makes a call to a page that returns the extenal IP address and right after 
+     * that make a call to the function responsible for calling the geo location service. 
+	 * 
+	 * @params
+	 * 	inContainer: Object. 
+	 * 				 {
+	 * 					'callback': Function(String),
+     *                  'IP': String
+	 * 				 }
+	 * 
+	 * @returns
+	 * 	null.
+	 */
+    this.findCountryAsync = function(inContainer) {
+        
+        var prop_ = hp.registration.Properties,
+            overridenIP = NetworkInfo.getIPFromPreferences();
+        
+        if (overridenIP) { // Tester is overriden the app
+          
+            console.log('The IP was defined in the Preferences file');
+            
+            inContainer['IP'] = overridenIP;
+            
+            this.fetchCountryAsync(inContainer);
+            
+        } else { // Need to find the external IP
+            
+            console.log('Looking for the external IP.');
+            
+            var xhr_ = new XMLHttpRequest();
+            xhr_.open('GET', prop_.endPointExternalIP, true);
+            xhr_.setRequestHeader('HPDevice', MachineInfo.getExternalIPHash());
+         
+            var dateStart = new Date();
+            
+            xhr_.onload = function() {
+                
+                if (xhr_.status === 200 && xhr_.readyState === 4) {
+
+                    var dateEnd = new Date();
+                    
+                    inContainer['IP'] = xhr_.responseText;
+                    
+                    try {
+                        
+                        console.log('It took ' + ((dateEnd - dateStart)/1000) + ' seconds to do the external IP lookup');
+                        
+                    } catch(inException) {
+                        
+                        // do nothing
+                        
+                    }
+
+                    this.fetchCountryAsync(inContainer);
+                    
+                }
+                
+            }.bind(this);
+            
+            xhr_.onerror = function() {
+                
+                var dateEnd = new Date();
+                
+                try {
+                        
+                    console.log('It took ' + ((dateEnd - dateStart)/1000) + ' seconds to do the external IP lookup');
+                    
+                } catch(inException) {
+                    
+                    // do nothing
+                    
+                }
+                
+                console.log('Fallback logic to determine the data to find country info failed');
+                
+                inContainer['callback'](null);
+                
+            };
+            
+            xhr_.send(null);
+            
+        }
+        
+    };//#hp.registration.registration.findCountryAsync
+    
+	/*
+	 * Uses the Geolocation service to retrieve the country code and pre-populate the
+	 * Country field on the screen so the end-user doesn't have to fill.
+	 * 
+	 * @params
+	 * 	inContainer: Object. 
+	 * 				 {
+	 * 					'callback': Function(String),
+     *                  'IP': String
+	 * 				 }
+	 * 
+	 * @returns
+	 * 	null.
+	 */
+	this.fetchCountryAsync = function(inContainer) {
+		
+		if (!inContainer || !('callback' in inContainer)) {
+			console.log('No callback function was specified for fetchCountry.');
+			return;
+		}
+		
+		var prop_ = hp.registration.Properties,
+			xhr_ = new XMLHttpRequest(),
+            endPoint = prop_.endPointGeoLocation + inContainer['IP'].trim() + '/' + 
+                        Transporter.getHash(inContainer['IP'].trim());
+		xhr_.open('GET', endPoint, true);
+		
+        var dateStart = new Date();
+        
+		xhr_.onload = function() {
+            
+			if (xhr_.readyState === 4) {
+                
+				if (xhr_.status === 200) {
+                    
+					var code_ = extractCountryCode(xhr_.responseXML);
+				
+                    var dateEnd = new Date();
+                    try {
+                        
+                        console.log('It took ' + ((dateEnd - dateStart)/1000) + ' seconds to find country code to prefill form.');
+                        
+                    } catch(inException) {
+                        
+                        // do nothing
+                        
+                    }
+                    
+					inContainer['callback'](code_);
+                    
+                    hp.registration.helper.Metrics.Cache['locationServiceUsed'] = true;
+                    hp.registration.helper.Metrics.Cache['countryCodeReturned'] = code_;
+                    
+				} else {
+                    
+					console.log('Attempt to use geolocation was made but no 200 message returned.' +
+							xhr_.status);
+					
+                    var dateEnd = new Date();
+                    try {
+                        
+                        console.log('It took ' + ((dateEnd - dateStart)/1000) + ' seconds to find country code to prefill form.');
+                        
+                    } catch(inException) {
+                        
+                        // do nothing
+                        
+                    }
+                    
+					inContainer['callback'](null);
+                    
+                    hp.registration.helper.Metrics.Cache['locationServiceUsed'] = true;
+                    hp.registration.helper.Metrics.Cache['countryCodeReturned'] = null;
+                    
+				}
+                
+			}
+            
+		}//#xhr_.onload
+		
+		xhr_.onerror = function(inError) {
+            
+			console.log('Problem while fetching the country information.');
+            
+            var dateEnd = new Date();
+            try {
+                
+                console.log('It took ' + ((dateEnd - dateStart)/1000) + ' seconds to find country code to prefill form.');
+                
+            } catch(inException) {
+                
+                // do nothing
+                
+            }
+            
+			inContainer['callback'](null);
+            
+            hp.registration.helper.Metrics.Cache['locationServiceUsed'] = false;
+            hp.registration.helper.Metrics.Cache['countryCodeReturned'] = null;
+            
+		};//#xhr_.onerror
+		
+		xhr_.send(null);
+		
+		return null;
+        
+	};//#hp.registration.Registration.fetchCountryAsync
+	
+	/*
+	 * Retrieves an array with the names of the countries.
+	 *
+	 * @returns
+	 *	Array
+	 */
+	this.getCountryListWithNameOnly = function() {
+	
+		if (!(this.Cache['countryList'] instanceof Array)) {
+			this.Cache['countryList'] = [];
+		}
+	
+		var result_ = this.Cache['countryList'].map(function(inElement) {
+			return inElement['name'];
+		});
+
+		return result_;
+	};//#hp.registration.Registration.getCountryListWithNameOnly
+
+	/*
+	 * Retrieves an array with the names of the countries.
+	 *
+	 * @returns
+	 *	Array
+	 */
+	this.getCountryListWithTwoLetterCode = function() {
+		return 	this.Cache['countryList'];
+	};//#hp.registration.Registration.getCountryListWithTwoLetterCode
+
+	/*
+	 * Retrieves the two letter code based on the name.
+	 *
+	 * @params 
+	 *	inName: String. Name of the Country
+	 *
+	 * @returns
+	 *	String. Two letter code.
+	 */
+	this.getCountryCodeBasedOnName = function(inName) {
+		var result_ = [];
+		inName = inName.toLowerCase().trim();
+
+		result_ = this.Cache['countryList'].filter(
+				function(inElement) {
+					return (inElement['name'].toLowerCase() === inName);
+				}
+			);
+
+		if (result_.length === 0) {
+			return 'ZZ'; 
+		} else {
+			return result_[0]['code'];
+		}
+	};//#hp.registration.Registration.getCountryCodeBasedOnName
+
+	/*
+	 * Retrieves the country name based on two letter code.
+	 *
+	 * @params 
+	 *	inCode: String. Two letter country code
+	 *
+	 * @returns
+	 *	String. Name of the country.
+	 */
+	this.getCountryNameBasedOnCode = function(inCode) {
+		var result_ = [];
+		inCode = inCode.toUpperCase().trim();
+
+		result_ = this.Cache['countryList'].filter(
+				function(inElement) {
+					return (inElement['code'] === inCode);
+				}
+			);
+
+		if (result_.length === 0) {
+			return null;
+		} else {
+			return result_[0]['name'];
+		}
+	};//#hp.registration.Registration.getCountryNameBasedOnCode
+
+    /*
+     * Indicates if the current UI is running on OOBE or from the app grid.
+     *
+     * @returns
+     *  boolean
+     */
+    this.isRunningDuringOOBE = function() {
+
+        return MachineInfo.isApplicationRunningDuringOOBE();
+        
+    };//#hp.registration.Registration.isRunningDuringOOBE
+    
+    /*
+     * Indicates how many times the application ran. Where 0 means it's running during OOBE.
+     *
+     * @returns 
+     *  int
+     */
+    this.getCurrentRun = function() {
+        
+        return MachineInfo.getCurrentRun();  
+        
+    };//#hp.registration.Registration.getCurrentRun
+    
+    /*
+     * Saves a key / value in the Preferences.xml
+     */
+    this.setSharedPreference = function(inKey, inValue) {
+        
+        MachineInfo.setSharedPreference(inKey, inValue);
+        
+    };//#hp.registration.Registration.setSharedPreference
+    this.setTitle = function(title) {       
+        MachineInfo.setTitle(title);
+        
+    };//#setTitle
+    /*
+     * Get the flags used by QA team.
+     *
+     * @params
+     *  inKey: String. Name of the key.
+     *
+     * @return
+     *  string
+     */
+    this.getPreferenceForInternalTests = function(inKey) {
+        
+        return MachineInfo.getPreferenceForInternalTests(inKey);
+        
+    };//#hp.registration.Registration.getPreferenceForInternalTests
+    
+    /*
+     * Get property from the device (adb shell getprop)
+     *
+     * @params
+     *  inKey: String. 
+     *
+     * @returns
+     *  String. Value of the property. null, otherwise.
+     */
+    this.getPropertyOfDevice = function(inKey) {
+        
+        return MachineInfo.getPropertyOfDevice(inKey);
+        
+    };//#hp.registration.Registration.getPropertyOfDevice
+    
+    /*
+     * Schedule a notification so the application can be re-opened. 
+     *  inContainer: Object. 
+     *              {
+     *                  'title': String,
+     *                  'text': String
+     *              }
+     *
+     * @returns
+     *  null
+     */
+    this.scheduleNotification = function(inContainer) {
+      
+        inContainer['interval'] = hp.registration.Properties.INTERVAL_NOTIFICATION;
+        
+        return MachineInfo.scheduleNotification(inContainer);
+        
+    };//#hp.registration.Registration.schduleNotification
+    
+    /*
+     * Indicates if the CarrierIQ component is installed or not.
+     *
+     * @returns
+     *  boolean
+     */
+    this.isCarrierIQInstalled = function() {
+
+        return CarrierIQ.isInstalled;
+        
+    };//#hp.registration.Registration.isCarrierIQInstalled
+    
+    /*
+     * Gets what would be the current state of the Carrier IQ component for 
+     * the country the user is in.
+     *
+     * @params
+     *  inCountryCode: String. Two-letter country code.
+     *
+     * @returns
+     *  String. 'precheck' or 'uncheck'.  
+     */
+    this.getCarrierIQState = function(inCountryCode) {
+     
+        /*
+         * Default is to suggest precheck. The configuration has an exclusion list 
+         * (countries where it should be uncheck). 
+         */
+        var result_ = MachineInfo.getConfigurationDefinedByGBU('carrieriq', inCountryCode),
+            valueToReturn_ = 'precheck';
+       
+        if (result_ && result_.toLowerCase() === 'uncheck') {
+         
+            valueToReturn_ = 'uncheck';
+            
+        } else if (result_ && result_.toLowerCase() === 'precheck') {
+         
+            valueToReturn_ = 'precheck';
+            
+        }
+        
+        console.log('Configuration for CarrierIQ was ' + valueToReturn_);
+        
+        return valueToReturn_;
+        
+    };//#hp.registration.Registration.getCarrierIQState
+    
+    /*
+     * Communicates with the Carrier IQ component
+     *
+     * @params
+     *  inUserSelection: String. 
+     *
+     * @returns 
+     *  null.
+     */
+    this.sendMessageToCarrierIQ = function(inUserSelection) {
+      
+        CarrierIQ.sendMessageToCarrierIQ(inUserSelection);
+        
+        return null;
+        
+    };//#hp.registration.Registration.sendMessageToCarrierIQ
+    
+    this.getOTASecret = function() {
+        
+        return MachineInfo.getOTASecret();
+        
+    };//#hp.registration.Registration.getOTASecret
+    
+    this.getDefaultOrientation = function() {
+
+        return MachineInfo.getDefaultOrientation();
+
+    };//#hp.registration.Registration.getDefaultOrientation
+
+    this.getCurrentOrientation = function() {
+
+        return MachineInfo.getCurrentOrientation();
+
+    };//#hp.registration.Registration.getCurrentOrientation
+
+    /*
+     * Cancel any notification scheduled.
+     *
+     * @returns 
+     *  null.
+     */
+    this.cancelNotification = function() {
+        
+        MachineInfo.cancelNotification();
+        
+        return null;
+        
+    };//#hp.registration.Registration.cancelNotification
+    
+    /*
+     * Helper function to be used to determine if the web layer is running on Chrome-based (starting with kitkat) or
+     * Stock-based browser (prior to kitkat).
+     *
+     * @returns
+     *  true = kitkat and above 
+     *  false = before kitkat
+     */
+    this.isHostBasedOnChrome = function() {
+     
+        return MachineInfo.isHostBasedOnChrome();
+        
+    }
+    
+    /*
+     * The flow might be different based on some criterias. This method indicates which flow should be used.
+     *
+     * TODO MOVE THE KOREAN FLOW HERE.
+     * @params
+     *  inRule: String (JSON object as String). 
+     *               {
+     *                  'flow': String ,
+     *                  'buildType': String 
+     *               }
+     *
+     * @returns
+     *  hp.registration.Properties.FLOW_*
+     */
+    this.whatFlowShouldBeUsed = function() {
+        
+        var prop_ = hp.registration.Properties,
+            loc_ = hp.registration.util.Localization;
+        var result_ = prop_.FLOW_NORMAL,
+            buildType_ = getBuildType();
+        var inRule = loc_.getContent('flowRule') || {};
+        
+        if ('buildType' in inRule && inRule.buildType === buildType_) {
+            
+            result_ = inRule.flow;
+            
+        } 
+
+        return result_;
+        
+    };//#hp.registration.Registration.whatFlowShouldBeUsed
+    
+    /*
+     * Tells if the application has to show a popup message to ask for consent.
+     *
+     * @returns 
+     *  true if the consent is necessary. false otherwise.
+     */
+    this.doesItNeedConsentToAccessUserInfo = function() {
+        
+        var whatFlow_ = this.whatFlowShouldBeUsed();
+        
+        return (whatFlow_ === hp.registration.Properties.FLOW_ALTERNATE_CONSENT_NETWORK_USER_INFO);
+        
+    }.bind(this);//#hp.registration.Registration.doesItNeedConsentToAccessUserInfo
+    
+    
+    /*
+     * Tell the Java layer to disable the component (Activity)
+     */
+	this.closeApplication = function(inKillAppGridShortcut) {
+        
+        console.log('Application will be closed');
+
+        inKillAppGridShortcut = inKillAppGridShortcut || hp.registration.model.RegistrationInfo.consentToSendData;
+
+        if ('registrationAndroid' in window) {
+            
+            registrationAndroid.closeApplication(inKillAppGridShortcut);
+            
+        } 
+    };//#hp.registration.Registration.closeApplication
+    
+    this.closeApplicationAndKillAppGridShortcut = function(inKillAppGridShortcut) {
+        
+        this.closeApplication(true);
+        
+    }.bind(this);//#hp.registration.Registration.closeApplication
+               
+    this.openDropbox = function(firstName, lastName, emailAddress) {
+    	registrationAndroid.openDropbox(firstName, lastName, emailAddress);
+    };
+    this.openAviate = function(firstName, lastName, emailAddress) {
+    	registrationAndroid.openAviate(firstName, lastName, emailAddress);
+    };
+    this.saveRetailerCode = function(inRetailer) {
+
+        MachineInfo.saveDataIntoPreferences(hp.registration.Properties.PREFERENCE_KEY_RETAILER, inRetailer);
+
+    };
+	return this;
+}.apply({}, null);//#hp.registration.Registration

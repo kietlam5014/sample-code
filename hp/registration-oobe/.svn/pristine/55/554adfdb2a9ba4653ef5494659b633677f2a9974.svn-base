@@ -1,0 +1,4 @@
+{
+	"privacy": "content/privacystatement/index.htm",
+    "flowRule": {"flow": "FLOW_ALTERNATE_CONSENT_NETWORK_USER_INFO", "buildType": "CN"}
+}

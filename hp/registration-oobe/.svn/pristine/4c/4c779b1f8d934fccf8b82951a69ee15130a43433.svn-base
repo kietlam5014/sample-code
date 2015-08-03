@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html dir="ltr" lang="zh-TW" xml:lang="zh-TW">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						作為 HP 恪守提供更佳的裝置體驗之承諾的一部份，此裝置上配備有診斷軟體。  此軟體會蒐集匿名診斷資料，包含裝置硬體與軟體資訊、網路組態和狀態，以及應用程式使用狀況。 這些資訊將用於改進我們的產品和服務內容。  診斷資料與裝置相連，但不會區分使用者。 僅跟診斷軟體提供者共用匿名資料。 資料上傳工作階段可能會藉由行動數據或 WiFi 網路進行，並符合 HP 安全性標準。  透過行動數據網路傳送至診斷提供者的資料數量非常有限，並不應給行動電信業者的資料配額造成負面影響。 如果您想停用此類診斷功能，請轉至「設定」。</Content>
+
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

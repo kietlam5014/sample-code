@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						Denne enhed er udstyret med software til diagnosticering som del af HP's indsats for at levere en bedre oplevelse med enheden.  Softwaren indsamler anonyme data til diagnosticering herunder oplysninger om enhedens hardware og software, netværkskonfiguration og status, samt brug af af programmer. Oplysningerne anvendes til at forbedre vores udbudte produkter og tjenesterydelser.  De pågældende data til diagnosticering er knyttet til enheden, og der opdeles ikke i mellem brugere. Anonyme data deles kun med leverandøren af softwaren til diagnosticering. Sessioner med dataoverførsel kan forekomme over et mobil- eller WiFi-netværk og udføres i overensstemmelse med HP's sikkerhedsstandard.  Datamængden, der sendes til leverandøren af diagnosticering over et mobilt netværk, er meget lille og bør ikke påvirke dataallokeringen hos mobiloperatøren. Hvis du ønsker at deaktivere funktionerne til diagnosticering, kan du gøre dette under Indstillinger.
+
+	</body>
+</html>

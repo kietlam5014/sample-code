@@ -1,0 +1,186 @@
+/*General========================================================================================*/
+.mainHeader {
+    font-size:30px;
+}
+
+.hpLogo {
+	height: 30px;
+	width: 30px;
+}
+
+#mainSection {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#registrationForm {
+    min-height: initial !important;   
+}
+
+.registrationFormLine {
+    margin-bottom: 0px ;
+}
+
+.base-field-style, .list-field-style,
+.base-field-style:hover, .base-field-style:focus {
+    padding: 0 10px 0px 10px !important;   
+}
+
+#Title {
+    max-height: initial;
+    min-height: initial;
+}
+
+#clearAll {
+    font-size: 0.8em !important;   
+}
+
+#clearAllIcon, #clearAllContainer.disabled > #clearAllIcon {
+    background-size: 14px 14px !important;
+    height: 14px !important;
+    width: 14px !important;
+}
+
+/*General (landscape)============================================================================*/
+BODY.landscape .introMain, BODY.landscape .regularText, BODY.landscape .error-msg, 
+BODY.landscape A, BODY.landscape .field {
+    font-size: 12px;   
+}
+
+BODY.landscape .field {
+	line-height: 12px;
+}
+
+BODY.landscape .main {
+    margin: 10px auto 0px auto;   
+}
+
+BODY.landscape .introMain {
+    margin-bottom: initial !important;
+    padding-top: 0 !important;   
+}
+
+/*General (portrait)=============================================================================*/
+BODY.portrait .introMain, BODY.portrait .regularText, BODY.portrait .error-msg, 
+BODY.portrait A, BODY.portrait .field {
+    font-size: 14px;   
+}
+
+BODY.portrait .field {
+	line-height: 14px;
+}
+
+/*Popup (General)================================================================================*/
+#popupWindowForContent {
+	padding: 50px 20px;
+}
+
+#popupWindow {
+	padding: 0 20px;
+}
+
+#popupNote {
+	height: 5%;
+
+}
+
+#popupTitle {
+	height: 1%;
+}
+
+#popupContentForContent {
+	height: 85%;
+}
+
+#popupButtonForContent {
+
+	margin£º 0px£»
+}
+
+#popupNote {
+	margin-bottom: 10px;
+}
+
+
+#inputSection {
+	margin-top: 0px;
+}
+
+#clearAllContainer {
+    margin: 2px 0;
+}
+
+
+
+#Title {
+   padding-top: 10px;
+   padding-bottom: 8px;
+   margin:0px;
+   min-height: 0px;
+}
+.btn {
+	padding:4px 19px 4px 19px;
+}
+
+#agreeHP  .agreeHPContent {
+	margin-top:0px;
+}
+
+#registrationForm {
+	margin-top: 0px;
+}
+
+#countryContainer, #nameContainer {
+    margin:0px;
+    pading:0px;
+}
+#emailContainer{
+    margin-bottom: 8px;
+	max-height: 28px;	
+}
+#nameContainer, #emailContainer {
+	margin-top: 0px;
+}
+
+#consentSection {
+    margin-top: 0px;   
+}
+
+#consentQuestion {
+    margin-top: 0px;   
+}
+#emailConsentText {
+
+}
+
+
+
+#privacyStatements {
+	margin-top:1px;
+}
+#privacyStatements ul li {
+	padding:0px 5px 0px 0 !important;
+}
+
+#SubtitleContent {
+	margin:10px 0 0 0;
+}
+.mainHeader {
+	font-size:20pt;
+
+}
+.header  {
+margin-top: 6px;
+margin-bottom: 6px;
+}
+FOOTER {
+
+	margin-bottom: 15px;
+
+}
+.hpLogo{
+	width: 50%;	
+}
+#finishButtonLabelandroid{
+ padding: 4px 1px;
+}

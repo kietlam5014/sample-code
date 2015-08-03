@@ -1,0 +1,1062 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:13.5pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+span.z-TopofFormChar
+	{mso-style-name:"z-Top of Form Char";
+	mso-style-link:"z-Top of Form";
+	font-family:"Arial",sans-serif;
+	display:none;}
+span.z-BottomofFormChar
+	{mso-style-name:"z-Bottom of Form Char";
+	mso-style-link:"z-Bottom of Form";
+	font-family:"Arial",sans-serif;
+	display:none;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:24.0pt'><b><span
+style='font-size:24.0pt;font-family:"Arial",sans-serif'>Andmekaitsepoliitika</span></b></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>HP peab lugu teie
+privaatsusest</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP ja
+tema tütarettevõtted peavad lugu teie privaatsusest. Käesolev
+andmekaitsepoliitika tutvustab meie andmekaitsepõhimõtteid ja valikuid, mille
+abil te saate määrata viisi, kuidas teie isikuandmeid, sealhulgas ka
+veebitegevuse andmeid, kogutakse ja kuidas HP seda infot kasutab.
+Andmekaitsepoliitika on hõlpsasti kättesaadav meie HP.com veebilehel ja kõikide
+HP veebilehtede allservas.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP on
+Council of Better Business Bureau (parema äritegevuse nõukogu) veebi
+andmekaitseprogrammi asutaja ja sponsor ning on BBB poolt akrediteeritud
+ettevõte. HP andmekaitsepõhimõtted vastavad BBB ärikoodeksile ja oleme uhked,
+et saame kasutada BBB pitserit.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP
+andmekaitsepõhimõtete ja standardite koostamisel võtsime arvesse ülemaailmsete
+peamiste printsiipide ja suundadega, sh OECD andmekaitsejuhised ja piiriülene
+infovoog, ELi direktiiv 95/46/EÜ, APEC andmekaitseraamistik ja Madridi
+resolutsioon rahvusvaheliste andmekaitsestandardite kohta.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP täidab
+nõudeid, mis on sätestatud järgmistes dokumentides: Ameerika Ühendriikide
+kaubandusministeeriumi välja antud USA ja ELi programm Safe Harbor ning USA ja
+Šveitsi programm Safe Harbour isikuandmete kogumise, kasutamise ja säilitamise
+kohta Euroopa Liidu liikmesriikidest ja Šveitsist. HP on kinnitanud, et järgib
+Safe Harbori privaatsuspõhimõtteid teavitamise, valiku, edastamise,
+turvalisuse, andmete puutumatuse, ligipääsu ja järelevalve kohta. Safe Harbori
+programmi kohta lisateabe saamiseks ja HP sertifikatsiooni vaatamiseks külastage
+veebilehte<span style='border:none windowtext 1.0pt;padding:0in'>http://www.export.gov/safeharbor/</span>&nbsp;.
+Lisaks sellele on HP kehtestanud ettevõtteid siduvate reeglite (BCR) kogumi,
+mille kinnitasid enamik Euroopa Majanduspiirkonna ja Šveitsi
+andmekaitseasutustest juunis 2011. BCR-id tagavad Euroopa Majanduspiirkonna
+isikute isikuandmete piisava kaitse, kui neid töödeldakse ükskõik millises HP
+ülemaailmses üksuses.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP
+kohustub programmi Safe Harbor põhimõtete ja BCR-i nõuete kohaselt lahendama
+kaebused, mis on seotud teie privaatsuse ning meiepoolse isikuandmete kogumise
+ja kasutamisega. Vajaduse korral delegeerib HP Euroopa Liidu kodanike või
+elanike andmekaitset puudutavad lahendamata jäänud kaebused, mis on seotud
+programmi Safe Harbor põhimõtete raames edastatud isikuandmetega,
+eraldiseisvale BBB EL-i Safe Harbori vaidluskomisjonile, mida juhib Council of
+Better Business Bureaus. Kui te ei saa oma kaebusele õigel ajal tagasisidet või
+HP ei suuda kaebust teile rahuldavalt lahendada, pöörduge BBB EL-i Safe Harbori
+poole veebilehel:&nbsp;<span style='border:none windowtext 1.0pt;padding:0in'>http://www.bbb.org/us/safe-harbor-complaints</span>&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>&nbsp;</span>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP on
+saanud organisatsioonilt TRUSTe APECi privaatsusemärgise, mis tähendab, et
+käesolev privaatsusavaldus ja meie tegevuspraktika on kontrollitud ja vastab
+TRUSTe programmile, mida saab vaadata valideerimislehel, klõpsates TRUSTe märgist
+ja mobiilirakendustes, mis on lingitud antud privaatsusavaldusega.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Käesolevas
+avalduses kirjeldatud HP privaatsust puudutav tegevuspraktika vastab APECi
+piiriülestele privaatsusreeglitele süsteemile, sealhulgas läbipaistvust,
+usaldusväärsust ja kogutavaid isikuandmeid puudutavate reeglite osas.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Piiriüleste
+privaatsusreeglite sertifikaat ei hõlma infot, mida võidakse koguda kolmanda
+osapoole platvormidelt allalaaditava tarkvara kaudu.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Kui teil
+on küsimusi privaatsuse või andmekasutuse kohta seoses HP APECi sertifikaadiga,
+millele meie pole suutnud rahuldavalt vastata, võtke ühendust
+organisatsioniga&nbsp;<span style='border:none windowtext 1.0pt;padding:0in'>TRUSTe</span>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Andmekaitsepoliitika
+     rakendusala</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Isikuandmete
+     kogumine</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Kuidas
+     me teie andmeid kasutame</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Kuidas
+     me teie andmeid jagame</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Laste
+     privaatsus</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Teie
+     valikud ja andmekaitse-eelistuste valik</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Juurdepääs
+     teie andmetele ja nende täpsus</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Teie
+     isikuandmete turvalisuse tagamine</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Käesoleva
+     andmekaitsepoliitika muutmine</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Kontaktandmed</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+Kuidas HP kasutab automaatseid andmekogumisvahendeid nagu:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Küpsised</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Veebimajakad</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>Manusveebilingid</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif;border:none windowtext 1.0pt;padding:0in'>HP
+     reklaamid kolmanda poole veebilehtedel</span><a name=1></a></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>1.&nbsp;Andmekaitsepoliitika
+rakendusala</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP on
+ülemaailmne organisatsioon piiriüleste juriidiliste isikute, äriprotsesside,
+juhtimisstruktuuride ja tehniliste süsteemidega. Käesolevat andmekaitsepoliitikat
+kohaldatakse kõikidele HP-le kuuluvatele veebilehtedele, domeenidele,
+teenustele, rakendustele ja toodetele, ka neile, mis kuuluvad täielikult meile
+kuuluvatele tütarettevõtetele (HP veebilehed või teenused), v.a juhul kui mõne
+HP programmi, toote või teenuse andmekaitsepõhimõtted või -poliitika on
+käesoleva andmekaitsepoliitika suhtes ülimuslikud või täiendavad seda.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>Lingid mitte-HP
+veebilehtedele</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Teie
+mugavuse ja teavitamise huvides võivad HP lehed või teenused pakkuda linke
+kolmanda osapoole rakendustele, toodetele, teenustele või veebilehtedele. Neid
+linke klõpsates väljute HP lehelt. HP ei kontrolli kolmandate osapoolte
+veebilehti ega nende andmekaitsepõhimõtteid, mis võivad erineda HP
+põhimõtetest. Me ei toeta ühegi kolmanda osapoole veebilehte ega tee avaldusi
+nende kohta. HP andmekaitsepoliitika ei laiene isikuandmetele, mida otsustate
+anda sellistele kolmandatele osapooltele või mida nad koguvad. Enne kui lubate
+mõnel veebilehel oma isikuandmeid koguda, soovitame teil tutvuda konkreetse veebilehe
+andmekaitsepoliitikaga.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Lisaks
+võime oma veebilehele lisada suhtlusmeediumi funktsioone, mis võimaldavad teil
+jagada teavet sotsiaalvõrgustikes ja suhelda HP-ga erinevatel suhtlusmeediumi
+veebilehtedel. Olenevalt funktsioonist võidakse kirjeldatud võimaluste
+kasutamisel teie isikuandmeid koguda või jagada. Soovitame teil üle vaadata
+nende suhtlusmeediumi veebilehtede andmekaitsepõhimõtted ja -sätted, mida te
+kasutate ning endale selgeks teha, millist teavet need veebilehed võivad
+koguda, kasutada ja jagada.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=2></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>2.&nbsp;Isikuandmete
+kogumine</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP kogub,
+ekspordib ja kasutab isikuandmeid teie ja HP vahelise suhte haldamiseks, teie
+paremaks teenindamiseks ning teie kogemuse ja HP-ga suhtlemise kohandamiseks
+vastavalt teie vajadustele. Selline kogumine toimub asjakohase teavitamise ja
+nõusoleku saamise alusel koos nõutavate kooskõlastustega andmekaitseasutustelt,
+kui see on vajalik.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP võib
+koguda teilt isiklikke andmeid seoses järgmisega:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>toote või teenuse tellimine, aktiveerimine
+     ja registreerimine;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>profiili loomine ja kasutaja kinnitamine
+     veebiteenuste jaoks;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>teabepäringud või kaebused;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>turundustellimused, teabelehed või
+     tugiteenuste tellimused;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>osalemine võistlustel või uuringus;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>kiirkrediidi taotlused;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>tööle kandideerimised;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>sündmuse registreerimine;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>HP veebilehtede külastused või sirvimised.</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Meile
+esitatavad isikuandmed võivad olla järgmised:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>isiklikud andmed ja äriandmed, nagu teie
+     nimi, aadress, telefoninumber ja meiliaadress;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>mõnel juhul võib HP saada teie
+     ärikontaktandmed teie töökoha vastavalt osakonnalt või ettevõttelt
+     (näiteks teie IT-osakonna töötaja);</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>finantsteave, nagu näiteks
+     krediit-/deebetkaardi number või muu info, mida on vaja arve esitamiseks;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>ID-kaardi number ja palga andmed;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>muu kordumatu teave, nagu teie
+     kasutajatunnused ja paroolid, toote funktsionaalsus, toodete ja teenuste
+     eelistused, ühenduse võtmise eelistused, haridus- ja ametialane taust ning
+     andmed tööga seotud huvide kohta;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>geograafilise asukoha andmed, nagu teie
+     IP-aadress või füüsiline asukoht, kui tellite asukohal põhinevaid teenuseid.</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Kui
+taotlete kiirkrediiti, võime paluda teil esitada täiendavaid isikuandmeid, nagu
+töötasu, sotsiaalkindlustuse number, pangateave ja muud andmed, mille abil teid
+autentida ja teie maksejõulisust kontrollida. Seda teavet kasutavad meie finantsteenuse
+osutajad, et otsustada, kas anda teile krediiti ja kui suures ulatuses.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Kui
+otsustate kasutada meie veebilehel programmi „Saada sõbrale” või sarnast
+soovitusprogrammi, siis palume teilt sõbra e-posti aadressi, mobiiltelefoni
+numbrit või muid kontaktandmeid ja teie sõbrale saadetakse automaatselt
+ühekordne kutse meie veebilehe külastamiseks.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Kui
+postitate, kommenteerite, huvitute või kaebate või jagate isiklikku teavet (sh
+fotosid) HP veebilehe avalikus foorumis, suhtlusvõrgustikus, blogis või muus
+foorumis, siis arvestage, et edastatud infot saavad lugeda, vaadata, koguda või
+kasutada kõik selliste foorumite kasutajad, kes võivad teie teavet kasutada
+teiega kontakteerumiseks, soovimatute sõnumite saatmiseks või muul eesmärgil,
+mille üle puudub kontroll nii teil kui ka HP-l. HP ei vastuta isikuandmete
+eest, mida foorumites levitate.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Lisaks
+teie avaldatud teabele võib HP koguda automaatsete andmekogumisvahendite abil
+teavet ka siis, kui külastate HP veebilehte, veebipõhist rakendust või mõne teise
+ettevõtte hallatavat, kuid HP nimel tegutsevat veebilehte. Sellisteks
+andmekogumisvahenditeks on veebimajakad, küpsised ja manusveebilingid.
+Nimetatud vahendid koguvad teatud suhtlusteavet, mida teie brauser veebilehele
+saadab, nagu näiteks veebilehitseja tüüp ja keel, pöörduste kellaajad ja selle
+veebilehe aadress, kust tulite. Lisaks võivad need vahendid koguda teavet teie
+internetiprotokolli (IP) aadressi, seadme kordumatu tunnuse,
+klõpsamisharjumuste kohta (st milliseid lehti vaatate, linke klõpsate ja muid
+HP veebilehtede või HP nimel tegutsevate lehtedega seotud tegevusi teete) ning
+tooteteavet. HP võib kasutada ka mõnda automaatset andmekogumise vahendit
+seoses teatud e-kirjade ja muu materjaliga, mida HP saadab ning võib koguda
+neid vahendeid kasutades teavet, kui avate oma e-kirja või klõpsate e-kirjas
+olevale lingile. Lisateabe saamiseks vaadake jaotist&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>Kuidas HP kasutab automaatse
+andmekogumise vahendeid?</span>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Lisaks
+kogub HP teavet avalikest allikatest või kommertsallikatest, mida ta peab
+usaldusväärseks. See teave võib sisaldada teie nime, aadressi, e-posti
+aadressi, eelistusi, huve ja demograafilisi andmeid / profiiliandmeid. Teavet,
+mida HP kogub avalikest allikatest või kommertsallikatest, võidakse kasutada
+koos teabega, mida HP kogub siis, kui külastate HP veebilehti. Näiteks võib HP
+võrrelda kommertsveebilehelt saadud geograafilist teavet IP-aadressiga, mida
+kogusid automaatsed andmekogumise vahendid eesmärgiga tuletada teie üldine
+geograafiline piirkond.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Vajaduse
+korral võib HP kasutada ka teie või teie tööandja antud andmeid koos avalikult
+kättesaadavate andmete ja muude veebist või veebist väljasolevate andmetega, et
+kontrollida HP korruptsioonivastase programmi raames ärikontaktide hoolikust.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=3></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>3.&nbsp;Kuidas me teie
+andmeid kasutame</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP kasutab
+ja töötleb andmeid teie vajaduste ja huvide paremaks mõistmiseks, et
+järjepidevalt pakkuda just teie jaoks kohandatud kogemust. Näiteks võib HP
+kasutada teie andmeid selleks järgmistel eesmärkidel:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et hallata suhet teiega;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et abistada teid tehingu või tellimuse
+     tegemisel;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et ennetada ja tuvastada ohte
+     turvalisusele, pettusi ja teisi kuritahtlikke toiminguid;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et suhelda teiega HP toodete ja teenustega
+     seoses;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et osutada ja parandada teenuseid ning
+     tuge;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et teavitada teid uutest teenustest ja
+     soodustustest;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et teha just teie jaoks kohandatud
+     soodustusi;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et valida teile edastatavat materjali;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et kohandada teie jaoks teatud HP
+     veebilehti;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et analüüsida turunduskampaaniate,
+     reklaamide ja HP nimel tegutsevate ettevõtete veebilehtede tulemuslikkust;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>et anda teile võimalus osaleda võistlustel
+     ja uuringutes.</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Anname
+teile võimaluse valida andmekaitse-eelistused meiega suhtlemisel (vt:&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>Teie valikud ja
+andmekaitse-eelistuste valimine</span>).</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Krediitkaarditeavet
+kasutatakse ainult maksete töötlemiseks ja pettuste vältimiseks. HP ja meie
+finantsteenuste pakkujad kasutavad krediitkaarditeavet ja delikaatseid
+isikuandmeid ainult krediidiandmise otsustamise eesmärgil ning sellist teavet
+ei säilitata kauem, kui see on vajalik vastava teenuse osutamiseks, välja
+arvatud juhul kui te ise palute meil säilitada oma krediitkaarditeavet ostude
+tegemiseks tulevikus.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=4></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>4.&nbsp;Kuidas me teie
+andmeid jagame</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP ei
+müü, rendi ega üüri teie isikuandmeid teistele, välja arvatud käesolevas
+andmekaitsepoliitikas kirjeldatud juhtudel. HP jagab isikuandmeid järgmistel
+juhtudel:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP
+kasutab teenusepakkujaid ja tarnijaid, et hallata või toetada oma
+äritoiminguid, pakkuda terviklikke tooteid, teenuseid ja kliendilahendusi ning
+aidata HP-d turundus- ja teabevahetusprogrammides. Selliste pakkujate ja
+tarnijate loetelus on näiteks krediitkaarditöötlejad, klienditoe- ja
+interaktiivse spikriteenuse pakkujad, turundusettevõtted, e-posti teenuse
+pakkujad, automatiseeritud andmetöötlejad ning kaubasaadetiste
+kohaletoimetajad. Tarnijad ja teenusepakkujad on lepingu alusel kohustatud
+tagama HP nimel saadud teabe konfidentsiaalsuse ega tohi kasutada HP-lt saadud
+teavet muul otstarbel kui HP-le teenuste osutamiseks.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Aeg-ajalt
+osaleb HP turundusprogrammides koos teiste ettevõtetega, sh HP nimel
+tegutsevate ettevõtetega, kelle veebilehti HP kasutab. Selliste programmide
+raames võidakse edastada teatud HP teenuseid ja turundusteavet samal ajal
+muudest ettevõtetest edastatavate teenuste ja teabega. Mõned nimetatud
+teenustest ja teabest pakuvad teile võimalust jagada isikuandmeid nii HP kui ka
+nendes programmides osalevate teiste ettevõtetega. Näiteks võite saada
+teabematerjale HP-lt ja teistelt ettevõtetelt või teil võimaldatakse
+registreeruda võrgus mitme ettevõtte tarkvaratoodetele. Kui otsustate edastada
+isikuandmeid ainult HP-le, siis HP ei jaga neid andmeid turundusprogrammides
+osalevate teiste ettevõtetega. Kui otsustate avaldada isikuandmeid teistele
+ettevõtetele, siis kasutatakse teie isikuandmeid vastavalt nende ettevõtete
+andmekaitsepoliitikale, mis võib erineda HP andmekaitsepoliitikast ja
+-põhimõtetest.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP võib
+edastada teie isikuandmeid teistele HP äriüksustele Ameerika Ühendriikides ja
+mujal maailmas. HP veebilehtedele sisenemisel, konto registreerimisel või
+teenuse kasutamisel või oma isikuandmete edastamisel HP-le muul moel, nõustute
+oma andmete sellise edastamisega HP üleilmses võrgus.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP ei
+jaga teie poolt HP-le edastatud isikuandmeid kolmandate osapooltega ilma teie
+loata, välja arvatud selles andmekaitsepoliitikas sätestatud viisil. Andmeid
+jagatakse ainult järgmistel juhtudel: (i) et vastata politsei ja
+valitsusasutuste vastava õiguse alusel esitatavatele teabepäringutele; (ii) et
+täita seaduse, eeskirja, kohtukutse või kohtumääruse nõudeid; (iii) et
+tuvastada ja ennetada ohte turvalisusele, pettusi ja teisi kuritahtlikke
+toiminguid; (iv) et jõustada/kaitsta HP või selle tütarettevõtete õigusi ja
+vara; või (v) et kaitsta HP, meie töötajate, ja HP vara rentivate või
+kasutatavate kolmandate osapoolte õigusi või ohutust, kui see on lubatud ja
+kooskõlas kohalduva seadusega.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Teatud
+asjaolude korral, kas strateegilistel või muudel majanduslikel põhjustel, võib
+HP otsustada müüa, osta, liita või muul viisil ümber korraldada oma äritegevuse
+mõnes riigis. Selline tehing võib tähendada isikuandmete avaldamist potentsiaalsetele
+või tegelikele ostjatele või sellise teabe saamist müüjatelt. Nimetatud
+tehingute korral püüab HP leida lahenduse, mis pakub asjakohast andmekaitset.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=5></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>5.&nbsp;Laste
+privaatsus</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP ei
+kogu teadlikult alla 13-aastaste või Koreas alla 14-aastaste laste isikuandmeid
+ja HP veebilehed ei ole suunatud lastele alla selle vanuse. Soovitame vanematel
+ja järelevaatajatel aktiivselt jälgida oma laste veebi- ja mobiilitegevusi ja
+huve.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=6></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>6.&nbsp;Teie valikud ja
+andmekaitse-eelistuste valimine</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP pakub
+teile võimalust saada erinevat lisateavet meie toodete ja teenuste kohta. Võite
+tellida teavet teatud toodete ja teenuste kohta ning HP üldisi teabematerjale.
+Võite valida, kas soovite saada HP üldisi teabematerjale tavaposti, e-posti,
+telefoni või mobiilirakenduse kaudu.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Tellitud
+või üldise teabematerjali vastuvõtu osas võite valiku teha või seda muuta
+andmekogumispunktis või kasutada järgmistes jaotistes olevaid teisi meetodeid.
+See võimalus ei kohaldu teabevahetusele, mis on seotud tellimuse täitmise,
+lepingute, klienditoe, toote ohutushoiatuse, draiveriuuenduste või muude
+administratiivsete ja toimingupõhiste teadetega, sest nende peamine eesmärk ei
+ole reklaam.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>Tellitud infovahetus</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Tellitud
+infovahetus hõlmab e-postiga saadetavaid infolehti, tarkvaravärskendusi jm, mille
+te võisite konkreetselt tellida või mille saamiseks andsite nõusoleku. Kui te
+aga ei soovi enam sellist materjali saada, võite valida ühe järgmistest
+meetoditest.</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Valige e-posti tellimuse tühistamiseks
+     link „opt out” või „unsubscribe” või järgige tellimuse tühistamise
+     juhiseid, mille leiate kõikidest tellitud materjalidest.</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Mobiiliseadmetele saadetavate sõnumite
+     tellimise lõpetamiseks vastake sõnumile sõnaga „STOP“ või „END“.</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Minge tagasi veebilehele (-lehtedele), kus
+     te oma eelistused algselt registreerisite ja järgige tellimuse tühistamise
+     juhiseid. Paljudele HP tellimustele on juurdepääs jaotises&nbsp;<span
+     style='border:none windowtext 1.0pt;padding:0in'>Tellija valiku veebileht</span>.</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Kirjutage&nbsp;<span style='border:none windowtext 1.0pt;
+     padding:0in'>HP andmekaitseosakonnale</span>. Lisage kirjavahetusele oma
+     nimi, kontaktandmed ja asjakohane täpne teave HP tellimuste kohta, mida te
+     enam ei soovi saada.</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Juhime
+teie tähelepanu asjaolule, et mõne tellimuse tühistamine võib mõjutada
+selliseid HP teenuseid, mille lahutamatu tingimus on nõustumine materjalide
+saamisega.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>HP üldine infovahetus</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP üldine
+infovahetus sisaldab teavet toodete, teenuste ja/või toe kohta. See võib
+hõlmata teavet uue toote kohta, sooduspakkumisi või kutset osalemaks
+turu-uuringus või vastavuse hindamises.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Sageli on
+teil võimalik kasutada&nbsp;<span style='border:none windowtext 1.0pt;
+padding:0in'>HP Passi</span>, et näidata, kas soovite saada HP-lt üldist
+teavet. HP Pass on ühekordse sisselogimise teenus, mis annab teile võimaluse
+registreeruda HP passi kasutavatel veebilehtedel, kasutades enda valitud
+üksikkasutaja tunnust ja parooli. HP pass kasutab küpsiseid teie põhiliste
+isikuandmete talletamiseks ning te ei pea neid enam uuesti sisestama, kui
+külastate edaspidi HP veebilehti. Lisaks sellele võimaldab HP pass seadistada
+andmekaitse-eelistusi. Teie eelistused rakenduvad kõikidele HP veebilehtedele,
+e-kirjadele ja teistele sidevahenditele, mis kasutavad HP passi.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Kui te ei
+saa HP passi kasutada, võite üldise teabe saamisest loobumiseks kasutada ühte
+järgmistest meetoditest:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Valige e-posti tellimuse tühistamiseks
+     link „opt out” või „unsubscribe” või järgige tellimuse tühistamise
+     juhiseid, mille leiate kõikidest tellitud materjalidest.</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Mobiiliseadmetele saadetavate sõnumite
+     tellimise lõpetamiseks vastake sõnumile sõnaga „STOP“ või „END“.</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Kirjutage&nbsp;<span style='border:none windowtext 1.0pt;
+     padding:0in'>HP andmekaitseosakonnale</span>. Lisage kirjavahetusele oma
+     nimi, kontaktandmed ja teave andmekaitse-eelistuste kohta.</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=7></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>7.&nbsp;Juurdepääs teie
+andmetele ja nende täpsus</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP püüab
+tagada, et teie isikuandmed oleksid täpselt salvestatud. Andmete täpsuse
+säilitamiseks oleme võtnud kasutusele vastava tehnoloogia, juhtimisprotsessid
+ja -poliitikad. HP pakub teile mõistlikku juurdepääsu teie isikuandmetele ning
+mõistlikku võimalust oma isikuandmeid kontrollida ja parandada. Võite paluda
+oma andmete anonüümseks muutmist, blokeerimist või kustutamist. Teie
+privaatsuse ja turvalisuse tagamiseks astume ka mõistlikke samme teie isiku
+kindlaks tegemiseks. Selleks nõuame parooli ja kasutajatunnust enne, kui
+võimaldame juurdepääsu teie andmetele. HP-le antud isikuandmete kontrollimiseks
+ja muutmiseks saate minna tagasi veebilehele, kus oma andmed algselt
+sisestasite, ning järgida juhiseid sellel veebilehel või kasutada&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>HP Passi</span>(kus võimalik)
+või võtta ühendust&nbsp;<span style='border:none windowtext 1.0pt;padding:0in'>HP
+andmekaitseosakonnaga</span>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=8></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>8.&nbsp;Teie
+isikuandmete turvalisuse tagamine</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP suhtub
+teie usaldusse tõsiselt. Lubamatu juurdepääsu või avalikustamise vältimiseks ja
+andmete täpsuse säilitamiseks ning teabe sobiliku kasutamise tagamiseks
+rakendab HP kogutavate andmete kaitsmiseks asjakohaseid füüsilisi, tehnilisi ja
+haldusprotseduure. HP säilitab andmeid ainult kohalike seadustega nõutaval või
+lubatud viisil ning korrektsetel ärilistel eesmärkidel.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Tundliku
+teabe, nagu krediitkaardiandmete, kogumisel või edastamisel kasutame erinevaid
+turvatehnoloogiaid ja -protseduure, et aidata kaitsta teie isiklikku teavet
+lubamatu juurdepääsu, kasutamise või avalikustamise eest. Teie poolt meile
+edastatud isiklikke andmeid hoitakse arvutisüsteemides, mida asuvad piiratud
+juurdepääsuga hoonetes. Konfidentsiaalseid andmeid (nagu krediitkaardi number
+või parool) Interneti vahendusel edastades kaitseme neid krüpteerimise abil
+näiteks SSL-protokolliga (turvasoklite kihi protokoll).</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Krediitkaardinumbreid
+kasutatakse ainult maksete töötlemiseks ja mitte muudel eesmärkidel. Reaalajas
+toimuvateks maksetöötlusteks tellib HP pettuste vältimise teenust. See teenus
+pakub teile ja HP-le täiendavat turvalisust krediitkaardipettuste vältimisel ja
+teie finantsandmete kaitsmisel.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=9></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>9.&nbsp;Käesoleva
+andmekaitsepoliitika muutmine</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Kui
+muudame oma andmekaitsepoliitikat, siis laadime uuendatud variandi sellele
+veebilehele ja näitame ära muudatuste kuupäeva. Kui teeme
+andmekaitsepoliitikasse olulisi muudatusi, siis võime teid sellest ka muul
+viisil teavitada, saates selle kohta e-kirja või postitades teate meie
+ettevõtte veebilehele ja/või suhtlusmeediumi lehtedele.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><a name=10></a><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>10.&nbsp;Kontaktandmed</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Teie
+arvamus on meile tähtis. Kui teil on märkusi või küsimusi seoses meie
+andmekaitsepoliitika või HP turvalisuse kohta või kui soovite esitada kaebuse,
+saatke need HP andmekaitseosakonnale või kirjutage meile aadressil:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><b><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Kanada,
+suurem osa Ladina-Ameerikast ja Ameerika Ühendriigid:</span></b><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<br>
+HP Privacy Mailbox&nbsp;<br>
+11445 Compaq Center Drive W.&nbsp;<br>
+Mailstop 040307&nbsp;<br>
+Houston, Texas 77070&nbsp;<br>
+USA&nbsp;<br>
+<br>
+<b>Mehhiko:</b><br>
+Hewlett-Packard<br>
+Legal Department<br>
+Prolongación Reforma No. 700&nbsp;<br>
+Colonia Lomas de Santa Fe<br>
+México, D.F., C.P.01210<br>
+<br>
+<b>Euroopa, Lähis-Ida ja Aafrika:</b>&nbsp;<br>
+EMEA Privacy Office&nbsp;<br>
+Hewlett Packard&nbsp;<br>
+MS 250&nbsp;<br>
+1 avenue du Canada&nbsp;<br>
+HP Les Ulis -91947 - Prantsusmaa<br>
+<br>
+<b>Aasia/Vaikse ookeani piirkond ja Jaapan:&nbsp;</b><br>
+HP APJ Privacy Office&nbsp;<br>
+Hewlett Packard&nbsp;<br>
+PO Box 384&nbsp;<br>
+Concord West, NSW 2138&nbsp;<br>
+Austraalia</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Versioon,
+oktoober 2014</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><a name=utca></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;line-height:22.5pt'><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif'>Kuidas HP kasutab
+automaatseid andmekogumisvahendeid</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Järgmised
+jaotised sisaldavad lisateavet levinud veebipõhiste tehnoloogiavahendite kohta.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><a name=cookies></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>Küpsised</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>„Küpsis”
+on väike andmefail, mille veebileht salvestab teie arvuti kõvakettale. HP või
+tema teenusepakkujad saadavad küpsiseid, kui liigute meie lehel või lehtedel,
+kus on kuvatud meie reklaamid, teete oste, küsite või isikupärastate teavet või
+registreerite end teatud teenuste kasutajaks. Meie veebilehel, meie nimel
+tegutsevatel veebilehtedel või lehtedel, kus on kuvatud meie reklaamid,
+kasutatavate küpsiste aktsepteerimisel võidakse meile anda teavet teie
+sirvimisharjumuste kohta, mida võime kasutada teie kogemuse isikupärastamiseks.
+Küpsiseid liigitatakse enamasti „seansiküpsisteks” või „püsiküpsisteks”.</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Seansiküpsised kustutatakse arvutist
+     pärast brauseri sulgemist.</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Püsiküpsised jäävad arvutisse kuni
+     kustutamise või aegumiseni. Enamik brausereid aktsepteerib küpsiseid
+     vaikimisi, kuid üldiselt saate brauseri eelistusi muutes küpsistest
+     keelduda või aktsepteerida üksnes teatud küpsised. Kui lülitate küpsised
+     välja, võib osa meie veebilehe funktsioonidest jääda teile kättesaamatuks
+     ja teie brauser ei pruugi kõiki veebilehti õigesti kuvada.</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Teatud
+riikides on võimalik seadistada veebilehe HP.com ja seonduvate küpsiste
+eeliseid, kasutades selleks eelistuste haldamise tööriista käesolevas
+avalduses, mis on kättesaadavad külastataval veebilehel.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Teavet
+levinumate brauserite ja küpsise-eelistuste muutmise kohta leiate järgmistelt
+veebilehtedelt:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Aeg-ajalt
+võib HP kasutada Flashi lokaalseid ühiskasutusobjekte (Local shared objects,
+LSO), et salvestada Flash-sisu teavet ja eelistusi. LSO-d sarnanevad
+HTMP-brauseri küpsistega, need on arvutisse salvestatavad väikesed
+tekstifailid, mida kutsutakse Flashi küpsisteks. Flashi küpsised on
+brauseriküpsistest mõneti erinevad, mistõttu ei pruugi õnnestuda nende
+eemaldamine brauseri küpsisehaldusvahendiga. Teavet Flashi küpsiste ja nendega
+seotud andmekaitse- ja salvestussätete kohta leiate ettevõtte&nbsp;<span
+style='border:none windowtext 1.0pt;padding:0in'>Adobe Systems website</span>&nbsp;.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+<br>
+<a name=wb></a></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>Veebimajakad</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Mõned
+HP.com ja kolmanda osapoole veebilehed ning HTML-vormingus meiliga saadetavad
+infolehed kasutavad küpsistele lisaks või ilma nendeta veebimajakaid veebilehe
+kasutamise koondstatistika koostamiseks ning veebilehe hp.com ja HP nimel
+tegutsevate ettevõtete veebilehtede jõudlusnäitajate mõõtmiseks. Veebimajakas
+on elektrooniline pilt, nn ühepiksline (1x1) ehk läbipaistev GIF. Veebimajakad
+võivad külastaja arvutis ära tunda teatud liiki teavet (nt külastaja küpsise
+number, lehe vaatamise kuupäev ja kellaaeg ning selle lehe kirjeldus, kus veebimajakas
+asub). Kontekstist olenevalt võidakse veebimajakat kasutada kolmanda osapoole
+serveris asuvale sisule viitamiseks või teenusepakkujate poolt reklaamide
+edastamiseks.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Veebimajakate
+keelamiseks e-kirjades tühistage vastuvõetud sõnumites olevate piltide
+allalaadimine (funktsioon oleneb arvutis kasutatavast meilitarkvarast). Kuid
+konkreetse meilitarkvara võimaluste tõttu ei pruugi meilipõhiste veebimajakate
+või muude automaatsete andmekogumisvahendite keelamine alati võimalik olla.
+Selle kohta saate lisateavet oma meilirakenduse sisespikrist või
+teenusepakkujalt.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Kui
+otsustate HP saadetavad turundussõnumid ja teabelehed vastu võtta (vt jaotist<span
+style='border:none windowtext 1.0pt;padding:0in'>&nbsp;Teie valikud ja
+privaatsuseelistuste valimine</span>), võib HP teie isikuandmeid automaatselt
+koguda. Näiteks veebimajakate ning e-kirjades ja infolehtedes sisalduvate
+isikupõhiste sihtkoha-aadresside kaudu saab HP jälgida, kas te olete selliseid
+sõnumeid avanud ja vastavaid linke klõpsanud. Lisateavet manusveebilinkide
+kohta leiate järgmisest jaotisest.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+<br>
+<a name=ewl></a></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>Manusveebilingid</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP
+e-kirjad, HP eelkonfigureeritud Interneti-klaviatuuri klahvid ja arvuti
+töölauale eelinstallitud kampaaniapõhised ikoonid kasutavad tihtipeale linke,
+mis viivad teid vastavale lehele pärast ümbersuunamist HP serverites.
+Ümbersuunamissüsteem võimaldab HP-l muuta selliste linkide sihtkoha-aadresse ja
+vajaduse korral määrata turunduskampaaniate tõhusust.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>E-kirjades
+kasutatuna võimaldavad sellised lingid meil tuvastada, kas olete neid
+klõpsanud, ja siduda sooritatud toiminguid teie isikuga. Kui te ei soovi, et HP
+kogub teavet klõpsatavate linkide kohta, võite teha järgmist:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>muuta HP edastatavate teabematerjalide
+     valikut (näiteks valige võimaluse korral sõnumi tekstiversioon) või mitte
+     klõpsata HP-lt saabunud e-kirjades olevaid linke;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>kustutada HP poolt arvutisse
+     eelinstallitud kampaaniapõhised ikoonid või neid mitte klõpsata;</span></li>
+ <li class=MsoNormal style='line-height:16.5pt'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>teatud arvutimudelite puhul
+     Interneti-klaviatuuri klahvid ümber konfigureerida, et avatakse teie
+     valitud sihtkoha-aadress (vt arvuti kasutusjuhendit).</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:15.0pt;line-height:18.0pt'><a name=hptpw></a><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif'>HP reklaamid ja
+pakkumised kolmandate osapoolte veebilehtedel</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HP-l on
+teenusepakkujatega leping reklaamide avaldamiseks kolmandate osapoolte
+veebilehtedel. Lisaks võivad mõned veebilehed olla teenusepakkuja käitatavad,
+kes edastab HP pakkumisi HP nimel. Teenusepakkujad võivad kolmandate osapoolte
+veebilehtedel ja lehel hp.com kasutada veebimajakaid ja saata neilt küpsiseid.
+Veebimajakad ja küpsised võimaldavad HP-l koguda teavet teie poolt vaadatavate
+lehtede ja klõpsatavate linkide kohta.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Lisateavet
+võrgureklaami ja selle kohta, kuidas sellest loobuda, leiate veebilehelt<span
+style='border:none windowtext 1.0pt;padding:0in'>http://www.aboutads.info</span>&nbsp;.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Selle
+andmekaitsepoliitika ingliskeelne originaal on kättesaadav veebilehel<span
+style='border:none windowtext 1.0pt;padding:0in'>http://www8.hp.com/us/en/privacy/privacy.html</span>.
+Tõlked on mõeldud ainult mugavuse tagamiseks.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+16.5pt'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Arial",sans-serif'>© 2015 Hewlett-Packard Development Company, L.P.</span></p>
+
+</div>
+
+</body>
+
+</html>

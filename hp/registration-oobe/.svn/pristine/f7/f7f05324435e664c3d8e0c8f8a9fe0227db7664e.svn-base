@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="vi" xml:lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Là một phần trong cam kết của HP nhằm cung cấp trải nghiệm thiết bị tốt hơn, thiết bị này được trang bị phần mềm chẩn đoán.  Phần mềm này thu thập dữ liệu chẩn đoán ẩn danh, bao gồm thông tin phần cứng và phần mềm, cấu hình và trạng thái mạng và sử dụng ứng dụng của thiết bị. Thông tin này được sử dụng để cải thiện việc cung cấp sản phẩm và dịch vụ của chúng tôi.  Dữ liệu chẩn đoán gắn liền với thiết bị và sẽ không phân biệt được giữa những người dùng. Dữ liệu ẩn danh chỉ được chia sẻ với nhà cung cấp phần mềm chẩn đoán. Phiên tải lên dữ liệu có thể xảy ra qua mạng di động hoặc WiFi và tuân theo các tiêu chuẩn Bảo mật của HP.  Lượng dữ liệu được gửi cho nhà cung cấp dịch vụ chẩn đoán qua mạng di động ở mức tối thiểu và sẽ không ảnh hưởng tiêu cực đến phân phối dữ liệu từ nhà cung cấp dịch vụ di động. Nếu bạn muốn tắt tính năng chẩn đoán nêu trên, vui lòng truy cập phần Cài đặt.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

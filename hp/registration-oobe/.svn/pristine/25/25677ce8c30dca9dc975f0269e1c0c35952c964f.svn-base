@@ -1,0 +1,483 @@
+package hp.oobe.tasks;
+
+import hp.oobe.Consts;
+import hp.oobe.Util;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.charset.Charset;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.util.Log;
+
+public final class OTATask extends HTTPTask implements IOOBETask {
+
+	// ============================================================================================
+	// PRIVATE MEMBERS
+	// ============================================================================================
+
+	private Util util = new Util();
+	private String response = null;
+	private String encryptionKey = null;
+	private String endPointQuery = null;
+
+	private static final String KEY_ACCESS_TOKEN = "access_token",
+			KEY_TOKEN_TYPE = "token_type", KEY_EXPIRES_IN = "expires_in",
+			KEY_REFRESH_TOKEN = "refresh_token",
+			KEY_INSTANCE_ID = "instance_id", KEY_STATUS_CODE = "statusCode",
+			KEY_BORN_ON_DATE = "realBornOnDate", KEY_DEVICES = "DeviceInfo";
+
+	public static final String CLIENT_ID = "4028876441ccf1c20141e734ecc30090";
+
+	private String readMessage(String keyToDecryptContent) {
+
+		return util.readContentOfFileAndDecrypt(Consts.FILES_ROOT
+				+ Consts.FILE_NAME_OTA, keyToDecryptContent);
+
+	}
+
+	/**
+	 * Sends the OTA registration.
+	 * 
+	 * @param enPoint
+	 *            URL that receive the message.
+	 * @param message
+	 *            Message that needs to be sent.
+	 * @return String. response returned by the server.
+	 */
+	private String registerAtOTA(String enPoint, String message) {
+		InputStream is = null;
+		HttpURLConnection conn = null;
+		OutputStreamWriter request = null;
+
+		// String endPoint = this.getEndPoint(),
+		// message = super.message;
+
+		// Sending the Registration data
+		if (endPoint != null && message != null && !endPoint.equals("")
+				&& !message.equals("")) {
+
+			try {
+
+				URL url = new URL(endPoint);
+				conn = (HttpURLConnection) url.openConnection();
+
+				conn.setDoOutput(true);
+				conn.setRequestProperty("Content-Type", "application/json");
+				conn.setRequestProperty("X-HP-Client-Id",
+						"android_system_update_client");
+
+				request = new OutputStreamWriter(conn.getOutputStream());
+				request.write(message);
+				request.flush();
+				request.close();
+
+				response = conn.getResponseMessage();
+
+				if (conn.getResponseCode() >= 400) {
+
+					is = conn.getErrorStream();
+
+				} else {
+
+					is = conn.getInputStream();
+
+				}
+
+				response = util.convertToString(is);
+				
+				if (conn.getResponseCode() >= 400) {
+					
+					Log.d(Consts.TAG, "Error while doing OTA registration: " + response);
+					
+				}
+
+			} catch (Exception e) {
+
+				Log.d(Consts.TAG, "Problem while sending the data of " + name
+						+ ". Error: " + e.getMessage());
+				e.printStackTrace();
+
+			} finally {
+
+				if (is != null) {
+
+					try {
+
+						is.close();
+
+					} catch (IOException e) {
+
+						e.printStackTrace();
+
+					}
+
+				}
+
+				conn.disconnect();
+
+			}
+
+		}
+
+		return response;
+
+	}// #registerAtOTA
+
+	/**
+	 * Send a message to the OTA server asking for information about the device
+	 * that was just registered.
+	 * 
+	 * @param endPoint
+	 * @param message
+	 * 
+	 * @return response from the server.
+	 */
+	private String queryOTA(String endPoint, String message) {
+
+		util.encryptAndPersistContent(Consts.FILES_ROOT
+				+ Consts.FILE_NAME_OTA_QUERY, message, this.encryptionKey);
+		InputStream is = null;
+		HttpURLConnection conn = null;
+		OutputStreamWriter request = null;
+		String responseQuery = null;
+
+		// Querying the Registration data
+		if (endPoint != null && message != null && !endPoint.equals("")
+				&& !message.equals("")) {
+
+			try {
+
+				URL url = new URL(endPoint);
+				conn = (HttpURLConnection) url.openConnection();
+
+				conn.setDoOutput(true);
+				conn.setRequestProperty("Content-Type", "application/json");
+				conn.setRequestProperty("X-HP-Client-Id",
+						"android_system_update_client");
+
+				request = new OutputStreamWriter(conn.getOutputStream());
+
+				request.write(message);
+				request.flush();
+				request.close();
+
+				responseQuery = conn.getResponseMessage();
+
+				if (conn.getResponseCode() >= 400) {
+
+					is = conn.getErrorStream();
+
+				} else {
+
+					is = conn.getInputStream();
+
+				}
+
+				responseQuery = util.convertToString(is);
+
+				if (conn.getResponseCode() >= 400) {
+					
+					Log.d(Consts.TAG, "Error while doing OTA query: " + response);
+					
+				}
+				
+				util.encryptAndPersistContent(Consts.FILES_ROOT
+						+ Consts.FILE_NAME_OTA_QUERY_RESPONSE, responseQuery,
+						this.encryptionKey);
+
+			} catch (Exception e) {
+
+				Log.d(Consts.TAG, "Problem while sending the data of " + name
+						+ ". Error: " + e.getMessage());
+				e.printStackTrace();
+
+			} finally {
+
+				if (is != null) {
+
+					try {
+
+						is.close();
+
+					} catch (IOException e) {
+
+						e.printStackTrace();
+
+					}
+
+				}
+
+				conn.disconnect();
+
+			}
+
+		}
+
+		return responseQuery;
+		
+
+	}// #queryOTA
+
+	/**
+	 * Build the body message of the query request.
+	 * 
+	 * @param accessToken
+	 * @return
+	 */
+	private String buildQueryMessage(String accessToken) {
+
+		return "{\"InDeviceId\":{\"authToken\": \"" + accessToken + "\"}}";
+
+	}// #buildQueryMessage
+
+	/**
+	 * Extracts the access token from the OTA registration's response. This
+	 * token will be used to query information from the OTA server.
+	 * 
+	 * @param message
+	 *            OTA registration's response
+	 * @return String which is the access token. Null if the access token is not
+	 *         in the message.
+	 */
+	private String extractAccessToken(String message) {
+
+		String result = null;
+
+		JSONObject json;
+		try {
+
+			json = new JSONObject(response);
+
+			result = json.getString(KEY_ACCESS_TOKEN);
+
+		} catch (JSONException e) {
+
+			Log.d(Consts.TAG,
+					"Problem while extracting the token from OTA response.");
+			e.printStackTrace();
+
+		}
+
+		return result;
+
+	}// #extractAccessToken
+
+	/**
+	 * Get the born on date from the message returned by the Query API.
+	 * 
+	 * @param message
+	 * @return Born on date if the response contains the information. null
+	 *         otherwise.
+	 */
+	private String exractBornOnDate(String message) {
+		String result = null;
+
+		JSONObject json;
+		JSONObject deviceInfo;
+
+		try {
+
+			json = new JSONObject(message);
+			deviceInfo = json.getJSONObject(KEY_DEVICES);
+			result = deviceInfo.getString(KEY_BORN_ON_DATE);
+		} catch (JSONException e) {
+
+			Log.d(Consts.TAG,
+					"Problem while extracting the token from OTA response.");
+			e.printStackTrace();
+
+		}
+
+		return result;
+
+	}// #extractBornOnDate
+
+	// ============================================================================================
+	// PUBLIC MEMBERS
+	// ============================================================================================
+	public OTATask(String name, String endPoint, String endPointQuery,
+			String keyToDecryptContent) {
+
+		super(name, endPoint);
+		super.message = readMessage(keyToDecryptContent);
+		this.encryptionKey = keyToDecryptContent;
+		this.endPointQuery = endPointQuery;
+
+	}
+
+	@Override
+	public boolean isValid(String response) {
+		boolean result = false;
+
+		try {
+
+			JSONObject json = new JSONObject(response);
+
+			if (!json.getString(KEY_ACCESS_TOKEN).equals("")
+					&& !json.getString(KEY_EXPIRES_IN).equals("")
+					&& !json.getString(KEY_TOKEN_TYPE).equals("")
+					&& !json.getString(KEY_REFRESH_TOKEN).equals("")
+					&& !json.getString(KEY_INSTANCE_ID).equals("")
+					&& json.getInt(KEY_STATUS_CODE) == 200) {
+
+				result = true;
+
+			} else {
+
+				Log.d(Consts.TAG, "Error response from the OTA server was "
+						+ response);
+
+			}
+
+		} catch (JSONException e) {
+
+			Log.d(Consts.TAG,
+					"Problem while creating the JSON object from the OTA server.");
+			e.printStackTrace();
+
+		} catch (Exception e) {
+
+			Log.d(Consts.TAG,
+					"Problem while processing the JSON object from the OTA server.");
+			e.printStackTrace();
+
+		}
+
+		if (result) {
+
+			Log.d(Consts.TAG, "OTA Server returned a valid message.");
+
+		} else {
+
+			Log.d(Consts.TAG, "OTA Server returned an invalid message.");
+
+		}
+
+		return result;
+
+	}
+
+	@Override
+	public void run() {
+		boolean sentOK = false;
+		boolean queryOK = false;
+		String bod = null;
+		String queryResponse = null;
+		if(getStatus()==true)//Do not do anything if task is marked complete
+			return;
+		try {
+
+			String registrationResponse = registerAtOTA(this.getEndPoint(),
+					super.message);// Born on Date
+			// Checking if the response was valid
+			sentOK = isValid(registrationResponse);
+
+			if (sentOK) {
+
+				Log.d(Consts.TAG, "OTA Registration was ok.");
+
+				String token = extractAccessToken(response);
+				if (token == null || token.equals("")) {
+
+					Log.d(Consts.TAG, "Not able to retrieve the OTA token.");
+
+				}
+
+				queryResponse = queryOTA(this.endPointQuery,
+						buildQueryMessage(token));
+				if (queryResponse != null && !queryResponse.equals("")) {
+
+					bod = exractBornOnDate(queryResponse);
+
+					if (bod != null) {
+
+						queryOK = true;
+
+					} else {
+
+						Log.d(Consts.TAG,
+								"BOD was not in OTA's query response.");
+
+					}
+
+				} else {
+
+					Log.d(Consts.TAG, "OTA query doesn't return a content.");
+
+				}
+
+			}
+		} catch (Exception ex) {
+			Log.d(Consts.TAG, "Problem while sending the data of " + name
+					+ ". Error: " + ex.getMessage());
+			ex.printStackTrace();
+
+		}
+
+		/*
+		 * The task is considered successful if the registration and query
+		 * happened ok. The response of the registration gets persisted; + the
+		 * born on date.
+		 * 
+		 * Note: If only the query failed (but the registration went fine) the
+		 * next time the service runs the registration will happen again. Not a
+		 * problem. The server rejects duplicated records. The reason is
+		 * designed like this is to prevent to use an old token (in case it
+		 * expired until the next attempt) and and avoid to make this logic more
+		 * complex.
+		 */
+		if (sentOK && queryOK) {
+
+			util.encryptAndPersistContent(Consts.FILES_ROOT
+					+ Consts.FILE_NAME_OTA_RESPONSE, response,
+					this.encryptionKey);
+			if (queryResponse != null) {
+				util.encryptAndPersistContent(Consts.FILES_ROOT
+						+ Consts.FILE_NAME_OTA_QUERY_RESPONSE, queryResponse,
+						this.encryptionKey);
+			}
+			if (bod != null) {
+				util.encryptAndPersistContent(Consts.FILES_ROOT
+						+ Consts.FILE_NAME_BOD, bod, this.encryptionKey);
+			}
+
+			this.sent = true;
+
+		} else {
+
+			this.sent = false;
+
+		}
+
+	}// #run
+
+	@Override
+	public String getName() {
+
+		return this.name;
+
+	}
+
+	@Override
+	public boolean getStatus() {
+
+		return this.sent;
+
+	}
+
+	@Override
+	public void setStatus(boolean status) {
+
+		this.sent = status;
+
+	}
+
+}

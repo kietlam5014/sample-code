@@ -1,0 +1,140 @@
+package hp.oobe;
+
+import java.io.File;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.net.Uri;
+import android.util.Log;
+
+public final class CarrierIQ {
+
+	private Context context = null;
+	
+	private final static String PACKAGE_ID = "com.carrieriq.hp";
+	private final static String NATIVE_PACKAGE_FULL_PATH = "/system/lib/libiq_service_hp_2.2.so";
+	private final static String ACTION = "com.carrieriq.hp.ENABLETOGGLE";
+	private final static String EXTRA = "Enable";
+    private static final String ACTION_CURRENT = "com.carrieriq.hp.ENABLECURRENTSTATUS";
+    private static final String CATEGORY = "android.intent.category.DEFAULT";
+	
+    private BroadcastReceiver statusReceiver = null;
+    
+    public static boolean currentState = false;
+    
+	public CarrierIQ(Context context) {
+		
+		this.context = context;
+		
+	}
+	
+	private boolean doesPackageExist() {
+		
+		PackageManager pManager = context.getPackageManager();
+		
+		try {
+			
+			PackageInfo info = pManager.getPackageInfo(PACKAGE_ID, PackageManager.GET_META_DATA);
+			
+		} catch (NameNotFoundException e) {
+			
+			return false;
+			
+		}
+		
+		return true;
+		
+	}
+	
+	private boolean doesNativePackageExist() {
+	
+		File file = new File(NATIVE_PACKAGE_FULL_PATH);
+
+		return file.exists();
+		
+	}
+	
+	/**
+	 * Indicates if the Carrier IQ component is installed in the system.
+	 * 
+	 * @return
+	 * true. If installed.
+	 * false. If not installed.
+	 */
+	public boolean isInstalled() {
+
+		return (doesPackageExist() && doesNativePackageExist());
+		
+	}
+	
+	public void sendMessage(String userSelection) {
+		
+		Intent intent = new Intent();
+		intent.setAction(ACTION);
+		
+		if (userSelection.toLowerCase().equals("yes")) {
+			
+			intent.putExtra(EXTRA, "Yes");
+			Log.d("HP_OOBE", "Broadcasting yes message to Carrier IQ.");
+			
+		} else {
+			
+			intent.putExtra(EXTRA, "No");
+			Log.d("HP_OOBE", "Broadcasting no message to Carrier IQ.");
+			
+		}
+		
+		context.sendBroadcast(intent);
+		
+	}
+	
+	public void sendMessageToFindState() {
+		
+		statusReceiver = new BroadcastReceiver() {
+			public void onReceive(Context ctx, Intent i) {
+				
+				String response = i.getStringExtra(EXTRA);
+				
+				Log.d(Consts.TAG, "Response from Carrier IQ is " + response);
+
+				if (response != null) {
+
+					if (response.toLowerCase().equals("yes")) {
+
+						currentState = true;
+
+					} else {
+
+						currentState = false;
+
+					}
+
+				}
+				
+			}
+		};
+
+		try {
+			
+			IntentFilter intentf = new IntentFilter();
+			intentf.addAction(ACTION_CURRENT);
+			intentf.addCategory(CATEGORY);
+			context.registerReceiver(statusReceiver, intentf);
+	
+			Intent intent = new Intent();
+			intent.setAction(ACTION);
+			context.sendBroadcast(intent);
+		} catch(Exception e) {
+			
+			// do nothing
+			
+		}
+			
+	}
+	
+}

@@ -1,0 +1,94 @@
+package hp.oobe.internals;
+
+import java.util.ArrayList;
+
+import hp.oobe.internals.R;
+import hp.oobe.internals.output.Output;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.view.Menu;
+import android.widget.TextView;
+
+public class MainActivity extends Activity
+{
+	@Override
+	protected void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+	
+	@Override
+	protected void onStart() {
+		super.onStart();
+		
+		displayOutput();		
+	}	
+	public static String getExternalCode(Context context, String packageName, String key) {
+        Context con = null;
+        String code = null;
+        
+        try {
+            con = context.createPackageContext(packageName, Context.CONTEXT_INCLUDE_CODE | Context.CONTEXT_IGNORE_SECURITY);
+            SharedPreferences pref = con.getSharedPreferences(
+                    packageName,  context.MODE_PRIVATE);
+            code = pref.getString(key, null);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+       
+
+        return code;
+    }
+	private void displayOutput()
+	{
+		final String NEWLINE = "\n";
+		
+		ContentResolver contentResolver = getContentResolver();
+		OutputFactory factory = new OutputFactory(contentResolver); 
+		ArrayList<Output> outputs = factory.getOutputs();		
+		
+		StringBuilder sb = new StringBuilder(); 
+		for( Output o: outputs )
+		{
+			sb.append(o.getTitle());   
+			sb.append(NEWLINE);
+			
+			sb.append(o.readOutput()); 
+			sb.append(NEWLINE);
+			sb.append(NEWLINE);
+		}
+		
+		sb.append(NEWLINE);	
+		String countryCode= getExternalCode(this, "hp.oobe", "countryCode");
+		sb.append("countryCode= ");
+		sb.append(countryCode);
+		sb.append(NEWLINE);	
+		String dropbox= getExternalCode(this, "hp.oobe", "DropBox");
+		sb.append("dropbox= ");
+		sb.append(dropbox);
+		sb.append(NEWLINE);	
+		String launcher= getExternalCode(this, "hp.oobe", "launcher");
+		sb.append("launcher= ");
+		sb.append(launcher);
+		sb.append(NEWLINE);	
+		String metrics= getExternalCode(this, "hp.oobe", "Metrics");
+		sb.append("metrics= ");
+		sb.append(metrics);
+		
+		TextView tv = (TextView)findViewById(R.id.output);
+		tv.setText(sb.toString());			
+	}
+}

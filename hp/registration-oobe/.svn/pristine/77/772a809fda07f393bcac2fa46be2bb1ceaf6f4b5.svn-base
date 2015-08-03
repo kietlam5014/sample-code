@@ -1,0 +1,159 @@
+package hp.oobe;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import android.app.Notification;
+import android.app.Notification.Style;
+import android.app.AlarmManager;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.TaskStackBuilder;
+import android.util.Log;
+
+public class RegistrationNotificationManager {
+
+	private Context context;
+	private SharedPreferences preferences = null;
+	
+	public RegistrationNotificationManager(Context context) {
+		
+		this.context = context;
+		preferences = this.context.getSharedPreferences(Consts.PREFERENCES, 0);
+		
+	}
+	
+	public void show(String title, String text, 
+			int iconAddress) {
+		 
+		try {
+			if (context == null) {
+				
+				Log.d(Consts.TAG, "Context for the NotificationManager was not set.");
+				
+			} else {
+				
+				Intent resultIntent = new Intent(context, HomeActivity.class);
+				
+				TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
+				stackBuilder.addParentStack(HomeActivity.class);
+				stackBuilder.addNextIntent(resultIntent);
+				
+				PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+				
+				Notification.Builder myBuilder = new Notification.Builder(context);
+				myBuilder.setSmallIcon(iconAddress);
+				myBuilder.setContentIntent(resultPendingIntent);
+				
+				Notification.BigTextStyle style = new Notification.BigTextStyle(myBuilder);
+				style.bigText(text);
+				style.setBigContentTitle(title);
+				//Added by Sony to fix defect:CR#345 
+				myBuilder.setContentTitle(title);//
+			    myBuilder.setContentText(text);
+				NotificationManager mNotificationManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
+				
+				mNotificationManager.notify(1, style.build());
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}//#scheduleNotification
+	
+	/*
+	 * Cancel the intent that was scheduled. Intent that is responsible to call the BroadcastReceiver.
+	 */
+	public void cancelNotification() {
+		
+		try {
+			Intent myIntent = new Intent(context, RegistrationNotificationReceiver.class);
+			PendingIntent pendingIntent = null;
+			pendingIntent = PendingIntent.getBroadcast(context, 0, myIntent, 0);
+			
+			AlarmManager alarmManager = (AlarmManager)context.getSystemService(context.ALARM_SERVICE);
+			
+			alarmManager.cancel(pendingIntent);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}//#cancelNotification
+	
+	/*
+	 * Removes the app logo from the notification area. 
+	 */
+	public void removeTicker() {
+		
+		NotificationManager mNotificationManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
+		mNotificationManager.cancelAll();
+		
+	}
+	
+	/**
+	 * Gets the last date that the notification was scheduled (not when it had to run).
+	 * 
+	 * @return
+	 * 	Date. The date when it was scheduled. null if no date was found in the Preferences.xml
+	 */
+	public Date lastScheduledDate() {
+		
+		Date result = null;
+		
+		String millSeconds = preferences.getString(Consts.PREFERENCE_NOTIFICATION_LAST_DATE_SCHEDULED, null);
+		
+		if (millSeconds != null) {
+			
+			result = new Date(Long.parseLong(millSeconds));
+			
+		}
+		
+		return result;
+		
+	}//#lastScheduledDate
+	
+	/**
+	 * Schedules a BroadcastReceiver that is responsible for scheduling 
+	 * 
+	 * @param when When the broadcast receiver should wake up.
+	 * @param title The title of the Notification. It can be null.
+	 * @param text The text of the Notification. It can be null.
+	 */
+	public void scheduleNotification(Date when, String title, String text) {
+		
+		/* 
+		 * Saving the content in the Shared Preferences so the BroadcastReceiver can use.
+		 * If the it's coming null it means that the content is already in the preferences.xml.
+		 */
+		if (title != null && text != null) {
+			
+			SharedPreferences.Editor editor = preferences.edit();
+			editor.putString(Consts.PREFERENCE_NOTIFICATION_TITLE, title);
+			editor.putString(Consts.PREFERENCE_NOTIFICATION_TEXT, text);
+			editor.commit();
+			
+		}
+		
+		// Scheduling the BroadcastReceiver 
+		Intent myIntent = new Intent(this.context, RegistrationNotificationReceiver.class);
+		PendingIntent pendingIntent = null;
+		pendingIntent = PendingIntent.getBroadcast(this.context, 0, myIntent, 0);
+		
+		AlarmManager alarmManager = (AlarmManager)this.context.getSystemService(Context.ALARM_SERVICE);
+		
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTimeInMillis(when.getTime());
+		
+		alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+
+		Log.d(Consts.TAG, "Receiver for Notification was scheduled to run on " + calendar.getTime().toString());
+		
+	}
+	
+}

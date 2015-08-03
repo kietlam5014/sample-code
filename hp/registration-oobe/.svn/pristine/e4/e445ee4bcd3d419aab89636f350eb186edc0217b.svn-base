@@ -1,0 +1,45 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.useragent = hp.registration.useragent || {};
+
+hp.registration.useragent.Transporter = function() {
+
+	/*
+	@input 
+		inContainer: 
+					{
+						'url': String,
+						'message': String,
+                        'otaUrl': String,
+                        'otaQueryUrl': String,
+                        'otaMessage': String,
+                        'beaconUrl': String,
+                        'beaconUrlPostOOBE': String,
+						'callback': Function(String)
+					}
+	@returns
+		null
+	 */
+	this.saveDataToBeUsedByService = function(inContainer) {
+
+		registrationAndroid.saveDataToBeUsedByService(inContainer['url'],
+                             'message=' + inContainer['message'],
+                             inContainer['otaUrl'],
+                             inContainer['otaQueryUrl'],                          
+                             inContainer['otaMessage'],
+                             inContainer['beaconUrl'],
+                             inContainer['beaconUrlPostOOBE'],
+                             inContainer['callback']);
+
+		return null;
+        
+	};//#hp.registration.useragent.Transporter.saveDataToBeUsedByService
+    
+    this.getHash = function(inIP) {
+        
+        return registrationAndroid.encryptToHexString(inIP);
+        
+    };//#hp.registration.useragent.Transporter.getHash
+
+	return this;
+}.apply({}, null);//#hp.registration.useragent.Transporter

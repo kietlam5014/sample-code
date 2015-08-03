@@ -1,0 +1,20 @@
+package hp.oobe.internals.output;
+
+import android.content.ContentResolver;
+
+public class OutputPreferences extends Output
+{
+	public static final String PREFERENCES_XML = "/data/data/hp.oobe/shared_prefs/Preferences.xml";	
+		
+	public OutputPreferences(ContentResolver contentResolver)
+	{
+		super(contentResolver);
+		title = PREFERENCES_XML;
+	}
+	
+	@Override
+	public String readOutput()
+	{
+		return readFile(PREFERENCES_XML);
+	}
+}

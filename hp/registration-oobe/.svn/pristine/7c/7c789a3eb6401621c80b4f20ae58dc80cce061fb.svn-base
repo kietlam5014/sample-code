@@ -1,0 +1,56 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.useragent = hp.registration.useragent || {};
+
+hp.registration.useragent.TransporterBrowser = function() {
+
+	/*
+	@input 
+		inContainer: 
+					{
+						'url': String,
+						'message': String,
+						'callback': Function(String)
+					}
+	@returns
+		null
+	 */
+	this.postData = function(inContainer) {
+
+		var _fakeReplyOk = '<?xml version="1.0"?>' +
+			'<registration-response version="1.0.3" status_code="OK">' +
+			'<header>' + 
+				'<server-info region="NA" host="cprs.hp.com" />' +
+				'<security-info principal="6808730788228548347" credentials="oKUL==" version="1.0.0" />' +
+			'</header>' +
+			'<payload></payload>' +
+			'</registration-response>';
+
+		var _fakeReplyError = '<?xml version="1.0"?>' +
+			'<registration-response version="1.0.3" status_code="ERROR">' +
+			'<header>' + 
+				'<server-info region="NA" host="cprs.hp.com" />' +
+				'<security-info principal="6808730788228548347" credentials="oKUL==" version="1.0.0" />' +
+			'</header>' +
+			'<payload></payload>' +
+			'</registration-response>';
+
+		inContainer['callback'](_fakeReplyOk);
+
+		return null;
+	};//#hp.registration.useragent.TransporterBrowser.postData
+    
+    this.saveDataToBeUsedByService = function(inContainer) {
+
+		return null;
+        
+	};//#hp.registration.useragent.Transporter.saveDataToBeUsedByService
+    
+    this.getHash = function(inIP) {
+        
+        return "209728bce1e5935327446afa4206c5d8";
+        
+    };//#hp.registration.useragent.TransporterBrowser.getHash
+
+	return this;
+}.apply({}, null);//#hp.registration.useragent.TransporterBrowser

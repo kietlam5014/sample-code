@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="ru" xml:lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Поскольку компания HP стремится к повышению удобства работы с производимыми ею устройствами, на данном устройстве установлено диагностическое программное обеспечение.  Это ПО собирает анонимные диагностические данные, в том числе информацию об аппаратном и программном обеспечении устройства, состоянии и конфигурации сети и использовании приложений. Данная информация используется для усовершенствования продукции и услуг компании HP.  Диагностические данные привязаны к устройству и не соотносятся с различными пользователями. Анонимные данные передаются только поставщику диагностического программного обеспечения. Сеансы загрузки данных осуществляются при подключении к сотовой сети или сети WiFi и отвечают стандартам безопасности HP.  Объем данных, передаваемых поставщику диагностического ПО через сотовую сеть, является минимальным и не должен приводить к снижению квоты на передачу данных, выделенной мобильным оператором. Чтобы отключить функции диагностики, перейдите в раздел &quot;Настройки&quot;.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

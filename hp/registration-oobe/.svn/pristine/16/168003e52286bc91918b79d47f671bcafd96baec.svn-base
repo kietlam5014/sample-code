@@ -1,0 +1,20 @@
+package hp.oobe.internals.output;
+
+import android.content.ContentResolver;
+
+public class OutputRegistration extends Output
+{
+	public static final String REGISTRATION_XML = "/data/data/hp.oobe/files/registration";
+	
+	public OutputRegistration(ContentResolver contentResolver)
+	{
+		super(contentResolver);
+		title = REGISTRATION_XML;
+	}
+
+	@Override
+	public String readOutput()
+	{
+		return readFile(REGISTRATION_XML, true);
+	}	
+}

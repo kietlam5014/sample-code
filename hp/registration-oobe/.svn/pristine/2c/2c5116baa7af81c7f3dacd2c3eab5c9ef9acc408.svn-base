@@ -1,0 +1,308 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.Properties = hp.registration.Properties || {};
+
+Object.defineProperties(hp.registration.Properties, 
+	{
+        'endPoint': {
+			'value': 'https://cprs.hp.com/cxs-cprs/registration-request',
+            'writable': true
+        },
+        'endPointGeoLocation': {
+        	'value': 'http://wstaxsaas.houston.hp.com/wstax/wstaxadapter/services/geoLocation/',
+        	'writable': true
+        },
+        'endPointOTA': {
+			'value': 'https://tokengateway.hpwsportal.com/tokengateway/v1/hp/anonymoustoken',
+            'writable': true
+        },
+        'endPointOTAQuery': {
+			'value':'https://profilemanager.hpwsportal.com/profilemanager/services/generalJ/getDeviceInfo',
+            'writable': true
+        },
+        'endPointExternalIP': {
+            'value': 'http://eipd.rssx.hp.com/eipd/ip',
+            'writable': true
+        },
+        'endPointBeacon': {
+            'value': 'http://metrics.rssx.hp.com/oobe/beacon.txt',
+            'writable': true
+        },
+		'ALTERNATE_PROVIDER_SUFIX': {
+			'value': 'Browser',
+			'writable': false
+		},
+        'DEFAULT_UNKNOWN_COUNTRY_CODE_REGISTRATION_BACKEND': {
+            'value': 'ZZ',
+            'writable': false
+        },
+        'DEFAULT_UNKNOWN_COUNTRY_CODE_BEACON_BACKEND': {
+            'value': 'WW',
+            'writable': false
+        },
+        'BUILD_TYPE_CN': {
+            'value': 'CN',
+            'writable': false
+        },
+        'BUILD_TYPE_WW': {
+            'value': 'WW',
+            'writable': false
+        },
+        'FLOW_NORMAL': {
+            'value': 'FLOW_NORMAL',
+            'writable': false
+        },
+        'FLOW_ALTERNATE_CONSENT_NETWORK_USER_INFO': {
+            'value': 'FLOW_ALTERNATE_CONSENT_NETWORK_USER_INFO',
+            'writable': false
+        },
+        /*
+         true = If you want to run in the browser (e.g. Google Chrome)
+         false = If it's running on the WebView container (production)
+         */
+        'usingAlternateUserAgent': {
+			'value': false,
+            'writable': true
+		},
+        'INTERVAL_NOTIFICATION': {
+            'value': 168, // hours
+            'writable': true
+        },
+        'SYSTEM_COUNTRY_CODE': {
+            'value': 'countryCode',
+            'writable': false
+        },
+        'BEACON_VERSION': {
+            'value': '2.0',
+            'writable': false
+        },
+        'YES': {
+            'value': 'Y',
+            'writable': false
+        },
+        'NO': {
+            'value': 'N',
+            'writable': false
+        },
+        'UNDEFINED': {
+            'value': 'U',
+            'writable': false
+        },
+        'STATUS_POST_OK': {
+            'value': 'post_ok',
+            'writable': false
+        },
+        'STATUS_POST_PROBLEM': {
+            'value': 'post_problem',
+            'writable': false
+        },
+        'LANDSCAPE': {
+        	'value': 'landscape',
+        	'writable': false,
+        },
+        'PORTRAIT': {
+        	'value': 'portrait',
+        	'writable': false
+        },
+        'SMALL_SCREEN': {
+            'value': 'small_canvas.css',
+            'writable': false
+        },
+        'NORMAL_SCREEN': {
+            'value': 'normal_canvas.css',
+            'writable': false
+        },
+        'BIG_SCREEN': {
+            'value': 'big_canvas_landscape.css',
+            'writable': false
+        },
+        'QA_METRICS_VERSION_KEY_NAME': {
+            'value': 'qaMetricsVersion',
+            'writable': false
+        },'APP_ID': {
+			'value': 332, 
+			'writable': false
+		},
+        'APP_ID_LAUNCHER': {
+            'value': 336,
+            'writable': false
+        },
+        'OS_CODE_ANDROID': {
+            'value': '064',
+            'writable': false
+        },
+        'LANGUAGES_WITH_FULL_NAME': {
+            'value': ['zh', 'ko'],
+            'writable': false
+        },
+        'LANGUAGES_RIGHT_TO_LEFT': {
+            'value': ['ar', 'he'],
+            'writable': false
+        },
+        'DEFAULT_PURCHASED_LOCATION': {
+            'value': '999',
+            'writable': false
+        },
+        'DEFAULT_SEGMENT_NUMBER': {
+            'value': '002',
+            'writable': false
+        },
+        'DEFAULT_SEGMENT_NUMBER_2': {
+            'value': '999',
+            'writable': false
+        },
+		'ATTR_APP_ID': {
+			'value': 'app_id',
+			'writable': false
+		},
+		'ELEMENT_PAYLOAD': {
+            'value': 'payload',
+            'writable': false
+        },//#ELEMENT_PAYLOAD
+        'ELEMENT_REGISTRATION_REDIRECT': {
+            'value': 'registration-redirect',
+            'writable': false
+        },//#ELEMENT_REGISTRATION_REDIRECT
+        'ELEMENT_FOUNDATION_BLOCK': {
+            'value': 'FoundationBlock',
+            'writable': false
+        },//#ELEMENT_FOUNDATION_BLOCK
+        'ELEMENT_LIBRARY_BLOCK': {
+            'value': 'LibraryBlock',
+            'writable': false
+        },//#ELEMENT_LIBRARY_BLOCK
+        'ELEMENT_CUSTOM_BLOCK': {
+            'value': 'CustomBlock',
+            'writable': false
+        },//#ELEMENT_CUSTOM_BLOCK
+        'ELEMENT_EXTENDED_REGISTRATION_SUB_BLOCK': {
+            'value': 'ExtendedRegistrationSubBlock',
+            'writable': false
+        },//#ELEMENT_EXTENDED_REGISTRATION_SUB_BLOCK
+        'ELEMENT_HEADER': {
+            'value': 'header',
+            'writable': false
+        },//#ELEMENT_HEADER
+        'ELEMENT_SOURCE': {
+            'value': 'source',
+            'writable': false
+        },//#ELEMENT_SOURCE
+        'ATTR_SEQUENCE': {
+            'value': 'reg_sequence',
+            'writable': false
+        },//#ATTR_SEQUENCE
+        'ATTR_REASON': {
+            'value': 'reg_reason',
+            'writable': false
+        },//#ATTR_REASON
+        'ATTR_FIRST_NAME': {
+            'value': 'pers_give_nm',
+            'writable': false
+        },//#ATTR_FIRST_NAME
+        'ATTR_LAST_NAME': {
+            'value': 'pers_last_nm',
+            'writable': false
+        },//#ATTR_LAST_NAME
+        'ATTR_ADDRESS1': {
+            'value': 'addr_nm',
+            'writable': false
+        },//#ATTR_ADDRESS1
+        'ATTR_ADDRESS2': {
+            'value': 'addr_nm2',
+            'writable': false
+        },//#ATTR_ADDRESS2
+        'ATTR_CITY': {
+            'value': 'addr_city_nm',
+            'writable': false
+        },//#ATTR_CITY
+        'ATTR_STATE': {
+            'value': 'state_cd',
+            'writable': false
+        },//#ATTR_STATE
+        'ATTR_ZIP_CODE': {
+            'value': 'zip_postal_cd',
+            'writable': false
+        },//#ATTR_ZIP_CODE
+        'ATTR_COUNTRY': {
+            'value': 'addr_country_cd',
+            'writable': false
+        },//#ATTR_COUNTRY
+        'ATTR_PHONE_CODE': {
+            'value': 'tele_city_cd',
+            'writable': false
+        },//#ATTR_PHONE_CODE
+        'ATTR_PHONE_NUMBER': {
+            'value': 'tele_phone_nr',
+            'writable': false
+        },//#ATTR_PHONE_NUMBER
+        'ATTR_CONSENT_POSTAL': {
+            'value': 'priv_postal_cd',
+            'writable': false
+        },//#ATTR_CONSENT_POSTAL
+        'ATTR_CONSENT_EMAIL': {
+            'value': 'priv_email_cd',
+            'writable': false
+        },//#ATTR_CONSENT_EMAIL
+        'ATTR_CONSENT_PHONE': {
+            'value': 'priv_phone_cd',
+            'writable': false
+        },//#ATTR_CONSENT_PHONE
+        'ATTR_SEGMENT': {
+            'value': 'segment_nm',
+            'writable': false
+        },//#ATTR_SEGMENT
+        'ATTR_SEGMENT2': {
+            'value': 'segment_nm2',
+            'writable': false
+        },//#ATTR_SEGMENT2
+        'ATTR_EMAIL': {
+            'value': 'email_add_nm',
+            'writable': false
+        },//#ATTR_EMAIL
+        'ATTR_PURCHASED_LOCATION': {
+            'value': 'pur_loc1',
+            'writable': false
+        },//#ATTR_PURCHASED_LOCATION
+        'ATTR_SERIAL_NUMBER': {
+            'value': 'prod_serial_id',
+            'writable': false
+        },//#ATTR_SERIAL_NUMBER
+        'ATTR_OPERATING_SYSTEM': {
+            'value': 'operating_system_2',
+            'writable': false
+        },//#ATTR_OPERATING_SYSTEM
+        'ATTR_LANG_CODE': {
+            'value': 'lang_code',
+            'writable': false
+        },//#ATTR_LANG_CODE
+        'ATTR_MODEL_NUMBER': {
+            'value': 'model_id',
+            'writable': false
+        },//#ATTR_MODEL_NUMBER
+        'ATTR_PRODUCT_CREATE_DT': {
+            'value': 'product_create_dt',
+            'writable': false
+        },//#ATTR_PRODUCT_CREATE_DT
+        'ATTR_REGISTRATION_VERSION': {
+            'value': 'reg_ver',
+            'writable': false
+        },//#ATTR_REGISTRATION_VERSION
+        'ATTR_PURCHASE_LOCATION' : {
+            'value': 'pur_loc1',
+            'writable': false
+        },
+        'MAX_LENGTH_MODEL_ID': {
+            'value': 40,
+            'writable': false
+        },//#MAX_LENGTH_MODEL_ID
+        'PREFERENCE_KEY_RETAILER': {
+            'value': 'retailerCode',
+            'writable': false
+        },
+        'CRM_OTHER_CODE': {
+            'value': '000',
+            'writable': false
+        }
+	}
+);//#hp.registration.Properties
+

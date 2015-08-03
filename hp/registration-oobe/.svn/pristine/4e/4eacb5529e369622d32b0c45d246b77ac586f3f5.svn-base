@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						As part of HP's commitment to delivering a better device experience, this device is equipped with diagnostic software.  This software collects anonymous diagnostic data, including device hardware and software information, network configuration and status, and application usage. This information is used to improve our product and service offerings.  The diagnostic data is linked to the device and does not differentiate between users. Anonymous data is only shared with the diagnostic software provider. The data upload sessions may occur over a mobile or WiFi network and are consistent with HP Security standards.  The volume of data sent over the mobile network to the diagnostic provider is minimal and should not negatively impact the data allowance from the mobile operator. If you would like to disable such diagnostic features, please go to Settings.
+					
+	</body>
+</html>

@@ -1,0 +1,29 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.useragent = hp.registration.useragent || {};
+
+hp.registration.useragent.CarrierIQ = function() {
+
+    Object.defineProperty(this, 'isInstalled', {
+        'get': function() {
+         
+            return registrationAndroid.isCarrierIQInstalled();
+  
+        }
+    });
+    
+    this.sendMessageToCarrierIQ = function(inUserSelection) {
+      
+        registrationAndroid.sendMessageToCarrierIQ(inUserSelection);
+        
+    };
+    
+    this.getCurrentState = function() {
+      
+        return registrationAndroid.getCarrierIQState();
+        
+    };
+    
+    return this;
+    
+}.apply({}, null);//#hp.registration.useragent.CarrierIQ

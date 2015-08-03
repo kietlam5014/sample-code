@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_home">Registrera</string>
+    <string name="notification_title">Registrera</string>
+    <string name="notification_text">Registrera enheten så att du får personligt anpassad och snabbare support.</string>
+    <string name="app_name">HP OOBE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+<string name="mybutton">Settings</string>
+<string name="read_provider_description">Access registration data entered during first boot.</string>
+</resources>

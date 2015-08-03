@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hp.oobe"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:sharedUserId="hp.oobe"
+    android:versionCode="1"
+   
+    android:versionName="1.5.0.3" >
+
+<supports-screens 
+                  android:smallScreens="true" 
+                  android:normalScreens="true" 
+                  android:largeScreens="true"
+                  android:xlargeScreens="true" 
+                  android:anyDensity="true"
+/>
+    <permission android:name="hp.oobe.READ_REGISTRATION" 
+                android:description="@string/read_provider_description"
+                android:label="Read Registration data"
+                android:protectionLevel="normal"></permission>
+    
+    <permission android:name="hp.oobe.READ_RETAILER" 
+      
+                android:label="Read Retailer data"
+                android:protectionLevel="normal"></permission>
+    
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.carrieriq.hp.permission.IPC" />
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="21" />
+
+    <application 
+        android:name="HPoobeApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar"
+        tools:replace="android:theme">
+        <activity
+            android:name="hp.oobe.MainActivity"
+            android:configChanges="keyboard|orientation|keyboardHidden|uiMode|screenSize|smallestScreenSize|fontScale|screenLayout|touchscreen|navigation"
+            
+            android:label="@string/app_name" android:taskAffinity="hp.oobe.MainActivity" >
+           
+            <intent-filter android:priority="4" >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:icon="@drawable/ic_launcher_home"
+            android:name="hp.oobe.HomeActivity"
+
+          android:configChanges="keyboard|orientation|keyboardHidden|uiMode|screenSize|smallestScreenSize|fontScale|screenLayout|touchscreen|navigation"
+            android:label="@string/title_activity_home" android:taskAffinity="hp.oobe.HomeActivity">
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <service android:name="hp.oobe.service.Registration"/>
+ 
+    
+        
+        <receiver android:name="hp.oobe.RegistrationNotificationReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="hp.oobe.RegistrationScheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+        <provider 	android:name="hp.oobe.RegistrationProvider" 
+            		android:authorities="hp.oobe" 
+            		android:readPermission="hp.oobe.READ_REGISTRATION" 
+            		android:exported="true" 
+            		android:grantUriPermissions="true">
+            
+        </provider>
+        
+        <provider android:name="hp.oobe.RetailerProvider"
+            	  android:authorities="hp.oobe.retailer"
+            	  android:readPermission="hp.oobe.READ_RETAILER"
+            	  android:exported="true"
+            	  android:grantUriPermissions="true">
+            
+        </provider>
+        
+    </application>
+
+</manifest>
+

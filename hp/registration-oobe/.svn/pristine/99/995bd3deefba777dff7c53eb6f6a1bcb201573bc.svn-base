@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+		<link type="text/css" href="css/base.css" rel="stylesheet" />
+
+        <script src="js/hp/registration/helper/Metrics.js"></script>
+        <script src="js/hp/registration/helper/OTA.js"></script>
+		<script src="js/hp/registration/model/MachineInfo.js"></script>
+		<script src="js/hp/registration/model/RegistrationInfo.js"></script>
+        <script src="js/hp/registration/model/OTA.js"></script>
+		<script src="js/hp/registration/useragent/MachineInfo.js"></script>
+		<script src="js/hp/registration/useragent/MachineInfoBrowser.js"></script>
+        <script src="js/hp/registration/useragent/NetworkInfo.js"></script>
+        <script src="js/hp/registration/useragent/NetworkInfoBrowser.js"></script>
+		<script src="js/hp/registration/useragent/RegistrationInfo.js"></script>
+		<script src="js/hp/registration/useragent/RegistrationInfoBrowser.js"></script>
+		<script src="js/hp/registration/useragent/Transporter.js"></script>
+		<script src="js/hp/registration/useragent/TransporterBrowser.js"></script>
+        <script src="js/hp/registration/useragent/CarrierIQ.js"></script>
+        <script src="js/hp/registration/useragent/CarrierIQBrowser.js"></script>
+		<script src="js/hp/registration/util/Message.js"></script>
+		<script src="js/hp/registration/util/ValidationEngine.js"></script>
+		<script src="js/hp/registration/util/Localization.js"></script>
+		<script src="js/hp/registration/Properties.js"></script>
+		<script src="js/hp/registration/Registration.js"></script>
+		<script src="js/hp/registration/Index.js"></script>
+		<script src="js/stroll.js"></script> 
+		<title>HP OOBE</title>
+
+	</head>
+
+<body>
+
+<div id="wrapper">
+
+    
+    <section id="mainSection" class="main">  
+        <label id="Title" class="regularText introMain"></label>  
+        <section id="mainContent" class="mainContent">
+        <section id="inputSection">   
+            
+            <div id="registrationForm">
+
+	                <div id="nameContainer" class="registrationFormLine">
+	                    <div id="nameFieldsContainer">
+	                        <div id="firstNameContainer">
+	                            <input id="firstName" placeholder="" type="text" 
+	                                class="field base-field-style" name="FirstName" maxlength="30" 
+	                                autocomplete="off">
+	                        </div>
+	                        <div id="lastNameContainer">
+	                            <input id="lastName" type="text" placeholder="" 
+	                                maxlength="30" autocomplete="off" 
+	                                class="field base-field-style">
+	                        </div>
+	                    </div>
+	                    <div id="FrstNameErrorMsg">
+	                        <label id="nameRequiredText" class="error-msg"></label>
+	                    </div>
+	                </div>
+	                <div id="emailContainer" class="registrationFormLine">
+	                    <input id="email" type="email" maxlength="60" autocomplete="off" 
+	                        class="field base-field-style">
+	                    <div id="EmailErrorMsg">
+	                        <label id="emailRequiredText" class="error-msg"></label>
+	                    </div>
+	                </div>  
+	                <div id="countryContainer" class="registrationFormLine">			 
+	                    <input id="CountryLst" type="text" maxlength="90" autocomplete="off" 
+	                        class="field list-field-style">
+	                    <div id="countryCollection"></div>
+	                    <div id="CountryErrorMsg">
+	                        <label id="countryRequiredText" class="error-msg"></label>
+	                	 </div>
+               		 </div> 
+            </div>
+            
+            <section id="consentQuestion">
+                <div id="emailMeblck">
+                
+			<table >
+				<tr>
+					<td> <input  id="consentYes" type="checkbox" name="consentQuestion"/></td>
+					<td> <div  id="emailConsentText" class="regularText"></div> </td>
+				</tr>
+			</table>
+      <!--      <input  id="consentYes" type="checkbox" name="consentQuestion"><label   id="emailConsentText" class="regularText"> </label>
+                
+	               <span id="emailConsentText" class="regularText"></span>
+                 <input id="consentYes" type="radio" name="consentQuestion">
+              <label id="yesText" class="regularText" ></label>
+                    <input id="consentNo" type="radio" name="consentQuestion" ><label id="noText" class="regularText" ></label>               
+ --> 
+               </div>
+                <label id="EmailConsentErrorMsg" class="error-msg"></label>
+            </section>
+            
+            <div id="clearAllContainer" class="registrationFormLine">
+                    <div id="clearAllIcon"></div>&nbsp;<a href="#" id="clearAll"></a>
+                </div>
+            
+            <div id="carrierIQContainer">
+                <div id="carrierIQConsentContainer">
+                    <input type="checkbox" id="carrierIQConsent">
+                </div>
+                <div id="carrierIQTextContainer">
+                    <label id="carrierIQText" class="regularText"></label>
+                </div>
+            </div>
+            
+            
+        </section><section id="consentSection">
+            <article id="consentContent">
+                
+            
+                <div id="privacyStatements">
+                     <ul>
+                         <li id="privacyRightsLi"><a id="privacyRights" href="#"></a></li>
+                         <li id="dataCollectionLi"><a id="dataCollection" href="#"></a></li>
+                     </ul>
+                    
+                 </div>
+             
+                 <div id="SubtitleContent" class="regularText"></div>
+             </article>
+         </section>
+        </section>
+     </section>
+     <footer class="footer">
+			 <div id="buttons">
+                 <div id="btnContainerGoAway"><a id="goAwayButtonLabel" class="btn btn-secondary" href="#"></a></div>
+				 <div id="btnContainerSkip" rel="skip"><a id="skipButtonLabel" class="btn btn-secondary" href="#"></a></div>
+<!-- 				  <div  id="dropbox" rel="dropbox" onclick="openDropbox()"><a id="dropboxbutton" class="btn btn-primary" href="#">drop box</a></div>
+ -->				 <div  id="btnConatiner" rel="finish" ><a id="finishButtonLabel" class="btn btn-primary" href="#"></a></div>
+	 	            <div  id="btnConatinerandroid" rel="finish" ><a id="finishButtonLabelandroid" class="btn btn-primary" href="#"><label style="position:relative; bottom:-3px"></label></a></div> 
+			
+			 </div>
+	 </footer>
+</div>
+
+<section id="popupCanvas">
+    <section id="popupWindow">
+        <label id="popupSimpleHeader" class="simpleHeader"></label>
+        <section id="popupContent" class="popupContent">
+            <article id="popupBodyContent"></article>
+            <a id="popupButton" href="#" style="" class="btn btn-primary"></a>
+            <a id="popupButton2" href="#" style="" class="btn btn-primary"></a>
+        </section>
+    </section>
+</section>
+
+<section id="popupCanvasForContent">
+    <section id="popupWindowForContent">
+        <label id="popupNote" class="noteText"></label>
+        <h1 id="popupTitle"></h1>
+        <section id="popupContentForContent" class="popupContent">
+            <article id="popupContentBodyContent"></article>
+        </section>
+        <a id="popupButtonForContent" href="#" style="" class="btn btn-primary"></a>
+        <a id="popupButton2ForContent" href="#" style="" class="btn btn-primary"></a>
+        
+    </section>
+</section>
+
+    
+</body>
+
+</html>

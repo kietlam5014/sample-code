@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="rtl" lang="he" xml:lang="he">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						כחלק ממחויבותה של HP לספק חוויית שימוש טובה יותר בהתקנים, התקן זה מצויד בתוכנת אבחון.  תוכנה זו אוספת נתוני אבחון באופן אנונימי, לרבות מידע על רכיבי החומרה והתוכנות של ההתקן, על תצורת הרשת ומצבה, ועל שימוש ביישומים. מידע זה משמש לשיפור היצע המוצרים והשירותים שלנו.  נתוני האבחון קשורים להתקן ואינם מבחינים בין משתמשים. הנתונים האנונימיים ישותפו רק עם ספק תוכנת האבחון. ההפעלות של העלאת הנתונים עשויות להתבצע ברשת סלולרית או ברשת WiFi והן תואמות לתקני האבטחה של HP.  כמות הנתונים שנשלחת לספק תוכנת האבחון ברשת סלולרית היא מזערית ולא אמורה להשפיע לרעה על הקצאת הנתונים מהמפעיל הנייד. אם ברצונך להשבית מאפייני אבחון אלה, עבור אל 'הגדרות'.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

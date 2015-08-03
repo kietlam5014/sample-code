@@ -1,0 +1,180 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.model = hp.registration.model || {};
+
+hp.registration.model.RegistrationInfo = function() {
+
+	var initialized_ = false;
+
+	this.init = function(inContainer) {
+		if (!initialized_) {
+
+			Object.defineProperties(
+				this,
+				{
+					'firstName': 
+									{
+										'value': (inContainer['firstName'] || ''),
+										'writable': true
+									},
+					'lastName': 
+									{
+										'value': (inContainer['lastName'] || ''),
+										'writable': true
+									},
+					'fullName': 
+									{
+										'value': (inContainer['fullName'] || ''),
+										'writable': true
+									},
+					'email':
+									{
+										'value': (inContainer['email'] || ''),
+										'writable': true
+									},
+					'address1':
+									{
+										'value': (inContainer['address1'] || ''),
+										'writable': true
+									},
+					'address2':
+									{
+										'value': (inContainer['address2'] || ''),
+										'writable': true
+									},
+					'city':
+									{
+										'value': (inContainer['city'] || ''),
+										'writable': true
+									},
+					'state':
+									{
+										'value': (inContainer['state'] || ''),
+										'writable': true
+									},
+					'country':
+									{
+										'value': (inContainer['country'] || ''),
+										'writable': true
+									},
+					'zipCode':
+									{
+										'value': (inContainer['zipCode'] || ''),
+										'writable': true
+									},
+					'segment':
+									{
+										'value': (inContainer['segment'] || ''),
+										'writable': true
+									},
+					'segment2':
+									{
+										'value': (inContainer['segment2'] || ''),
+										'writable': true
+									},
+					'phoneCode':
+									{
+										'value': (inContainer['phoneCode'] || ''),
+										'writable': true
+									},
+					'phoneNumber':
+									{
+										'value': (inContainer['phoneNumber'] || ''),
+										'writable': true
+									},
+					'consentEmail':
+									{
+										'value': (inContainer['consentEmail'] || ''),
+										'writable': true
+									},
+					'consentPhone':
+									{
+										'value': (inContainer['consentPhone'] || ''),
+										'writable': true
+									},
+					'consentPostal':
+									{
+										'value': (inContainer['consentPostal'] || ''),
+										'writable': true
+									},
+					'modelNumber': 
+									{
+										'value': (inContainer['modelNumber'] || ''),
+										'writable': true
+									},
+					'serialNumber':
+									{
+										'value': (inContainer['serialNumber'] || ''),
+										'writable': true
+									},
+					'applicationId':
+									{
+										'value': (inContainer['applicationId'] || ''),
+										'writable': true
+									},
+					'registrationVersion':
+									{
+										'value': (inContainer['registrationVersion'] || ''),
+										'writable': true
+									},
+					'sequence':
+									{
+										'value': (inContainer['sequence'] || ''),
+										'writable': true
+									},
+					'reason':
+									{
+										'value': (inContainer['reason'] || ''),
+										'writable': true
+									},
+					'purchasedLocation': 
+									{
+										'value': (inContainer['purchasedLocation'] || ''),
+										'writable': true
+									},
+					'language': 
+									{
+										'value': (inContainer['language'] || ''),
+										'writable': true
+									},
+					'operatingSystem':
+									{   // Code in HP
+										'value': (inContainer['operatingSystem'] || ''),
+										'writable': true
+									},
+					'productCreateDate': 
+									{
+										'value': (inContainer['productCreateDate'] || ''),
+										'writable': true
+									},
+					'softwareBuild':
+									{	// Version of the operating system as specified by the vendor
+										'value': (inContainer['operatingSystem'] || ''),
+										'writable': true
+									},
+                    'consentToSendData':
+                                    {
+                                        // Not part of the package. Helper to disable the Launcher or not.
+                                        'value': false,
+                                        'writable': true
+                                    },
+                    'bornOnDate':   
+                                    {
+                                        'value': (inContainer['bornOnDate'] || ''),
+                                        'writable': true
+                                    },
+                    'purchasedLocation':   
+                                    {
+                                        'value': (inContainer['purchasedLocation'] || ''),
+                                        'writable': true
+                                    }
+				}
+			);
+
+			initialized_ = true;
+		}
+	}.bind(this);//#hp.registration.model.RegistrationInfo
+
+
+	return this;
+}.apply({}, null);

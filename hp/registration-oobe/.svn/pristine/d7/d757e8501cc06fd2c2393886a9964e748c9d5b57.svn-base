@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						W ramach nieustających starań firmy HP służących udostępnianiu lepszego środowiska urządzeń to urządzenie wyposażono w oprogramowanie diagnostyczne.  To oprogramowanie zbiera anonimowe dane diagnostyczne, w tym informacje o sprzęcie i oprogramowaniu, stanie i konfiguracji sieci oraz o użyciu aplikacji. Na podstawie tych informacji ulepszamy nasze produkty i usługi.  Te dane diagnostyczne są powiązane z urządzeniem i nie służą do rozróżniania użytkowników. Dane anonimowe są udostępniane wyłącznie dostawcy oprogramowania diagnostycznego. Sesje przekazywania danych mogą być realizowane przez sieć komórkową lub WiFi i są zgodne ze standardami zabezpieczeń firmy HP.  Ilość danych wysyłanych dostawcy diagnostyki przez sieć komórkową jest minimalna i nie powinna mieć większego wpływu na przydział transmisji danych u operatora sieci komórkowej. Takie funkcje diagnostyczne można wyłączyć w obszarze Ustawienia.
+
+	</body>
+</html>

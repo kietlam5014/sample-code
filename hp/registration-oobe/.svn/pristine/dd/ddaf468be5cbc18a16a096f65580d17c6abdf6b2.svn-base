@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/backbuttom"
+            android:layout_gravity="top"
+            android:background="@drawable/repeat_bg"
+            android:gravity="top" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/logo"
+                android:layout_height="@dimen/logo"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/hp_logo_header" />
+
+            <TextView
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView1"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_toRightOf="@id/imageView1"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:singleLine="false"
+                android:text="Register"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/titlesize"
+                android:textStyle="bold" >
+
+                <requestFocus />
+            </TextView>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:background="#F1F1F1" >
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:background="#F1F1F1" >
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="@dimen/top"
+        android:background="@drawable/line" >
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="1dp"
+            android:scrollbars="horizontal|vertical" />
+
+    </FrameLayout>
+
+</RelativeLayout>

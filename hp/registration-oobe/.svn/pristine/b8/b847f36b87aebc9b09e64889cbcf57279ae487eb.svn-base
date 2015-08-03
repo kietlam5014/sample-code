@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="fr" xml:lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Dans le cadre de l'engagement de HP à offrir une meilleure expérience de ses périphériques, ce périphérique est équipé d'un logiciel de diagnostic.  Ce logiciel recueille des données de diagnostic anonymes, y compris des informations sur le matériel et les logiciels du périphérique, la configuration et le statut du réseau, ainsi que l'utilisation des applications. Ces informations sont utilisées pour améliorer nos offres de produits et de services.  Les données de diagnostic sont associées à ce périphérique et aucune distinction n'est faite entre les utilisateurs. Les données anonymes sont partagées uniquement avec le fournisseur du logiciel de diagnostic. Les sessions de téléchargement de données peuvent être ouvertes sur un réseau cellulaire ou un réseau Wi-Fi conformément aux normes de sécurité de HP.  La quantité de données envoyées au fournisseur de diagnostic via le réseau cellulaire est minime et ne devrait avoir aucune incidence sur l'allocation de données par l'opérateur de téléphonie mobile. Si vous souhaitez désactiver ces fonctionnalités de diagnostic, accédez à la section Paramètres.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

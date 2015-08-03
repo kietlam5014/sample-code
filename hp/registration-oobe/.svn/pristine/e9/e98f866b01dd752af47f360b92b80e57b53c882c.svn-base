@@ -1,0 +1,204 @@
+/*
+ * @depends
+ *	hp.registration.Properties
+ */
+
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.useragent = hp.registration.useragent || {};
+
+hp.registration.useragent.MachineInfo = function() {
+
+	function parseModelNumber_(inModelNumber) {
+		var prop_ = hp.registration.Properties;
+		var result_ = null;
+
+		['#', '-'].forEach(
+				function(inItem) {
+					var index_ = inModelNumber.indexOf(inItem);
+					if (index_ !== -1) {
+						result_ = inModelNumber.substring(0, index_);
+					}
+				}
+			);
+
+		if (result_ === null) {
+			result_ = inModelNumber.substring(0, prop_.MAX_LENGTH_MODEL_ID);
+		} 
+
+		return result_;
+	}
+
+    /*
+     * ============================================================================================
+     * Public members
+     * ============================================================================================
+     */
+	this.getInfoAsync = function(inContainer) {
+		var platform_ = registrationAndroid; // Exposed by Android layer
+
+		var obj_ = JSON.parse(platform_.getMachineInfo());
+		obj_.language = window.navigator.language;
+		obj_.modelNumber = parseModelNumber_(obj_.modelNumber);
+							   
+
+		inContainer['callback'](obj_);
+	}//#hp.registration.useragent.MachineInfo.getInfoAsync
+
+	this.getIP = function() {
+		return registrationAndroid.getIPv4Address();
+	};//#getIP
+    
+    this.isApplicationRunningDuringOOBE = function() {
+        
+        var platform_ = registrationAndroid;
+        
+        return platform_.isRunningDuringOOBE();
+        
+    };//#isApplicationRunningDuringOOBE
+    
+
+    
+    this.getCurrentRun = function() {
+        
+        return registrationAndroid.getCurrentRun();
+        
+    };//#getCurrentRun
+    
+    this.setSharedPreference = function(inKey, inValue) {
+        
+        registrationAndroid.setSharedPreference(inKey, inValue);
+        
+    };//#setSharedPreference
+    this.setTitle = function(title) {       
+    	registrationAndroid.setTitle(title);
+        
+    };//#setTitle
+    this.getPreferenceForInternalTests = function(inKey) {
+        
+        return registrationAndroid.getPreferenceForInternalTests(inKey);
+        
+    };//#hp.registration.useragent.MachineInfo.getPreferenceForInternalTests
+    
+    this.getPropertyOfDevice = function(inKey) {
+        
+        return registrationAndroid.getProperty(inKey);
+        
+    };//#hp.registration.useragent.MachineInfo.getPropertyOfDevice
+    
+    /*
+     * Get a configuration set by the GBUs. 
+     *
+     * @params
+     *  inName: String. Name of the configuration.
+     *  inCountry: String. Two letter country code.
+     *
+     * @returns
+     *  String. Configuration value if a value was found. null, otherwise.
+     */
+    this.getConfigurationDefinedByGBU = function(inName, inCountry) {
+        
+        return registrationAndroid.getConfigurationDefinedByGBU(inName, inCountry);
+        
+    };//#hp.registration.useragent.MachineInfo.getConfigurationDefinedByGBU
+    
+    /*
+     * Schedule a notification so the application can be re-opened. 
+     *  inContainer: Object. 
+     *              {
+     *                  'interval': String, Time (in milleseconds) that the notification should show up.
+     *                  'title': String,
+     *                  'text': String
+     *              }
+     *
+     * @returns
+     *  null
+     */
+    this.scheduleNotification = function(inContainer) {
+      
+        if (!inContainer['interval'] && !inContainer['title'] && !inContainer['text']) {
+         
+            console.log('All the parameters necessary to schedule the notification are not defined');
+            
+            return null;
+            
+        }
+        
+        registrationAndroid.scheduleNotification(inContainer['interval'], 
+                                                 inContainer['title'], inContainer['text']);
+        
+        return null;
+        
+    };//#hp.registration.useragent.MachineInfo.scheduleNotification
+    
+    /*
+     * Cancel any notification scheduled.
+     *
+     * @returns 
+     *  null.
+     */
+    this.cancelNotification = function() {
+        
+        try {
+            
+            registrationAndroid.cancelNotification();
+            
+        } catch (inException) {
+         
+            console.log('Problem while canceling the notification');
+            
+        }
+        
+        return null;
+        
+    };//#hp.registration.useragent.MachineInfo.cancelNotification
+    
+    /*
+     * Get OTA secret
+     *
+     * @returns
+     *  String.
+     */
+    this.getOTASecret = function() {
+        
+        return registrationAndroid.getOTASecret();
+        
+    };//#hp.registration.useragent.MachineInfo.getOTASecret
+    
+    this.getDefaultOrientation = function() {
+
+        return registrationAndroid.getDefaultOrientation();
+
+    };//#hp.registration.useragent.MachineInfo.getDefaultOrientation
+
+    this.getCurrentOrientation = function() {
+
+        return registrationAndroid.getCurrentOrientation();
+
+    };//#hp.registration.useragent.MachineInfo.getCurrentOrientation
+
+    this.getExternalIPHash = function() {
+        
+        return registrationAndroid.getExternalIPHash();
+        
+    };//#hp.registration.useragent.MachineInfo.getExternalIPHash
+    
+    this.getLocale = function() {
+      
+        return registrationAndroid.getLocale();
+        
+    };//#hp.registration.useragent.MachineInfo.getLocale
+    
+    this.isHostBasedOnChrome = function() {
+     
+        return registrationAndroid.isHostBasedOnChrome();
+        
+    };//#hp.registration.useragent.MachineInfo.isHostBasedOnChrome
+    
+    this.saveDataIntoPreferences = function(inKey, inVal) {
+
+        registrationAndroid.saveDataIntoPreferences(inKey, inVal);
+        
+    };
+	return this;
+}.apply({}, null);//#hp.registration.useragent.MachineInfo

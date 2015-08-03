@@ -1,0 +1,231 @@
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.carrieriq.hp;
+
+import com.android.settings.bluetooth.DockEventReceiver;
+
+import com.android.settings.*;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceGroup;
+import android.preference.PreferenceScreen;
+import android.provider.MediaStore;
+import android.provider.Settings;
+import android.util.Log;
+import android.os.Bundle;
+import android.os.UserManager;
+import android.net.Uri;
+
+import java.lang.reflect.Method;
+import java.util.List;
+
+public class IQToggle extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
+
+    private static final String TAG = "CarrierIQ_HP";
+    private static final String KEY_MAIN_CHECKBOX = "carrieriq_consent";
+    private static final String KEY_LEARNMORE = "carrieriq_learnmore";
+    private static final String ACTION = "com.carrieriq.hp.ENABLETOGGLE";
+    private static final String ACTION_CURRENT = "com.carrieriq.hp.ENABLECURRENTSTATUS";
+    private static final String CATEGORY = "android.intent.category.DEFAULT";
+    private static final String EXTRA = "Enable";
+
+    private BroadcastReceiver statusReceiver = null;
+    private CheckBoxPreference cpMainCheckBox = null;
+    private Preference pLearnMore = null;
+
+    private void sendMessage(String userSelection) {
+
+	Intent intent = new Intent();
+	intent.setAction(ACTION);
+
+	if (userSelection.toLowerCase().equals("yes")) {
+
+		intent.putExtra(EXTRA, "Yes");
+		Log.d(TAG, "Yes message will be broadcasted to CarrierIQ component");
+
+	} else {
+
+		intent.putExtra(EXTRA, "No");
+		Log.d(TAG, "No message will be broadcasted to CarrierIQ component");
+
+	}
+
+	getActivity().sendBroadcast(intent);
+
+    }
+
+    private void setAgentStatus(Intent i) {
+
+	String response = i.getStringExtra(EXTRA);
+
+	if (response != null) {
+
+		if (response.toLowerCase().equals("yes")) {
+
+			cpMainCheckBox.setChecked(true);
+
+		} else {
+
+			cpMainCheckBox.setChecked(false);
+
+		}
+
+	}
+
+    }
+
+    private void openPage(String url) {
+
+	Intent i = new Intent(Intent.ACTION_VIEW);
+	i.setData(Uri.parse(url));
+	getActivity().startActivity(i);
+
+    }
+
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        return true;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ContentResolver resolver = getContentResolver();
+        
+	Log.d(TAG, "Settings loaded");
+
+        addPreferencesFromResource(R.xml.carrieriq_settings);
+
+	cpMainCheckBox = (CheckBoxPreference)findPreference(KEY_MAIN_CHECKBOX);
+	pLearnMore = (Preference)findPreference(KEY_LEARNMORE);
+
+	statusReceiver = new BroadcastReceiver() {
+		public void onReceive(Context ctx, Intent i) {
+			Log.d(TAG, "Message was received");
+			setAgentStatus(i);
+		}
+	};
+
+	IntentFilter intentf = new IntentFilter();
+	intentf.addAction(ACTION_CURRENT);
+	intentf.addCategory(CATEGORY);
+	getActivity().registerReceiver(statusReceiver, intentf);
+
+	Intent intent = new Intent();
+	intent.setAction(ACTION);
+	getActivity().sendBroadcast(intent);
+
+	Log.d(TAG, "Broadcast for the status was requested");
+
+	// Disabling the preference if a secondary user is logged in
+	try {
+
+		if (android.os.Build.VERSION.SDK_INT > 16) {
+
+			UserManager um = (UserManager)getActivity().getSystemService("user");
+			Method getUserHandle = UserManager.class.getMethod("getUserHandle");
+			int userHandle = (Integer)getUserHandle.invoke(um);
+
+			if (userHandle != 0) {
+
+				cpMainCheckBox.setEnabled(false);	
+
+			}
+		}
+
+	} catch (Exception e) {
+
+		Log.e(TAG, "Problem while checking user permission");
+		e.printStackTrace();
+
+	}
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+
+	final String key = preference.getKey();
+	String message = "";
+
+	if (KEY_MAIN_CHECKBOX.equals(key)) {
+
+		if (cpMainCheckBox.isChecked()) {
+
+			Log.d(TAG, "Checked");
+			message = "Yes";
+
+		} else {
+
+			Log.d(TAG, "Not checked");
+			message = "No";
+
+		}
+
+		try {
+
+			sendMessage(message);
+
+		} catch (Exception e) {
+
+			Log.e(TAG, "Problem while broadcasting message to CarrierIQ component");
+			e.printStackTrace();
+
+		}
+
+	} else if (KEY_LEARNMORE.equals(key)) {
+
+		String url = getResources().getString(R.string.carrieriq_learnmore_url);
+		openPage(url);
+
+	}
+
+	return true;
+    }
+
+    @Override
+    protected int getHelpResource() {
+        return R.string.help_url_sound;
+    }
+
+
+    @Override
+    public Dialog onCreateDialog(int id) {
+        return null;
+    }
+}
+

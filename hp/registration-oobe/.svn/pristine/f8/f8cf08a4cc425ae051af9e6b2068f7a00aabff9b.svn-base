@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="pt" xml:lang="pt">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Como parte do compromisso da HP de proporcionar uma melhor experiência com o dispositivo, este é equipado com um software de diagnóstico.  Este software coleta dados anônimos de diagnóstico, incluindo informações de hardware e software, configuração e status da rede e uso do aplicativo. Essas informações são utilizadas para melhorar nossa oferta de produtos e serviços.  Os dados diagnósticos estão vinculados ao dispositivo e não fazem diferença entre os usuários. Dados anônimos são compartilhados apenas com o provedor do software de diagnóstico. As sessões de upload de dados podem ocorrer em uma rede de celular ou Wi-Fi e estão em conformidade com os padrões de Segurança HP.  A quantidade de dados enviada ao provedor do diagnóstico via rede do celular é mínima e não deve afetar negativamente a atribuição de dados a partir da operadora de celular. Se você deseja desativar esses recursos de diagnóstico, acesse Configurações.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

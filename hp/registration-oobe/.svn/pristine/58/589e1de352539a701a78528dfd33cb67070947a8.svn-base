@@ -1,0 +1,312 @@
+package hp.oobe.tasks;
+
+import hp.oobe.Consts;
+import hp.oobe.Util;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+
+import android.util.Log;
+
+/**
+ * This task is responsible to send the XML to the HP's backend (consumer +
+ * product registration). This task has a dependency on other Task: OTATask. It
+ * depends on the token returned by the OTATask so it can retrieve the real born
+ * on date and update the Registration message. So OTATask has to run first.
+ * 
+ */
+public final class RegistrationTask extends HTTPTask implements IOOBETask {
+
+	// ============================================================================================
+	// PRIVATE MEMBERS
+	// ============================================================================================
+
+	private Util util = new Util();
+	private String response = null;
+	private String bod = null;
+	private String keyToDecryptContent = null;
+
+	private String readMessage(String keyToDecryptContent) {
+
+		return util.readContentOfFileAndDecrypt(Consts.FILES_ROOT
+				+ Consts.FILE_NAME_REQUEST_REGISTRATION, keyToDecryptContent);
+
+	}
+
+	private void saveMessage(String content) {
+		util.encryptAndPersistContent(Consts.FILES_ROOT
+				+ Consts.FILE_NAME_REQUEST_REGISTRATION, content,
+				this.keyToDecryptContent);
+	}
+
+	private Document updateField(Document doc, String xPathExpression,
+			String value) {
+		try {
+			NodeList nodes = doc
+					.getElementsByTagName(Consts.EXTENDED_REG_SUB_BLOCK);
+			if (nodes != null && nodes.getLength() > 0) {
+				Node Keynode = nodes.item(0);
+				NamedNodeMap attr = Keynode.getAttributes();
+				Node nodeAttr = attr.getNamedItem(xPathExpression);
+				nodeAttr.setTextContent(value);
+				return doc;
+			}
+			return null;
+		} catch (Exception ex) {
+			Log.e(Consts.TAG, ex.getMessage());
+			ex.printStackTrace();
+			return null;
+		}
+	}// #updateField
+
+	// ============================================================================================
+	// PUBLIC MEMBERS
+	// ============================================================================================
+	public RegistrationTask(String name, String endPoint,
+			String keyToDecryptContent) {
+
+		super(name, endPoint);
+		super.message = readMessage(keyToDecryptContent);
+		this.keyToDecryptContent = keyToDecryptContent;
+	}
+
+	@Override
+	public boolean isValid(String response) {
+
+		boolean result = false, isPayloadEmpty = true;
+
+		try {
+			if (response == null || response.isEmpty())
+				return false;
+			DocumentBuilder db = DocumentBuilderFactory.newInstance()
+					.newDocumentBuilder();
+			InputSource is = new InputSource();
+
+			is.setCharacterStream(new StringReader(response));
+
+			Document doc = db.parse(is);
+			String status = doc.getElementsByTagName("registration-response")
+					.item(0).getAttributes().getNamedItem("status_code")
+					.getNodeValue();
+
+			Node payload = doc.getElementsByTagName("payload").item(0);
+
+			for (int count = 0, len = payload.getChildNodes().getLength(); count < len; count++) {
+				if (payload.getChildNodes().item(count).getNodeType() == Node.ELEMENT_NODE) {
+					isPayloadEmpty = false;
+				}
+			}
+
+			if (status.equalsIgnoreCase("ok") && isPayloadEmpty) {
+				Log.d(Consts.TAG,
+						"Response from server was parsed and it was ok.");
+				result = true;
+			}
+
+		} catch (ParserConfigurationException e) {
+
+			Log.d(Consts.TAG,
+					"Problem while parsing the response. Error: "
+							+ e.getMessage());
+			e.printStackTrace();
+
+		} catch (SAXException e) {
+
+			Log.d(Consts.TAG,
+					"Problem while parsing the response. Error: "
+							+ e.getMessage());
+			e.printStackTrace();
+
+		} catch (IOException e) {
+
+			Log.d(Consts.TAG,
+					"Problem while parsing the response. Error: "
+							+ e.getMessage());
+			e.printStackTrace();
+
+		}
+
+		return result;
+	}
+
+	private Document getDomElement(String xml) {
+		try {
+			xml = xml.replaceAll("message=", "");
+			Document doc = null;
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			dbf.setNamespaceAware(true);
+			try {
+
+				DocumentBuilder db = dbf.newDocumentBuilder();
+
+				InputSource is = new InputSource();
+				is.setCharacterStream(new StringReader(xml));
+				StringReader xmlstring = new StringReader(xml);
+				is.setCharacterStream(xmlstring);
+				is.setEncoding("UTF-8");
+				doc = db.parse(is);
+
+			} catch (ParserConfigurationException e) {
+				Log.e("Error: ", e.getMessage());
+				return null;
+			} catch (SAXException e) {
+				Log.e("Error: ", e.getMessage());
+				return null;
+			} catch (IOException e) {
+				Log.e("Error: ", e.getMessage());
+				return null;
+			}
+
+			return doc;
+		} catch (Exception ex) {
+			return null;
+		}
+	}
+
+	@Override
+	public void run() {
+		if (this.getStatus() == true)
+			return;
+		InputStream is = null;
+		HttpURLConnection conn = null;
+		OutputStreamWriter request = null;
+		this.bod = util.readBornOnDateFromFile(this.keyToDecryptContent);
+		if (this.bod != null) {
+			// apply BOD only if it exists
+			Document msgDom = getDomElement(super.message);
+			Document doc = updateField(msgDom, Consts.BOD_FIELD, this.bod);
+
+			StreamResult result = null;
+			StringWriter writer = null;
+			try {
+				if (doc != null) {
+					DOMSource domSource = new DOMSource(doc);
+					writer = new StringWriter();
+					result = new StreamResult(writer);
+					TransformerFactory tf = TransformerFactory.newInstance();
+					Transformer transformer = tf.newTransformer();
+					transformer.transform(domSource, result);
+				}
+			} catch (Exception ex) {
+				Log.e(Consts.TAG, ex.getMessage());
+				ex.printStackTrace();
+			}
+
+			if (writer != null) {
+				message = writer.toString();
+				if (message != null && !message.equals("")) {
+					saveMessage(message); // Persist the Registration Message
+				}
+			}
+		}
+		String endPoint = this.getEndPoint();
+		// Sending the Registration data
+		if (endPoint != null && message != null && !endPoint.equals("")
+				&& !message.equals("")) {
+
+			try {
+				message = message.replace("message=", "");
+				final String postData = URLEncoder.encode(message, "UTF-8");
+				message = "message=" + postData;
+				URL url = new URL(endPoint);
+				conn = (HttpURLConnection) url.openConnection();
+
+				conn.setDoOutput(true);
+				conn.setRequestProperty("Content-Type",
+						"application/x-www-form-urlencoded");
+				request = new OutputStreamWriter(conn.getOutputStream());
+				request.write(message);
+				request.flush();
+				request.close();
+
+				is = conn.getInputStream();
+				response = util.convertToString(is);
+
+			} catch (Exception e) {
+
+				Log.d(Consts.TAG, "Problem while sending the data of " + name
+						+ ". Error: " + e.getMessage());
+				e.printStackTrace();
+
+			} finally {
+				if (is != null) {
+
+					try {
+
+						is.close();
+
+					} catch (IOException e) {
+
+						e.printStackTrace();
+
+					}
+
+				}
+
+				conn.disconnect();
+
+			}
+
+			// Checking if the response was valid
+			this.sent = isValid(response);
+
+			// If everything was ok, saving the response
+			if (this.sent) {
+
+				util.persistContent(Consts.FILES_ROOT
+						+ Consts.FILE_NAME_RESPONSE, response);
+
+			}
+
+		}
+
+	}// #run
+
+	@Override
+	public String getName() {
+
+		return this.name;
+
+	}
+
+	@Override
+	public boolean getStatus() {
+
+		return this.sent;
+
+	}
+
+	@Override
+	public void setStatus(boolean status) {
+
+		this.sent = status;
+
+	}
+
+}

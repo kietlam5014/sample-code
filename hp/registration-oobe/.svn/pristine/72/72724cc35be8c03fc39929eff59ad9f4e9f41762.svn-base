@@ -1,0 +1,61 @@
+package hp.oobe.utilities;
+
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Enumeration;
+
+import org.apache.http.conn.util.InetAddressUtils;
+
+import android.util.Log;
+
+public class NetworkManager {
+	
+	private static final String TAG = "NetworkManager";
+	
+	public static String getLocalIpAddress(boolean useIPv4)
+	{
+		try 
+		{	
+	        for (Enumeration<NetworkInterface> netInterfaces = NetworkInterface.getNetworkInterfaces(); netInterfaces.hasMoreElements();) 
+	        {	            
+	        	NetworkInterface intf = netInterfaces.nextElement();
+	            
+	        	for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) 
+	        	{	            
+	        		InetAddress inetAddress = enumIpAddr.nextElement();	             
+	             
+	        		boolean isIPv4 = InetAddressUtils.isIPv4Address(inetAddress.getHostAddress());
+	        		if (!inetAddress.isLoopbackAddress())
+	                {
+	        			String ipAddress = inetAddress.getHostAddress().toString();
+
+	        			
+	        			if(useIPv4 && isIPv4)
+	        			{
+	        				return ipAddress;
+	        			}
+	        			
+	        			if(!useIPv4 && !isIPv4)
+	        			{
+	        				 int delim = ipAddress.indexOf('%'); // drop ip6 port suffix
+                             
+	        				 if(delim >= 0)
+	        				 {
+	        					 ipAddress = ipAddress.substring(0, delim);
+	        				 }
+	        				 
+	                         return ipAddress;
+	        			}
+	                }	               
+	            }
+	        }
+	    } 
+		catch (SocketException ex) 
+		{
+	        Log.e(TAG, ex.toString());
+	    }
+		
+	    return null;
+	}	  
+}

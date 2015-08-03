@@ -1,0 +1,28 @@
+package hp.oobe.tasks;
+
+public abstract class HTTPTask {
+	
+	protected String endPoint = null;
+	
+	protected String message = null;
+	
+	protected boolean sent = false;
+	
+	protected String name = null;
+	
+	public HTTPTask(String name, String endPoint) {
+		
+		this.name = name;
+		this.endPoint = endPoint;
+		
+	}
+	
+	public String getEndPoint() {
+		
+		return this.endPoint;
+		
+	}
+	
+	public abstract boolean isValid(String response);
+	
+}//#HTTPTask

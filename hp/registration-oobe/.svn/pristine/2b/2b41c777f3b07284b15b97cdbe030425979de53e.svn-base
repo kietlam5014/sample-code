@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						HP siekia užtikrinti, kad įrenginys veiktų tinkamai, todėl šiame įrenginyje yra diagnostikos programinė įranga.  Ši programinė įranga renka anoniminius diagnostikos duomenis, įskaitant informaciją apie įrenginio aparatinę įranga ir programinę įrangą, tinklo konfigūraciją ir būseną bei programų naudojimą. Ši informacija bus naudojama siekiant pagerinti mūsų produktus ir paslaugas.  Diagnostikos duomenys susieti su įrenginiu, o ne su naudotojais. Anoniminiais duomenimis dalijamasi tik su diagnostikos programinės įrangos teikėju. Duomenys gali būti siunčiami naudojant mobilųjį ryšį arba „WiFi“ tinklą ir jie siunčiami pagal HP saugumo standartus.  Diagnostikos programinės įrangos teikėjui mobiliuoju ryšiu siunčiamas labai nedidelis kiekis duomenų, todėl tai neturėtų turėti neigiamos įtakos mobiliojo ryšio operatoriaus suteikiamų duomenų kiekiui. Jei norite išjungti šias diagnostikos funkcijas, eikite į „Settings“ (nuostatos).
+
+	</body>
+</html>

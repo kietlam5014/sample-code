@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html dir="ltr" lang="nb" xml:lang="nb">
+	<head>
+		<meta charset="utf-8" />
+		<title>About PPS-ASG</title>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/jquery.ui.core.js"></script>
+		<script src="https://ssl.www8.hp.com/ie/en/scripts/framework/jquery/v-1-8/can.jquery.js"></script>
+		<script src="https://ssl.www8.hp.com/caas/header-footer/us/en/default/2.0?contentType=js"></script>
+	</head>
+	<body>
+		<div id="everything" class="everything">
+			<div id="content">
+				<div id="header" class="header" style="width:100%">
+				</div>
+				<div id="body" class="body">
+					<div style="display:block;width: 100%;margin-left:auto;margin-right:auto;margin-bottom:20px">
+						Som en del av HPs innsats for å levere en bedre enhetsopplevelse er denne enheten utstyrt med diagnoseprogramvare.  Denne programvaren samler inn anonyme diagnosedata, medregnet informasjon om enhetens maskinvare og programvare, nettverkskonfigurasjon og bruk av applikasjoner. Denne informasjonen brukes for å forbedre vårt produkt og våre servicetilbud.  Diagnosedataene er knyttet til enheten og vil ikke skille mellom brukere. Anonyme data deles bare med leverandøren av diagnoseprogramvaren. Dataopplastingsøktene kan finne sted over et mobil- eller WiFi-nettverk og overholder nøye HPs sikkerhetsstandarder.  Det er en minimal mengde data som sendes over mobilnettet til diagnoseleverandøren, og den bør ikke ha betydning for datakvotene dine hos mobiloperatøren. Hvis du gjerne vil deaktivere slike diagnosefunksjoner, vennligst gå til Innstillinger.
+					</div>
+				</div>
+				<div id="footer" class="footer" style="width: 100%">
+				</div>
+			</div>
+		</div>
+		
+		<style>
+			
+			#footer, .footer_container, #ladybug {
+				width: 100% !important;
+			}
+			
+		</style>
+	</body>
+</html>

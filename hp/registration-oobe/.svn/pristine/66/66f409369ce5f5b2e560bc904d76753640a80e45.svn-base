@@ -1,0 +1,12 @@
+<!doctype html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../resources/css/learnmore.css">
+	</head>
+	<body>
+						Kao dio HP-ova nastojanja oko ponude boljeg iskustva rada s uređajem, ovaj je uređaj opremljen dijagnostičkim softverom.  On prikuplja anonimne dijagnostičke podatke, uključujući one o hardveru i softveru uređaja, konfiguraciji i stanju mreže te korištenju aplikacija. Ti se podaci koriste za poboljšavanje naše ponude proizvoda i usluga.  Dijagnostički su podaci povezani s uređajem i ne razlikuju se od korisnika do korisnika. Anonimni se podaci dijele samo s proizvođačem dijagnostičkog softvera. Moguće su sesije prijenosa podataka putem mobilne ili bežične mreže, pri čemu su te sesije u skladu s HP-ovim sigurnosnim standardima.  Količina podataka koja se šalje proizvođaču dijagnostičkog softvera putem mobilne mreže minimalna je i ne bi trebala negativno utjecati na podatkovne pakete dobivene od mobilnog operatera. Ako želite, takve dijagnostičke značajke možete onemogućiti u odjeljku Postavke.
+
+	</body>
+</html>

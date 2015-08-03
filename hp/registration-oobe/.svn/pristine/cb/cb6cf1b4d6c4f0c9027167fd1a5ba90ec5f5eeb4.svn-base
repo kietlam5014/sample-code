@@ -1,0 +1,23 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.useragent = hp.registration.useragent || {};
+
+hp.registration.useragent.RegistrationInfoBrowser = function() {
+
+	this.getInfoAsync = function(inContainer) {
+
+		inContainer['callback'](
+				{
+					'segment': hp.registration.Properties.DEFAULT_SEGMENT_NUMBER,
+					'segment2': hp.registration.Properties.DEFAULT_SEGMENT_NUMBER,
+					'purchasedLocation': hp.registration.Properties.DEFAULT_PURCHASED_LOCATION
+				}
+			);
+
+		return null;
+	};//#hp.registration.useragent.RegistrationInfoBrowser.getInfoAsync
+
+
+    
+	return this;
+}.apply({}, null);//#hp.registration.useragent.RegistrationInfoBrowser

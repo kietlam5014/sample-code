@@ -1,0 +1,91 @@
+var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.model = hp.registration.model || {};
+
+hp.registration.model.MachineInfo = function() {
+
+	var initialized_ = false;
+
+	this.init = function(inContainer) {
+		if (!initialized_) {
+
+			if (typeof inContainer == "string") {
+				inContainer = JSON.parse(inContainer);
+			}
+
+			Object.defineProperties(
+				this,
+				{
+					'serialNumber': 
+									{
+										'value': inContainer['serialNumber'],
+										'writable': false
+									},
+					'modelNumber': 
+									{
+										'value': inContainer['modelNumber'],
+										'writable': false
+									},
+                    'model':
+                                    {
+                                        'value': inContainer['model'],
+                                        'writable': false
+                                    },
+					'language':
+									{
+										'value': inContainer['language'],
+										'writable': false
+									},
+					'registrationVersion': 
+									{
+										'value': inContainer['registrationVersion'],
+										'writable': false
+									},
+					'operatingSystem':
+									{
+										'value': inContainer['operatingSystem'],
+										'writable': false
+									},
+                    'fingerPrint':
+                                    {
+                                        'value': inContainer['fingerPrint'],
+                                        'writable': false
+                                    },
+                    'oem':
+                                    {
+                                        'value': inContainer['oem'],
+                                        'writable': false
+                                    },
+                    'osn':  
+                                    {
+                                        'value': inContainer['osn'],
+                                        'writable': false
+                                    },
+                    'codeName':     
+                                    {
+                                        'value': inContainer['codeName'],
+                                        'writable': false
+                                    },
+                    'incrementalBuildNumber':
+                                    {
+                                        'value': inContainer['incrementalBuildNumber'],
+                                        'writable': false
+                                    },
+                    'buildTimestamp':
+                                    {
+                                        'value': inContainer['buildTimestamp'],
+                                        'writable': false
+                                    },
+                    'bornOnDate':   {
+                                        'value': inContainer['bornOnDate'],
+                                        'writable': false
+                                    }
+				}
+			);
+
+			initialized_ = true;
+		}
+	}.bind(this);//#hp.registration.model.MachineInfo
+
+	return this;
+}.apply({}, null);//#hp.registration.model.MachineInfo

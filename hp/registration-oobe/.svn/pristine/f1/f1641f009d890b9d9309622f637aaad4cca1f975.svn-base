@@ -1,0 +1,212 @@
+﻿var hp = hp || {};
+hp.registration = hp.registration || {};
+hp.registration.util = hp.registration.util || {};
+
+// TODO UPDATE WITH THE LATEST VERSION FROM WINDOWS 8 METRO APP.
+hp.registration.util.ValidationEngine = function () {
+    /*
+     * =============================================================================================
+     * Private members
+     * =============================================================================================
+     */
+    var _regExpZipCodeDefault = /^[0-9A-Za-z]+[- ]*[0-9A-Za-z]+$/;
+    //var _regExpEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var _regExpEmail = /[^@\.\"\\\s]([-\._\w]?[^@\.\"\\\s])*@[^\.@\\\s\^ \ / ' \" < > ~ ! # \$ % \& * ( ) + \|]*\.[a-zA-Z]{2,}$/;
+    var _regExpPhoneNumber = /^[+\d-xX\s.\(\)\/\\]+$/;
+    var _regExpName = /[\^\/'\"<>\\]+/;
+    
+    /*
+     * =============================================================================================
+     * Public members
+     * =============================================================================================
+     */
+    this.MIN_LENGTH_FIRST_NAME = 1;
+    this.MAX_LENGTH_FIRST_NAME = 30;
+
+    this.MIN_LENGTH_LAST_NAME = 1;
+    this.MAX_LENGTH_LAST_NAME = 30;
+
+    this.MIN_LENGTH_ZIP_CODE = 3;
+    this.MAX_LENGTH_ZIP_CODE = 10;
+
+    this.MIN_LENGTH_EMAIL = 5;
+    this.MAX_LENGTH_EMAIL = 60;
+
+    this.MIN_LENGTH_PHONE_NUMBER = 1;
+    this.MAX_LENGTH_PHONE_NUMBER = 15;
+
+    this.MIN_LENGTH_ADDRESS = 1;
+    this.MAX_LENGTH_ADDRESS = 64;
+
+    this.MIN_LENGTH_ADDRESS2 = 1;
+    this.MAX_LENGTH_ADDRESS2 = 64;
+
+    this.MIN_LENGTH_CITY = 1;
+    this.MAX_LENGTH_CITY = 35;
+
+    this.MIN_LENGTH_STATE = 1;
+    this.MAX_LENGTH_STATE = 35;
+
+    this.ERROR_REQUIRED = 'field_required';
+    this.ERROR_INVALID_ZIP_CODE = 'invalid_zip_code';
+    this.ERROR_INVALID_EMAIL = 'invalid_email';
+    this.ERROR_CONSENT_EMAIL_MISSING = 'missing_consent_email';
+    this.ERROR_NOT_MATCH_EMAIL = 'not_match_email';
+    this.ERROR_INVALID_CHARACTER = 'invalid_character_entered';
+
+    this.YES = 'y';
+    this.NO = 'n';
+
+    this.validateFirstName = function (inUserInput) {
+        if ((inUserInput.trim().length >= this.MIN_LENGTH_FIRST_NAME) &&
+            (inUserInput.trim().length <= this.MAX_LENGTH_FIRST_NAME)) {
+            if (_regExpName.test(inUserInput)) { // invalid char found
+                return this.ERROR_INVALID_CHARACTER;
+            } else {
+                return null;
+            }
+        } else {
+            return this.ERROR_REQUIRED;
+        }
+    }.bind(this);//#validateFirstName
+
+    this.validateLastName = function (inUserInput) {
+        if ((inUserInput.trim().length >= this.MIN_LENGTH_LAST_NAME) &&
+            (inUserInput.trim().length <= this.MAX_LENGTH_LAST_NAME)) {
+                if (_regExpName.test(inUserInput)) { // invalid char found
+                    return this.ERROR_INVALID_CHARACTER;
+                } else {
+                    return null;
+                }
+        } else {
+            return this.ERROR_REQUIRED;
+        }
+    }.bind(this);//#validateLastName
+
+    this.validateZipCode = function (inUserInput) {
+        inUserInput = inUserInput.trim();
+
+        if (inUserInput.length === 0) {
+            return null;
+        } else if (!_regExpZipCodeDefault.test(inUserInput)) {
+            return this.ERROR_INVALID_ZIP_CODE;
+        } else {
+            return null;
+        }
+        /*if (((inUserInput.length >= this.MIN_LENGTH_ZIP_CODE) &&
+            (inUserInput.length <= this.MAX_LENGTH_ZIP_CODE))) {
+                if (String(inUserInput).search(_regExpZipCodeDefault) != -1) {
+                    return null;
+                } else {
+                    return this.ERROR_INVALID_ZIP_CODE;
+                }
+        } else {
+            return this.ERROR_REQUIRED;
+        }*/
+    }.bind(this);//#validateZipCode
+
+    this.validateEmail = function (inUserInput, inUserInput2) {
+        inUserInput = inUserInput.trim();
+        inUserInput2 = inUserInput2.trim();
+
+        // TODO REFACTOR THIS METHOD. TOO MUCH RETURN POINTS.
+
+        if (((inUserInput.length >= this.MIN_LENGTH_EMAIL) &&
+            (inUserInput.length <= this.MAX_LENGTH_EMAIL))) {
+                if (_regExpEmail.test(inUserInput)) {
+                    // Check if matches with the other value
+                    if (inUserInput2.length !== 0) {
+                        if (inUserInput !== inUserInput2) {
+                            return this.ERROR_NOT_MATCH_EMAIL;
+                        } else {
+                            return null;
+                        }
+                    } else {
+                        return null;
+                    }
+                } else {
+                    return this.ERROR_INVALID_EMAIL;
+                }
+
+                // TODO MISSING THE SPACE AND DASH VALIDATION
+            } else {
+                return this.ERROR_REQUIRED;
+            }
+    }.bind(this);//#validateEmail
+
+    this.validateEmailConsent = function (inTextSelected) {
+        var _isValid = this.ERROR_CONSENT_EMAIL_MISSING;
+        if (inTextSelected ) {
+            inTextSelected = inTextSelected.trim().toLowerCase();
+            [this.YES, this.NO].forEach(
+                function (inItem) { if (inTextSelected === inItem) { _isValid = null; } });
+        }
+
+        return _isValid;
+    }.bind(this);//#validateEmailConsent
+
+    this.validatePhoneNumber = function (inUserInput) {
+        inUserInput = inUserInput.trim();
+
+        var _isValid = this.ERROR_INVALID_CHARACTER;
+
+        if (inUserInput.trim().length === 0) {
+            _isValid = null;
+        } else {
+            if (inUserInput.length >= this.MIN_LENGTH_PHONE_NUMBER &&
+                inUserInput.length <= this.MAX_LENGTH_PHONE_NUMBER &&
+                _regExpPhoneNumber.test(inUserInput) === true) {
+                    _isValid = null;
+                }
+        }
+
+        return _isValid;
+    }.bind(this);//#validatePhoneNumber
+
+    this.validateAddress = function (inUserInput) {
+        inUserInput = inUserInput.trim();
+
+        if (inUserInput.trim().length === 0) {
+            return true;
+        } else {
+            if (inUserInput.length >= this.MIN_LENGTH_ADDRESS
+                && inUserInput.length <= this.MAX_LENGTH_ADDRESS) {
+                    return true;
+                }
+        }
+
+        return false;
+    }.bind(this);//#validateAddress
+
+    /*
+     * Check if the XML response from the server is OK.
+     *
+     * @input
+     *  inXml: string or XmlDocument.
+     *
+     * @return
+     *  true. If the response says that the message was received by the server.
+     *  false. If the response says that the server had a problem on processing the post.
+     */
+    this.validateResponse = function (inXml) {
+        var result = false;
+
+        if (typeof inXml === 'string') {
+            var str = inXml;
+            var _parser = new DOMParser();
+            inXml = _parser.parseFromString(str, "text/xml");
+        }
+
+        var _statusCode = inXml.documentElement.getAttribute('status_code') || '';
+        var _payload = inXml.documentElement.getElementsByTagName('payload')[0];
+        if (_statusCode.toLowerCase() === 'ok') {
+            if (_payload && _payload.textContent.trim().length === 0) {
+                result = true;
+            }
+        }
+
+        return result;
+    };//#validateResponse
+
+    return this;
+}.apply({}, null);
