@@ -10,7 +10,7 @@ from Gerrit import *
 
 
 def main():
-    server = 'review-android.quicinc.com'
+    server = 'enter-server-here'
 
     parser = argparse.ArgumentParser(description='dependencyOrder script')
     parser.add_argument('-g','--gerrits',action='store',dest='gerrits',nargs='+', help='<Required> gerrits',required=True)
@@ -33,20 +33,11 @@ def main():
         print "merged?    : %s" % gerrit.isMerged()
         print "owner email: %s" % gerrit.ownerEmail()
         print "branch     : %s" % gerrit.branch()
-        print "PLs        : %s" % gerrit.branchPLs()
-        print "file path  : %s" % gerrit.filePath()
-        print "project    : %s" % gerrit.project()
         print "subject    : %s" % gerrit.subject()
         print "ref        : %s" % gerrit.ref()
         print "dependsOn  : %s" % gerrit.dependsOn()
         print "extDepend  : %s" % gerrit.externalDependsOn()
-        print "LA set?    : %s" % gerrit.lnxbuild()
-        print "KW set?    : %s" % gerrit.kwuser()
 	print "Id match?  : %s" % gerrit.isIdMatch()
-        print "CRs        : %s" % gerrit.CRs()
-	if not (ci_status == None):
-	    print "CI Status  :\n%s\n    %s" % (ci_status[0], ci_status[1])
-
 if __name__ == '__main__':
         main()
 
