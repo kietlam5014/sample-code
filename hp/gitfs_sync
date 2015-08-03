@@ -1,0 +1,116 @@
+#!/usr/bin/env bash
+# Author: Kiet Lam
+# April 2015
+# Desc: sync between central git and TFVC (TFS)
+
+
+# Defined variables
+PROJ=tfs-git-test
+BRANCH=master
+TFS=http://win-flh321eoo68:8080/tfs/myteamprojectcollection
+CGIT=ssh://kiet.lam@cgit-pro.houston.hp.com:29418/$PROJ
+
+ 
+check_err()
+{
+    # parameter 1 is last exit code
+    # parameter 2 is error message that should be shown if error code is not 0
+    if [ "${1}" -ne "0" ]; then
+        cat '~temp.log'
+        echo ${2}
+        rm -f '~temp.log' > /dev/null
+        exit ${1}
+    fi
+    rm -f '~temp.log' > /dev/null
+}
+
+
+## Create proj workspace if doesn't exist
+#
+if [ -d "$PROJ" ]; then
+  msg="Updating $PROJ to latest"
+  echo "$(date '+%F %T') $msg"
+  pushd $PROJ
+  git-tf pull --deep --mentions > '~temp.log'
+  check_err $? "$msg resulted in error"
+  popd
+else
+  msg="Pulling from TFS"
+  echo "$(date '+%F %T') $msg"
+  git-tf clone $TFS $/$PROJ --deep --verbose
+  check_err $? $msg
+  pushd $PROJ
+  git remote add cgit $CGIT
+  popd
+fi
+
+
+## cd into project
+#
+cd $PROJ
+git config --local core.autocrlf false
+
+
+## Fetching central git
+#
+msg="Fetching from central git"
+echo "$(date '+%F %T') $msg"
+git fetch cgit master > '~temp.log'
+check_err $? "$msg resulted in error"
+
+
+## Scenerio #1 - no changes on both git/tfs
+#
+stat=$(git diff $BRANCH..FETCH_HEAD --name-only)
+if [ -z "$stat" ]; then
+  msg="Both central git and TFVC are up to date"
+  echo "$(date '+%F %T') $msg"
+  exit 0
+fi;
+
+
+## Scenerio #2 - changes in TFVC
+#
+stat1=$(git log --oneline $BRANCH..FETCH_HEAD)
+stat2=$(git log --oneline FETCH_HEAD..$BRANCH)
+if [ -z "$stat1" ] && [ ! -z "$stat2" ]; then
+  msg="Only TFVC changes, pushing to central git"
+  echo "$(date '+%F %T') $msg"
+  git push cgit master
+  check_err $? "$msg resulted in error"
+  exit 0
+fi
+
+
+## Scenerio #3 - changes in central git
+#
+stat1=$(git log --oneline FETCH_HEAD..$BRANCH)
+stat2=$(git log --oneline $BRANCH..FETCH_HEAD)
+if [ -z "$stat1" ] && [ ! -z "$stat2" ]; then
+  msg="Only central git changes, pulling changes and rebase"
+  echo "$(date '+%F %T') $msg"
+  git pull --rebase cgit master > '~temp.log'
+  check_err $? "$msg resulted in error"
+  msg="Pushing to TFVC"
+  echo "$(date '+%F %T') $msg"
+  git-tf checkin --deep --mentions --autosquash > '~temp.log'
+  check_err $? "$msg resulted in error"
+  exit 0
+fi
+
+
+## Scenerio #4 - changes in both central git and TFVC
+#
+msg="Including both changes as a merged commit"
+echo "$(date '+%F %T') $msg"
+git pull --no-ff --rebase=false --no-edit cgit $BRANCH > '~temp.log'
+check_err $?
+# merge in both changes to git and TFVC
+msg="Merging into TFVC"
+echo "$(date '+%F %T') $msg"
+git-tf checkin --deep --mentions > '~temp.log'
+check_err $? "$msg resulted in error"
+msg="Merging into central git"
+echo "$(date '+%F %T') $msg"
+git push cgit $BRANCH > '~temp.log'
+check_err $? "$msg resulted in error"
