@@ -9,9 +9,8 @@ endlocal & popd
 goto :endperl
 @rem ';
 #================================================================================#
-# Copyright (c) 2009, Sony Ericsson
-# All Rights Reserved.
-#
+# Author: Kiet Lam (10101482)
+# Date: 2009
 ## Description:  build all languages by calling stagecabs and
 #                generateSDR scripts.
 #

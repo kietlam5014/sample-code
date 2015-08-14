@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
 # =========================================================================================#
-# Copyright (c) 2012, Sony Mobile Communications
-# All Rights Reserved.
-#
+# Author: Kiet Lam (10101482)
+# Date: 2012
 # Description:  Create flashable images (user variant) from prod.cfg
 #    e.g of prod config format:
 #         Build-id     	$HOME/Model/CDF							Site

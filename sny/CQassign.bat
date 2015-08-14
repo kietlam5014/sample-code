@@ -11,10 +11,8 @@ endlocal & popd
 goto :endperl
 @rem ';
 #================================================================================#
-# Copyright (c) 2010, Sony Ericsson
-# All Rights Reserved.
-#
 # Author: Kiet Lam (10101482)
+# Date  : 2010
 #
 # Description:  Assign DMS to a user.
 #

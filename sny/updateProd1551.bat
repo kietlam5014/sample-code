@@ -11,10 +11,8 @@ endlocal & popd
 goto :endperl
 @rem ';
 #================================================================================#
-# Copyright (c) 2010, Sony Ericsson
-# All Rights Reserved.
-#
 # Author: Kiet Lam (10101482)
+# Date: 2010
 #
 # Description:  Get freeze label from Notes section of the DMS and update prod 1551
 #

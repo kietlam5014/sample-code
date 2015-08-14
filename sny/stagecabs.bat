@@ -10,8 +10,8 @@ endlocal & popd
 goto :endperl
 @rem ';
 #================================================================================#
-# Copyright (c) 2009, Sony Ericsson
-# All Rights Reserved.
+# Author: Kiet Lam (10101482)
+# Date: 2009
 #
 # Description: This script setups the necessary environments, creates a temp dir,
 #              and calls vendor's subscript.

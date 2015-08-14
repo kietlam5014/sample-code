@@ -1,11 +1,8 @@
 @echo off
 REM #####################################################################
 REM ##
-REM ## Copyright (c) 2009, Sony Ericsson Communications
-REM ## All Rights Reserved.
-REM ##
 REM ## Author: Kiet Lam (10101482)
-REM ##
+REM ## Date: 2009
 REM ## System:       Vulcan
 REM ## Component:    script tool
 REM ## Module:
