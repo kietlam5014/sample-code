@@ -12,9 +12,6 @@ goto endofperl
 @rem ';
 ###########################################################################
 ##
-## Copyright (c) 2006, Siemens Communications
-## All Rights Reserved.
-##
 ## Description: Add <add name="XmlSerialization.Compilation" value="4"/> under
 ##              <system.diagnostics>
 ##                      <switches>

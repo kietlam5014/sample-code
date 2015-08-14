@@ -2,15 +2,11 @@
 setlocal
 REM #####################################################################
 REM ##
-REM ## Copyright (c) 2006, Siemens Communications, Inc.
-REM ## All Rights Reserved.
-REM ##
 REM ## System:       HiPath OpenScape
 REM ## Component:    bld
 REM ## SubComponent: tools
 REM ## Module:
 REM ##
-REM ## Description:  Batch script to create, label and start the build.
 REM ## Revision History:
 REM ##
 REM ##  Date      Author  Ver Description

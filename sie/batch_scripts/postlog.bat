@@ -12,9 +12,6 @@ goto endofperl
 @rem ';
 ###########################################################################
 ##
-## Copyright (c) 2001, Siemens Enterprise Networks LLC
-## All Rights Reserved.
-##
 ## Description: Searches all logs and them to web directory
 ##
 ## Revision History:

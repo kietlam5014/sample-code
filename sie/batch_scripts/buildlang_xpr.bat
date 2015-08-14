@@ -1,9 +1,6 @@
 @echo off
 REM #####################################################################
 REM ##
-REM ## Copyright (c) 2004, Siemens Enterprise Networks, Inc.
-REM ## All Rights Reserved.
-REM ##
 REM ## System:       OpenScape
 REM ## Component:    cm
 REM ## SubComponent: batch

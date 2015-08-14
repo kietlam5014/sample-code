@@ -12,9 +12,6 @@ goto endofperl
 @rem ';
 ###########################################################################
 ##
-## Copyright (c) 2001, Siemens Enterprise Networks
-## All Rights Reserved.
-##
 ## Description: Modify *.csproj to set DebugSymbols to true for Release mode
 ##
 ## Revision History:

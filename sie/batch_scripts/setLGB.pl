@@ -1,8 +1,5 @@
 ###########################################################################
 ##
-## Copyright (c) 1999, Siemens Information and Communication Networks, Inc.
-## All Rights Reserved.
-##
 ## Description:  Recursively label files in \xperience_deliver\Debug
 ##
 ## Revision History:

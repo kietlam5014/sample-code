@@ -1,9 +1,6 @@
 @echo off
 REM #####################################################################
 REM ##
-REM ## Copyright (c) 2000, Siemens Enterprise Networks, Inc.
-REM ## All Rights Reserved.
-REM ##
 REM ## System:       Xperience
 REM ##
 REM ## Description:  Batch script to build Xperience Install Package.

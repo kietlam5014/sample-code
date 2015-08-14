@@ -1,8 +1,5 @@
 ###########################################################################
 ##
-## Copyright (c) 1999, Siemens Information and Communication Networks, Inc.
-## All Rights Reserved.
-##
 ## System:       Xperience
 ##
 ## Description:  Check makefile_accumulated.log for failure

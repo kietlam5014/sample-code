@@ -1,7 +1,4 @@
 ##
-## Copyright (c) 1999, Siemens Information and Communication Networks, Inc.
-## All Rights Reserved.
-##
 ## Description:	Recursively checked out files unres from current
 ##		directory.
 ##

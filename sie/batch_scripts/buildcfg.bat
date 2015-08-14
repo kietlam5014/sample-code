@@ -1,9 +1,6 @@
 @echo off
 REM #####################################################################
 REM ##
-REM ## Copyright (c) 2000, Siemens Enterprise Networks, Inc.
-REM ## All Rights Reserved.
-REM ##
 REM ## Description:  This file contains defined variables used by
 REM ##               moabuild.bat to do the build.
 REM ## Revision History:

@@ -1,9 +1,6 @@
 @echo off
 REM #####################################################################
 REM ##
-REM ## Copyright (c) 2006, Siemens Communications, Inc.
-REM ## All Rights Reserved.
-REM ##
 REM ## Description:  Unlock and lock labels excluding supplied NUSER
 REM ##
 REM ## Revision History:

@@ -12,9 +12,6 @@ goto endofperl
 @rem ';
 ###########################################################################
 ##
-## Copyright (c) 2001, Siemens Enterprise Networks
-## All Rights Reserved.
-##
 ## Description: Check for any new Projects not in xperience.sln
 ##
 ## Revision History:

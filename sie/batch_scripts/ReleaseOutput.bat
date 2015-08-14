@@ -12,9 +12,6 @@ goto endofperl
 @rem ';
 ###########################################################################
 ##
-## Copyright (c) 2001, Siemens Enterprise Networks
-## All Rights Reserved.
-##
 ## Description: Replace all ..\xperience_deliver\Release\ with ..\Output\ in .csproj
 ##
 ## Revision History:

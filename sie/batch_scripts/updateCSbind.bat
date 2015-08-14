@@ -12,9 +12,6 @@ goto endofperl
 @rem ';
 ###########################################################################
 ##
-## Copyright (c) 2003, Siemens Enterprise Networks
-## All Rights Reserved.
-##
 ## Description: Parse Config Specs and replace <*BIND> with *_$BIND
 ##              Final result is in %TMP%. Used by MOABuild
 ##
