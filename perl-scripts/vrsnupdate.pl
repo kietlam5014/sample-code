@@ -1,8 +1,5 @@
 ###########################################################################
 ##
-## Copyright (c) 1999, Siemens Information and Communication Networks, Inc.
-## All Rights Reserved.
-##
 ## Description: Read a list of files containing <CC_HINET_VRSN> in its
 ##              content, checkouts and replaces <CC_HINET_VRSN> with
 ##              ClearCase BIND label.

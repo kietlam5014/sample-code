@@ -1,8 +1,5 @@
 ###########################################################################
 ##
-## Copyright (c) 1999, Siemens Information and Communication Networks, Inc.
-## All Rights Reserved.
-##
 ## System:       HiNet RC 3000
 ## Component:    bld
 ## SubComponent: tools

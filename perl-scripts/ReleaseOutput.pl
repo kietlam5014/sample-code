@@ -3,17 +3,14 @@
 setlocal
 set SCRIPT=%0
 shift
-set path=\xperience_third_party\PERL\bin;%path%
+set path=\top_third_party\jdk\1.1.6\bin;\top_third_party\PERL\bin;%path%
 IF NOT EXIST %SCRIPT% set SCRIPT=%SCRIPT%.bat
-set PERL5LIB=\xperience_third_party\PERL\LIB;\xperience\bld\tools\pm
+set PERL5LIB=\top_third_party\PERL\LIB;\top\bld\tools\pm
 PERL %SCRIPT% %0 %1 %2 %3 %4 %5 %6 %7 %8 %9 2>&1
 endlocal
 goto endofperl
 @rem ';
 ###########################################################################
-##
-## Copyright (c) 2001, Siemens Enterprise Networks
-## All Rights Reserved.
 ##
 ## Description: Replace all ..\xperience_deliver\Release\ with ..\Output\ in .csproj
 ##
@@ -133,7 +130,9 @@ sub replaceWithTopdo {
 # ############################################################################################### #
 sub isCheckout {
    my ($n) = @_;
-   return (-w $n) ? 1 : 0;
+   local $r = "cleartool lsco -short $n";
+   local $result = `$r`;
+   $result;
 }
 
 __END__

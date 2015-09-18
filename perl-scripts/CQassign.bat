@@ -11,8 +11,6 @@ endlocal & popd
 goto :endperl
 @rem ';
 #================================================================================#
-# Copyright (c) 2010, Sony Ericsson
-# All Rights Reserved.
 #
 # Author: Kiet Lam (10101482)
 #

@@ -1,2 +1,0 @@
-element * CHECKEDOUT
-element * <XBIND>
