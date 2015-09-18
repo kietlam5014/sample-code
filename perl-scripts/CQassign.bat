@@ -13,6 +13,7 @@ goto :endperl
 #================================================================================#
 #
 # Author: Kiet Lam (10101482)
+# Date  : 2010
 #
 # Description:  Assign DMS to a user.
 #
